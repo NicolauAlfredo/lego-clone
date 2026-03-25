@@ -1,0 +1,13 @@
+/* Reset Base */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #fff;
+  color: #2c2c2c;
+}
