@@ -76,5 +76,101 @@
       </div>
     </div>
     <!-- FINE DEL TOP BAR -->
+
+    <!-- HEADER PRINCIPALE (NAVBAR) Blocco: header -->
+    <header class="header">
+      <!-- Contenitore principale -->
+      <div class="header__container">
+        <!-- SEZIONE SINISTRA: LOGO + NAV -->
+        <div class="header__left">
+          <!-- Logo -->
+          <a href="#" class="header__logo">
+            <img src="assets/images/logo/logo-header.svg" alt="LEGO logo" />
+          </a>
+          <!-- Navigazione principale -->
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <!-- Voce con bottone -->
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Acquista</button>
+              </li>
+
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Scopri</button>
+              </li>
+
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Aiuto</button>
+              </li>
+
+              <!-- Link semplice -->
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Tutti i set</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- SEZIONE CENTRALE: SEARCH -->
+        <div class="header__center">
+          <!-- Form di ricerca -->
+          <form
+            class="header__search-form"
+            action="#"
+            method="post"
+            role="search"
+          >
+            <!-- Label accessibile -->
+            <label for="search" class="sr-only">Search</label>
+
+            <!-- Box ricerca -->
+            <div class="header__search-box">
+               
+              <img
+                src="assets/icons/magnifying-glass-solid.svg"
+                alt="Search icon"
+                class="header__search-icon"
+              />
+
+              <!-- Input -->
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search"
+                class="header__search-input"
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- SEZIONE DESTRA: AZIONI UTENTE -->
+        <div class="header__right">
+          <!-- Bottone preferiti -->
+          <button type="button" class="header__icon-btn">
+            <img
+              src="assets/icons/heart.svg"
+              alt="Favorites"
+              class="header__icon"
+            />
+          </button>
+
+          <!-- Bottone carrello -->
+          <button type="button" class="header__icon-btn">
+            <img
+              src="assets/icons/shopping-bag.svg"
+              alt="Cart"
+              class="header__icon"
+            />
+
+            <!-- Contatore prodotti -->
+            <span class="header__cart-count">(0)</span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+    <!-- FINE DEL HEADER -->
+
   </body>
 </html>
