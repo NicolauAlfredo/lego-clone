@@ -290,3 +290,91 @@ body {
 .header__cart-count {
   font-size: 14px;
 }
+
+/* ================= HERO SECTION ================= */
+
+/* Blocco principale della sezione */
+.hero {
+  background-color: var(--color-yellow);
+  width: 1604px;
+  margin: 0 auto;
+  height: 499px;
+
+  display: flex;
+  align-items: center; /* centra verticalmente il contenuto */
+
+  /* Immagine di sfondo */
+  background-image: url("/assets/images/backgrounds/static-yellow-hero-large.jpg");
+  background-size: cover; /* copre tutta la sezione */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenitore interno (utile per future estensioni) */
+.hero__container {
+  width: 100%;
+}
+
+/* ===== CONTENUTO SINISTRO ===== */
+
+/* Blocco testo */
+.hero__content {
+  margin-left: 30px;
+  max-width: 520px; /* limita la larghezza per migliorare la leggibilità */
+}
+
+/* Titolo principale */
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* Testo descrittivo */
+.hero__text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* BOTTONI */
+
+/* Contenitore bottoni */
+.hero__actions {
+  display: flex;
+  gap: 16px; /* spazio tra i bottoni */
+}
+
+/* Bottone base (riutilizzabile) */
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Bottone principale (nero) */
+.hero__btn--primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Bottone secondario (bordato) */
+.hero__btn--secondary {
+  border: 2px solid var(--color-black);
+  color: var(--color-black);
+}
+
+/* ICONE */
+
+/* Icone all'interno dei bottoni */
+.hero__icon {
+  width: 18px;
+  height: 18px;
+}
