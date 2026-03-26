@@ -99,9 +99,9 @@ body {
 }
 
 /* SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS */
-.top-bar__right { 
+.top-bar__right {
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
 /* Bottone account */
@@ -142,7 +142,7 @@ body {
   line-height: 1.1875rem;
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-weight: 500; 
+  font-weight: 500;
 }
 
 .top-bar__insider-link img {
@@ -150,4 +150,143 @@ body {
   width: 22px;
   cursor: pointer;
   margin: 3px 4px 0 0;
+}
+
+/* HEADER */
+/* Blocco principale header */
+.header {
+  background-color: var(--color-yellow);
+}
+
+/* Contenitore principale con larghezza massima e centratura */
+.header__container {
+  height: 4.6875rem;
+  margin: 0 auto;
+  padding: 0 1.875rem;
+  width: 100%;
+  max-width: 100rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SEZIONE SINISTRA (logo + menu) */
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo principale */
+.header__logo img {
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* Lista del menu */
+.header__menu {
+  height: 3.4375rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Elemento singolo del menu */
+.header__menu-item {
+  list-style: none;
+}
+
+/* Bottoni del menu (Acquista, Scopri, Aiuto) */
+.header__menu-btn {
+  border: 0;
+  background-color: var(--color-yellow);
+  font-family: "Cera Pro, sans-serif";
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+/* Link speciale "Tutti i set" */
+.header__menu-link {
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--color-red);
+  background: var(--color-white);
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* SEZIONE CENTRALE (search) */
+
+/* Label nascosta ma accessibile per screen reader */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Contenitore della barra di ricerca */
+.header__search-box {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 999px;
+  padding: 12px;
+  gap: 8px;
+
+  /* ATTENZIONE: questo valore è fisso e non responsivo */
+  margin-left: 500px;
+
+  width: 330px;
+  height: 40px;
+  border: 1px solid var(--color-black);
+}
+
+/* Icona della ricerca */
+.header__search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Campo input della ricerca */
+.header__search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* SEZIONE DESTRA (azioni utente) */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Bottoni con icone (wishlist, carrello) */
+.header__icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Icone interne ai bottoni */
+.header__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Contatore prodotti nel carrello */
+.header__cart-count {
+  font-size: 14px;
 }
