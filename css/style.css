@@ -398,3 +398,91 @@ body {
   width: 1608px;
   display: block;
 }
+
+/* Sezione 3: Trova il set perfetto */
+.perfet-set {
+  display: flex;
+  justify-content: center;
+  background: var(--color-yellow);
+  width: 1604px;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Sezione 4: Scopri cosa stanno costruendo tutti */
+.discover-builds {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-gray-alt);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 5: In evidenza questa settimana */
+.weekly-featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-orange-dark);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 6: Scopri di più */
+.explore-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-red);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 7: Iscriviti e guadagna punti */
+.join-and-earn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-blue-primary);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 8: Welcome */
+.welcome-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify; 
+  width: 1604px;
+  margin: 40px auto 0; 
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-purple-darker);
+  width: 100%;
+  margin: 40px auto 0;
+  height: 600px;
+}
