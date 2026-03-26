@@ -378,3 +378,23 @@ body {
   width: 18px;
   height: 18px;
 }
+
+/* Sezione Featured (Section 2) */
+.section-featured {
+  background: var(--color-dark);
+  width: 1604px;
+  margin: 0 auto;
+  height: 379px;
+  position: relative; /* necessario per posizionamento elementi interni */
+}
+
+/* Footer decorativo */
+.section-featured__footer {
+  width: 1604px;
+  margin: 0 auto;
+}
+
+.section-featured__footer img {
+  width: 1608px;
+  display: block;
+}
