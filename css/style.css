@@ -1,5 +1,26 @@
-/* Reset Base */
+/* Variabili Globali (Design System) */
+:root {
+  --color-yellow: #ffd502;
+  --color-black: #000000;
+  --color-gray-light: #f2f2f2;
+  --color-gray-dark: #2c2c2c;
+  --color-dark: #222222;
+  --color-white: #ffffff;
+  --color-red: #d0021b;
+  --color-blue-primary: #005ad2;
+  --color-blue-dark: #006db7;
+  --color-orange: #f47d20;
+  --color-orange-light: #fac400;
+  --color-black-translucent: #00000099;
+  --color-background-dark: #141414;
+  --color-background-gray: #242424;
+  --color-gray-alt: #f6f6f6;
+  --color-purple-dark: #201d48;
+  --color-purple-darker: #18152d;
+  --color-orange-dark: #e96f14;
+}
 
+/* Reset Base */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +29,125 @@
 
 body {
   width: 100%;
-  background: #fff;
-  color: #2c2c2c;
+  background: var(color-white);
+}
+
+/* TOP BAR - Barra Superiore Bloco principale: top-bar */
+.top-bar {
+  background: var(--color-white);
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Contenitore interno principale */
+.top-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 200px 0 190px;
+}
+
+/* SEZIONE SINISTRA: AREA GIOCHI */
+.top-bar__left {
+  display: flex;
+  align-items: center;
+}
+
+/* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
+.top-bar__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenitore centrale per allineamento dei bottoni e testo */
+.top-bar__center-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Bottone freccie */
+.top-bar__button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: rgb(20, 20, 20);
+  padding: 50px;
+  z-index: 1;
+}
+
+.top-bar__button img {
+  height: 28px;
+  width: 28px;
+}
+
+/* Testo centrale */
+
+.top-bar__center-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS */
+.top-bar__right { 
+  display: flex;
+  align-items: center;  
+}
+
+/* Bottone account */
+.top-bar__account-btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.top-bar__account-btn img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+/* Linea verticale separatrice */
+.top-bar__vertical-line {
+  margin: 0 1.25rem;
+  width: 0.0625rem;
+  height: 1.25rem;
+  background: var(--color-background-gray);
+}
+
+/* Link LEGO Insiders */
+.top-bar__insider-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500; 
+}
+
+.top-bar__insider-link img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  margin: 3px 4px 0 0;
 }
