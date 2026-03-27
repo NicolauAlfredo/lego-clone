@@ -55,6 +55,30 @@ body {
 .top-bar__left {
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  background-color: rgb(171, 217, 255);
+  background-size: auto;
+  text-transform: uppercase;
+  width: 100px;
+  font-weight: 500;
+  height: 25px;
+  font-size: 12px;
+  text-align: center;
+  text-size-adjust: 100%;
+  cursor: pointer;
+  line-height: 12px;
+  padding: 0% 10px;
+  border-bottom: #000000;
+  box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
+}
+.top-bar__left:hover{
+  background-color: var(--color-white);
+}
+
+/* LINK: AREA GIOCHI */
+.top-bar__left-link{
+  text-decoration: none;
+  color: black;
 }
 
 /* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
