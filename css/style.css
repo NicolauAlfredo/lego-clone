@@ -30,6 +30,7 @@
 body {
   width: 100%;
   background: var(color-white);
+  font-family: "Nunito", sans-serif;
 }
 
 /* TOP BAR - Barra Superiore Bloco principale: top-bar */
@@ -469,9 +470,9 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: justify; 
+  text-align: justify;
   width: 1604px;
-  margin: 40px auto 0; 
+  margin: 40px auto 0;
 }
 
 /* FOOTER */
