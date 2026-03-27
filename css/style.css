@@ -1,5 +1,26 @@
-/* Reset Base */
+/* Variabili Globali (Design System) */
+:root {
+  --color-yellow: #ffd502;
+  --color-black: #000000;
+  --color-gray-light: #f2f2f2;
+  --color-gray-dark: #2c2c2c;
+  --color-dark: #222222;
+  --color-white: #ffffff;
+  --color-red: #d0021b;
+  --color-blue-primary: #005ad2;
+  --color-blue-dark: #006db7;
+  --color-orange: #f47d20;
+  --color-orange-light: #fac400;
+  --color-black-translucent: #00000099;
+  --color-background-dark: #141414;
+  --color-background-gray: #242424;
+  --color-gray-alt: #f6f6f6;
+  --color-purple-dark: #201d48;
+  --color-purple-darker: #18152d;
+  --color-orange-dark: #e96f14;
+}
 
+/* Reset Base */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +29,460 @@
 
 body {
   width: 100%;
-  background: #fff;
-  color: #2c2c2c;
+  background: var(color-white);
+}
+
+/* TOP BAR - Barra Superiore Bloco principale: top-bar */
+.top-bar {
+  background: var(--color-white);
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Contenitore interno principale */
+.top-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 200px 0 190px;
+}
+
+/* SEZIONE SINISTRA: AREA GIOCHI */
+.top-bar__left {
+  display: flex;
+  align-items: center;
+}
+
+/* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
+.top-bar__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenitore centrale per allineamento dei bottoni e testo */
+.top-bar__center-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Bottone freccie */
+.top-bar__button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: rgb(20, 20, 20);
+  padding: 50px;
+  z-index: 1;
+}
+
+.top-bar__button img {
+  height: 28px;
+  width: 28px;
+}
+
+/* Testo centrale */
+
+.top-bar__center-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS */
+.top-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+/* Bottone account */
+.top-bar__account-btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.top-bar__account-btn img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+/* Linea verticale separatrice */
+.top-bar__vertical-line {
+  margin: 0 1.25rem;
+  width: 0.0625rem;
+  height: 1.25rem;
+  background: var(--color-background-gray);
+}
+
+/* Link LEGO Insiders */
+.top-bar__insider-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.top-bar__insider-link img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  margin: 3px 4px 0 0;
+}
+
+/* HEADER */
+/* Blocco principale header */
+.header {
+  background-color: var(--color-yellow);
+}
+
+/* Contenitore principale con larghezza massima e centratura */
+.header__container {
+  height: 4.6875rem;
+  margin: 0 auto;
+  padding: 0 1.875rem;
+  width: 100%;
+  max-width: 100rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SEZIONE SINISTRA (logo + menu) */
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo principale */
+.header__logo img {
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* Lista del menu */
+.header__menu {
+  height: 3.4375rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Elemento singolo del menu */
+.header__menu-item {
+  list-style: none;
+}
+
+/* Bottoni del menu (Acquista, Scopri, Aiuto) */
+.header__menu-btn {
+  border: 0;
+  background-color: var(--color-yellow);
+  font-family: "Cera Pro, sans-serif";
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+/* Link speciale "Tutti i set" */
+.header__menu-link {
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--color-red);
+  background: var(--color-white);
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* SEZIONE CENTRALE (search) */
+
+/* Label nascosta ma accessibile per screen reader */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
+
+/* Contenitore della barra di ricerca */
+.header__search-box {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 999px;
+  padding: 12px;
+  gap: 8px;
+
+  /* ATTENZIONE: questo valore è fisso e non responsivo */
+  margin-left: 500px;
+
+  width: 330px;
+  height: 40px;
+  border: 1px solid var(--color-black);
+}
+
+/* Icona della ricerca */
+.header__search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Campo input della ricerca */
+.header__search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* SEZIONE DESTRA (azioni utente) */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Bottoni con icone (wishlist, carrello) */
+.header__icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Icone interne ai bottoni */
+.header__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Contatore prodotti nel carrello */
+.header__cart-count {
+  font-size: 14px;
+}
+
+/* ================= HERO SECTION ================= */
+
+/* Blocco principale della sezione */
+.hero {
+  background-color: var(--color-yellow);
+  width: 1604px;
+  margin: 0 auto;
+  height: 499px;
+
+  display: flex;
+  align-items: center; /* centra verticalmente il contenuto */
+
+  /* Immagine di sfondo */
+  background-image: url("/assets/images/backgrounds/static-yellow-hero-large.jpg");
+  background-size: cover; /* copre tutta la sezione */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenitore interno (utile per future estensioni) */
+.hero__container {
+  width: 100%;
+}
+
+/* ===== CONTENUTO SINISTRO ===== */
+
+/* Blocco testo */
+.hero__content {
+  margin-left: 30px;
+  max-width: 520px; /* limita la larghezza per migliorare la leggibilità */
+}
+
+/* Titolo principale */
+.hero__title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+/* Testo descrittivo */
+.hero__text p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+/* BOTTONI */
+
+/* Contenitore bottoni */
+.hero__actions {
+  display: flex;
+  gap: 16px; /* spazio tra i bottoni */
+}
+
+/* Bottone base (riutilizzabile) */
+.hero__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 12px 20px;
+  border-radius: 30px;
+
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Bottone principale (nero) */
+.hero__btn--primary {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+/* Bottone secondario (bordato) */
+.hero__btn--secondary {
+  border: 2px solid var(--color-black);
+  color: var(--color-black);
+}
+
+/* ICONE */
+
+/* Icone all'interno dei bottoni */
+.hero__icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Sezione Featured (Section 2) */
+.section-featured {
+  background: var(--color-dark);
+  width: 1604px;
+  margin: 0 auto;
+  height: 379px;
+  position: relative; /* necessario per posizionamento elementi interni */
+}
+
+/* Footer decorativo */
+.section-featured__footer {
+  width: 1604px;
+  margin: 0 auto;
+}
+
+.section-featured__footer img {
+  width: 1608px;
+  display: block;
+}
+
+/* Sezione 3: Trova il set perfetto */
+.perfet-set {
+  display: flex;
+  justify-content: center;
+  background: var(--color-yellow);
+  width: 1604px;
+  margin: 0 auto;
+  height: 400px;
+  position: relative;
+  margin-top: 40px;
+}
+
+/* Sezione 4: Scopri cosa stanno costruendo tutti */
+.discover-builds {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-gray-alt);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 5: In evidenza questa settimana */
+.weekly-featured {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-orange-dark);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 6: Scopri di più */
+.explore-more {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-red);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 7: Iscriviti e guadagna punti */
+.join-and-earn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-blue-primary);
+  width: 1604px;
+  margin: 40px auto 0;
+  height: 400px;
+}
+
+/* Sezione 8: Welcome */
+.welcome-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: justify; 
+  width: 1604px;
+  margin: 40px auto 0; 
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-purple-darker);
+  width: 100%;
+  margin: 40px auto 0;
+  height: 600px;
 }

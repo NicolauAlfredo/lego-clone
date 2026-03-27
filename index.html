@@ -3,8 +3,302 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | LEGO® Shop ufficiale IT</title>
+    <title>Home | LEGO&reg; Shop ufficiale IT</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- TOP BAR - Barra Superiore Bloco principale: top-bar -->
+    <div class="top-bar">
+      <!-- Contenitore interno principale -->
+      <div class="top-bar__container">
+        <!-- SEZIONE SINISTRA: AREA GIOCHI -->
+        <div class="top-bar__left">
+          <!-- Link area giochi -->
+          <a href="#" class="top-bar__left-link">AREA GIOCHI</a>
+        </div>
+
+        <!-- SEZIONE CENTRALE: MESSAGGIO E BOTTONI  -->
+        <div class="top-bar__center">
+          <!-- Contenitore centrale per allineamento dei bottoni e testo -->
+          <div class="top-bar__center-container">
+            <!-- Bottone freccia sinistra -->
+            <button class="top-bar__button top-bar__button--arrow-left">
+              <img
+                src="assets/icons/chevron-left.svg"
+                alt="Button Arrow left"
+              />
+            </button>
+
+            <!-- Testo centrale -->
+            <div class="top-bar__center-text">
+              <p>
+                <span
+                  >Doppi punti fedeltà su set selezionati, dal 17/3 al
+                  26/3*</span
+                >
+                <a href="#" class="top-bar__center-link">Compra ora</a>
+              </p>
+            </div>
+
+            <!-- Bottone freccia destra -->
+            <button class="top-bar__button top-bar__button--arrow-right">
+              <img
+                src="assets/icons/chevron-right.svg"
+                alt="Button Arrow right"
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS -->
+        <div class="top-bar__right">
+          <!-- Bottone account -->
+          <button class="top-bar__account-btn">
+            <img
+              src="assets/icons/account-profile-color.svg"
+              alt="Account Profile"
+            />
+            <span>Account</span>
+          </button>
+
+          <!-- Linea verticale separatrice -->
+          <span class="top-bar__vertical-line"></span>
+
+          <!-- Link LEGO Insiders -->
+          <a href="#" class="top-bar__insider-link">
+            <img
+              src="assets/icons/brick-one-by-one-side-blue.svg"
+              alt="Iscriviti al programma LEGO"
+            />
+            <span>Iscriviti al programma LEGO&reg; Insiders</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- FINE DEL TOP BAR -->
+
+    <!-- HEADER PRINCIPALE (NAVBAR) Blocco: header -->
+    <header class="header">
+      <!-- Contenitore principale -->
+      <div class="header__container">
+        <!-- SEZIONE SINISTRA: LOGO + NAV -->
+        <div class="header__left">
+          <!-- Logo -->
+          <a href="#" class="header__logo">
+            <img src="assets/images/logo/logo-header.svg" alt="LEGO logo" />
+          </a>
+          <!-- Navigazione principale -->
+          <nav class="header__nav">
+            <ul class="header__menu">
+              <!-- Voce con bottone -->
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Acquista</button>
+              </li>
+
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Scopri</button>
+              </li>
+
+              <li class="header__menu-item">
+                <button class="header__menu-btn">Aiuto</button>
+              </li>
+
+              <!-- Link semplice -->
+              <li class="header__menu-item">
+                <a href="#" class="header__menu-link">Tutti i set</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- SEZIONE CENTRALE: SEARCH -->
+        <div class="header__center">
+          <!-- Form di ricerca -->
+          <form
+            class="header__search-form"
+            action="#"
+            method="post"
+            role="search"
+          >
+            <!-- Label accessibile -->
+            <label for="search" class="sr-only">Search</label>
+
+            <!-- Box ricerca -->
+            <div class="header__search-box">
+              <img
+                src="assets/icons/magnifying-glass-solid.svg"
+                alt="Search icon"
+                class="header__search-icon"
+              />
+
+              <!-- Input -->
+              <input
+                type="search"
+                id="search"
+                name="search"
+                placeholder="Search"
+                class="header__search-input"
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- SEZIONE DESTRA: AZIONI UTENTE -->
+        <div class="header__right">
+          <!-- Bottone preferiti -->
+          <button type="button" class="header__icon-btn">
+            <img
+              src="assets/icons/heart.svg"
+              alt="Favorites"
+              class="header__icon"
+            />
+          </button>
+
+          <!-- Bottone carrello -->
+          <button type="button" class="header__icon-btn">
+            <img
+              src="assets/icons/shopping-bag.svg"
+              alt="Cart"
+              class="header__icon"
+            />
+
+            <!-- Contatore prodotti -->
+            <span class="header__cart-count">(0)</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- FINE DEL HEADER -->
+
+    <main>
+      <!-- SECTION 1 - HERO PROMO Blocco: hero -->
+      <section class="hero">
+        <!-- Contenitore principale della sezione -->
+        <div class="hero__container">
+          <!-- CONTENUTO TESTUALE (SINISTRA) -->
+          <div class="hero__content">
+            <!-- Titolo principale -->
+            <div class="hero__header">
+              <h2 class="hero__title">
+                Acquista subito e ottieni questo omaggio per Pasqua con il tuo
+                ordine
+              </h2>
+            </div>
+
+            <!-- Testo descrittivo -->
+            <div class="hero__text">
+              <p>
+                Ottieni il set Decorazioni pasquali LEGO® come omaggio con gli
+                acquisti a partire da 75 €. Dal 17/3 al 26/3 fino a esaurimento
+                scorte.*
+              </p>
+            </div>
+
+            <!-- BOTTONI -->
+            <div class="hero__actions">
+              <!-- Bottone principale -->
+              <a href="#" class="hero__btn hero__btn--primary">
+                <span>Compra ora</span>
+
+                <!-- Icona freccia (sostituita con img) -->
+                <img
+                  src="assets/icons/chevron-right.svg"
+                  alt="Arrow right"
+                  class="hero__icon"
+                />
+              </a>
+
+              <!-- Bottone secondario -->
+              <a href="#" class="hero__btn hero__btn--secondary">
+                <span>Visualizza l'omaggio</span>
+
+                <!-- Icona freccia -->
+                <img
+                  src="assets/icons/chevron-right.svg"
+                  alt="Arrow right"
+                  class="hero__icon"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FINE DELL SECTION 1 -->
+
+      <!-- Sezione 2: Carousel dei set -->
+      <section class="section-featured">
+        <!-- Footer della sezione -->
+      </section>
+      <!-- FINE DELL SECTION 2 -->
+
+      <!-- Footer decorativo -->
+      <div class="section-featured__footer">
+        <img
+          src="assets/icons/downSlope3-desktop-v1__.svg"
+          alt="Decorazione ondulata"
+        />
+      </div>
+      <!-- FINE DELL FOOTER DECORATIVO -->
+
+      <!-- Sezione 3: Trova il set perfetto -->
+      <section class="perfet-set">
+        <h2>Trova il set perfetto</h2>
+      </section>
+      <!-- FINE DELLA SECTION 3 -->
+
+      <!-- Sezione 4: Trova il set perfetto -->
+      <section class="discover-builds">
+        <h3>Scopri cosa stanno costruendo tutti</h3>
+        <p>
+          Vivi una nuova avventura di costruzione con questi set LEGO&reg; per
+          trovare l'ispirazione.
+        </p>
+      </section>
+      <!-- FINE DELLA SECTION 4 -->
+
+      <!-- Sezione 5: In evidenza questa settimana -->
+      <section class="weekly-featured">
+        <div class="weekly-featured__header">
+          <h2>In evidenza questa settimana</h2>
+          <p>
+            Uno sguardo più da vicino ai momenti LEGO&reg; che vale la pena
+            scoprire: dal divertimento stagionale alle occasioni speciali.
+          </p>
+        </div>
+        <div class="weekly-featured__footer">
+          <!-- Immagini di fondo sarà qui -->
+        </div>
+      </section>
+      <!-- FINE DELLA SECTION 5 -->
+
+      <!-- Sezione 6: Scopri di più -->
+      <section class="explore-more"></section>
+      <!-- FINE DELLA SECTION 6 -->
+
+      <!-- Sezione 7: Iscriviti e guadagna punti -->
+      <section class="join-and-earn"></section>
+      <!-- FINE DELLA SECTION 7 -->
+
+      <!-- Sezione 8: Benvenuto-->
+      <section class="welcome-home">
+        <p>
+          Ti diamo il benvenuto nel LEGO® Shop ufficiale, dove troverai
+          giocattoli da costruzione LEGO, regali, splendidi set da esposizione e
+          molto altro ancora per bambine, bambini, ragazzi e adulti. Trova il
+          regalo perfetto per bambini, ragazzi e adulti, per festeggiare i
+          compleanni o altre occasioni come San Valentino, la Festa della mamma
+          e la Festa del papà. Con noi è facile acquistare giocattoli che
+          garantiscono ore di gioco all'insegna del divertimento e della
+          fantasia. Puoi anche trovare set LEGO per gli adulti, perfetti per
+          ogni tipo di interessi come auto, fiori, videogiochi e molto altro
+          ancora!
+        </p>
+      </section>
+      <!-- FINE DELLA SECTION 8 -->
+    </main>
+  </body>
+
+  <!-- FOOTER  -->
+  <footer class="footer"></footer>
+  <!-- FINE DEL FOOTER -->
 </html>
