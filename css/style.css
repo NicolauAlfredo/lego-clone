@@ -246,7 +246,10 @@ body {
   padding: 10px;
   text-decoration: none;
 }
-
+.header__menu-link:hover{
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
 /* SEZIONE CENTRALE (search) */
 
 /* Label nascosta ma accessibile per screen reader */
@@ -385,14 +388,23 @@ body {
 
 /* Bottone principale (nero) */
 .hero__btn--primary {
-  background-color: var(--color-black);
+  background-color: rgba(32, 32, 32, 0.6);
   color: var(--color-white);
+}
+
+.hero__btn:hover{
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.67);
 }
 
 /* Bottone secondario (bordato) */
 .hero__btn--secondary {
-  border: 2px solid var(--color-black);
-  color: var(--color-black);
+  border: 2px solid rgba(32, 32, 32, 0.6);
+  color: rgb(20, 20, 20);
+}
+
+.hero__btn--secondary:hover{
+  color: var(--color-white);
 }
 
 /* ICONE */
