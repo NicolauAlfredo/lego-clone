@@ -383,14 +383,12 @@ body {
 /* Sezione Featured (Section 2) */
 .section-featured {
   background: var(--color-dark);
-  width: 1604px;
+   width: 1604px;
   margin: 0 auto;
-  height: auto;
+  height: 400px;
   padding: 20px;
   position: relative; /* necessario per posizionamento elementi interni */
-  overflow-x: auto;
-  overflow-y: hidden;
- 
+  
 }
 
 /* Footer decorativo */
@@ -493,25 +491,41 @@ body {
 }
 
 #novità{
-    
+    padding-left: 10px;
     display:flex;
-    gap: 10px;
-    padding-right: 20px;
-    flex-wrap: nowrap;
+    
+    }
+
+    
+    
+    
+
+
+.barra-navigazione{
+    display: flex;
+    gap: 20px;
+    padding: 10px; 
+    padding-bottom: 20px; 
+    padding-left: 20px;
+    font-size: 0.7rem;
     
 }
 .card{
     overflow: hidden;
     position: relative;
-    width: 202px;
+    height: 260px;
+    
+    
     
    
 }
 .card img{
     
-    width: 100%;
-    height: auto%;
+    width: 185px;
+    height: 100%;
     display: block; 
+    object-fit: cover;
+    margin-right: 10px;
 
 }
 .card h2 {
@@ -522,7 +536,7 @@ body {
     transform: translateX(-50%);
     font-family: var(--font-family);
     font-weight: 900;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 1.3;
     text-align: center;
     color: #dbd8d4;
@@ -531,12 +545,12 @@ body {
 }
 .card:hover{
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-  transform: translateY(-2px);
-  ;
+    transform: translateY(-2px);
+  
 
 }
 nav a{
     text-decoration: none;
-    color: black;
+     color: #dbd8d4;
     font-family: 'Nunito', sans-serif;
 }
