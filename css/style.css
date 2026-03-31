@@ -473,17 +473,16 @@ body {
   margin-bottom: 15px;
 }
 
-.explore-more__card-tittle {
-  font-size: 18px;
-  font-weight: 600;
+.explore-more__card-title {
+  font-size: 20px; 
   margin-bottom: 10px;
 }
 
 .explore-more__card p {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-background-dark);
   margin-bottom: 20px;
-  max-width: 90%;
+  max-width: 90%; 
 }
 
 .explore-more__card a {
