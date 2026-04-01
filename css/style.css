@@ -456,16 +456,170 @@ body {
 /* Sezione 7: Iscriviti e guadagna punti */
 .join-and-earn {
   display: flex;
+  
+  margin-left: 150px;
+  
+  
+  align-items: flex-start;
+  font-family:  var(--font-family);
+  
+  
+}
+.join-and-earn_puntifedelta-premiriservatiaisoci-omaggiatempolimitato {
+  display:flex;
+  gap: 60px;
+ }
+
+.join-and-earn_insiders {
+ display:flex;
+ flex-direction: column;
+ 
+ margin: 0;
+  
+}
+.join-and-earn_insiders img {
+  width: 200px;
+  height: auto;
+  margin-right: 10px;
+}
+.join-and-earn_insiders h2 {
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: left;
+  color: #141414;
+  margin: 0;
+  justify-content: left;
+  
+}
+.join-and-earn_insiders p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-align: left;
+  color: #141414;
+  margin-top: 10px;
+  font-weight: 700;
+}
+.join-and-earn_puntifedelta {
+  display:flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  background: var(--color-blue-primary);
-  width: 1604px;
-  margin: 40px auto 0;
-  height: 400px;
+  border: 1px solid #e0e0e0; 
+  overflow:hidden;
+  width: 300px;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 50px;
+  rotate: -3deg;
+  margin-left: 90px;
+
+  
+ }
+
+.join-and-earn_puntifedelta img {
+ width: 100%;
+ margin-bottom: 20px;
+ 
+
+ 
+ 
+}
+.join-and-earn_puntifedelta h3 {
+  color: #3d3737;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  
+}
+.join-and-earn_puntifedelta p {
+ font-weight: 300;      
+  color: #888686;        
+  font-size: 0.9rem;  
+  padding-top: 3px;
+  padding-bottom: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
+  width:100%;
+  text-align: center; 
 }
 
+.join-and-earn_premiriservatiaisoci {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0; 
+  overflow:hidden;
+  width: 300px;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 50px;
+  rotate: 3deg;
+ }
+.join-and-earn_premiriservatiaisoci img {
+ width: 100%;
+ margin-bottom: 20px;
+ 
+ 
+}
+.join-and-earn_premiriservatiaisoci h3 {
+  color: #3d3737;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  
+}
+.join-and-earn_premiriservatiaisoci p {
+ font-weight: 300;      
+  color: #888686;        
+  font-size: 0.9rem;  
+  padding-top: 3px;
+  padding-bottom: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
+  width:100%;
+  text-align: center; 
+}
+
+.join-and-earn_omaggiatempolimitato {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #e0e0e0; 
+  overflow:hidden;
+  width: 300px;
+  border-radius: 12px 12px 12px 12px;
+  margin-top: 50px;
+  rotate: -3deg;
+  }
+
+.join-and-earn_omaggiatempolimitato img {
+ width: 100%;
+ margin-bottom: 20px;
+ 
+
+ 
+ 
+}
+.join-and-earn_omaggiatempolimitato h3 {
+  color: #3d3737;
+  font-size: 1.1rem;
+  padding-top: 15px;
+  
+}
+.join-and-earn_omaggiatempolimitato p {
+ font-weight: 300;      
+  color: #888686;        
+  font-size: 0.9rem;  
+  padding-top: 3px;
+  padding-bottom: 30px;
+  padding-right: 12px;
+  padding-left: 12px;
+  width:100%;
+  text-align: center; 
+}
+
+.join-and-earn_divbloccovuoto {
+  width: 100%;
+  height: 100px;
+}
 /* Sezione 8: Welcome */
 .welcome-home {
   display: flex;
@@ -474,7 +628,8 @@ body {
   align-items: center;
   text-align: justify; 
   width: 1604px;
-  margin: 40px auto 0; 
+  margin: auto;
+  margin-top: 50px;
 }
 
 /* FOOTER */
@@ -493,8 +648,7 @@ body {
 #novità{
     padding-left: 10px;
     display:flex;
-    
-    }
+     }
 
     
     
