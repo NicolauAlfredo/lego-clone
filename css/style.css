@@ -473,8 +473,7 @@ body {
 .join-and-earn_insiders {
  display:flex;
  flex-direction: column;
- 
- margin: 0;
+ margin: 50px;
   
 }
 .join-and-earn_insiders img {
