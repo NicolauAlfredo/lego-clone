@@ -443,7 +443,7 @@ body {
 .perfet-set {
   width: 1604px;
   margin: 0 auto;
-  height: 400px;
+  height: 730px;
   position: relative;
   padding: 32px;
 }
@@ -476,6 +476,12 @@ body {
   text-decoration: none;
   font-weight: bold;
 }
+/* Sezione 3: Test dell'active tab, da revisionare assieme
+.perfect-set-nav-link:active{
+  border-bottom: 3px solid var(--color-text-btn);
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+} */
 .perfect-set-nav-link:hover{
   border-bottom: 3px solid var(--color-text-btn);
   margin-bottom: 5px;
@@ -501,24 +507,48 @@ body {
   color: white;
   border-style: none;
 }
-
-/* Sezione 3: cards */
 .carousel-perfect-set{
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
   gap: 20px;
 }
-.perfect-set-article{
-  padding: 5px;
-  gap: 20px;
-  border: 1px solid var(--color-background-gray);
-}
 
+/* Sezione 3: cards */
+
+.perfect-set-article{
+  padding: 10px;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  max-width: 292px;
+}
+.card-perfect-set-image{
+  width: 250px;
+  height: 250px;
+}
+.image-article{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .product-perfect-set-attributes{
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  gap: 10px;
+}
+.perfect-set-article-name{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.text-link-product{
+  text-decoration: none;
+  color: var(--color-black);
+}
+.text-link-product:hover{
+  text-decoration: underline;
 }
 .product-perfect-set-attributes span{
   display: flex;
@@ -530,6 +560,78 @@ body {
 .product-perfect-set-attributes-icons{
   height: 18px;
   width: 18px;
+}
+.perfect-set-price{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Sezione 3: Carrello bottone */
+.perfect-set-carrello-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+.perfect-set-carrello-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  align-items: center;
+  font-size: 14px;
+  border-radius: 25px;
+  background-color: var(--color-orange);
+  height: 44px;
+  width: 213px;
+  padding: 0px 16px;
+  margin-top: 20px;
+}
+.aggiungi-al-carrello{
+  row-gap: 20px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  gap: 18px;
+}
+.carrello-bag-icon{
+  height: 18px;
+  width: 18px;
+}
+.carrello-btn{
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: 200;
+}
+.carrello-btn:hover{
+  text-decoration: underline;
+}
+
+/*Sezione 3: Badge */
+.perfect-set-badge{
+  display: flex;
+  width: 100%;
+  height: 24px;
+  justify-content: right;
+}
+.perfect-set-badge span{
+  display: flex;
+  background-color: yellow;
+  padding: 10px;
+  align-items: center;
+}
+.favorite-button{
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  align-self: flex-end;
+  border: 2px;
+  padding: 10px;
+}
+
+.favorite-button:hover{
+  filter: brightness(90%);
 }
 
 /* Sezione 4: Scopri cosa stanno costruendo tutti */
