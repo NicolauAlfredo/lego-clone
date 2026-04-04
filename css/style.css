@@ -390,6 +390,91 @@ body {
   position: relative; /* necessario per posizionamento elementi interni */
   
 }
+#novità{
+    padding-left: 10px;
+    display:flex;
+     }
+
+    
+    
+    
+
+
+.section-featured__navigation{
+    display: flex;
+    gap: 20px;
+    padding: 10px; 
+    padding-bottom: 20px; 
+    padding-left: 20px;
+    font-size: 0.7rem;
+    
+}
+.section-featured__card {
+    overflow: hidden;
+    position: relative;
+    height: 260px;
+    
+    
+    
+   
+}
+.section-featured__card img{
+    
+    width: 185px;
+    height: 100%;
+    display: block; 
+    object-fit: cover;
+    margin-right: 10px;
+
+}
+.section-featured__card h2 {
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 1.2rem;
+    line-height: 1.3;
+    text-align: center;
+    color: #dbd8d4;
+    margin: 0;
+    width: 90%;
+    transition: opacity 0.3s ease;
+}
+
+#novità:hover .section-featured__card img {
+  filter: brightness(0.5);
+  transition: filter 0.3s ease;
+}
+
+
+#novità .section-featured__card:hover img {
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+nav a{
+    text-decoration: none;
+     color: #dbd8d4;
+    font-family: 'Nunito', sans-serif;
+}
+.section-featured__navigation nav a {
+  position: relative;
+  padding-bottom: 6px;
+}
+
+
+.section-featured__navigation nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+}
 
 /* Footer decorativo */
 .section-featured__footer {
@@ -664,82 +749,3 @@ body {
   height: 600px;
 }
 
-#novità{
-    padding-left: 10px;
-    display:flex;
-     }
-
-    
-    
-    
-
-
-.barra-navigazione{
-    display: flex;
-    gap: 20px;
-    padding: 10px; 
-    padding-bottom: 20px; 
-    padding-left: 20px;
-    font-size: 0.7rem;
-    
-}
-.card{
-    overflow: hidden;
-    position: relative;
-    height: 260px;
-    
-    
-    
-   
-}
-.card img{
-    
-    width: 185px;
-    height: 100%;
-    display: block; 
-    object-fit: cover;
-    margin-right: 10px;
-
-}
-.card h2 {
-    
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-family);
-    font-weight: 900;
-    font-size: 1.2rem;
-    line-height: 1.3;
-    text-align: center;
-    color: #dbd8d4;
-    margin: 0;
-    width: 90%;
-}
-.card:hover{
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
-    transform: translateY(-2px);
-  
-
-}
-nav a{
-    text-decoration: none;
-     color: #dbd8d4;
-    font-family: 'Nunito', sans-serif;
-}
-.barra-navigazione nav a {
-  position: relative;
-  padding-bottom: 6px;
-}
-
-
-.barra-navigazione nav a:hover::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--color-white);
-  border-radius: 2px;
-}
