@@ -20,6 +20,15 @@
   --color-orange-dark: #e96f14;
 }
 
+/* Font */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Reset Base */
 * {
   margin: 0;
@@ -30,7 +39,7 @@
 body {
   width: 100%;
   background: var(color-white);
-  font-family: "Nunito", sans-serif;
+  font-family: "Cera Pro", sans-serif;
 }
 
 /* TOP BAR - Barra Superiore Bloco principale: top-bar */
@@ -474,7 +483,7 @@ body {
 }
 
 .explore-more__card-title {
-  font-size: 20px; 
+  font-size: 20px;
   margin-bottom: 10px;
 }
 
@@ -482,7 +491,7 @@ body {
   font-size: 16px;
   color: var(--color-background-dark);
   margin-bottom: 20px;
-  max-width: 90%; 
+  max-width: 90%;
 }
 
 .explore-more__card a {
@@ -524,17 +533,4 @@ body {
   text-align: justify;
   width: 1604px;
   margin: 40px auto 0;
-}
-
-/* FOOTER */
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  background: var(--color-purple-darker);
-  width: 100%;
-  margin: 40px auto 0;
-  height: 600px;
 }
