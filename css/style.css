@@ -439,8 +439,8 @@ body {
   display: block;
 }
 
-/* Sezione 3: Trova il set perfetto */
-.perfet-set {
+/* Sezione 3: Trova il set perfectto */
+.perfect-set {
   width: 1604px;
   margin: 0 auto;
   height: 730px;
@@ -453,7 +453,7 @@ body {
 .title-perfect-set{
   text-align: center;
 }
-.perfet-set-header{
+.perfect-set-header{
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -461,7 +461,7 @@ body {
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.perfet-set-btn{
+.perfect-set-btn{
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -488,13 +488,13 @@ body {
   padding-bottom: 8px;
 }
 
-.perfet-set-container-chevron{
+.perfect-set-container-chevron{
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.perfet-set-chevron{
+.perfect-set-chevron{
   border-radius: 50%;
   border-style: solid;
   width: 40px;
@@ -502,7 +502,7 @@ body {
   border-color: var(--color-text-btn);
   color: var(--color-text-btn);
 }
-.perfet-set-chevron:hover{
+.perfect-set-chevron:hover{
   background-color: var(--color-text-btn);
   color: white;
   border-style: none;
@@ -586,6 +586,9 @@ body {
   padding: 0px 16px;
   margin-top: 20px;
 }
+.perfect-set-carrello-btn:hover{
+  background-color: var(--color-orange-dark);
+}
 .aggiungi-al-carrello{
   row-gap: 20px;
   display: flex;
@@ -594,6 +597,11 @@ body {
   justify-items: center;
   cursor: pointer;
   gap: 18px;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 15px;
 }
 .carrello-bag-icon{
   height: 18px;
