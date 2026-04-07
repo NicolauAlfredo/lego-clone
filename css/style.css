@@ -21,6 +21,15 @@
   --color-text-btn: rgba(0, 0, 0, 0.6);
 }
 
+/* Font */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Reset Base */
 * {
   margin: 0;
@@ -31,7 +40,7 @@
 body {
   width: 100%;
   background: var(color-white);
-  font-family: "Nunito", sans-serif;
+  font-family: "Cera Pro", sans-serif;
 }
 
 /* TOP BAR - Barra Superiore Bloco principale: top-bar */
@@ -673,14 +682,65 @@ body {
 /* Sezione 6: Scopri di più */
 .explore-more {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  background: var(--color-red);
   width: 1604px;
   margin: 40px auto 0;
-  height: 400px;
+  padding: 32px;
+}
+
+.explore-more__title h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--color-background-dark);
+}
+
+.explore-more__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.explore-more__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.explore-more__card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.explore-more__card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.explore-more__card p {
+  font-size: 16px;
+  color: var(--color-background-dark);
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.explore-more__card a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--color-black);
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.explore-more__card a:hover {
+  background-color: #696868;
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Sezione 7: Iscriviti e guadagna punti */
@@ -705,17 +765,4 @@ body {
   text-align: justify;
   width: 1604px;
   margin: 40px auto 0;
-}
-
-/* FOOTER */
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  background: var(--color-purple-darker);
-  width: 100%;
-  margin: 40px auto 0;
-  height: 600px;
 }
