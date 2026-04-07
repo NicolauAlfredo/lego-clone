@@ -686,6 +686,59 @@ nav a {
     transform: translateX(0);
   }
 }
+.join-and-earn__buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #005bd2d7;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 2px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  cursor: pointer;
+  text-decoration: none;
+}
+.btn-primary:hover { 
+  background: #005a9e; 
+}
+.btn-primary .arrow,
+.btn-secondary .arrow {
+  font-size: 30px;
+}
+
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  color: #005bd2d7;
+  border: 2px solid #005bd2d7;
+  border-radius: 50px;
+  padding: 2px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: var(--font-family);
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  
+}
+.btn-secondary:hover { 
+  background: #005ad2; 
+  
+}
 .join-and-earn__divbloccovuoto {
   width: 100%;
   height: 100px;
