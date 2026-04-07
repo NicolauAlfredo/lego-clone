@@ -19,6 +19,16 @@
   --color-purple-dark: #201d48;
   --color-purple-darker: #18152d;
   --color-orange-dark: #e96f14;
+  --color-text-btn: rgba(0, 0, 0, 0.6);
+}
+
+/* Font */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* Reset Base */
@@ -31,6 +41,7 @@
 body {
   width: 100%;
   background: var(color-white);
+  font-family: "Cera Pro", sans-serif;
 }
 
 /* TOP BAR - Barra Superiore Bloco principale: top-bar */
@@ -56,6 +67,30 @@ body {
 .top-bar__left {
   display: flex;
   align-items: center;
+  border-radius: 5px;
+  background-color: rgb(171, 217, 255);
+  background-size: auto;
+  text-transform: uppercase;
+  width: 100px;
+  font-weight: 500;
+  height: 25px;
+  font-size: 11px;
+  text-align: center;
+  text-size-adjust: 100%;
+  cursor: pointer;
+  line-height: 12px;
+  padding: 0% 10px;
+  border-bottom: #000000;
+  box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
+}
+.top-bar__left:hover{
+  background-color: var(--color-white);
+}
+
+/* LINK: AREA GIOCHI */
+.top-bar__left-link{
+  text-decoration: none;
+  color: black;
 }
 
 /* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
@@ -222,8 +257,13 @@ body {
   background: var(--color-white);
   padding: 10px;
   text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
 }
-
+.header__menu-link:hover{
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
 /* SEZIONE CENTRALE (search) */
 
 /* Label nascosta ma accessibile per screen reader */
@@ -362,14 +402,23 @@ body {
 
 /* Bottone principale (nero) */
 .hero__btn--primary {
-  background-color: var(--color-black);
+  background-color: rgba(32, 32, 32, 0.6);
   color: var(--color-white);
+}
+
+.hero__btn:hover{
+  text-decoration: underline;
+  background-color: rgba(0, 0, 0, 0.67);
 }
 
 /* Bottone secondario (bordato) */
 .hero__btn--secondary {
-  border: 2px solid var(--color-black);
-  color: var(--color-black);
+  border: 2px solid rgba(32, 32, 32, 0.6);
+  color: rgb(20, 20, 20);
+}
+
+.hero__btn--secondary:hover{
+  color: var(--color-white);
 }
 
 /* ICONE */
@@ -472,16 +521,209 @@ nav a {
   display: block;
 }
 
-/* Sezione 3: Trova il set perfetto */
-.perfet-set {
-  display: flex;
-  justify-content: center;
-  background: var(--color-yellow);
+/* Sezione 3: Trova il set perfectto */
+.perfect-set {
   width: 1604px;
   margin: 0 auto;
-  height: 400px;
+  height: 730px;
   position: relative;
-  margin-top: 40px;
+  padding: 32px;
+}
+
+/* Sezione 3: Bottoni e titolo */
+
+.title-perfect-set{
+  text-align: center;
+}
+.perfect-set-header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.perfect-set-nav-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  list-style: none;
+}
+.perfect-set-nav-link{
+  color: var(--color-text-btn);
+  font-size: 20px;
+  cursor: pointer;
+  border-bottom: transparent;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* Sezione 3: Test dell'active tab, da revisionare assieme
+.perfect-set-nav-link:active{
+  border-bottom: 3px solid var(--color-text-btn);
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+} */
+.perfect-set-nav-link:hover{
+  border-bottom: 3px solid var(--color-text-btn);
+  margin-bottom: 5px;
+  padding-bottom: 8px;
+}
+
+.perfect-set-container-chevron{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.perfect-set-chevron{
+  border-radius: 50%;
+  border-style: solid;
+  width: 40px;
+  height: 40px;
+  border-color: var(--color-text-btn);
+  color: var(--color-text-btn);
+  background-color: transparent;
+}
+.perfect-set-chevron:hover{
+  background-color: var(--color-text-btn);
+  color: white;
+  border-style: none;
+}
+
+.perfect-set-carousel{
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  gap: 20px;
+}
+
+/* Sezione 3: cards */
+
+.perfect-set-article{
+  padding: 10px;
+  gap: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  max-width: 500px;
+  max-width: 292px;
+}
+.perfect-set-card-image{
+  width: 250px;
+  height: 250px;
+}
+.perfect-set-card-image-product{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.perfect-set-attributes{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.perfect-set-product-name{
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.perfect-set-product-name-text{
+  text-decoration: none;
+  color: var(--color-black);
+}
+.perfect-set-product-name-text:hover{
+  text-decoration: underline;
+}
+.perfect-set-attributes span{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  font-weight: 500;
+  font-size: 14px;
+}
+.perfect-set-attributes-icons{
+  height: 18px;
+  width: 18px;
+}
+.perfect-set-price{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Sezione 3: Carrello bottone */
+.perfect-set-carrello-container{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: baseline;
+  justify-content: space-evenly;
+}
+.perfect-set-carrello-btn{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  align-items: center;
+  font-size: 14px;
+  border-radius: 25px;
+  background-color: var(--color-orange);
+  height: 44px;
+  width: 213px;
+  padding: 0px 16px;
+  margin-top: 20px;
+}
+.perfect-set-carrello-btn:hover{
+  background-color: var(--color-orange-dark);
+}
+.perfect-set-carrello-aggiungi-al-carrello{
+  row-gap: 20px;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  gap: 18px;
+  background-color: transparent;
+  border: none;
+  font-weight: 500;
+  font-family: inherit;
+  font-size: 15px;
+}
+.carrello-bag-icon{
+  height: 18px;
+  width: 18px;
+}
+.carrello-btn{
+  text-decoration: none;
+  color: var(--color-black);
+  font-weight: 200;
+}
+.carrello-btn:hover{
+  text-decoration: underline;
+}
+
+/*Sezione 3: Badge */
+.perfect-set-badge{
+  display: flex;
+  width: 100%;
+  height: 24px;
+  justify-content: right;
+}
+.perfect-set-badge span{
+  display: flex;
+  background-color: yellow;
+  padding: 10px;
+  align-items: center;
+}
+.perfect-set-favorite-button{
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
+  align-self: flex-end;
+  border: 2px;
+  padding: 10px;
+}
+
+.perfect-set-favorite-button:hover{
+  filter: brightness(90%);
 }
 
 /* Sezione 4: Scopri cosa stanno costruendo tutti */
@@ -513,14 +755,65 @@ nav a {
 /* Sezione 6: Scopri di più */
 .explore-more {
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  background: var(--color-red);
   width: 1604px;
   margin: 40px auto 0;
-  height: 400px;
+  padding: 32px;
+}
+
+.explore-more__title h1 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: var(--color-background-dark);
+}
+
+.explore-more__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.explore-more__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.explore-more__card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.explore-more__card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.explore-more__card p {
+  font-size: 16px;
+  color: var(--color-background-dark);
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+.explore-more__card a {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid var(--color-black);
+  border-radius: 25px;
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.explore-more__card a:hover {
+  background-color: #696868;
+  color: #fff;
+  text-decoration: underline;
 }
 
 /* Sezione 7: Iscriviti e guadagna punti */
@@ -751,6 +1044,7 @@ nav a {
   align-items: center;
   text-align: justify;
   width: 1604px;
+
   margin: auto;
   margin-top: 50px;
 }
@@ -765,5 +1059,4 @@ nav a {
   background: var(--color-purple-darker);
   width: 100%;
   margin: 40px auto 0;
-  height: 600px;
 }

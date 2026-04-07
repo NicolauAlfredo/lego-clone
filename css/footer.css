@@ -1,0 +1,333 @@
+/* ===================== FOOTER GENERALE ===================== */
+.footer {
+  display: flex; /* Usa flexbox per organizzare gli elementi */
+  align-items: center; /* Allinea gli elementi al centro sull'asse verticale */
+  flex-direction: column; /* Dispone gli elementi in colonna */
+  background: #201b48; /* Colore di sfondo del footer */
+  text-align: justify; /* Giustifica il testo */
+  width: 100%; /* Occupa tutta la larghezza */
+  margin: 40px auto 0; /* Margine superiore e centratura */
+}
+
+/* ===================== HEADER DEL FOOTER ===================== */
+.footer__header {
+  display: flex; /* Layout flessibile */
+  justify-content: space-between; /* Spazio tra le colonne */
+  width: 69%; /* Larghezza contenuta */
+  height: 520px; /* Altezza fissa */
+}
+
+/* ===================== BRANDING ===================== */
+.branding {
+  display: flex;
+  flex-direction: column; /* Elementi in colonna */
+  margin-right: 20px;
+  margin-top: 40px;
+  width: 300px;
+}
+
+.branding-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.branding__logo {
+  width: 98px;
+  height: 98px;
+}
+
+.branding__location {
+  background: #000000; /* Sfondo nero */
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Spazio tra icona e testo */
+  color: white;
+  width: 80px;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+}
+
+.branding__nav {
+  margin-top: 20px;
+}
+
+.branding__nav ul {
+  list-style-type: none; /* Rimuove i punti della lista */
+}
+
+.branding__nav li {
+  margin-top: 20px;
+}
+
+.branding__nav li a:hover {
+  text-decoration: underline; /* Effetto hover */
+  color: #ffffff;
+}
+
+.branding__nav a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===================== CHI SIAMO ===================== */
+.chi-siamo {
+  margin-right: 20px;
+  margin-top: 40px;
+  font-size: 16px;
+  width: 200px;
+  text-align: left;
+}
+
+.chi-siamo h3 {
+  text-transform: uppercase; /* Testo in maiuscolo */
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.chi-siamo__nav {
+  margin-top: 40px;
+}
+
+.chi-siamo__nav ul {
+  list-style-type: none;
+}
+
+.chi-siamo__nav li {
+  margin-top: 20px;
+}
+
+.chi-siamo__nav li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.chi-siamo a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===================== SUPPORTO ===================== */
+.supporto {
+  margin-right: 20px;
+  margin-top: 40px;
+  font-size: 16px;
+  width: 200px;
+  text-align: left;
+}
+
+.supporto h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.supporto__nav {
+  margin-top: 40px;
+}
+
+.supporto__nav ul {
+  list-style-type: none;
+}
+
+.supporto__nav li {
+  margin-top: 20px;
+}
+
+.supporto__nav li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.supporto a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===================== ATTRAZIONI ===================== */
+.attrazioni {
+  margin-top: 40px;
+  margin-right: 20px;
+  width: 200px;
+  text-align: left;
+}
+
+.attrazioni h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.attrazioni__nav {
+  margin-top: 40px;
+}
+
+.attrazioni__nav ul {
+  list-style-type: none;
+}
+
+.attrazioni__nav li {
+  margin-top: 20px;
+}
+
+.attrazioni__nav li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.attrazioni a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===================== ALTRE INFORMAZIONI ===================== */
+.altre-informazioni {
+  margin-top: 40px;
+  width: 200px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.altre-informazioni h3 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.altre-informazioni__nav {
+  margin-top: 40px;
+}
+
+.altre-informazioni__nav ul {
+  list-style-type: none;
+}
+
+.altre-informazioni__nav li {
+  margin-top: 20px;
+}
+
+.altre-informazioni__nav li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.altre-informazioni a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* ===================== SEZIONE PRINCIPALE ===================== */
+.footer__main {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 69%;
+  height: 200px;
+  margin-top: 10px;
+}
+
+/* ===================== NEWSLETTER ===================== */
+.newsletter {
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter span {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.newsletter__email {
+  display: flex;
+  align-items: center;
+}
+
+.newsletter__email input {
+  height: 60px;
+  width: 210px;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.newsletter__email button {
+  height: 60px;
+  width: 45px;
+  border: none;
+  background: #e96f14; /* Colore arancione bottone */
+  cursor: pointer;
+}
+
+.newsletter__email img {
+  height: 24px;
+  width: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* ===================== SOCIAL ===================== */
+.social {
+  display: flex;
+  flex-direction: column;
+}
+
+.social__icons {
+  margin-top: 30px;
+}
+
+.social__icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.social__icon a {
+  text-decoration: none;
+}
+
+.social span {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* ===================== DISCLAIMER ===================== */
+.footer__disclaimer {
+  display: flex;
+  flex-direction: column;
+  width: 69%;
+  margin-top: 10px;
+  font-size: 12px;
+  height: 100px;
+}
+
+.disclaimer__nav ul {
+  display: flex;
+  flex-wrap: wrap; /* Permette il ritorno a capo */
+  gap: 20px; /* Spazio tra gli elementi */
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.disclaimer__nav li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.disclaimer__nav li a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+.disclaimer__legal {
+  margin-top: 20px;
+  color: #ffffff;
+}
