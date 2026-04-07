@@ -390,7 +390,7 @@ body {
   position: relative; /* necessario per posizionamento elementi interni */
   
 }
-#novità{
+#novita {
     padding-left: 10px;
     display:flex;
      }
@@ -444,13 +444,13 @@ body {
     transition: opacity 0.3s ease;
 }
 
-#novità:hover .section-featured__card img {
+#novita:hover .section-featured__card img {
   filter: brightness(0.5);
   transition: filter 0.3s ease;
 }
 
 
-#novità .section-featured__card:hover img {
+#novita .section-featured__card:hover img {
   filter: brightness(1);
   transition: filter 0.3s ease;
 }
@@ -548,23 +548,23 @@ nav a{
   
   
 }
-.join-and-earn_puntifedelta-premiriservatiaisoci-omaggiatempolimitato {
+.join-and-earn__cards {
   display:flex;
   gap: 60px;
  }
 
-.join-and-earn_insiders {
+.join-and-earn__insiders {
  display:flex;
  flex-direction: column;
  margin: 50px;
  
 }
-.join-and-earn_insiders img {
+.join-and-earn__insiders img {
   width: 200px;
   height: auto;
   margin-right: 10px;
 }
-.join-and-earn_insiders h2 {
+.join-and-earn__insiders h2 {
   font-weight: bold;
   font-size: 2.4rem;
   text-align: left;
@@ -573,7 +573,7 @@ nav a{
   justify-content: left;
   
 }
-.join-and-earn_insiders p {
+.join-and-earn__insiders p {
   font-size: 1.3rem;
   line-height: 1.5;
   text-align: left;
@@ -581,7 +581,7 @@ nav a{
   margin-top: 10px;
   font-weight: 700;
 }
-.join-and-earn_puntifedelta {
+.join-and-earn__puntifedelta {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -597,7 +597,7 @@ nav a{
   
  }
 
-.join-and-earn_puntifedelta img {
+.join-and-earn__puntifedelta img {
  width: 100%;
  margin-bottom: 20px;
  
@@ -605,13 +605,13 @@ nav a{
  
  
 }
-.join-and-earn_puntifedelta h3 {
+.join-and-earn__puntifedelta h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
   
 }
-.join-and-earn_puntifedelta p {
+.join-and-earn__puntifedelta p {
   font-weight: 300;      
   color: #888686;        
   font-size: 0.9rem;  
@@ -623,7 +623,7 @@ nav a{
   text-align: center; 
 }
 
-.join-and-earn_premiriservatiaisoci {
+.join-and-earn__rewards {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -635,19 +635,19 @@ nav a{
   margin-top: 50px;
   rotate: 3deg;
  }
-.join-and-earn_premiriservatiaisoci img {
+.join-and-earn__rewards img {
  width: 100%;
  margin-bottom: 20px;
  
  
 }
-.join-and-earn_premiriservatiaisoci h3 {
+.join-and-earn__rewards h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
   
 }
-.join-and-earn_premiriservatiaisoci p {
+.join-and-earn__rewards p {
  font-weight: 300;      
   color: #888686;        
   font-size: 0.9rem;  
@@ -659,7 +659,7 @@ nav a{
   text-align: center; 
 }
 
-.join-and-earn_omaggiatempolimitato {
+.join-and-earn__gifts {
   display:flex;
   flex-direction: column;
   justify-content: center;
@@ -672,7 +672,7 @@ nav a{
   rotate: -3deg;
   }
 
-.join-and-earn_omaggiatempolimitato img {
+.join-and-earn__gifts img {
  width: 100%;
  margin-bottom: 20px;
  
@@ -680,13 +680,13 @@ nav a{
  
  
 }
-.join-and-earn_omaggiatempolimitato h3 {
+.join-and-earn__gifts h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
   
 }
-.join-and-earn_omaggiatempolimitato p {
+.join-and-earn__gifts p {
  font-weight: 300;      
   color: #888686;        
   font-size: 0.9rem;  
@@ -720,7 +720,7 @@ nav a{
     transform: translateX(0);
   }
 }
-.join-and-earn_divbloccovuoto {
+.join-and-earn__divbloccovuoto {
   width: 100%;
   height: 100px;
 }
