@@ -1,6 +1,6 @@
 /* Variabili Globali (Design System) */
 :root {
-  --font-family: 'Nunito', sans-serif;
+  --font-family: "Nunito", sans-serif;
   --color-yellow: #ffd502;
   --color-black: #000000;
   --color-gray-light: #f2f2f2;
@@ -383,65 +383,52 @@ body {
 /* Sezione Featured (Section 2) */
 .section-featured {
   background: var(--color-dark);
-   width: 1604px;
+  width: 1604px;
   margin: 0 auto;
   height: 400px;
   padding: 20px;
   position: relative; /* necessario per posizionamento elementi interni */
-  
 }
 #novita {
-    padding-left: 10px;
-    display:flex;
-     }
+  padding-left: 10px;
+  display: flex;
+}
 
-    
-    
-    
-
-
-.section-featured__navigation{
-    display: flex;
-    gap: 20px;
-    padding: 10px; 
-    padding-bottom: 20px; 
-    padding-left: 20px;
-    font-size: 0.7rem;
-    
+.section-featured__navigation {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  font-size: 0.7rem;
 }
 .section-featured__card {
-    overflow: hidden;
-    position: relative;
-    height: 260px;
-    
-    
-    
-   
+  overflow: hidden;
+  position: relative;
+  height: 260px;
 }
-.section-featured__card img{
-    
-    width: 185px;
-    height: 100%;
-    display: block; 
-    object-fit: cover;
-    margin-right: 10px;
-
+.section-featured__card img {
+  width: 185px;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  margin-right: 10px;
 }
 .section-featured__card h2 {
-    z-index: 2;
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--font-family);
-    font-weight: 900;
-    font-size: 1.2rem;
-    line-height: 1.3;
-    text-align: center;
-    color: #dbd8d4;
-    margin: 0;
-    width: 90%;
-    transition: opacity 0.3s ease;
+  z-index: 2;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-family);
+  font-weight: 900;
+  font-size: 1.2rem;
+  line-height: 1.3;
+  text-align: center;
+  color: #dbd8d4;
+  margin: 0;
+  width: 90%;
+  transition: opacity 0.3s ease;
 }
 
 #novita:hover .section-featured__card img {
@@ -449,24 +436,22 @@ body {
   transition: filter 0.3s ease;
 }
 
-
 #novita .section-featured__card:hover img {
   filter: brightness(1);
   transition: filter 0.3s ease;
 }
-nav a{
-    text-decoration: none;
-     color: #dbd8d4;
-    font-family: 'Nunito', sans-serif;
+nav a {
+  text-decoration: none;
+  color: #dbd8d4;
+  font-family: "Nunito", sans-serif;
 }
 .section-featured__navigation nav a {
   position: relative;
   padding-bottom: 6px;
 }
 
-
 .section-featured__navigation nav a:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -544,20 +529,17 @@ nav a{
   position: relative;
   margin-left: 80px;
   align-items: flex-start;
-  font-family:  var(--font-family);
-  
-  
+  font-family: var(--font-family);
 }
 .join-and-earn__cards {
-  display:flex;
+  display: flex;
   gap: 60px;
- }
+}
 
 .join-and-earn__insiders {
- display:flex;
- flex-direction: column;
- margin: 50px;
- 
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
 }
 .join-and-earn__insiders img {
   width: 200px;
@@ -571,7 +553,6 @@ nav a{
   color: #141414;
   margin: 0;
   justify-content: left;
-  
 }
 .join-and-earn__insiders p {
   font-size: 1.3rem;
@@ -582,125 +563,110 @@ nav a{
   font-weight: 700;
 }
 .join-and-earn__puntifedelta {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0e0e0; 
-  overflow:hidden;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
   width: 300px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: -3deg;
   margin-left: 90px;
-
-  
- }
+}
 
 .join-and-earn__puntifedelta img {
- width: 100%;
- margin-bottom: 20px;
- 
-
- 
- 
+  width: 100%;
+  margin-bottom: 20px;
 }
 .join-and-earn__puntifedelta h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
-  
 }
 .join-and-earn__puntifedelta p {
-  font-weight: 300;      
-  color: #888686;        
-  font-size: 0.9rem;  
+  font-weight: 300;
+  color: #888686;
+  font-size: 0.9rem;
   padding-top: 3px;
   padding-bottom: 30px;
   padding-right: 12px;
   padding-left: 12px;
-  width:100%;
-  text-align: center; 
+  width: 100%;
+  text-align: center;
 }
 
 .join-and-earn__rewards {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0e0e0; 
-  overflow:hidden;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
   width: 300px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: 3deg;
- }
+}
 .join-and-earn__rewards img {
- width: 100%;
- margin-bottom: 20px;
- 
- 
+  width: 100%;
+  margin-bottom: 20px;
 }
 .join-and-earn__rewards h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
-  
 }
 .join-and-earn__rewards p {
- font-weight: 300;      
-  color: #888686;        
-  font-size: 0.9rem;  
+  font-weight: 300;
+  color: #888686;
+  font-size: 0.9rem;
   padding-top: 3px;
   padding-bottom: 30px;
   padding-right: 12px;
   padding-left: 12px;
-  width:100%;
-  text-align: center; 
+  width: 100%;
+  text-align: center;
 }
 
 .join-and-earn__gifts {
-  display:flex;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e0e0e0; 
-  overflow:hidden;
+  border: 1px solid #e0e0e0;
+  overflow: hidden;
   width: 300px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: -3deg;
-  }
+}
 
 .join-and-earn__gifts img {
- width: 100%;
- margin-bottom: 20px;
- 
-
- 
- 
+  width: 100%;
+  margin-bottom: 20px;
 }
 .join-and-earn__gifts h3 {
   color: #3d3737;
   font-size: 1.1rem;
   padding-top: 15px;
-  
 }
 .join-and-earn__gifts p {
- font-weight: 300;      
-  color: #888686;        
-  font-size: 0.9rem;  
+  font-weight: 300;
+  color: #888686;
+  font-size: 0.9rem;
   padding-top: 3px;
   padding-bottom: 30px;
   padding-right: 12px;
   padding-left: 12px;
-  width:100%;
-  text-align: center; 
+  width: 100%;
+  text-align: center;
 }
 .carota {
   width: 180px;
   height: auto;
-  align-self: flex-end; 
+  align-self: flex-end;
   opacity: 0;
   transform: translateX(80px);
   animation: slide-in 0.6s ease-out forwards;
@@ -709,7 +675,7 @@ nav a{
   position: absolute;
   right: 7%;
   top: 30px;
- }
+}
 @keyframes slide-in {
   from {
     opacity: 0;
@@ -730,7 +696,7 @@ nav a{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: justify; 
+  text-align: justify;
   width: 1604px;
   margin: auto;
   margin-top: 50px;
@@ -748,4 +714,3 @@ nav a{
   margin: 40px auto 0;
   height: 600px;
 }
-
