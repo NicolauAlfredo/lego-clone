@@ -345,7 +345,7 @@ body {
   align-items: center; /* centra verticalmente il contenuto */
 
   /* Immagine di sfondo */
-  background-image: url("/assets/images/backgrounds/static-yellow-hero-large.jpg");
+  background-image: url("/assets/images/backgrounds/lego-easter-hero-banner-desktop.jpg");
   background-size: cover; /* copre tutta la sezione */
   background-position: center;
   background-repeat: no-repeat;
@@ -1003,7 +1003,7 @@ nav a {
   margin: 0 auto;
   min-height: 700px;
   height: auto;
-  background-image: url("../assets/images/backgrounds/Highlighted.jpg");
+  background-image: url("../assets/images/backgrounds/lego-ferrari-helmets-hero.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
