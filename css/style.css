@@ -83,12 +83,12 @@ body {
   border-bottom: #000000;
   box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
 }
-.top-bar__left:hover{
+.top-bar__left:hover {
   background-color: var(--color-white);
 }
 
 /* LINK: AREA GIOCHI */
-.top-bar__left-link{
+.top-bar__left-link {
   text-decoration: none;
   color: black;
 }
@@ -260,7 +260,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
-.header__menu-link:hover{
+.header__menu-link:hover {
   background-color: var(--color-black);
   color: var(--color-white);
 }
@@ -406,7 +406,7 @@ body {
   color: var(--color-white);
 }
 
-.hero__btn:hover{
+.hero__btn:hover {
   text-decoration: underline;
   background-color: rgba(0, 0, 0, 0.67);
 }
@@ -417,7 +417,7 @@ body {
   color: rgb(20, 20, 20);
 }
 
-.hero__btn--secondary:hover{
+.hero__btn--secondary:hover {
   color: var(--color-white);
 }
 
@@ -532,10 +532,10 @@ nav a {
 
 /* Sezione 3: Bottoni e titolo */
 
-.title-perfect-set{
+.title-perfect-set {
   text-align: center;
 }
-.perfect-set-header{
+.perfect-set-header {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -543,14 +543,14 @@ nav a {
   justify-content: space-between;
   margin-bottom: 16px;
 }
-.perfect-set-nav-btn{
+.perfect-set-nav-btn {
   display: flex;
   flex-direction: row;
   gap: 30px;
   align-items: center;
   list-style: none;
 }
-.perfect-set-nav-link{
+.perfect-set-nav-link {
   color: var(--color-text-btn);
   font-size: 20px;
   cursor: pointer;
@@ -564,19 +564,19 @@ nav a {
   margin-bottom: 5px;
   padding-bottom: 8px;
 } */
-.perfect-set-nav-link:hover{
+.perfect-set-nav-link:hover {
   border-bottom: 3px solid var(--color-text-btn);
   margin-bottom: 5px;
   padding-bottom: 8px;
 }
 
-.perfect-set-container-chevron{
+.perfect-set-container-chevron {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
 
-.perfect-set-chevron{
+.perfect-set-chevron {
   border-radius: 50%;
   border-style: solid;
   width: 40px;
@@ -585,13 +585,13 @@ nav a {
   color: var(--color-text-btn);
   background-color: transparent;
 }
-.perfect-set-chevron:hover{
+.perfect-set-chevron:hover {
   background-color: var(--color-text-btn);
   color: white;
   border-style: none;
 }
 
-.perfect-set-carousel{
+.perfect-set-carousel {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;
@@ -600,67 +600,67 @@ nav a {
 
 /* Sezione 3: cards */
 
-.perfect-set-article{
+.perfect-set-article {
   padding: 10px;
   gap: 20px;
   border: 1px solid rgba(0, 0, 0, 0.06);
   max-width: 500px;
   max-width: 292px;
 }
-.perfect-set-card-image{
+.perfect-set-card-image {
   width: 250px;
   height: 250px;
 }
-.perfect-set-card-image-product{
+.perfect-set-card-image-product {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
-.perfect-set-attributes{
+.perfect-set-attributes {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-.perfect-set-product-name{
+.perfect-set-product-name {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 15px;
   font-weight: 500;
 }
-.perfect-set-product-name-text{
+.perfect-set-product-name-text {
   text-decoration: none;
   color: var(--color-black);
 }
-.perfect-set-product-name-text:hover{
+.perfect-set-product-name-text:hover {
   text-decoration: underline;
 }
-.perfect-set-attributes span{
+.perfect-set-attributes span {
   display: flex;
   flex-direction: row;
   gap: 5px;
   font-weight: 500;
   font-size: 14px;
 }
-.perfect-set-attributes-icons{
+.perfect-set-attributes-icons {
   height: 18px;
   width: 18px;
 }
-.perfect-set-price{
+.perfect-set-price {
   margin-top: 20px;
   margin-bottom: 20px;
 }
 /* Sezione 3: Carrello bottone */
-.perfect-set-carrello-container{
+.perfect-set-carrello-container {
   display: flex;
   flex-direction: row;
   gap: 10px;
   align-items: baseline;
   justify-content: space-evenly;
 }
-.perfect-set-carrello-btn{
+.perfect-set-carrello-btn {
   display: flex;
   flex-direction: row;
-  justify-content: center;  
+  justify-content: center;
   align-items: center;
   font-size: 14px;
   border-radius: 25px;
@@ -670,13 +670,13 @@ nav a {
   padding: 0px 16px;
   margin-top: 20px;
 }
-.perfect-set-carrello-btn:hover{
+.perfect-set-carrello-btn:hover {
   background-color: var(--color-orange-dark);
 }
-.perfect-set-carrello-aggiungi-al-carrello{
+.perfect-set-carrello-aggiungi-al-carrello {
   row-gap: 20px;
   display: flex;
-  flex-direction: row; 
+  flex-direction: row;
   align-items: center;
   justify-items: center;
   cursor: pointer;
@@ -687,33 +687,33 @@ nav a {
   font-family: inherit;
   font-size: 15px;
 }
-.carrello-bag-icon{
+.carrello-bag-icon {
   height: 18px;
   width: 18px;
 }
-.carrello-btn{
+.carrello-btn {
   text-decoration: none;
   color: var(--color-black);
   font-weight: 200;
 }
-.carrello-btn:hover{
+.carrello-btn:hover {
   text-decoration: underline;
 }
 
 /*Sezione 3: Badge */
-.perfect-set-badge{
+.perfect-set-badge {
   display: flex;
   width: 100%;
   height: 24px;
   justify-content: right;
 }
-.perfect-set-badge span{
+.perfect-set-badge span {
   display: flex;
   background-color: yellow;
   padding: 10px;
   align-items: center;
 }
-.perfect-set-favorite-button{
+.perfect-set-favorite-button {
   border-radius: 50px;
   width: 44px;
   height: 44px;
@@ -722,7 +722,7 @@ nav a {
   padding: 10px;
 }
 
-.perfect-set-favorite-button:hover{
+.perfect-set-favorite-button:hover {
   filter: brightness(90%);
 }
 
@@ -1190,9 +1190,13 @@ nav a {
 .join-and-earn {
   display: flex;
   position: relative;
-  margin-left: 80px;
   align-items: flex-start;
   font-family: var(--font-family);
+  width: 100%;
+  max-width: 1604px;
+  margin: 40px auto 0;
+  padding: 0 16px;
+  background: var(--color-gray-alt);
 }
 .join-and-earn__cards {
   display: flex;
@@ -1202,7 +1206,8 @@ nav a {
 .join-and-earn__insiders {
   display: flex;
   flex-direction: column;
-  margin: 50px;
+  margin-left: 50px;
+  margin-right: 150px;
 }
 .join-and-earn__insiders img {
   width: 200px;
@@ -1232,15 +1237,15 @@ nav a {
   align-items: center;
   border: 1px solid #e0e0e0;
   overflow: hidden;
-  width: 300px;
+  width: 240px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: -3deg;
-  margin-left: 90px;
 }
 
 .join-and-earn__puntifedelta img {
   width: 100%;
+  height: 100%;
   margin-bottom: 20px;
 }
 .join-and-earn__puntifedelta h3 {
@@ -1267,13 +1272,14 @@ nav a {
   align-items: center;
   border: 1px solid #e0e0e0;
   overflow: hidden;
-  width: 300px;
+  width: 240px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: 3deg;
 }
 .join-and-earn__rewards img {
   width: 100%;
+  height: 100%;
   margin-bottom: 20px;
 }
 .join-and-earn__rewards h3 {
@@ -1300,7 +1306,7 @@ nav a {
   align-items: center;
   border: 1px solid #e0e0e0;
   overflow: hidden;
-  width: 300px;
+  width: 240px;
   border-radius: 12px 12px 12px 12px;
   margin-top: 50px;
   rotate: -3deg;
@@ -1308,6 +1314,7 @@ nav a {
 
 .join-and-earn__gifts img {
   width: 100%;
+  height: 100%;
   margin-bottom: 20px;
 }
 .join-and-earn__gifts h3 {
@@ -1336,7 +1343,7 @@ nav a {
   animation-timeline: view();
   animation-range: entry 80% entry 100%;
   position: absolute;
-  right: 7%;
+  left: 88.9%;
   top: 30px;
 }
 @keyframes slide-in {
@@ -1414,9 +1421,22 @@ nav a {
   align-items: center;
   text-align: justify;
   width: 1604px;
+  background: var(--color-gray-light);
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 14px;
+  margin-bottom: -40px;
+  height: 110px;
+  justify-content: center;
+}
 
-  margin: auto;
-  margin-top: 50px;
+.welcome-home__blue-text {
+  color: var(--color-blue-dark);
+  text-decoration: none;
+}
+
+.welcome-home__blue-text:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
