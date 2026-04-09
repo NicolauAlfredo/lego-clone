@@ -521,9 +521,9 @@ nav a {
   display: block;
 }
 
-/* Sezione 3: Trova il set perfectto */
+/* Sezione 3: Trova il set perfetto */
 .perfect-set {
-  width: 1604px;
+  width: 100%;
   margin: 0 auto;
   height: 730px;
   position: relative;
@@ -625,7 +625,7 @@ nav a {
   margin-top: 10px;
   margin-bottom: 30px;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: bold;
 }
 .perfect-set-product-name-text {
   text-decoration: none;
@@ -638,7 +638,7 @@ nav a {
   display: flex;
   flex-direction: row;
   gap: 5px;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 14px;
 }
 .perfect-set-attributes-icons {
@@ -649,6 +649,7 @@ nav a {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 /* Sezione 3: Carrello bottone */
 .perfect-set-carrello-container {
   display: flex;
@@ -683,9 +684,12 @@ nav a {
   gap: 18px;
   background-color: transparent;
   border: none;
-  font-weight: 500;
+  font-weight: 700;
   font-family: inherit;
   font-size: 15px;
+}
+.perfect-set-carrello-btn-responsive{
+  display: none;
 }
 .carrello-bag-icon {
   height: 18px;
@@ -724,6 +728,192 @@ nav a {
 
 .perfect-set-favorite-button:hover {
   filter: brightness(90%);
+}
+
+/* Sezione 3: responsive */
+
+/* Iphone responsive vertical */
+@media (max-width: 375px){
+  .perfect-set{
+    max-width: 100em;
+    width: 100%;
+  }
+  .perfect-set-container-chevron{
+    display: none;
+  }
+  .perfect-set-scroll{
+    padding-bottom: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 600px;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(196, 196, 196); 
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+	    background-color: #9c9c9c;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track-piece:end {
+      margin-right: 125vw; 
+    }
+  }
+  .perfect-set-card-image {
+  width: 250px;
+  height: 250px;
+  }
+  .perfect-set-carrello-container{
+      justify-content: flex-start;
+  }
+  .perfect-set-carrello-btn-responsive{
+      display: block;
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      border: 2px;
+      padding: 10px;
+      background-color: var(--color-orange)
+    }
+    .carrello-bag-icon {
+    height: 25px;
+    width: 25px;
+    }
+    .perfect-set-carrello-btn{
+      display: none;
+    }
+    .perfect-set-carrello-btn-responsive:hover {
+    background-color: var(--color-orange-dark);
+  }
+}
+/*Iphone responsive horizantal*/
+@media(max-width: 667px){
+  .perfect-set-chevron:active{
+    background-color: var(--color-text-btn);
+    color: white;
+    border-style: none;
+  }
+ .perfect-set{
+    max-width: 100em;
+    width: 100%;
+  }
+  .perfect-set-scroll{
+    padding-bottom: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 600px;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(196, 196, 196); 
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+	    background-color: #9c9c9c;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track-piece:end {
+      margin-right: 125vw; 
+    }
+  }
+  .perfect-set-card-image {
+  width: 250px;
+  height: 250px;
+  }
+  .perfect-set-carrello-container{
+      justify-content: flex-start;
+  }
+  .perfect-set-carrello-btn-responsive{
+      display: block;
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      border: 2px;
+      padding: 10px;
+      background-color: var(--color-orange)
+    }
+    .carrello-bag-icon {
+    height: 25px;
+    width: 25px;
+    }
+    .perfect-set-carrello-btn{
+      display: none;
+    }
+    .perfect-set-carrello-btn-responsive:hover {
+    background-color: var(--color-orange-dark);
+  }
+}
+/* Ipad Air responsive */
+@media (max-width: 820px){
+  .perfect-set{
+    max-width: 100em;
+    width: 100%;
+  }
+  .perfect-set-scroll{
+    padding-bottom: 24px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    max-width: 600px;
+    padding-right: 0;
+
+    &::-webkit-scrollbar {
+      height: 5px;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px rgb(196, 196, 196); 
+      border-radius: 10px;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 10px;
+	    background-color: #9c9c9c;
+      width: 5px;
+    }
+    &::-webkit-scrollbar-track-piece:end {
+      margin-right: 125vw; 
+    }
+  }
+  .perfect-set-card-image {
+  width: 250px;
+  height: 250px;
+  }
+  .perfect-set-carrello-container{
+      justify-content: flex-start;
+  }
+  .perfect-set-carrello-btn-responsive{
+      display: block;
+      border-radius: 50px;
+      width: 44px;
+      height: 44px;
+      align-items: center;
+      border: 2px;
+      padding: 10px;
+      background-color: var(--color-orange)
+    }
+    .carrello-bag-icon {
+    height: 25px;
+    width: 25px;
+    }
+    .perfect-set-carrello-btn{
+      display: none;
+    }
+    .perfect-set-carrello-btn-responsive:hover {
+    background-color: var(--color-orange-dark);
+  }
 }
 
 /* Sezione 4: Scopri cosa stanno costruendo tutti */
