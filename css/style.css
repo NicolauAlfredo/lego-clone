@@ -430,6 +430,7 @@ body {
 }
 
 /* Sezione Featured (Section 2) */
+
 .section-featured {
   background: var(--color-dark);
   width: 1604px;
@@ -502,14 +503,64 @@ nav a {
 .section-featured__navigation nav a:hover::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   width: 100%;
   height: 3px;
   background: var(--color-white);
   border-radius: 2px;
 }
-
+.section-featured {
+  height: auto;
+}
+@media (max-width: 375px) {
+  .section-featured__navigation{
+    padding-left: 5px;
+    font-size: 9px;
+    
+  }
+ 
+  
+   .section-featured__card {
+    height: 152px;
+    padding-top: 10px;
+    width: 100px;
+  }
+  .section-featured__card img {
+    width: 100%;
+    
+  }
+  .section-featured__card h2{
+    font-size: 14px;
+    
+   
+}
+ 
+  #novita {
+    overflow-x: scroll;
+    gap: 7px;
+    max-width: 375px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    
+    
+  }
+    #novita::-webkit-scrollbar {
+    height: 4px;
+    
+  }
+  #novita::-webkit-scrollbar-track {
+   background-color: gray;
+  }
+  #novita::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 2px;
+  }
+}
+   .section-featured__card {
+    flex-shrink: 0;
+  } 
+}
 /* Footer decorativo */
 .section-featured__footer {
   width: 1604px;
