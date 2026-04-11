@@ -513,6 +513,68 @@ nav a {
 .section-featured {
   height: auto;
 }
+.section-featured__navigation nav a:focus::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--color-white);
+  border-radius: 2px;
+}
+@media (max-width: 820px) {
+  .section-featured{
+    padding-bottom: 10px;
+  }
+  .section-featured__navigation{
+    padding-left: 5px;
+    font-size: 7px;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    
+  }
+ 
+  
+   .section-featured__card {
+    height: 152px;
+    padding-top: 10px;
+    width: 100px;
+  }
+  .section-featured__card img {
+    width: 100%;
+    
+  }
+  .section-featured__card h2{
+    font-size: 10px;
+    }
+     .section-featured__card h2 br {
+      display: none;
+     }
+ 
+  #novita {
+    overflow-x: scroll;
+    gap: 7px;
+    max-width: 600px;
+    padding-bottom: 13px;
+    padding-left: 0px;
+    
+    
+  }
+    #novita::-webkit-scrollbar {
+    height: 2px;
+    
+    
+  }
+  #novita::-webkit-scrollbar-track {
+   background-color: gray;
+  }
+  #novita::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 2px;
+    
+  }
+}
 @media (max-width: 375px) {
   .section-featured__navigation{
     padding-left: 5px;
@@ -560,7 +622,7 @@ nav a {
    .section-featured__card {
     flex-shrink: 0;
   } 
-}
+
 /* Footer decorativo */
 .section-featured__footer {
   width: 1604px;
