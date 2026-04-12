@@ -1122,6 +1122,39 @@ nav a {
   display: block;
 }
 
+/* Sezione 5: media query per tablet */
+
+/* Sezione 5: media query per mobile */
+@media (max-width: 375px) {
+  .weekly-featured__banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("../assets/images/backgrounds/lego-ferrari-helmets-hero-mobile.jpg");
+    background-position: top;
+  }
+
+  .weekly-featured__overlay {
+    padding: 18px 12px 40px;
+  }
+
+  .weekly-featured__badge {
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    margin-top: 150px;
+  }
+
+  .weekly-featured__heading {
+    font-size: 1.75rem;
+    margin: 12px 0 16px;
+  }
+
+  .weekly-featured__header {
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.35;
+  }
+}
 /* Sezione 6: Scopri di più */
 .explore-more {
   display: flex;
