@@ -1340,7 +1340,6 @@ nav a {
   rotate: -3deg;
 }
 
-
 .join-and-earn__puntifedelta h3 {
   color: #3d3737;
   font-size: 1.1rem;
@@ -1593,7 +1592,6 @@ nav a {
     width: 350px;
     height: 150px;
     rotate: 1deg;
-    
   }
   .join-and-earn__rewards img {
     width: 134px;
@@ -1701,7 +1699,6 @@ nav a {
     flex-wrap: nowrap;
     gap: 16px;
     margin-top: 10px;
-    
   }
 
   .join-and-earn__puntifedelta,
@@ -1714,18 +1711,17 @@ nav a {
     border-radius: 5px;
     align-items: stretch;
     justify-content: flex-start;
-   
   }
 
   .join-and-earn__puntifedelta img,
   .join-and-earn__rewards img,
   .join-and-earn__gifts img {
     width: 100%;
-    height: 100px ; 
+    height: 100px;
     object-fit: cover;
-    margin-bottom: 0 ; 
+    margin-bottom: 0;
     flex-shrink: 0;
-    padding: 0 ; 
+    padding: 0;
   }
 
   .join-and-earn__puntifedelta__text,
@@ -1744,18 +1740,16 @@ nav a {
     font-size: 10px;
     text-align: center;
     padding-top: 20px;
-    
-   }
-   .join-and-earn__puntifedelta h3 {
+  }
+  .join-and-earn__puntifedelta h3 {
     padding-left: 30px;
-   }
-   .join-and-earn__rewards h3 {
+  }
+  .join-and-earn__rewards h3 {
     padding-left: 10px;
-   }
-   .join-and-earn__gifts h3 {
+  }
+  .join-and-earn__gifts h3 {
     padding-left: 5px;
-   }
-   
+  }
 
   .join-and-earn__puntifedelta p,
   .join-and-earn__rewards p,
@@ -1763,26 +1757,21 @@ nav a {
     font-size: 9px;
     padding: 1px;
     padding-bottom: 17px;
-    
-    
   }
   .join-and-earn__gifts p {
     padding: 5px;
-   }
+  }
 
- 
-
-
-    .join-and-earn__gifts__text {
+  .join-and-earn__gifts__text {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px;
   }
- 
-.join-and-earn br{ 
-  display:none;
-}
+
+  .join-and-earn br {
+    display: none;
+  }
   .carota {
     display: none;
   }
