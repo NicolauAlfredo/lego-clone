@@ -1340,11 +1340,7 @@ nav a {
   rotate: -3deg;
 }
 
-.join-and-earn__puntifedelta img {
-  width: 100%;
-  height: 100%;
-  margin-bottom: 20px;
-}
+
 .join-and-earn__puntifedelta h3 {
   color: #3d3737;
   font-size: 1.1rem;
@@ -1597,6 +1593,7 @@ nav a {
     width: 350px;
     height: 150px;
     rotate: 1deg;
+    
   }
   .join-and-earn__rewards img {
     width: 134px;
@@ -1696,6 +1693,7 @@ nav a {
     flex-direction: row;
     flex-wrap: nowrap;
     margin-bottom: 20px;
+    margin-top: 0px;
   }
 
   .join-and-earn__cards {
@@ -1710,10 +1708,12 @@ nav a {
   .join-and-earn__rewards,
   .join-and-earn__gifts {
     flex-direction: column;
-    width: 130px;
+    width: 140px;
     height: auto;
     margin-top: 0;
     border-radius: 5px;
+    align-items: stretch;
+    justify-content: flex-start;
    
   }
 
@@ -1721,11 +1721,11 @@ nav a {
   .join-and-earn__rewards img,
   .join-and-earn__gifts img {
     width: 100%;
-    height: 80px !important; 
+    height: 100px ; 
     object-fit: cover;
-    margin-bottom: 0 !important; 
+    margin-bottom: 0 ; 
     flex-shrink: 0;
-    padding: 0 !important; 
+    padding: 0 ; 
   }
 
   .join-and-earn__puntifedelta__text,
@@ -1741,29 +1741,48 @@ nav a {
   .join-and-earn__puntifedelta h3,
   .join-and-earn__rewards h3,
   .join-and-earn__gifts h3 {
-    font-size: 9.3px;
+    font-size: 10px;
     text-align: center;
-    padding-top: 0;
+    padding-top: 20px;
+    
    }
+   .join-and-earn__puntifedelta h3 {
+    padding-left: 30px;
+   }
+   .join-and-earn__rewards h3 {
+    padding-left: 10px;
+   }
+   .join-and-earn__gifts h3 {
+    padding-left: 5px;
+   }
+   
 
   .join-and-earn__puntifedelta p,
   .join-and-earn__rewards p,
   .join-and-earn__gifts p {
-    font-size: 8px;
-    padding: 5px;
+    font-size: 9px;
+    padding: 1px;
+    padding-bottom: 17px;
     
     
   }
+  .join-and-earn__gifts p {
+    padding: 5px;
+   }
+
+ 
+
+
     .join-and-earn__gifts__text {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 8px;
   }
-   .join-and-earn__gifts img {
-    object-position: top
-   }
-
+ 
+.join-and-earn br{ 
+  display:none;
+}
   .carota {
     display: none;
   }
