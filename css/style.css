@@ -534,7 +534,6 @@ nav a {
     
   }
  
-  
    .section-featured__card {
     height: 152px;
     padding-top: 10px;
@@ -636,10 +635,6 @@ nav a {
 /* Sezione 3: Trova il set perfetto */
 .perfect-set {
   margin: 0 131px;
-<<<<<<< HEAD
-  height: 730px;
-=======
->>>>>>> dev
   position: relative;
 }
 
@@ -924,7 +919,6 @@ nav a {
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    max-width: 600px;
 
     &::-webkit-scrollbar {
       height: 5px;
