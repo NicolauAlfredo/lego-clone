@@ -1,0 +1,23 @@
+/* Reset Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: var(--color-white);
+  font-family: "Cera Pro", sans-serif;
+}
+
+/* Base responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
