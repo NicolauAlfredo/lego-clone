@@ -1640,3 +1640,61 @@ nav a {
   width: 100%;
   margin: 40px auto 0;
 }
+
+/* Mobile */
+@media (max-width: 375px) {
+  .welcome-home {
+    width: 100%;
+    height: auto;
+  }
+
+  .welcome-home p {
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .welcome-home {
+    width: 100%;
+    padding: 20px 12px;
+    height: auto;
+  }
+
+  .welcome-home__toggle {
+    display: none;
+  }
+
+  .welcome-home__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .welcome-home__extra {
+    display: inline;
+  }
+
+  .welcome-home__btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    text-decoration: underline;
+    margin-top: 10px;
+    color: var(--color-blue-dark);
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  .welcome-home__btn::after {
+    content: "Leggi di più";
+  }
+
+  .welcome-home__toggle:checked + .welcome-home__text {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .welcome-home__toggle:checked ~ .welcome-home__btn::after {
+    content: "Mostra Meno";
+  }
+}
