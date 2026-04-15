@@ -1,3 +1,5 @@
+/* Definizione delle variabili globali (design tokens):
+   colori, tipografia e valori riutilizzabili in tutto il progetto */
 :root {
   --font-family: "Nunito", sans-serif;
   --color-yellow: #ffd502;
@@ -21,7 +23,8 @@
   --color-text-btn: rgba(0, 0, 0, 0.6);
 }
 
-/* Font */
+/* Definizione del font personalizzato "Cera Pro":
+   caricato localmente con ottimizzazione per il rendering (font-display: swap) */
 @font-face {
   font-family: "Cera Pro";
   src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
