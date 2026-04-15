@@ -1,4 +1,5 @@
-/* Label nascosta ma accessibile per screen reader */
+/* Classe utility per nascondere visivamente un elemento
+   mantenendolo accessibile agli screen reader */
 .sr-only {
   position: absolute;
   left: -9999px;
