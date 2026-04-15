@@ -1690,3 +1690,53 @@ nav a {
     font-size: 18px;
   }
 }
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .explore-more {
+    width: 100%;
+    padding: 24px 12px;
+  }
+
+  .explore-more__cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    align-items: flex-start;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+  }
+
+  .explore-more__card {
+    flex: 0 0 260px;
+    min-width: 310px;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .explore-more__card img {
+    width: 100%;
+  }
+
+  .explore-more__cards::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .explore-more__cards::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+    border-radius: 4px;
+  }
+
+  .explore-more__card-title {
+    font-size: 18px;
+  }
+
+  .explore-more__card p {
+    font-size: 18px;
+  }
+}
