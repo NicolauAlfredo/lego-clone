@@ -1,0 +1,564 @@
+/* TOP BAR - Barra Superiore Bloco principale: top-bar */
+.top-bar {
+  background: var(--color-white);
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Contenitore interno principale */
+.top-bar__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 200px 0 190px;
+}
+
+/* SEZIONE SINISTRA: AREA GIOCHI */
+.top-bar__left {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  background-color: rgb(171, 217, 255);
+  background-size: auto;
+  text-transform: uppercase;
+  width: 100px;
+  font-weight: 500;
+  height: 25px;
+  font-size: 11px;
+  text-align: center;
+  text-size-adjust: 100%;
+  cursor: pointer;
+  line-height: 12px;
+  padding: 0% 10px;
+  border-bottom: #000000;
+  box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
+}
+.top-bar__left:hover {
+  background-color: var(--color-white);
+}
+
+/* LINK: AREA GIOCHI */
+.top-bar__left-link {
+  text-decoration: none;
+  color: black;
+}
+
+/* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
+.top-bar__center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Contenitore centrale per allineamento dei bottoni e testo */
+.top-bar__center-container {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Bottone freccie */
+.top-bar__button {
+  border: 0;
+  cursor: pointer;
+  background: transparent;
+  color: rgb(20, 20, 20);
+  padding: 50px;
+  z-index: 1;
+}
+
+.top-bar__button img {
+  height: 28px;
+  width: 28px;
+}
+
+/* Testo centrale */
+
+.top-bar__center-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS */
+.top-bar__right {
+  display: flex;
+  align-items: center;
+}
+
+/* Bottone account */
+.top-bar__account-btn {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.top-bar__account-btn img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+}
+
+/* Linea verticale separatrice */
+.top-bar__vertical-line {
+  margin: 0 1.25rem;
+  width: 0.0625rem;
+  height: 1.25rem;
+  background: var(--color-background-gray);
+}
+
+/* Link LEGO Insiders */
+.top-bar__insider-link {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.1875rem;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.top-bar__insider-link img {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  margin: 3px 4px 0 0;
+}
+
+/* HEADER */
+/* Blocco principale header */
+.header {
+  background-color: var(--color-yellow);
+}
+
+/* Contenitore principale con larghezza massima e centratura */
+.header__container {
+  height: 4.6875rem;
+  margin: 0 auto;
+  padding: 0 1.875rem;
+  width: 100%;
+  max-width: 100rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* SEZIONE SINISTRA (logo + menu) */
+.header__left {
+  display: flex;
+  align-items: center;
+}
+
+/* Logo principale */
+.header__logo img {
+  height: 55px;
+  width: 55px;
+  cursor: pointer;
+  margin-right: 60px;
+}
+
+/* Lista del menu */
+.header__menu {
+  height: 3.4375rem;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Elemento singolo del menu */
+.header__menu-item {
+  list-style: none;
+}
+
+/* Bottoni del menu (Acquista, Scopri, Aiuto) */
+.header__menu-btn {
+  border: 0;
+  background-color: var(--color-yellow);
+  font-family: "Cera Pro, sans-serif";
+  margin-right: 20px;
+  text-transform: uppercase;
+  color: var(--color-black);
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+/* Link speciale "Tutti i set" */
+.header__menu-link {
+  text-transform: uppercase;
+  border-radius: 5px;
+  color: var(--color-red);
+  background: var(--color-white);
+  padding: 10px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+}
+.header__menu-link:hover {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+/* SEZIONE CENTRALE (search) */
+
+/* Contenitore della barra di ricerca */
+.header__search-box {
+  display: flex;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 999px;
+  padding: 12px;
+  gap: 8px;
+
+  /* ATTENZIONE: questo valore è fisso e non responsivo */
+  margin-left: 500px;
+
+  width: 330px;
+  height: 40px;
+  border: 1px solid var(--color-black);
+}
+
+/* Icona della ricerca */
+.header__search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Campo input della ricerca */
+.header__search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+/* SEZIONE DESTRA (azioni utente) */
+.header__right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Bottoni con icone (wishlist, carrello) */
+.header__icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Icone interne ai bottoni */
+.header__icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Contatore prodotti nel carrello */
+.header__cart-count {
+  font-size: 14px;
+}
+
+/* Containers principali */
+.top-bar__container,
+.header__container {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  /* Top bar */
+  .top-bar__left,
+  .top-bar__right {
+    display: none;
+  }
+
+  .top-bar__container {
+    padding: 0 10px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .top-bar__center {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-bar__center-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .top-bar__button {
+    padding: 4px;
+  }
+
+  .top-bar__button img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .top-bar__center-text {
+    font-size: 12px;
+    text-align: center;
+    white-space: normal;
+    max-width: 260px;
+  }
+
+  /* Header nascosto */
+  .header {
+    display: none;
+  }
+
+  /* Mobile header */
+  .mobile-header {
+    display: block;
+  }
+
+  .mobile-header__container {
+    height: 55px;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-header__menu-btn,
+  .mobile-header__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-header__menu-btn img {
+    display: block;
+    width: 32px;
+    height: 32px;
+  }
+
+  .mobile-header__icon-btn img {
+    display: block;
+    width: 28px;
+    height: 28px;
+  }
+
+  .mobile-header__logo {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    margin-right: auto;
+  }
+
+  .mobile-header__logo img {
+    display: block;
+    width: 64px;
+    height: 38.39px;
+  }
+
+  .mobile-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .header {
+    display: none;
+  }
+
+  /* Icone header */
+  .mobile-header__icon-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mobile-header__icon-btn img {
+    display: block;
+    width: 20px;
+    height: 20px;
+  }
+
+  .mobile-header__cart-count {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Top bar */
+  .top-bar {
+    position: relative;
+  }
+
+  .top-bar__button--close {
+    display: flex;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .top-bar__left,
+  .top-bar__right {
+    display: none;
+  }
+
+  .top-bar__container {
+    padding: 0 24px;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .top-bar__center {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .top-bar__center-container {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .top-bar__button {
+    padding: 4px;
+  }
+
+  .top-bar__button img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .top-bar__center-text {
+    font-size: 14px;
+    text-align: center;
+    white-space: normal;
+    max-width: 520px;
+  }
+
+  /* Header */
+  .header {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+  }
+
+  .mobile-header__container {
+    height: 64px;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile-header__menu-btn,
+  .mobile-header__icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-header__menu-btn img {
+    display: block;
+    width: 34px;
+    height: 34px;
+  }
+
+  .mobile-header__icon-btn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .mobile-header__icon-btn img {
+    display: block;
+    width: 24px;
+    height: 24px;
+  }
+
+  .mobile-header__cart-count {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -14px;
+    font-size: 10px;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .mobile-header__logo {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: auto;
+  }
+
+  .mobile-header__logo img {
+    display: block;
+    width: 69.8px;
+    height: 41.88px;
+  }
+
+  .mobile-header__actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .mobile-header {
+    display: none;
+  }
+
+  .top-bar__button--close {
+    display: none;
+  }
+}
