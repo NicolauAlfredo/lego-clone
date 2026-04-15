@@ -1,0 +1,31 @@
+:root {
+  --font-family: "Nunito", sans-serif;
+  --color-yellow: #ffd502;
+  --color-black: #000000;
+  --color-gray-light: #f2f2f2;
+  --color-gray-dark: #2c2c2c;
+  --color-dark: #222222;
+  --color-white: #ffffff;
+  --color-red: #d0021b;
+  --color-blue-primary: #005ad2;
+  --color-blue-dark: #006db7;
+  --color-orange: #f47d20;
+  --color-orange-light: #fac400;
+  --color-black-translucent: #00000099;
+  --color-background-dark: #141414;
+  --color-background-gray: #242424;
+  --color-gray-alt: #f6f6f6;
+  --color-purple-dark: #201d48;
+  --color-purple-darker: #18152d;
+  --color-orange-dark: #e96f14;
+  --color-text-btn: rgba(0, 0, 0, 0.6);
+}
+
+/* Font */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
