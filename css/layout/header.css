@@ -1,4 +1,5 @@
-/* TOP BAR - Barra Superiore Bloco principale: top-bar */
+/* Barra superiore del sito:
+   contiene area giochi, messaggio promozionale e accessi rapidi */
 .top-bar {
   background: var(--color-white);
   padding: 15px 0;
@@ -7,7 +8,8 @@
   position: relative;
 }
 
-/* Contenitore interno principale */
+/* Contenitore principale della top bar:
+   distribuisce le sezioni sinistra, centro e destra */
 .top-bar__container {
   display: flex;
   align-items: center;
@@ -17,7 +19,8 @@
   padding: 0 200px 0 190px;
 }
 
-/* SEZIONE SINISTRA: AREA GIOCHI */
+/* Sezione sinistra:
+   contiene il link rapido all'area giochi */
 .top-bar__left {
   display: flex;
   align-items: center;
@@ -37,31 +40,36 @@
   border-bottom: #000000;
   box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
 }
+
+/* Stato hover del pulsante area giochi */
 .top-bar__left:hover {
   background-color: var(--color-white);
 }
 
-/* LINK: AREA GIOCHI */
+/* Link interno dell'area giochi */
 .top-bar__left-link {
   text-decoration: none;
   color: black;
 }
 
-/* SEZIONE CENTRALE: MESSAGGIO E BOTTONI */
+/* Sezione centrale:
+   posiziona il messaggio promozionale al centro della barra */
 .top-bar__center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
 
-/* Contenitore centrale per allineamento dei bottoni e testo */
+/* Wrapper del contenuto centrale:
+   allinea frecce, testo e pulsante di chiusura */
 .top-bar__center-container {
   display: flex;
   gap: 8px;
   align-items: center;
 }
 
-/* Bottone freccie */
+/* Bottoni della top bar:
+   usati per navigazione e chiusura del messaggio */
 .top-bar__button {
   border: 0;
   cursor: pointer;
@@ -71,13 +79,13 @@
   z-index: 1;
 }
 
+/* Icone interne ai bottoni della top bar */
 .top-bar__button img {
   height: 28px;
   width: 28px;
 }
 
-/* Testo centrale */
-
+/* Testo promozionale centrale */
 .top-bar__center-text {
   display: flex;
   align-items: center;
@@ -88,13 +96,14 @@
   font-size: 14px;
 }
 
-/* SEZIONE DESTRA: ACCOUNT E LEGO INSIDERS */
+/* Sezione destra:
+   contiene accesso account e link LEGO Insiders */
 .top-bar__right {
   display: flex;
   align-items: center;
 }
 
-/* Bottone account */
+/* Pulsante account */
 .top-bar__account-btn {
   display: flex;
   gap: 6px;
@@ -109,13 +118,14 @@
   padding: 0;
 }
 
+/* Icona del pulsante account */
 .top-bar__account-btn img {
   height: 22px;
   width: 22px;
   cursor: pointer;
 }
 
-/* Linea verticale separatrice */
+/* Separatore verticale tra account e insiders */
 .top-bar__vertical-line {
   margin: 0 1.25rem;
   width: 0.0625rem;
@@ -135,6 +145,7 @@
   font-weight: 500;
 }
 
+/* Icona del link LEGO Insiders */
 .top-bar__insider-link img {
   height: 22px;
   width: 22px;
@@ -142,32 +153,33 @@
   margin: 3px 4px 0 0;
 }
 
-/* HEADER */
-/* Blocco principale header */
+/* Header desktop principale:
+   contiene logo, navigazione, ricerca e azioni utente */
 .header {
   background-color: var(--color-yellow);
 }
 
-/* Contenitore principale con larghezza massima e centratura */
+/* Contenitore del header:
+   definisce larghezza massima, spaziatura e allineamento interno */
 .header__container {
   height: 4.6875rem;
   margin: 0 auto;
   padding: 0 1.875rem;
   width: 100%;
   max-width: 100rem;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* SEZIONE SINISTRA (logo + menu) */
+/* Sezione sinistra del header:
+   include logo e menu principale */
 .header__left {
   display: flex;
   align-items: center;
 }
 
-/* Logo principale */
+/* Logo principale del sito */
 .header__logo img {
   height: 55px;
   width: 55px;
@@ -175,7 +187,7 @@
   margin-right: 60px;
 }
 
-/* Lista del menu */
+/* Lista orizzontale del menu principale */
 .header__menu {
   height: 3.4375rem;
   display: flex;
@@ -183,12 +195,12 @@
   gap: 20px;
 }
 
-/* Elemento singolo del menu */
+/* Singolo elemento del menu */
 .header__menu-item {
   list-style: none;
 }
 
-/* Bottoni del menu (Acquista, Scopri, Aiuto) */
+/* Bottoni del menu di navigazione */
 .header__menu-btn {
   border: 0;
   background-color: var(--color-yellow);
@@ -203,7 +215,7 @@
   cursor: pointer;
 }
 
-/* Link speciale "Tutti i set" */
+/* Link evidenziato "Tutti i set" */
 .header__menu-link {
   text-transform: uppercase;
   border-radius: 5px;
@@ -214,13 +226,15 @@
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
 }
+
+/* Stato hover del link evidenziato */
 .header__menu-link:hover {
   background-color: var(--color-black);
   color: var(--color-white);
 }
-/* SEZIONE CENTRALE (search) */
 
-/* Contenitore della barra di ricerca */
+/* Barra di ricerca del header:
+   contiene icona e campo input */
 .header__search-box {
   display: flex;
   align-items: center;
@@ -228,10 +242,7 @@
   border-radius: 999px;
   padding: 12px;
   gap: 8px;
-
-  /* ATTENZIONE: questo valore è fisso e non responsivo */
   margin-left: 500px;
-
   width: 330px;
   height: 40px;
   border: 1px solid var(--color-black);
@@ -251,55 +262,59 @@
   width: 100%;
 }
 
-/* SEZIONE DESTRA (azioni utente) */
+/* Sezione destra del header:
+   contiene wishlist e carrello */
 .header__right {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Bottoni con icone (wishlist, carrello) */
+/* Bottoni icona del header */
 .header__icon-btn {
   background: none;
   border: none;
   cursor: pointer;
-
   display: flex;
   align-items: center;
   gap: 4px;
 }
 
-/* Icone interne ai bottoni */
+/* Icone interne ai bottoni del header */
 .header__icon {
   width: 24px;
   height: 24px;
 }
 
-/* Contatore prodotti nel carrello */
+/* Contatore prodotti del carrello */
 .header__cart-count {
   font-size: 14px;
 }
 
-/* Containers principali */
+/* Regola comune per i contenitori principali
+   della top bar e del header */
 .top-bar__container,
 .header__container {
   width: 100%;
 }
 
-/* Mobile */
+/* Adattamento mobile:
+   semplifica top bar e sostituisce il header desktop con quello mobile */
 @media (max-width: 375px) {
-  /* Top bar */
+  /* Nasconde le sezioni laterali della top bar su mobile */
   .top-bar__left,
   .top-bar__right {
     display: none;
   }
 
+  /* Riorganizza il contenitore della top bar in modo più compatto */
   .top-bar__container {
     padding: 0 10px;
     justify-content: center;
     flex-direction: column;
   }
 
+  /* Riposiziona il contenuto centrale della top bar */
   .top-bar__center {
     position: static;
     transform: none;
@@ -308,20 +323,24 @@
     justify-content: center;
   }
 
+  /* Centra gli elementi della top bar */
   .top-bar__center-container {
     justify-content: center;
     width: 100%;
   }
 
+  /* Riduce il padding dei bottoni */
   .top-bar__button {
     padding: 4px;
   }
 
+  /* Mantiene dimensione leggibile delle icone */
   .top-bar__button img {
     width: 28px;
     height: 28px;
   }
 
+  /* Adatta il testo promozionale su più righe */
   .top-bar__center-text {
     font-size: 12px;
     text-align: center;
@@ -329,16 +348,17 @@
     max-width: 260px;
   }
 
-  /* Header nascosto */
+  /* Nasconde il header desktop */
   .header {
     display: none;
   }
 
-  /* Mobile header */
+  /* Mostra il header mobile */
   .mobile-header {
     display: block;
   }
 
+  /* Contenitore del header mobile */
   .mobile-header__container {
     height: 55px;
     padding: 0 12px;
@@ -347,6 +367,7 @@
     justify-content: space-between;
   }
 
+  /* Bottoni menu e azioni del mobile header */
   .mobile-header__menu-btn,
   .mobile-header__icon-btn {
     display: flex;
@@ -358,18 +379,21 @@
     cursor: pointer;
   }
 
+  /* Icona menu hamburger */
   .mobile-header__menu-btn img {
     display: block;
     width: 32px;
     height: 32px;
   }
 
+  /* Icone azioni mobile */
   .mobile-header__icon-btn img {
     display: block;
     width: 28px;
     height: 28px;
   }
 
+  /* Logo nel header mobile */
   .mobile-header__logo {
     display: flex;
     align-items: center;
@@ -377,23 +401,26 @@
     margin-right: auto;
   }
 
+  /* Immagine logo mobile */
   .mobile-header__logo img {
     display: block;
     width: 64px;
     height: 38.39px;
   }
 
+  /* Gruppo azioni del header mobile */
   .mobile-header__actions {
     display: flex;
     align-items: center;
     gap: 16px;
   }
 
+  /* Nasconde il header desktop anche in questo blocco */
   .header {
     display: none;
   }
 
-  /* Icone header */
+  /* Gestione singolo bottone icona con contatore */
   .mobile-header__icon-btn {
     position: relative;
     display: flex;
@@ -402,12 +429,14 @@
     justify-content: flex-start;
   }
 
+  /* Versione compatta delle icone mobile */
   .mobile-header__icon-btn img {
     display: block;
     width: 20px;
     height: 20px;
   }
 
+  /* Contatore del carrello nel mobile header */
   .mobile-header__cart-count {
     position: absolute;
     left: 50%;
@@ -419,13 +448,15 @@
   }
 }
 
-/* Tablet */
+/* Adattamento tablet:
+   mantiene il layout mobile ma con spaziature e dimensioni più ampie */
 @media (min-width: 768px) and (max-width: 1024px) {
-  /* Top bar */
+  /* Top bar con riferimento per elementi assoluti */
   .top-bar {
     position: relative;
   }
 
+  /* Mostra e posiziona il pulsante chiudi nella top bar */
   .top-bar__button--close {
     display: flex;
     position: absolute;
@@ -434,17 +465,20 @@
     transform: translateY(-50%);
   }
 
+  /* Nasconde le sezioni laterali su tablet */
   .top-bar__left,
   .top-bar__right {
     display: none;
   }
 
+  /* Riorganizza il contenitore top bar */
   .top-bar__container {
     padding: 0 24px;
     justify-content: center;
     flex-direction: column;
   }
 
+  /* Riporta il contenuto centrale in flusso normale */
   .top-bar__center {
     position: static;
     transform: none;
@@ -453,20 +487,24 @@
     justify-content: center;
   }
 
+  /* Allinea il contenuto centrale */
   .top-bar__center-container {
     justify-content: center;
     width: 100%;
   }
 
+  /* Riduce il padding dei bottoni */
   .top-bar__button {
     padding: 4px;
   }
 
+  /* Dimensione icone della top bar */
   .top-bar__button img {
     width: 28px;
     height: 28px;
   }
 
+  /* Testo promozionale più ampio su tablet */
   .top-bar__center-text {
     font-size: 14px;
     text-align: center;
@@ -474,15 +512,17 @@
     max-width: 520px;
   }
 
-  /* Header */
+  /* Nasconde il header desktop */
   .header {
     display: none;
   }
 
+  /* Mostra il header mobile */
   .mobile-header {
     display: block;
   }
 
+  /* Contenitore del mobile header su tablet */
   .mobile-header__container {
     height: 64px;
     padding: 0 24px;
@@ -491,6 +531,7 @@
     justify-content: space-between;
   }
 
+  /* Bottoni menu e azioni */
   .mobile-header__menu-btn,
   .mobile-header__icon-btn {
     display: flex;
@@ -502,12 +543,14 @@
     cursor: pointer;
   }
 
+  /* Icona menu su tablet */
   .mobile-header__menu-btn img {
     display: block;
     width: 34px;
     height: 34px;
   }
 
+  /* Struttura dei bottoni icona con contatore */
   .mobile-header__icon-btn {
     position: relative;
     display: flex;
@@ -516,12 +559,14 @@
     justify-content: flex-start;
   }
 
+  /* Icone delle azioni su tablet */
   .mobile-header__icon-btn img {
     display: block;
     width: 24px;
     height: 24px;
   }
 
+  /* Contatore carrello su tablet */
   .mobile-header__cart-count {
     position: absolute;
     left: 50%;
@@ -532,6 +577,7 @@
     text-align: center;
   }
 
+  /* Logo del header mobile su tablet */
   .mobile-header__logo {
     display: flex;
     align-items: center;
@@ -539,12 +585,14 @@
     margin-right: auto;
   }
 
+  /* Immagine del logo su tablet */
   .mobile-header__logo img {
     display: block;
     width: 69.8px;
     height: 41.88px;
   }
 
+  /* Gruppo azioni del header mobile */
   .mobile-header__actions {
     display: flex;
     align-items: center;
@@ -552,12 +600,15 @@
   }
 }
 
-/* Desktop */
+/* Adattamento desktop:
+   mostra il header completo e nasconde quello mobile */
 @media (min-width: 1025px) {
+  /* Nasconde il header mobile su desktop */
   .mobile-header {
     display: none;
   }
 
+  /* Nasconde il pulsante chiudi della top bar su desktop */
   .top-bar__button--close {
     display: none;
   }
