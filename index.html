@@ -66,6 +66,14 @@
                 alt="Scorri messaggio successivo"
               />
             </button>
+
+            <!-- Bottone chiudi messaggio -->
+            <button class="top-bar__button top-bar__button--close">
+              <img
+                src="assets/icons/close-solid-icon.svg"
+                alt="Chiudi messaggio"
+              />
+            </button>
           </div>
         </div>
 
@@ -95,6 +103,42 @@
       </div>
     </div>
     <!-- FINE DEL TOP BAR -->
+
+    <!-- HEADER PRINCIPALE MOBILE (NAVBAR) Blocco: header -->
+    <header class="mobile-header">
+      <div class="mobile-header__container">
+        <!-- Menu (hamburger) -->
+        <button class="mobile-header__menu-btn" aria-label="Apri menu">
+          <img src="assets/icons/hamburger-icon.svg" alt="Menu" />
+        </button>
+
+        <!-- Logo -->
+        <a href="#" class="mobile-header__logo">
+          <img src="assets/images/logo/logo-header.svg" alt="LEGO" />
+        </a>
+
+        <!-- Actions -->
+        <div class="mobile-header__actions">
+          <button class="mobile-header__icon-btn" aria-label="Cerca">
+            <img src="assets/icons/search-icon.svg" alt="Cerca" />
+          </button>
+
+          <button class="mobile-header__icon-btn" aria-label="Account">
+            <img src="assets/icons/account-icon.svg" alt="Account" />
+          </button>
+
+          <button class="mobile-header__icon-btn" aria-label="Preferiti">
+            <img src="assets/icons/heart-icon.svg" alt="Preferiti" />
+          </button>
+
+          <button class="mobile-header__icon-btn" aria-label="Carrello">
+            <img src="assets/icons/shopping-bag-icon.svg" alt="Carrello" />
+            <span class="mobile-header__cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- FINE DEL MOBILE HEADER -->
 
     <!-- HEADER PRINCIPALE (NAVBAR) Blocco: header -->
     <header class="header">
@@ -194,6 +238,13 @@
       <section class="hero">
         <!-- Contenitore principale della sezione -->
         <div class="hero__container">
+          <!-- MOBILE IMG -->
+          <div class="hero__banner_mobile">
+            <img
+              src="assets/images/backgrounds/lego-easter-hero-banner-mobile.jpg"
+              alt=""
+            />
+          </div>
           <!-- CONTENUTO TESTUALE (SINISTRA) -->
           <div class="hero__content">
             <!-- Titolo principale -->
@@ -394,7 +445,7 @@
           </div>
         </div>
         <!-- Carosello prodotti Sezione 3: Trova il set perfetto -->
-        <div>
+        <div class="perfect-set-scroll">
           <div class="perfect-set-carousel">
             <!-- Card 1 -->
             <article class="perfect-set-article">
@@ -452,6 +503,16 @@
                     Aggiungi al carrello
                   </button>
                 </div>
+                <button
+                  class="perfect-set-carrello-btn-responsive"
+                  type="button"
+                >
+                  <img
+                    src="assets/icons/shopping-bag-icon.svg"
+                    alt="Aggiungi Rametti di magnolia al carrello"
+                    class="carrello-bag-icon"
+                  />
+                </button>
                 <button class="perfect-set-favorite-button" type="button">
                   <img
                     src="assets/icons/heart-icon.svg"
@@ -517,6 +578,16 @@
                     Aggiungi al carrello
                   </button>
                 </div>
+                <button
+                  class="perfect-set-carrello-btn-responsive"
+                  type="button"
+                >
+                  <img
+                    src="assets/icons/shopping-bag-icon.svg"
+                    alt="Aggiungi Rametti di magnolia al carrello"
+                    class="carrello-bag-icon"
+                  />
+                </button>
                 <button class="perfect-set-favorite-button" type="button">
                   <img
                     src="assets/icons/heart-icon.svg"
@@ -582,6 +653,16 @@
                     Aggiungi al carrello
                   </button>
                 </div>
+                <button
+                  class="perfect-set-carrello-btn-responsive"
+                  type="button"
+                >
+                  <img
+                    src="assets/icons/shopping-bag-icon.svg"
+                    alt="Aggiungi Rametti di magnolia al carrello"
+                    class="carrello-bag-icon"
+                  />
+                </button>
                 <button class="perfect-set-favorite-button" type="button">
                   <img
                     src="assets/icons/heart-icon.svg"
@@ -647,6 +728,16 @@
                     Aggiungi al carrello
                   </button>
                 </div>
+                <button
+                  class="perfect-set-carrello-btn-responsive"
+                  type="button"
+                >
+                  <img
+                    src="assets/icons/shopping-bag-icon.svg"
+                    alt="Aggiungi Rametti di magnolia al carrello"
+                    class="carrello-bag-icon"
+                  />
+                </button>
                 <button class="perfect-set-favorite-button" type="button">
                   <img
                     src="assets/icons/heart-icon.svg"
@@ -712,6 +803,16 @@
                     Aggiungi al carrello
                   </button>
                 </div>
+                <button
+                  class="perfect-set-carrello-btn-responsive"
+                  type="button"
+                >
+                  <img
+                    src="assets/icons/shopping-bag-icon.svg"
+                    alt="Aggiungi Rametti di magnolia al carrello"
+                    class="carrello-bag-icon"
+                  />
+                </button>
                 <button class="perfect-set-favorite-button" type="button">
                   <img
                     src="assets/icons/heart-icon.svg"
@@ -1070,10 +1171,10 @@
             src="assets/images/logo/lego-insiders-logo.svg"
             alt="LEGO Insiders"
           />
-          <h2>Iscriviti e guadagna<br />punti</h2>
+          <h2>Iscriviti e guadagna<br> punti </h2>
           <p>
-            Accumula punti con i tuoi acquisti e<br />accedi a vantaggi
-            esclusivi riservati ai<br />soci.
+            Accumula punti con i tuoi acquisti e <br /> accedi a vantaggi
+            esclusivi riservati ai <br/> soci.
           </p>
           <div class="join-and-earn__buttons">
             <a
@@ -1099,11 +1200,13 @@
               src="assets/images/marketing/loyalty-points-card.png"
               alt="Punti fedeltà LEGO Insiders"
             />
+            <div class="join-and-earn__puntifedelta__text">
             <h3>Punti fedeltà</h3>
             <p>
-              Guadagna punti da riscuotere<br />effettuando acquisti o
-              registrando i <br />set che possiedi.
+              Guadagna punti da riscuotere <br/> effettuando acquisti o
+              registrando i <br /> set che possiedi.
             </p>
+            </div>
           </div>
 
           <div class="join-and-earn__rewards">
@@ -1111,22 +1214,26 @@
               src="assets/images/marketing/members-rewards-card.jpg"
               alt="Premi riservati ai soci LEGO Insiders"
             />
-            <h3>Premi riservati ai soci</h3>
+             <div class="join-and-earn__rewards__text"> 
+              <h3> Premi riservati ai soci</h3>
             <p>
               Articoli LEGO, sconti speciali,<br />
               biglietti per LEGOLAND e molto<br />
               altro.
             </p>
+            </div>
           </div>
           <div class="join-and-earn__gifts">
             <img
               src="assets/images/marketing/limited-offers-card.png"
               alt="Omaggi a tempo limitato LEGO Insiders"
             />
+             <div class="join-and-earn__gifts__text">
             <h3>Omaggi a tempo limitato</h3>
             <p>
-              Ottieni di più di ciò che ami:<br />omaggi disponibili con set<br />selezionati.
+              Ottieni di più di ciò che ami: <br /> omaggi disponibili con set <br /> selezionati.
             </p>
+            </div>
           </div>
         </div>
         <img
@@ -1140,31 +1247,42 @@
 
       <!-- Sezione 8: Benvenuto-->
       <section class="welcome-home">
-        <p>
+        <!-- Toggle -->
+        <input type="checkbox" id="toggle-text" class="welcome-home__toggle" />
+
+        <!-- Testo -->
+        <p class="welcome-home__text">
           Ti diamo il benvenuto nel LEGO® Shop ufficiale, dove troverai
           giocattoli da costruzione LEGO,
-          <a href="#" class="welcome-home__blue-text">regali</a> , splendidi set
-          da esposizione e molto altro ancora per
-          <a href="#" class="welcome-home__blue-text">bambine</a>,
-          <a href="#" class="welcome-home__blue-text">bambini</a>,
-          <a href="#" class="welcome-home__blue-text">ragazzi</a> e adulti.
-          Trova il regalo perfectto per bambini, ragazzi e adulti, per
-          festeggiare i
-          <a href="#" class="welcome-home__blue-text">compleanni</a> o altre
-          occasioni come
-          <a href="#" class="welcome-home__blue-text">San Valentino</a>, la
-          <a href="#" class="welcome-home__blue-text">Festa della mamma</a> e la
-          <a href="#" class="welcome-home__blue-text">Festa del papà</a>. Con
-          noi è facile acquistare giocattoli che garantiscono ore di gioco
-          all'insegna del divertimento e della fantasia. Puoi anche trovare
-          <a href="#" class="welcome-home__blue-text">set LEGO per gli adulti</a
-          >, perfectti per ogni tipo di
-          <a href="#" class="welcome-home__blue-text">interessi</a> come
-          <a href="#" class="welcome-home__blue-text">auto</a>,
-          <a href="#" class="welcome-home__blue-text">fiori</a>,
-          <a href="#" class="welcome-home__blue-text">videogiochi</a> e molto
-          altro ancora!
+          <a href="#" class="welcome-home__blue-text">regali</a>, splendidi set
+          da esposizione e molto altro ancora
+
+          <span class="welcome-home__extra">
+            per <a href="#" class="welcome-home__blue-text">bambine</a>,
+            <a href="#" class="welcome-home__blue-text">bambini</a>,
+            <a href="#" class="welcome-home__blue-text">ragazzi</a> e adulti.
+            Trova il regalo perfetto per bambini, ragazzi e adulti, per
+            festeggiare i
+            <a href="#" class="welcome-home__blue-text">compleanni</a> o altre
+            occasioni come
+            <a href="#" class="welcome-home__blue-text">San Valentino</a>, la
+            <a href="#" class="welcome-home__blue-text">Festa della mamma</a> e
+            la <a href="#" class="welcome-home__blue-text">Festa del papà</a>.
+            Con noi è facile acquistare giocattoli che garantiscono ore di gioco
+            all'insegna del divertimento e della fantasia. Puoi anche trovare
+            <a href="#" class="welcome-home__blue-text"
+              >set LEGO per gli adulti</a
+            >, perfetti per ogni tipo di
+            <a href="#" class="welcome-home__blue-text">interessi</a> come
+            <a href="#" class="welcome-home__blue-text">auto</a>,
+            <a href="#" class="welcome-home__blue-text">fiori</a>,
+            <a href="#" class="welcome-home__blue-text">videogiochi</a> e molto
+            altro ancora!
+          </span>
         </p>
+
+        <!-- Bottone -->
+        <label for="toggle-text" class="welcome-home__btn"></label>
       </section>
       <!-- FINE DELLA SECTION 8 -->
     </main>
