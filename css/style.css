@@ -437,10 +437,12 @@ body {
   height: 400px;
   padding: 20px;
   position: relative; /* necessario per posizionamento elementi interni */
+  overflow-x: scroll;
 }
 #novita {
   padding-left: 10px;
   display: flex;
+  
 }
 
 .section-featured__navigation {
@@ -451,6 +453,11 @@ body {
   padding-left: 20px;
   font-size: 0.7rem;
 }
+.section-featured__navigation nav{
+  font-size: 9px;
+  padding-bottom: 10px;
+}
+
 .section-featured__card {
   overflow: hidden;
   position: relative;
@@ -533,25 +540,25 @@ nav a {
     padding-bottom: 4px;
   }
 
-  .section-featured__card {
+  
  
    .section-featured__card {
-    height: 152px;
+    height: 200px;
     padding-top: 10px;
-    width: 100px;
+    width: 135px;
   }
   .section-featured__card img {
     width: 100%;
   }
   .section-featured__card h2 {
-    font-size: 10px;
+    font-size: 13px;
   }
   .section-featured__card h2 br {
     display: none;
   }
 
   #novita {
-    overflow-x: scroll;
+    overflow-x: visible;
     gap: 7px;
     padding-bottom: 13px;
     padding-left: 0px;
@@ -566,6 +573,7 @@ nav a {
     background: #ffffff;
     border-radius: 2px;
   }
+}
 }
 @media (max-width: 375px) {
   .section-featured__navigation {
