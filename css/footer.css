@@ -331,3 +331,403 @@
   margin-top: 20px;
   color: #ffffff;
 }
+
+/* Responsive Reset */
+.footer__header,
+.footer__main,
+.footer__disclaimer {
+  width: min(100%, 1100px);
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  /* STRUTTURA MOBILE:
+     Il footer viene riorganizzato in layout verticale e fluido */
+  .footer {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .footer__header,
+  .footer__main,
+  .footer__disclaimer {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* GESTIONE WRAPPER:
+     I contenitori principali vengono "appiattiti" per facilitare il riordino */
+  .footer__header,
+  .footer__main {
+    display: contents;
+  }
+
+  /* ORDINE ELEMENTI:
+     Definisce la sequenza verticale dei blocchi nel mobile */
+  .branding {
+    order: 1;
+  }
+  .newsletter {
+    order: 2;
+  }
+  .chi-siamo {
+    order: 3;
+  }
+  .supporto {
+    order: 4;
+  }
+  .attrazioni {
+    order: 5;
+  }
+  .altre-informazioni {
+    order: 6;
+  }
+  .social {
+    order: 7;
+  }
+  .footer__disclaimer {
+    order: 8;
+  }
+
+  /* SPAZIATURA:
+     Padding laterale uniforme per tutti i blocchi */
+  .branding,
+  .newsletter,
+  .chi-siamo,
+  .supporto,
+  .attrazioni,
+  .altre-informazioni,
+  .social,
+  .footer__disclaimer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* BRANDING:
+     Adattamento di logo, selettore paese e navigazione */
+  .branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .branding-top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .branding__logo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+
+  .branding__location {
+    margin-top: 0;
+    width: auto;
+    align-self: flex-start;
+    padding: 10px 14px;
+  }
+
+  .branding__nav {
+    margin-top: 20px;
+  }
+
+  /* NEWSLETTER:
+     Input e bottone adattati alla larghezza disponibile */
+  .newsletter {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .newsletter__email {
+    width: 100%;
+  }
+
+  .newsletter__email input {
+    width: 100%;
+    height: 52px;
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  .newsletter__email button {
+    height: 52px;
+  }
+
+  /* SEZIONI INFORMATIVE:
+     Colonne trasformate in blocchi verticali full width */
+  .chi-siamo,
+  .supporto,
+  .attrazioni,
+  .altre-informazioni {
+    width: 100%;
+    min-width: unset;
+    margin-top: 24px;
+  }
+
+  .chi-siamo h3,
+  .supporto h3,
+  .attrazioni h3,
+  .altre-informazioni h3,
+  .newsletter span,
+  .social span {
+    font-size: 14px;
+  }
+
+  .chi-siamo__nav,
+  .supporto__nav,
+  .attrazioni__nav,
+  .altre-informazioni__nav {
+    margin-top: 20px;
+  }
+
+  .branding__nav li,
+  .chi-siamo__nav li,
+  .supporto__nav li,
+  .attrazioni__nav li,
+  .altre-informazioni__nav li {
+    margin-top: 14px;
+  }
+
+  /* SOCIAL:
+     Gestione icone e spaziatura */
+  .social {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .social__icons {
+    margin-top: 16px;
+  }
+
+  .social__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+  }
+
+  /* DISCLAIMER:
+     Layout compatto per link legali e testo finale */
+  .footer__disclaimer {
+    margin-top: 24px;
+    font-size: 11px;
+    height: auto;
+    padding-bottom: 24px;
+  }
+
+  .disclaimer__nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .disclaimer__legal {
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* STRUTTURA TABLET:
+     Il footer mantiene una disposizione verticale ma più ariosa rispetto al mobile */
+  .footer {
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .footer__header,
+  .footer__main,
+  .footer__disclaimer {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-sizing: border-box;
+  }
+
+  /* GESTIONE WRAPPER:
+     I contenitori vengono appiattiti per controllare meglio l'ordine visivo */
+  .footer__header,
+  .footer__main {
+    display: contents;
+  }
+
+  /* ORDINE ELEMENTI:
+     Sequenza verticale dei blocchi anche su tablet */
+  .branding {
+    order: 1;
+  }
+  .newsletter {
+    order: 2;
+  }
+  .chi-siamo {
+    order: 3;
+  }
+  .supporto {
+    order: 4;
+  }
+  .attrazioni {
+    order: 5;
+  }
+  .altre-informazioni {
+    order: 6;
+  }
+  .social {
+    order: 7;
+  }
+  .footer__disclaimer {
+    order: 8;
+  }
+
+  /* SPAZIATURA:
+     Padding uniforme applicato a tutte le sezioni */
+  .branding,
+  .newsletter,
+  .chi-siamo,
+  .supporto,
+  .attrazioni,
+  .altre-informazioni,
+  .social,
+  .footer__disclaimer {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* BRANDING:
+     Layout verticale con logo e informazioni allineate a sinistra */
+  .branding {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .branding-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .branding__logo {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+
+  .branding__location {
+    margin-top: 8px;
+  }
+
+  .branding__nav {
+    margin-top: 20px;
+  }
+
+  /* NEWSLETTER:
+     Input adattato alla larghezza con dimensioni consistenti */
+  .newsletter {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .newsletter__email {
+    width: 100%;
+  }
+
+  .newsletter__email input {
+    width: 100%;
+    height: 52px;
+    font-size: 13px;
+    padding: 14px;
+  }
+
+  .newsletter__email button {
+    height: 52px;
+  }
+
+  /* SEZIONI INFORMATIVE:
+     Blocchi full width disposti verticalmente */
+  .chi-siamo,
+  .supporto,
+  .attrazioni,
+  .altre-informazioni {
+    width: 100%;
+    min-width: unset;
+    margin-top: 24px;
+  }
+
+  .chi-siamo h3,
+  .supporto h3,
+  .attrazioni h3,
+  .altre-informazioni h3,
+  .newsletter span,
+  .social span {
+    font-size: 14px;
+  }
+
+  .chi-siamo__nav,
+  .supporto__nav,
+  .attrazioni__nav,
+  .altre-informazioni__nav {
+    margin-top: 20px;
+  }
+
+  .branding__nav li,
+  .chi-siamo__nav li,
+  .supporto__nav li,
+  .attrazioni__nav li,
+  .altre-informazioni__nav li {
+    margin-top: 14px;
+  }
+
+  /* SOCIAL:
+     Spaziatura e dimensione icone adattate al tablet */
+  .social {
+    width: 100%;
+    margin-top: 24px;
+  }
+
+  .social__icons {
+    margin-top: 16px;
+  }
+
+  .social__icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+  }
+
+  /* DISCLAIMER:
+     Area legale compatta ma leggibile */
+  .footer__disclaimer {
+    margin-top: 24px;
+    font-size: 11px;
+    height: auto;
+    padding-bottom: 24px;
+  }
+
+  .disclaimer__nav ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    font-size: 12px;
+  }
+
+  .disclaimer__legal {
+    margin-top: 16px;
+    line-height: 1.6;
+  }
+}
