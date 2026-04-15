@@ -331,3 +331,13 @@
   margin-top: 20px;
   color: #ffffff;
 }
+
+/* Responsive Reset */
+.footer__header,
+.footer__main,
+.footer__disclaimer {
+  width: min(100%, 1100px);
+  padding-left: 16px;
+  padding-right: 16px;
+  box-sizing: border-box;
+}
