@@ -1123,6 +1123,30 @@ nav a {
 }
 
 /* Sezione 5: media query per tablet */
+@media (max-width: 820px) {
+  .weekly-featured {
+    width: 1604px;
+    max-width: 100%;
+  }
+
+  .weekly-featured__header {
+    margin-top: 40px;
+    margin-bottom: -50px;
+  }
+  .weekly-featured__overlay-text {
+    margin-top: 100px;
+    padding: 40px;
+  }
+  .weekly-featured__heading {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+
+  .weekly-featured__tabs {
+    margin-top: 50px;
+    margin-bottom: 0px;
+  }
+}
 
 /* Sezione 5: media query per mobile */
 @media (max-width: 375px) {
