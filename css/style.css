@@ -523,11 +523,9 @@ nav a {
 
 /* Sezione 3: Trova il set perfetto */
 .perfect-set {
-  width: 100%;
-  margin: 0 auto;
+  margin: 0 131px;
   height: 730px;
   position: relative;
-  padding: 32px;
 }
 
 /* Sezione 3: Bottoni e titolo */
