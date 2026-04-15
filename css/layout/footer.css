@@ -1,57 +1,55 @@
-/* FOOTER */
+/* Blocco principale del footer:
+   struttura verticale, centrata e con sfondo scuro */
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  text-align: center;
-  background: var(--color-purple-darker);
+  text-align: justify;
+  background: #201b48;
   width: 100%;
   margin: 40px auto 0;
 }
 
-.footer {
-  display: flex; /* Usa flexbox per organizzare gli elementi */
-  align-items: center; /* Allinea gli elementi al centro sull'asse verticale */
-  flex-direction: column; /* Dispone gli elementi in colonna */
-  background: #201b48; /* Colore di sfondo del footer */
-  text-align: justify; /* Giustifica il testo */
-  width: 100%; /* Occupa tutta la larghezza */
-  margin: 40px auto 0; /* Margine superiore e centratura */
-}
-
-/* ===================== HEADER DEL FOOTER ===================== */
+/* Contenitore superiore del footer:
+   organizza le colonne principali (branding e link) */
 .footer__header {
-  display: flex; /* Layout flessibile */
-  justify-content: space-between; /* Spazio tra le colonne */
-  width: 69%; /* Larghezza contenuta */
-  height: 520px; /* Altezza fissa */
+  display: flex;
+  justify-content: space-between;
+  width: 69%;
+  height: 520px;
 }
 
-/* ===================== BRANDING ===================== */
+/* Sezione branding:
+   include logo, selezione paese e navigazione primaria */
 .branding {
   display: flex;
-  flex-direction: column; /* Elementi in colonna */
+  flex-direction: column;
   margin-right: 20px;
   margin-top: 40px;
   width: 300px;
 }
 
+/* Wrapper interno del branding:
+   gestisce logo e selettore paese */
 .branding-top {
   display: flex;
   flex-direction: column;
 }
 
+/* Logo del footer */
 .branding__logo {
   width: 98px;
   height: 98px;
 }
 
+/* Bottone selezione paese:
+   layout orizzontale con icona e testo */
 .branding__location {
-  background: #000000; /* Sfondo nero */
+  background: #000000;
   display: flex;
   align-items: center;
-  gap: 10px; /* Spazio tra icona e testo */
+  gap: 10px;
   color: white;
   width: 80px;
   margin-top: 20px;
@@ -59,29 +57,35 @@
   border: none;
 }
 
+/* Navigazione branding */
 .branding__nav {
   margin-top: 20px;
 }
 
+/* Rimozione stile lista */
 .branding__nav ul {
-  list-style-type: none; /* Rimuove i punti della lista */
+  list-style-type: none;
 }
 
+/* Spaziatura tra elementi lista */
 .branding__nav li {
   margin-top: 20px;
 }
 
+/* Hover link branding */
 .branding__nav li a:hover {
-  text-decoration: underline; /* Effetto hover */
+  text-decoration: underline;
   color: #ffffff;
 }
 
+/* Link branding */
 .branding__nav a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* ===================== CHI SIAMO ===================== */
+/* Sezione "Chi siamo":
+   colonna informativa con link aziendali */
 .chi-siamo {
   margin-right: 20px;
   margin-top: 40px;
@@ -90,35 +94,42 @@
   text-align: left;
 }
 
+/* Titolo sezione */
 .chi-siamo h3 {
-  text-transform: uppercase; /* Testo in maiuscolo */
+  text-transform: uppercase;
   font-size: 16px;
   color: #ffffff;
 }
 
+/* Navigazione interna */
 .chi-siamo__nav {
   margin-top: 40px;
 }
 
+/* Lista senza bullet */
 .chi-siamo__nav ul {
   list-style-type: none;
 }
 
+/* Spaziatura elementi */
 .chi-siamo__nav li {
   margin-top: 20px;
 }
 
+/* Hover link */
 .chi-siamo__nav li a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
 
+/* Link base */
 .chi-siamo a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* ===================== SUPPORTO ===================== */
+/* Sezione supporto:
+   struttura identica a "chi siamo" */
 .supporto {
   margin-right: 20px;
   margin-top: 40px;
@@ -127,35 +138,41 @@
   text-align: left;
 }
 
+/* Titolo supporto */
 .supporto h3 {
   text-transform: uppercase;
   font-size: 16px;
   color: #ffffff;
 }
 
+/* Navigazione supporto */
 .supporto__nav {
   margin-top: 40px;
 }
 
+/* Lista supporto */
 .supporto__nav ul {
   list-style-type: none;
 }
 
+/* Spaziatura elementi */
 .supporto__nav li {
   margin-top: 20px;
 }
 
+/* Hover link */
 .supporto__nav li a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
 
+/* Link base */
 .supporto a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* ===================== ATTRAZIONI ===================== */
+/* Sezione attrazioni */
 .attrazioni {
   margin-top: 40px;
   margin-right: 20px;
@@ -163,35 +180,41 @@
   text-align: left;
 }
 
+/* Titolo attrazioni */
 .attrazioni h3 {
   text-transform: uppercase;
   font-size: 16px;
   color: #ffffff;
 }
 
+/* Navigazione attrazioni */
 .attrazioni__nav {
   margin-top: 40px;
 }
 
+/* Lista attrazioni */
 .attrazioni__nav ul {
   list-style-type: none;
 }
 
+/* Spaziatura elementi */
 .attrazioni__nav li {
   margin-top: 20px;
 }
 
+/* Hover link */
 .attrazioni__nav li a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
 
+/* Link base */
 .attrazioni a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* ===================== ALTRE INFORMAZIONI ===================== */
+/* Sezione altre informazioni */
 .altre-informazioni {
   margin-top: 40px;
   width: 200px;
@@ -199,35 +222,42 @@
   text-align: left;
 }
 
+/* Titolo sezione */
 .altre-informazioni h3 {
   text-transform: uppercase;
   font-size: 16px;
   color: #ffffff;
 }
 
+/* Navigazione */
 .altre-informazioni__nav {
   margin-top: 40px;
 }
 
+/* Lista */
 .altre-informazioni__nav ul {
   list-style-type: none;
 }
 
+/* Spaziatura elementi */
 .altre-informazioni__nav li {
   margin-top: 20px;
 }
 
+/* Hover link */
 .altre-informazioni__nav li a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
 
+/* Link base */
 .altre-informazioni a {
   text-decoration: none;
   color: #ffffff;
 }
 
-/* ===================== SEZIONE PRINCIPALE ===================== */
+/* Sezione centrale footer:
+   contiene newsletter e social */
 .footer__main {
   display: flex;
   justify-content: space-between;
@@ -237,12 +267,14 @@
   margin-top: 10px;
 }
 
-/* ===================== NEWSLETTER ===================== */
+/* Blocco newsletter:
+   input e bottone iscrizione */
 .newsletter {
   display: flex;
   flex-direction: column;
 }
 
+/* Titolo newsletter */
 .newsletter span {
   text-transform: uppercase;
   font-size: 16px;
@@ -251,11 +283,13 @@
   color: #ffffff;
 }
 
+/* Wrapper input + bottone */
 .newsletter__email {
   display: flex;
   align-items: center;
 }
 
+/* Campo input email */
 .newsletter__email input {
   height: 60px;
   width: 210px;
@@ -266,14 +300,16 @@
   padding: 20px;
 }
 
+/* Bottone invio */
 .newsletter__email button {
   height: 60px;
   width: 45px;
   border: none;
-  background: #e96f14; /* Colore arancione bottone */
+  background: #e96f14;
   cursor: pointer;
 }
 
+/* Icona bottone */
 .newsletter__email img {
   height: 24px;
   width: 24px;
@@ -281,16 +317,18 @@
   cursor: pointer;
 }
 
-/* ===================== SOCIAL ===================== */
+/* Sezione social */
 .social {
   display: flex;
   flex-direction: column;
 }
 
+/* Container icone */
 .social__icons {
   margin-top: 30px;
 }
 
+/* Icone social */
 .social__icon {
   width: 40px;
   height: 40px;
@@ -298,10 +336,7 @@
   cursor: pointer;
 }
 
-.social__icon a {
-  text-decoration: none;
-}
-
+/* Titolo social */
 .social span {
   text-transform: uppercase;
   font-size: 16px;
@@ -309,7 +344,8 @@
   color: #ffffff;
 }
 
-/* ===================== DISCLAIMER ===================== */
+/* Disclaimer:
+   contiene link legali e testo informativo */
 .footer__disclaimer {
   display: flex;
   flex-direction: column;
@@ -319,31 +355,36 @@
   height: 100px;
 }
 
+/* Navigazione legale */
 .disclaimer__nav ul {
   display: flex;
-  flex-wrap: wrap; /* Permette il ritorno a capo */
-  gap: 20px; /* Spazio tra gli elementi */
+  flex-wrap: wrap;
+  gap: 20px;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
+/* Link legali */
 .disclaimer__nav li a {
   text-decoration: none;
   color: #ffffff;
 }
 
+/* Hover link legali */
 .disclaimer__nav li a:hover {
   text-decoration: underline;
   color: #ffffff;
 }
 
+/* Testo legale */
 .disclaimer__legal {
   margin-top: 20px;
   color: #ffffff;
 }
 
-/* Responsive Reset */
+/* Reset responsive:
+   limita larghezza e aggiunge padding laterale */
 .footer__header,
 .footer__main,
 .footer__disclaimer {
@@ -351,394 +392,4 @@
   padding-left: 16px;
   padding-right: 16px;
   box-sizing: border-box;
-}
-
-/* Mobile */
-@media (max-width: 375px) {
-  /* STRUTTURA MOBILE:
-     Il footer viene riorganizzato in layout verticale e fluido */
-  .footer {
-    align-items: stretch;
-    text-align: left;
-  }
-
-  .footer__header,
-  .footer__main,
-  .footer__disclaimer {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-  }
-
-  /* GESTIONE WRAPPER:
-     I contenitori principali vengono "appiattiti" per facilitare il riordino */
-  .footer__header,
-  .footer__main {
-    display: contents;
-  }
-
-  /* ORDINE ELEMENTI:
-     Definisce la sequenza verticale dei blocchi nel mobile */
-  .branding {
-    order: 1;
-  }
-  .newsletter {
-    order: 2;
-  }
-  .chi-siamo {
-    order: 3;
-  }
-  .supporto {
-    order: 4;
-  }
-  .attrazioni {
-    order: 5;
-  }
-  .altre-informazioni {
-    order: 6;
-  }
-  .social {
-    order: 7;
-  }
-  .footer__disclaimer {
-    order: 8;
-  }
-
-  /* SPAZIATURA:
-     Padding laterale uniforme per tutti i blocchi */
-  .branding,
-  .newsletter,
-  .chi-siamo,
-  .supporto,
-  .attrazioni,
-  .altre-informazioni,
-  .social,
-  .footer__disclaimer {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* BRANDING:
-     Adattamento di logo, selettore paese e navigazione */
-  .branding {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-  }
-
-  .branding-top {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 12px;
-    width: 100%;
-  }
-
-  .branding__logo {
-    width: 72px;
-    height: 72px;
-    flex-shrink: 0;
-  }
-
-  .branding__location {
-    margin-top: 0;
-    width: auto;
-    align-self: flex-start;
-    padding: 10px 14px;
-  }
-
-  .branding__nav {
-    margin-top: 20px;
-  }
-
-  /* NEWSLETTER:
-     Input e bottone adattati alla larghezza disponibile */
-  .newsletter {
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .newsletter__email {
-    width: 100%;
-  }
-
-  .newsletter__email input {
-    width: 100%;
-    height: 52px;
-    font-size: 13px;
-    padding: 14px;
-  }
-
-  .newsletter__email button {
-    height: 52px;
-  }
-
-  /* SEZIONI INFORMATIVE:
-     Colonne trasformate in blocchi verticali full width */
-  .chi-siamo,
-  .supporto,
-  .attrazioni,
-  .altre-informazioni {
-    width: 100%;
-    min-width: unset;
-    margin-top: 24px;
-  }
-
-  .chi-siamo h3,
-  .supporto h3,
-  .attrazioni h3,
-  .altre-informazioni h3,
-  .newsletter span,
-  .social span {
-    font-size: 14px;
-  }
-
-  .chi-siamo__nav,
-  .supporto__nav,
-  .attrazioni__nav,
-  .altre-informazioni__nav {
-    margin-top: 20px;
-  }
-
-  .branding__nav li,
-  .chi-siamo__nav li,
-  .supporto__nav li,
-  .attrazioni__nav li,
-  .altre-informazioni__nav li {
-    margin-top: 14px;
-  }
-
-  /* SOCIAL:
-     Gestione icone e spaziatura */
-  .social {
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .social__icons {
-    margin-top: 16px;
-  }
-
-  .social__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 30px;
-  }
-
-  /* DISCLAIMER:
-     Layout compatto per link legali e testo finale */
-  .footer__disclaimer {
-    margin-top: 24px;
-    font-size: 11px;
-    height: auto;
-    padding-bottom: 24px;
-  }
-
-  .disclaimer__nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    font-size: 12px;
-  }
-
-  .disclaimer__legal {
-    margin-top: 16px;
-    line-height: 1.6;
-  }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* STRUTTURA TABLET:
-     Il footer mantiene una disposizione verticale ma più ariosa rispetto al mobile */
-  .footer {
-    align-items: stretch;
-    text-align: left;
-  }
-
-  .footer__header,
-  .footer__main,
-  .footer__disclaimer {
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    box-sizing: border-box;
-  }
-
-  /* GESTIONE WRAPPER:
-     I contenitori vengono appiattiti per controllare meglio l'ordine visivo */
-  .footer__header,
-  .footer__main {
-    display: contents;
-  }
-
-  /* ORDINE ELEMENTI:
-     Sequenza verticale dei blocchi anche su tablet */
-  .branding {
-    order: 1;
-  }
-  .newsletter {
-    order: 2;
-  }
-  .chi-siamo {
-    order: 3;
-  }
-  .supporto {
-    order: 4;
-  }
-  .attrazioni {
-    order: 5;
-  }
-  .altre-informazioni {
-    order: 6;
-  }
-  .social {
-    order: 7;
-  }
-  .footer__disclaimer {
-    order: 8;
-  }
-
-  /* SPAZIATURA:
-     Padding uniforme applicato a tutte le sezioni */
-  .branding,
-  .newsletter,
-  .chi-siamo,
-  .supporto,
-  .attrazioni,
-  .altre-informazioni,
-  .social,
-  .footer__disclaimer {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* BRANDING:
-     Layout verticale con logo e informazioni allineate a sinistra */
-  .branding {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-top: 20px;
-  }
-
-  .branding-top {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-  }
-
-  .branding__logo {
-    width: 72px;
-    height: 72px;
-    flex-shrink: 0;
-  }
-
-  .branding__location {
-    margin-top: 8px;
-  }
-
-  .branding__nav {
-    margin-top: 20px;
-  }
-
-  /* NEWSLETTER:
-     Input adattato alla larghezza con dimensioni consistenti */
-  .newsletter {
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .newsletter__email {
-    width: 100%;
-  }
-
-  .newsletter__email input {
-    width: 100%;
-    height: 52px;
-    font-size: 13px;
-    padding: 14px;
-  }
-
-  .newsletter__email button {
-    height: 52px;
-  }
-
-  /* SEZIONI INFORMATIVE:
-     Blocchi full width disposti verticalmente */
-  .chi-siamo,
-  .supporto,
-  .attrazioni,
-  .altre-informazioni {
-    width: 100%;
-    min-width: unset;
-    margin-top: 24px;
-  }
-
-  .chi-siamo h3,
-  .supporto h3,
-  .attrazioni h3,
-  .altre-informazioni h3,
-  .newsletter span,
-  .social span {
-    font-size: 14px;
-  }
-
-  .chi-siamo__nav,
-  .supporto__nav,
-  .attrazioni__nav,
-  .altre-informazioni__nav {
-    margin-top: 20px;
-  }
-
-  .branding__nav li,
-  .chi-siamo__nav li,
-  .supporto__nav li,
-  .attrazioni__nav li,
-  .altre-informazioni__nav li {
-    margin-top: 14px;
-  }
-
-  /* SOCIAL:
-     Spaziatura e dimensione icone adattate al tablet */
-  .social {
-    width: 100%;
-    margin-top: 24px;
-  }
-
-  .social__icons {
-    margin-top: 16px;
-  }
-
-  .social__icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 30px;
-  }
-
-  /* DISCLAIMER:
-     Area legale compatta ma leggibile */
-  .footer__disclaimer {
-    margin-top: 24px;
-    font-size: 11px;
-    height: auto;
-    padding-bottom: 24px;
-  }
-
-  .disclaimer__nav ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px 16px;
-    font-size: 12px;
-  }
-
-  .disclaimer__legal {
-    margin-top: 16px;
-    line-height: 1.6;
-  }
 }
