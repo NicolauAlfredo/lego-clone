@@ -11,8 +11,4 @@
 
 /* Import dei file pagina:
    carica gli stili specifici delle diverse pagine del progetto */
-@import url("./pages/home.css");
-@import url("./pages/building-instructions.css");
-@import url("./pages/insiders.css");
-@import url("./pages/kids.css");
-@import url("./pages/service.css");
+@import url("./pages/home.css"); 
