@@ -1,0 +1,5 @@
+/* Label nascosta ma accessibile per screen reader */
+.sr-only {
+  position: absolute;
+  left: -9999px;
+}
