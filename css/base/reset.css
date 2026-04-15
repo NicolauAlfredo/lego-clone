@@ -1,22 +1,28 @@
-/* Reset Base */
+/* Reset globale per rimuovere margini e padding predefiniti
+   e uniformare il modello di box su tutti gli elementi */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Stili base del documento:
+   imposta larghezza piena, sfondo bianco e font principale del sito */
 body {
   width: 100%;
   background: var(--color-white);
   font-family: "Cera Pro", sans-serif;
 }
 
-/* Base responsive */
+/* Regole responsive di base per le immagini:
+   evita che escano dal contenitore e mantiene le proporzioni originali */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* Previene lo scroll orizzontale indesiderato
+   sull'intera pagina */
 html,
 body {
   overflow-x: hidden;
