@@ -1629,18 +1629,6 @@ nav a {
   text-decoration: underline;
 }
 
-/* FOOTER */
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  background: var(--color-purple-darker);
-  width: 100%;
-  margin: 40px auto 0;
-}
-
 /* Mobile */
 @media (max-width: 375px) {
   .welcome-home {
@@ -1752,4 +1740,16 @@ nav a {
   .welcome-home__toggle:checked ~ .welcome-home__btn::after {
     content: "Mostra Meno";
   }
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  background: var(--color-purple-darker);
+  width: 100%;
+  margin: 40px auto 0;
 }
