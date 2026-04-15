@@ -1,0 +1,34 @@
+.lego-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  animation: legoBlink 4s infinite;
+  margin-top: 50px;
+}
+
+@keyframes legoBlink {
+  0% {
+    color: #d01012;
+    opacity: 1;
+  }
+
+  25% {
+    color: #0055bf;
+    opacity: 0.4;
+  }
+
+  50% {
+    color: #ffd500;
+    opacity: 1;
+  }
+
+  75% {
+    color: #00af4d;
+    opacity: 0.4;
+  }
+
+  100% {
+    color: #d01012;
+    opacity: 1;
+  }
+}
