@@ -32,7 +32,7 @@
   align-items: center; /* centra verticalmente il contenuto */
 
   /* Immagine di sfondo */
-  background-image: url("/assets/images/backgrounds/lego-easter-hero-banner-desktop.jpg");
+  background-image: url("/assets/pages/home/background/lego-easter-hero-banner-desktop.jpg");
   background-size: cover; /* copre tutta la sezione */
   background-position: center;
   background-repeat: no-repeat;
@@ -1105,7 +1105,7 @@ nav a {
   margin: 0 auto;
   min-height: 700px;
   height: auto;
-  background-image: url("/assets/images/backgrounds/lego-ferrari-helmets-hero.jpg");
+  background-image: url("/assets/pages/home/background/lego-ferrari-helmets-hero.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -1256,7 +1256,7 @@ nav a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: url("/assets/images/backgrounds/lego-ferrari-helmets-hero-mobile.jpg");
+    background-image: url("/assets/pages/home/background/lego-ferrari-helmets-hero-mobile.jpg");
     background-position: top;
   }
 
@@ -2149,7 +2149,7 @@ nav a {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    background-image: url("/assets/images/backgrounds/lego-easter-hero-banner-tablet.jpg");
+    background-image: url("/assets/pages/home/background/lego-easter-hero-banner-tablet.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
