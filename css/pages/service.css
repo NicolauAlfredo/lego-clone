@@ -1,37 +1,3 @@
-.lego-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  animation: legoBlink 4s infinite;
-  margin-top: 50px;
-}
-
-@keyframes legoBlink {
-  0% {
-    color: #d01012;
-    opacity: 1;
-  }
-
-  25% {
-    color: #0055bf;
-    opacity: 0.4;
-  }
-
-  50% {
-    color: #ffd500;
-    opacity: 1;
-  }
-
-  75% {
-    color: #00af4d;
-    opacity: 0.4;
-  }
-
-  100% {
-    color: #d01012;
-    opacity: 1;
-  }
-}
 /* HERO SECTION - MOBILE FIRST */
 
 .hero-section {
@@ -120,6 +86,157 @@
   outline: 3px solid #005ad2;
   outline-offset: 4px;
   border-radius: 8px;
+}
+
+/* HERO SECTION - TABLET */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-section {
+    padding: 32px 0 48px;
+  }
+
+  .hero__image {
+    margin-bottom: 32px;
+  }
+
+  .hero__image img {
+    max-width: 192px;
+    max-height: 192px;
+  }
+
+  .hero__content {
+    max-width: 520px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  .hero__title {
+    margin: 0 0 40px;
+    font-size: 30px;
+    line-height: 1.2;
+  }
+
+  .hero__services {
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    justify-content: center;
+    column-gap: 56px;
+    row-gap: 40px;
+  }
+
+  .hero__service {
+    justify-content: center;
+  }
+
+  .hero__service:last-child {
+    grid-column: 1 / 2;
+  }
+
+  .hero-service-icon {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 14px;
+  }
+
+  .hero-service-icon img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .hero-service-title {
+    max-width: 130px;
+    font-size: 18px;
+    line-height: 1.35;
+  }
+}
+
+/* HERO SECTION - DESKTOP */
+@media (min-width: 1024px) {
+  .hero-section {
+    position: relative;
+    height: 370px;
+    padding: 48px 32px;
+    overflow: visible;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .hero__image {
+    position: absolute;
+    left: -19px;
+    bottom: -80px;
+    z-index: 9999;
+
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .hero__image img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    max-height: none;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .hero__title {
+    margin: 0 0 28px;
+    color: #1f1f1f;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .hero__services {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(110px, 1fr));
+    justify-content: center;
+    align-items: start;
+    gap: 24px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .hero__service {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__service:last-child {
+    grid-column: auto;
+  }
+
+  .hero-service-item {
+    width: 100%;
+    max-width: 120px;
+  }
+
+  .hero-service-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+
+  .hero-service-icon img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .hero-service-title {
+    max-width: 120px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+  }
 }
 
 /* SUPORT LINKS - MOBILE FIRST */
@@ -297,6 +414,7 @@
   outline-offset: 3px;
 }
 
+
 /* CONTACT CTA - MOBILE FIRST */
 
 .contact-cta {
@@ -373,6 +491,7 @@
   outline-offset: 4px;
 }
 
+
 /* PRIVACY SECTION - MOBILE FIRST */
 
 .privacy {
@@ -431,3 +550,4 @@
   outline-offset: 4px;
   border-radius: 4px;
 }
+
