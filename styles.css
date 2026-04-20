@@ -62,6 +62,17 @@ body {
   width: 205px;
   background-color: #ba6f00;
 }
+.btn-background-two {
+  
+  border-radius: 15px;
+
+ 
+  margin: 0 auto;
+  
+  height: 60px;
+  width: 315px;
+  background-color: #717384;
+}
 .btn-esplora svg {
   width: 25px;
   height: 30px;
@@ -70,9 +81,7 @@ body {
   vertical-align: middle;
 }
 
-.btn-esplora:hover {
-  background-color: green;
-}
+
 
 .cards {
   display: flex;
@@ -82,10 +91,12 @@ body {
 .second_cards {
   display: flex;
   gap: 30px;
+  
 }
 .third_cards {
   display: flex;
   gap: 30px;
+  
 }
 .fourth_cards {
   display: flex;
@@ -97,13 +108,86 @@ body {
 }
 .second_cards img {
   border-radius: 80px;
-  width: 85px;
+  width: 80px;
 }
 .third_cards img {
-  width: 85px;
-  border-radius: 15px;
+  width: 80px;
+  border-radius: 6px;
 }
 .fourth_cards img {
   border-radius: 80px;
-  width: 85px;
+  width: 80px;
 }
+.first_card img:hover{
+ transform: scale(1.5);
+  filter: brightness(1.1);
+
+}
+.second_cards img:hover {
+   transform: scale(1.5);
+  filter: brightness(1.1);
+
+}
+.third_cards img:hover {
+   transform: scale(1.5);
+  filter: brightness(1.1);
+
+}
+.fourth_cards img:hover {
+   transform: scale(1.5);
+  filter: brightness(1.1);
+
+}
+.btn-show {
+  display: flex;
+  
+  background-color: #c89d00;
+justify-content: center;
+align-items: flex-end;
+padding: 12px 24px;
+  
+
+  cursor: pointer;
+width: 80px;;
+height: 130px;
+  
+  font-size: 10px;
+  color: #8a3400;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: transparent;
+  border-radius: 10px;
+  padding-bottom: 25px;
+  
+}
+.btn-show svg{
+  position:absolute;
+  margin-bottom: 30px;
+  width: 50px;
+}
+footer{
+  position: relative;
+}
+.barra-inferiore{
+  position: absolute;
+  width: 320px;
+  height: 48px;
+  margin: 20px auto;
+  border-radius: 20px;
+    bottom: -20px;
+ 
+  left: 50%;
+  transform: translateX(-50%);
+}
+.barra-inferiore svg{
+  
+  padding: 10px;
+  width: 30px;
+  color: #717384;
+  
+}
+
+
+
+
