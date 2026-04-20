@@ -9,7 +9,11 @@ body {
   align-items: center;
   margin-top: 10px;
 }
+body {
+  overflow-y: hidden;
+}
 .btn-wrapper {
+  
   width: 1034px;
   height: 600px;
   margin: 32px 0;
@@ -59,7 +63,7 @@ body {
   transform: translateX(-50%);
   margin-left: 10px;
   height: 60px;
-  width: 205px;
+  width: 220px;
   background-color: #ba6f00;
 }
 .btn-background-two {
@@ -67,7 +71,7 @@ body {
   border-radius: 20px;
   left: 50%;
    transform: translateX(-50%);
-bottom: 25px;
+bottom: 30px;
   
   
   
@@ -168,14 +172,14 @@ height: 130px;
   margin-bottom: 30px;
   width: 50px;
 }
-footer{
+.footer{
   display:flex;
 }
 .barra-inferiore{
   position: relative;
   width: 320px;
   height: 48px;
-  margin: 20px auto;
+  margin: 15px auto;
   border-radius: 20px;
     border: transparent;
  
@@ -190,22 +194,24 @@ footer{
 .freccia-dx {
   background-color: #0072CE;
   position: absolute;
-  right: 350px;
+  right: 360px;
   border-radius: 13px;
   border: transparent;
   width: 65px;
   height: 80px;
+  top: 33%;
 
 
 }
 .freccia-sx {
   background-color: #0072CE;
   position: absolute;
-  left: 350px;
+  left: 360px;
   border-radius: 13px;
   border: transparent;
   width: 65px;
   height: 80px;
+  top:33%;
 
 }
 .freccia-dx:hover , 
@@ -213,7 +219,25 @@ footer{
   background-color: #005bb5;
   cursor: pointer;
 }
-
+footer {
+   display: flex;
+    justify-content: flex-end;
+}
+footer a {
+  background-color: black;
+  color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+   font-family: "Nunito", sans-serif;
+  text-decoration: none;
+  margin-right: 20px;
+ 
+ 
+}
+footer a:hover {
+  color: #7f8590;
+}
 
 
 
