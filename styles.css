@@ -1,0 +1,109 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #002f8a, #01194c);
+}
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+.btn-wrapper {
+  width: 1034px;
+  height: 600px;
+  margin: 32px 0;
+  overflow: hidden;
+  border-radius: 30px;
+  position: relative;
+}
+.btn-wrapper video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.btn-wrapper img {
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 195px;
+  height: 80px;
+  position: absolute;
+}
+.btn-esplora {
+  background-color: #c89d00;
+
+  padding: 12px 24px;
+
+  cursor: pointer;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  color: #8a3400;
+  font-family: "Nunito", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 700;
+  border: transparent;
+  border-radius: 15px;
+  padding: 12px 15px;
+  margin-left: 10px;
+}
+
+.btn-background {
+  border-radius: 15px;
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 10px;
+  height: 60px;
+  width: 205px;
+  background-color: #ba6f00;
+}
+.btn-esplora svg {
+  width: 25px;
+  height: 30px;
+  margin-left: 8px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.btn-esplora:hover {
+  background-color: green;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.second_cards {
+  display: flex;
+  gap: 30px;
+}
+.third_cards {
+  display: flex;
+  gap: 30px;
+}
+.fourth_cards {
+  display: flex;
+  gap: 30px;
+}
+.first_card img {
+  width: 80px;
+  border-radius: 80px;
+}
+.second_cards img {
+  border-radius: 80px;
+  width: 85px;
+}
+.third_cards img {
+  width: 85px;
+  border-radius: 15px;
+}
+.fourth_cards img {
+  border-radius: 80px;
+  width: 85px;
+}
