@@ -1,6 +1,21 @@
 /* Barra superiore del sito:
    contiene area giochi, messaggio promozionale e accessi rapidi */
-.top-bar {
+@font-face {
+  font-family: Cera Pro;
+  src: url(../../assets/global/fonts/CeraPro-Regular.woff2);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Cera ProBold;
+  src: url(../../assets/global/fonts/CeraPro-Bold.woff2);
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+
+   .top-bar {
   background: var(--color-white);
   padding: 15px 0;
   display: flex;
@@ -24,14 +39,15 @@
 .top-bar__left {
   display: flex;
   align-items: center;
+  justify-content: center;
   border-radius: 5px;
   background-color: rgb(171, 217, 255);
   background-size: auto;
   text-transform: uppercase;
   width: 100px;
-  font-weight: 500;
+  font-weight: 600;
   height: 25px;
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   text-size-adjust: 100%;
   cursor: pointer;
@@ -208,13 +224,18 @@
   margin-right: 20px;
   text-transform: uppercase;
   color: var(--color-black);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.1875rem;
   border-bottom: 3px solid transparent;
   cursor: pointer;
+  font-family: "Cera Pro", sans-serif;
 }
-
+.header__menu-btn:hover {
+  border-bottom: 3px;
+  border-style: solid;
+  border-color: black;
+}
 /* Link evidenziato "Tutti i set" */
 .header__menu-link {
   text-transform: uppercase;
@@ -223,7 +244,7 @@
   background: var(--color-white);
   padding: 10px;
   text-decoration: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Cera Pro", sans-serif;
   font-weight: 500;
 }
 
