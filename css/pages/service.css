@@ -535,6 +535,15 @@
   outline-offset: 3px;
 }
 
+/* HELP SEARCH - DESKTOP */
+@media (min-width: 1024px) {
+  .help-search {
+    max-width: 1490px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    margin-bottom: 90px;
+  }
+}
 
 /* CONTACT CTA - MOBILE FIRST */
 
