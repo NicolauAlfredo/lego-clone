@@ -18,7 +18,7 @@ body {
 }
 
 .lego-insiders__header-w-background-image {
-  background-image: url("../../assets/pages/insiders/images/insiders-image:desktop.jpg");
+  background-image: url("../../assets/pages/insiders/images/insiders-image-desktop.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -200,7 +200,7 @@ body {
 /* Media query per tablet */
 @media (max-width: 820px) {
   .lego-insiders__header-w-background-image {
-    background-image: url("../../assets/pages/insiders/images/insiders-image:tablet.jpg");
+    background-image: url("../../assets/pages/insiders/images/insiders-image-tablet.jpg");
   }
   .lego-insiders__section-card-carousel {
     overflow-x: auto;
@@ -211,6 +211,6 @@ body {
 /* Media query per mobile */
 @media (max-width: 375px) {
   .lego-insiders__header-w-background-image {
-    background-image: url("../../assets/pages/insiders/images/insiders-image:mobile.jpg");
+    background-image: url("../../assets/pages/insiders/images/insiders-image-mobile.jpg");
   }
 }
