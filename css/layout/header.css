@@ -1,21 +1,4 @@
-/* Barra superiore del sito:
-   contiene area giochi, messaggio promozionale e accessi rapidi */
-@font-face {
-  font-family: Cera Pro;
-  src: url(../../assets/global/fonts/CeraPro-Regular.woff2);
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: Cera ProBold;
-  src: url(../../assets/global/fonts/CeraPro-Bold.woff2);
-  font-weight: bold;
-  font-style: normal;
-}
-
-
-
-   .top-bar {
+.top-bar {
   background: var(--color-white);
   padding: 15px 0;
   display: flex;
