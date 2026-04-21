@@ -168,6 +168,11 @@ main{
 details{
     cursor: pointer;
 }
+
+details[open]{
+    transition: all 0.5s ease 1s;
+}
+
 .instruct-aiuto-container{
     display: flex;
     align-items: center;
