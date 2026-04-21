@@ -1,10 +1,10 @@
 /* Import dei file base:
    include variabili globali, reset e regole tipografiche */
-@import url("/css/base/variables.css");
-@import url("/css/base/reset.css");
-@import url("/css/base/typography.css");
+@import url("./base/variables.css");
+@import url("./base/reset.css");
+@import url("./base/typography.css");
 
 /* Import dei file di layout:
    carica gli stili strutturali condivisi di header e footer */
-@import url("/css/layout/header.css");
-@import url("/css/layout/footer.css"); 
+@import url("./layout/header.css");
+@import url("./layout/footer.css"); 
