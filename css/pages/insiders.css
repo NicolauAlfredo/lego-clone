@@ -1,34 +1,216 @@
-.lego-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-align: center;
-  animation: legoBlink 4s infinite;
-  margin-top: 50px;
+/* Reset Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@keyframes legoBlink {
-  0% {
-    color: #d01012;
-    opacity: 1;
-  }
+body {
+  width: 100%;
+  background: white;
+}
 
-  25% {
-    color: #0055bf;
-    opacity: 0.4;
-  }
+/* Header */
+.lego-insiders__header {
+  display: flex;
+  justify-content: center;
+  padding: 2.25rem 1.25rem;
+}
 
-  50% {
-    color: #ffd500;
-    opacity: 1;
-  }
+.lego-insiders__header-w-background-image {
+  background-image: url("../../assets/pages/insiders/images/insiders-image-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 8.125rem;
+  padding: 20px;
+}
 
-  75% {
-    color: #00af4d;
-    opacity: 0.4;
-  }
+.lego-insiders__header-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
 
-  100% {
-    color: #d01012;
-    opacity: 1;
+.lego-insiders__header-overlay-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #000000bd;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 25px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.lego-insiders__header-overlay-button a {
+  color: white;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.lego-insiders__header-overlay-button a span img {
+  width: 24px;
+  display: flex;
+  align-items: center;
+  filter: invert(1);
+  padding-left: 8px;
+}
+
+.lego-insiders__section {
+  background-color: rgb(215, 217, 225);
+}
+
+.lego-insiders__section-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2.25rem 1.25rem;
+  font-weight: 700;
+  margin-bottom: 10rem;
+  font-size: 1.25rem;
+}
+
+.lego-insiders__section-card-carousel ul {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 3rem;
+  overflow-x: auto;
+  list-style: none;
+  width: 100%;
+}
+
+.lego-insiders__section-card-carousel ul li img {
+  max-width: 22rem;
+  width: 100%;
+}
+
+.lego-insiders__section-card-carousel-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+.lego-insiders__section-button {
+  margin-top: 10rem;
+  padding-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lego-insiders__frequently-asked {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.2rem;
+  padding: 2.25rem 1.25rem;
+  margin: 0 3.75rem;
+}
+
+.lego-insiders__frequently-asked-title {
+  font-size: 2rem;
+  line-height: 2.6875rem;
+  font-weight: 400;
+}
+
+.lego-insiders__frequently-asked-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+  font-weight: 400;
+  cursor: pointer;
+  padding: 1.25rem;
+}
+
+.lego-insiders__frequently-asked-summary-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+.lego-insiders__outer {
+  margin: 2.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+}
+
+.lego-insiders__quicklinks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  margin-top: 5rem;
+  margin-bottom: 2.25rem;
+}
+
+.lego-insiders__quicklinks ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  list-style: none;
+}
+
+.lego-insiders__quicklinks-link {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.01em;
+  line-height: 1.62;
+  padding-top: 0.5rem;
+}
+
+/* Media query per tablet */
+@media (max-width: 820px) {
+  .lego-insiders__header-w-background-image {
+    background-image: url("../../assets/pages/insiders/images/insiders-image-tablet.jpg");
+  }
+  .lego-insiders__section-card-carousel {
+    overflow-x: auto;
+    display: flex;
+  }
+}
+
+/* Media query per mobile */
+@media (max-width: 375px) {
+  .lego-insiders__header-w-background-image {
+    background-image: url("../../assets/pages/insiders/images/insiders-image-mobile.jpg");
   }
 }
