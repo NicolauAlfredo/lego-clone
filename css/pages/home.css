@@ -590,7 +590,7 @@ nav a {
   }
 }
 /*Iphone responsive horizantal*/
-@media (max-width: 667px) {
+@media (max-width: 768px) {
   .perfect-set-chevron:active {
     background-color: var(--color-text-btn);
     color: white;

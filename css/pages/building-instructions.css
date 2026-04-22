@@ -263,7 +263,7 @@ details:open .instruction-aiuto-container-button{
 
 /* RESPONSIVE IphoneSE*/
 
-@media (max-width: 375px){
+@media (max-width: 767px){
     main{
         margin: 0px;
     }
