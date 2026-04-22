@@ -1,6 +1,4 @@
-let perfectSet = []
-
-function cardProduct(id, linkImage, age, blocks, price, rating, favorite){
+export function cardProduct(id, linkImage, age, blocks, price, rating, favorite){
     this.id = id;
     this.linkImage= linkImage
     this.age = age;
