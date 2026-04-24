@@ -149,7 +149,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 0.5rem;
   padding: 1.25rem;
 }
@@ -202,9 +201,8 @@ body {
   .lego-insiders__header-w-background-image {
     background-image: url("../../assets/pages/insiders/images/insiders-image-tablet.jpg");
   }
-  .lego-insiders__section-card-carousel {
-    overflow-x: auto;
-    display: flex;
+
+  .lego-insiders__header {
   }
 }
 
