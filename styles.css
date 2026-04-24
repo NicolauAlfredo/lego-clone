@@ -94,7 +94,7 @@ body {
   border-radius: 25px;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 30px;
+  bottom: 20px;
 
   height: 50px;
   width: 320px;
@@ -112,6 +112,7 @@ body {
   display: flex;
   gap: 30px;
   justify-content: center;
+  padding-bottom: 10px;
 }
 .second_cards {
   display: flex;
@@ -149,7 +150,7 @@ body {
 .second_cards img:hover,
 .third_cards img:hover,
 .fourth_cards img:hover {
-  transform: scale(1.4);
+  transform: scale(1.2);
   filter: brightness(1.1);
 }
 .btn-show {
@@ -190,15 +191,16 @@ body {
   text-decoration: none;
 }
 .footer img:first-child:hover {
-   filter: brightness(0) saturate(150%) invert(37%) sepia(90%)  hue-rotate(190deg) brightness(1.1);
+  filter: brightness(0) saturate(150%) invert(37%) sepia(90%) hue-rotate(190deg)
+    brightness(1.1);
 }
-.barra-inferiore a:nth-child(2) img:hover{
-  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(5000%) hue-rotate(0deg) brightness(1);
+.barra-inferiore a:nth-child(2) img:hover {
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(5000%)
+    hue-rotate(0deg) brightness(1);
 }
-.barra-inferiore a:nth-child(3) img:hover{
-  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(1);
-
-
+.barra-inferiore a:nth-child(3) img:hover {
+  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(500%)
+    hue-rotate(90deg) brightness(1);
 }
 
 .barra-inferiore {
@@ -250,6 +252,7 @@ footer a {
   font-family: "Nunito", sans-serif;
   text-decoration: none;
   margin-right: 20px;
+  margin-top: -10px;
 }
 footer a:hover {
   color: #7f8590;
