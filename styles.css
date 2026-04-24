@@ -91,7 +91,7 @@ body {
 }
 .btn-background-two {
   position: absolute;
-  border-radius: 20px;
+  border-radius: 25px;
   left: 50%;
   transform: translateX(-50%);
   bottom: 30px;
@@ -186,19 +186,24 @@ body {
 .footer {
   display: flex;
 }
+.footer img {
+  padding: 11px;
+  filter: brightness(0) saturate(100%) invert(35%) sepia(100%)
+    hue-rotate(180deg);
+}
+.footer a {
+  text-decoration: none;
+}
+
 .barra-inferiore {
   position: relative;
   width: 320px;
   height: 48px;
   margin: 15px auto;
-  border-radius: 20px;
+  border-radius: 25px;
   border: transparent;
 }
-.barra-inferiore svg {
-  padding: 10px;
-  width: 35px;
-  color: #717384;
-}
+
 .freccia-dx {
   background-color: #0072ce;
   position: absolute;
@@ -229,7 +234,6 @@ body {
 footer {
   display: flex;
   justify-content: flex-end;
-  
 }
 footer a {
   background-color: black;
@@ -240,7 +244,6 @@ footer a {
   font-family: "Nunito", sans-serif;
   text-decoration: none;
   margin-right: 20px;
-  
 }
 footer a:hover {
   color: #7f8590;
@@ -254,16 +257,13 @@ footer a:hover {
   margin-right: -10px;
   z-index: 1;
   rotate: 18deg;
-  
-  
 
-  
   border-radius: 20px;
 
   width: 210px;
   height: 200px;
 }
-.immagine-laterale{
+.immagine-laterale {
   background-image: url(assets/images/boop_background.png);
   width: 250px;
   height: 125px;
@@ -273,7 +273,7 @@ footer a:hover {
   top: 4%;
   background-size: cover;
   overflow: hidden;
- 
+
   background-size: 120%;
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
 }
