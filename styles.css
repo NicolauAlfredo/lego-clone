@@ -112,12 +112,10 @@ body {
   display: flex;
   gap: 30px;
   justify-content: center;
-  
 }
 .second_cards {
   display: flex;
   gap: 30px;
-  
 }
 .third_cards {
   display: flex;
@@ -147,20 +145,11 @@ body {
   width: 80px;
   height: 133px;
 }
-.first_card img:hover {
-  transform: scale(1.5);
-  filter: brightness(1.1);
-}
-.second_cards img:hover {
-  transform: scale(1.5);
-  filter: brightness(1.1);
-}
-.third_cards img:hover {
-  transform: scale(1.5);
-  filter: brightness(1.1);
-}
+.first_card img:hover,
+.second_cards img:hover,
+.third_cards img:hover,
 .fourth_cards img:hover {
-  transform: scale(1.5);
+  transform: scale(1.4);
   filter: brightness(1.1);
 }
 .btn-show {
@@ -199,6 +188,17 @@ body {
 }
 .footer a {
   text-decoration: none;
+}
+.footer img:first-child:hover {
+   filter: brightness(0) saturate(150%) invert(37%) sepia(90%)  hue-rotate(190deg) brightness(1.1);
+}
+.barra-inferiore a:nth-child(2) img:hover{
+  filter: brightness(0) saturate(100%) invert(13%) sepia(100%) saturate(5000%) hue-rotate(0deg) brightness(1);
+}
+.barra-inferiore a:nth-child(3) img:hover{
+  filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(500%) hue-rotate(90deg) brightness(1);
+
+
 }
 
 .barra-inferiore {
