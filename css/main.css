@@ -7,4 +7,4 @@
 /* Import dei file di layout:
    carica gli stili strutturali condivisi di header e footer */
 @import url("./layout/header.css");
-@import url("./layout/footer.css");
+@import url("./layout/footer.css"); 

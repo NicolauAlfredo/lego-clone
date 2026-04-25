@@ -25,10 +25,48 @@
 
 /* Definizione del font personalizzato "Cera Pro":
    caricato localmente con ottimizzazione per il rendering (font-display: swap) */
+
+/* Cera Pro - Regular */
 @font-face {
   font-family: "Cera Pro";
-  src: url("/assets/fonts/CeraPro-Regular.woff2") format("woff2");
+  src: url("../../assets/global/fonts/CeraPro-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
+}
+
+/* Cera Pro - Regular Italic */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../../assets/global/fonts/CeraPro-RegularItalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Cera Pro - Medium */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../../assets/global/fonts/CeraPro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cera Pro - Bold */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../../assets/global/fonts/CeraPro-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Cera Pro - Bold Italic */
+@font-face {
+  font-family: "Cera Pro";
+  src: url("../../assets/global/fonts/CeraPro-BoldItalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
   font-display: swap;
 }
