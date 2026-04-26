@@ -286,3 +286,89 @@ footer a:hover {
   background-size: 120%;
   background-repeat: no-repeat;
 }
+@media (max-width: 480px) {
+  html,
+  body,
+  .btn-wrapper,
+  .video {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+  .video {
+    width: 100%;
+  }
+  .btn-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video video {
+    width: 320px;
+    height: 550px;
+
+    border-radius: 50px;
+
+    margin: 0 auto;
+  }
+  .video img {
+    margin-top: 25px;
+  }
+  .video-due {
+    display: none;
+  }
+  .video-tre {
+    display: none;
+  }
+  .cards {
+    padding-top: 10px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+  }
+  .btn-esplora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    margin: 0px;
+    bottom: 50px;
+    height: 60px;
+    padding-right: 10px;
+  }
+  .btn-background {
+    display: none;
+  }
+  footer a {
+    display: none;
+  }
+  .freccia-dx,
+  .freccia-sx {
+    display: none;
+  }
+  .btn-show {
+    display: none;
+  }
+  .immagine-laterale {
+    display: none;
+  }
+  .barra-inferiore {
+    margin-top: 320px;
+    justify-content: center;
+  }
+  .cards {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+  }
+  .btn-background-two {
+    top: 70%;
+    margin-top: 50px;
+  }
+}
