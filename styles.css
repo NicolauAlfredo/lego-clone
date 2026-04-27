@@ -368,7 +368,16 @@ footer a:hover {
     display: none;
   }
   .immagine-laterale {
-    display: none;
+    position: fixed;
+    right: -120px;
+
+    z-index: 1;
+    width: 230px;
+  }
+  .immagine-laterale img {
+    position: absolute;
+
+    margin-left: 10px;
   }
   .barra-inferiore {
     margin-top: 20px;
