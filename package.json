@@ -1,0 +1,21 @@
+{
+  "name": "lego-clone",
+  "version": "1.0.0",
+  "description": "This project is part of the **Web Developer Course by [Develhope](https://www.develhope.co/)** team exercise. The goal is to clone the LEGO website as closely as possible, practicing front-end development skills using **HTML**, **CSS** and **JAVASCRIPT**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolauAlfredo/lego-clone.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/NicolauAlfredo/lego-clone/issues"
+  },
+  "homepage": "https://github.com/NicolauAlfredo/lego-clone#readme"
+}
