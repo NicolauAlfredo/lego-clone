@@ -1,9 +1,9 @@
 const footerAccordions = document.querySelectorAll(".footer-accordion");
-const mobileBreakpoint = window.matchMedia("(max-width: 767px)");
+const footerBreakpoint = window.matchMedia("(max-width: 1024px)");
 
 function updateFooterAccordions() {
-  footerAccordions.forEach(accordion => {
-    if (mobileBreakpoint.matches) {
+  footerAccordions.forEach((accordion) => {
+    if (footerBreakpoint.matches) {
       accordion.removeAttribute("open");
     } else {
       accordion.setAttribute("open", "");
@@ -13,4 +13,4 @@ function updateFooterAccordions() {
 
 updateFooterAccordions();
 
-window.addEventListener("resize", updateFooterAccordions);
+footerBreakpoint.addEventListener("change", updateFooterAccordions);
