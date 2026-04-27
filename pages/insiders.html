@@ -491,310 +491,329 @@
       </section>
     </main>
 
-    <!-- FOOTER  -->
+    <!-- FOOTER -->
     <footer class="footer">
-      <!-- HEADER del footer -->
-      <div class="footer__header">
-        <!-- Blocco branding (logo + posizione) -->
-        <div class="branding">
-          <div class="branding-top">
-            <!-- Logo -->
-            <img
-              class="branding__logo"
-              src="../assets/global/logo/logo-footer.svg"
-              alt="LEGO"
-            />
+      <div class="footer__container">
+        <!-- FOOTER TOP -->
+        <div class="footer__header">
+          <!-- BRANDING -->
+          <div class="branding">
+            <div class="branding-top">
+              <img
+                class="branding__logo"
+                src="./assets/global/logo/logo-footer.svg"
+                alt="LEGO"
+              />
 
-            <!-- Bottone posizione -->
-            <button class="branding__location">
-              <!-- Icona mappa/posizione -->
-              <svg
-                viewBox="0 0 40 40"
-                fill="currentColor"
-                width="22"
-                height="22"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M29 16.023c0-4.937-4.063-9-9-9-5 0-9 4.063-9 9 0 .813.25 2 .938 3.625.624 1.5 1.562 3.25 2.624 5 1.813 2.875 3.876 5.625 5.438 7.625 1.5-2 3.563-4.75 5.375-7.625 1.063-1.75 2-3.5 2.625-5 .688-1.625 1-2.812 1-3.625Zm3 0c0 5.5-7.313 15.188-10.563 19.25a1.886 1.886 0 0 1-2.937 0C15.312 31.211 8 21.523 8 16.023c0-6.625 5.375-12 12-12s12 5.375 12 12Zm-10 0c0-1.062-.938-2-2-2-1.125 0-2 .938-2 2 0 1.125.875 2 2 2 1.063 0 2-.875 2-2Zm-7 0c0-1.75.938-3.375 2.5-4.312 1.5-.875 3.438-.875 5 0 1.5.937 2.5 2.562 2.5 4.312 0 1.813-1 3.438-2.5 4.375-1.563.875-3.5.875-5 0-1.563-.937-2.5-2.562-2.5-4.375Z"
-                />
-              </svg>
-              <!-- Testo posizione -->
-              <span class="branding__text">Italia</span>
-            </button>
+              <button class="branding__location" type="button">
+                <svg
+                  viewBox="0 0 40 40"
+                  fill="currentColor"
+                  width="22"
+                  height="22"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M29 16.023c0-4.937-4.063-9-9-9-5 0-9 4.063-9 9 0 .813.25 2 .938 3.625.624 1.5 1.562 3.25 2.624 5 1.813 2.875 3.876 5.625 5.438 7.625 1.5-2 3.563-4.75 5.375-7.625 1.063-1.75 2-3.5 2.625-5 .688-1.625 1-2.812 1-3.625Zm3 0c0 5.5-7.313 15.188-10.563 19.25a1.886 1.886 0 0 1-2.937 0C15.312 31.211 8 21.523 8 16.023c0-6.625 5.375-12 12-12s12 5.375 12 12Zm-10 0c0-1.062-.938-2-2-2-1.125 0-2 .938-2 2 0 1.125.875 2 2 2 1.063 0 2-.875 2-2Zm-7 0c0-1.75.938-3.375 2.5-4.312 1.5-.875 3.438-.875 5 0 1.5.937 2.5 2.562 2.5 4.312 0 1.813-1 3.438-2.5 4.375-1.563.875-3.5.875-5 0-1.563-.937-2.5-2.562-2.5-4.375Z"
+                  />
+                </svg>
+
+                <span class="branding__text">Italia</span>
+              </button>
+            </div>
+
+            <nav
+              class="branding__nav"
+              aria-label="Navigazione footer principale"
+            >
+              <ul>
+                <li>
+                  <a href="https://www.lego.com/it-it/gift-cards"
+                    >Carte regalo</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.lego.com/it-it/lego-set-inspiration">
+                    Trova l'ispirazione
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lego.com/it-it/themes/brand-catalogue">
+                    Cataloghi LEGO
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.lego.com/it-it/stores">
+                    Trova un negozio LEGO
+                  </a>
+                </li>
+              </ul>
+            </nav>
           </div>
 
-          <!-- Navigazione interna del branding -->
-          <div class="branding__nav">
-            <ul type="none">
+          <!-- CHI SIAMO -->
+          <details class="footer-accordion chi-siamo" open>
+            <summary>Chi Siamo</summary>
+
+            <ul class="footer-accordion__nav chi-siamo__nav">
               <li>
-                <a href="https://www.lego.com/it-it/gift-cards">Carte regalo</a>
+                <a href="https://www.lego.com/it-it/aboutus">
+                  Informazioni su LEGO Group
+                </a>
               </li>
               <li>
-                <a href="https://www.lego.com/it-it/lego-set-inspiration"
-                  >Trova l'ispirazione</a
-                >
+                <a href="https://www.lego.com/it-it/aboutus/newsroom">
+                  Sala stampa LEGO&reg;
+                </a>
               </li>
               <li>
-                <a href="https://www.lego.com/it-it/themes/brand-catalogue"
-                  >Cataloghi LEGO</a
-                >
+                <a href="https://www.lego.com/it-it/sustainability">
+                  Sostenibilità
+                </a>
               </li>
               <li>
-                <a href="https://www.lego.com/it-it/stores"
-                  >Trova un negozio LEGO</a
+                <a
+                  href="https://www.lego.com/cdn/cs/set/assets/blte42cb66f699d7db6/LEGO_Modern_Slavery_Transparency_Statement_2023_FINAL.pdf"
                 >
+                  Dichiarazione sulla trasparenza della catena di fornitura
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/legal/notices-and-policies/compliance"
+                >
+                  Certificazioni dei prodotti LEGO
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/careers">Lavora in LEGO</a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/compliance-line">
+                  LEGO Compliance Line
+                </a>
               </li>
             </ul>
-          </div>
+          </details>
+
+          <!-- SUPPORTO -->
+          <details class="footer-accordion supporto" open>
+            <summary>Supporto</summary>
+
+            <ul class="footer-accordion__nav supporto__nav">
+              <li><a href="./pages/service.html">Contattaci</a></li>
+              <li>
+                <a href="./pages/building-instructions.html">Istruzioni</a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/service/replacement-parts">
+                  Parti mancanti
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/shipping-handling">
+                  Consegna e spedizione LEGO&reg;
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/returns"
+                  >Resi LEGO&reg;</a
+                >
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/payment-methods">
+                  Modalità di pagamento
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/terms-and-conditions">
+                  Termini e condizioni
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/service/product-recalls">
+                  Richiamo prodotti
+                </a>
+              </li>
+            </ul>
+          </details>
+
+          <!-- ATTRAZIONI -->
+          <details class="footer-accordion attrazioni" open>
+            <summary>Attrazioni</summary>
+
+            <ul class="footer-accordion__nav attrazioni__nav">
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/attractions#blt281a0fddfffea922"
+                >
+                  LEGO&reg; House
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/attractions#blt2d039b65946ba98d"
+                >
+                  LEGOLAND&reg; Parks
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/attractions#blt7819df81c4e1b774"
+                >
+                  LEGOLAND Discovery Center
+                </a>
+              </li>
+            </ul>
+          </details>
+
+          <!-- ALTRE INFORMAZIONI -->
+          <details class="footer-accordion altre-informazioni" open>
+            <summary>Altre informazioni</summary>
+
+            <ul class="footer-accordion__nav altre-informazioni__nav">
+              <li>
+                <a href="https://www.lego.com/it-it/magazine">
+                  LEGO&reg; Magazine (GRATUITO)
+                </a>
+              </li>
+              <li>
+                <a href="https://education.lego.com/it-it/">LEGO Education</a>
+              </li>
+              <li><a href="https://beta.ideas.lego.com/">LEGO Ideas</a></li>
+              <li>
+                <a href="https://learningthroughplay.com/">LEGO Foundation</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.studentbeans.com/it-it/it/beansid-connect/hosted/lego/student/3faa1362-21ab-4ffd-82ee-5b3bae902e5a"
+                >
+                  Offerte per studenti
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/affiliate-program">
+                  Programma di affiliazione
+                </a>
+              </li>
+            </ul>
+          </details>
         </div>
 
-        <!-- Sezione Chi Siamo -->
-        <div class="chi-siamo">
-          <h3>Chi Siamo</h3>
-          <ul type="none" class="chi-siamo__nav">
-            <li>
-              <a href="https://www.lego.com/it-it/aboutus"
-                >Informazioni su LEGO Group</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/aboutus/newsroom"
-                >Sala stampa LEGO&reg;</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/sustainability"
-                >Sostenibilità</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/cdn/cs/set/assets/blte42cb66f699d7db6/LEGO_Modern_Slavery_Transparency_Statement_2023_FINAL.pdf"
-                >Dichiarazione sulla trasparenza della catena di fornitura</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/it-it/legal/notices-and-policies/compliance"
-                >Certificazioni dei prodotti LEGO</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/careers">Lavora in LEGO</a>
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/compliance-line"
-                >LEGO Compliance Line</a
-              >
-            </li>
-          </ul>
-        </div>
+        <!-- FOOTER MAIN -->
+        <div class="footer__main">
+          <div class="newsletter">
+            <span>Iscriviti alle e-mail di marketing</span>
 
-        <!-- Sezione Supporto -->
-        <div class="supporto">
-          <h3>Supporto</h3>
-          <ul type="none" class="supporto__nav">
-            <li><a href="./service.html">Contattaci</a></li>
-            <li><a href="./building-instructions.html">Istruzioni</a></li>
-            <li>
-              <a href="https://www.lego.com/it-it/service/replacement-parts"
-                >Parti mancanti</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/shipping-handling"
-                >Consegna e spedizione LEGO&reg;</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/returns"
-                >Resi LEGO&reg;</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/payment-methods"
-                >Modalità di pagamento</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/terms-and-conditions"
-                >Termini e condizioni</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/service/product-recalls"
-                >Richiamo prodotti</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Sezione Attrazioni -->
-        <div class="attrazioni">
-          <h3>Attrazioni</h3>
-          <ul type="none" class="attrazioni__nav">
-            <li>
-              <a
-                href="https://www.lego.com/it-it/attractions#blt281a0fddfffea922"
-                >LEGO&reg; House</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/it-it/attractions#blt2d039b65946ba98d"
-              >
-                LEGOLAND&reg; Parks</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/it-it/attractions#blt7819df81c4e1b774"
-              >
-                LEGOLAND Discovery Center</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <!-- Sezione Altre Informazioni -->
-        <div class="altre-informazioni">
-          <h3>Altre informazioni</h3>
-          <ul type="none" class="altre-informazioni__nav">
-            <li>
-              <a href="https://www.lego.com/it-it/magazine"
-                >LEGO&reg; Magazine (GRATUITO)</a
-              >
-            </li>
-            <li>
-              <a href="https://education.lego.com/it-it/">LEGO Education</a>
-            </li>
-            <li><a href="https://beta.ideas.lego.com/">LEGO Ideas</a></li>
-            <li>
-              <a href="https://learningthroughplay.com/">LEGO Foundation</a>
-            </li>
-            <li>
-              <a
-                href="https://www.studentbeans.com/it-it/it/beansid-connect/hosted/lego/student/3faa1362-21ab-4ffd-82ee-5b3bae902e5a"
-                >Offerte per studenti</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/affiliate-program"
-                >Programma di affiliazione</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- SEZIONE PRINCIPALE DEL FOOTER -->
-      <div class="footer__main">
-        <!-- Newsletter -->
-        <div class="newsletter">
-          <span>Iscriviti alle e-mail di marketing</span>
-          <div class="newsletter__email">
-            <!-- Campo email -->
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="il tuo indrizzo e-mail"
-            />
-            <!-- Bottone invio newsletter -->
-            <button>
-              <img
-                src="../assets/global/icons/arrow-right-solid-icon.svg"
-                alt="Invia e-mail"
+            <form class="newsletter__email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Il tuo indirizzo e-mail"
+                required
               />
-            </button>
+
+              <button type="submit" aria-label="Invia e-mail">
+                <img
+                  src="./assets/global/icons/arrow-right-solid-icon.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </button>
+            </form>
+          </div>
+
+          <div class="social">
+            <span>Seguici</span>
+
+            <div class="social__icons">
+              <a href="https://www.facebook.com/LEGOItalia/">
+                <img
+                  src="./assets/global/icons/facebook.svg"
+                  alt="Segui LEGO su Facebook"
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="https://x.com/LEGO_Group">
+                <img
+                  src="./assets/global/icons/twitter.svg"
+                  alt="Segui LEGO su X"
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="https://www.instagram.com/legoitaly_official/">
+                <img
+                  src="./assets/global/icons/instagram.svg"
+                  alt="Segui LEGO su Instagram"
+                  class="social__icon"
+                />
+              </a>
+
+              <a href="https://www.youtube.com/user/LEGO?app=desktop">
+                <img
+                  src="./assets/global/icons/youtube.svg"
+                  alt="Segui LEGO su YouTube"
+                  class="social__icon"
+                />
+              </a>
+            </div>
           </div>
         </div>
 
-        <!-- Social -->
-        <div class="social">
-          <span>Seguici</span>
-          <div class="social__icons">
-            <!-- Icona Facebook -->
-            <a href="https://www.facebook.com/LEGOItalia/"
-              ><img
-                src="../assets/global/icons/facebook.svg"
-                alt="Segui LEGO su Facebook"
-                class="social__icon"
-            /></a>
-            <!-- Icona Twitter -->
-            <a href="https://x.com/LEGO_Group"
-              ><img
-                src="../assets/global/icons/twitter.svg"
-                alt="Segui LEGO su X"
-                class="social__icon"
-            /></a>
-            <!-- Icona Instagram -->
-            <a href="https://www.instagram.com/legoitaly_official/"
-              ><img
-                src="../assets/global/icons/instagram.svg"
-                alt="Segui LEGO su Instagram"
-                class="social__icon"
-            /></a>
-            <!-- Icona YouTube -->
-            <a href="https://www.youtube.com/user/LEGO?app=desktop"
-              ><img
-                src="../assets/global/icons/youtube.svg"
-                alt="Segui LEGO su YouTube"
-                class="social__icon"
-            /></a>
+        <!-- FOOTER DISCLAIMER -->
+        <div class="footer__disclaimer">
+          <nav class="disclaimer__nav" aria-label="Informazioni legali">
+            <ul>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/legal/notices-and-policies/privacy-policy"
+                >
+                  Informativa sulla privacy
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/cookie-policy">Cookie</a>
+              </li>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/legal/notices-and-policies/legal-notice"
+                >
+                  Informativa legale
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.lego.com/it-it/legal/notices-and-policies/terms-and-code-of-conduct"
+                >
+                  Termini d'uso
+                </a>
+              </li>
+              <li>
+                <a href="https://www.lego.com/it-it/page/accessibility">
+                  Accessibilità
+                </a>
+              </li>
+              <li><a href="#">Impostazioni dei cookie</a></li>
+            </ul>
+          </nav>
+
+          <div class="disclaimer__legal">
+            <p>
+              LEGO System A/S, DK-7190 Billund, Denmark. Per effettuare acquisti
+              online è necessario essere maggiorenni. LEGO, il logo LEGO, la
+              Minifigure, DUPLO, il logo FRIENDS, il logo MINIFIGURES, DREAMZzz,
+              NINJAGO, VIDIYO e MINDSTORMS sono marchi registrati di LEGO Group.
+              ©2026 The LEGO Group. Tutti i diritti riservati. L'uso di questo
+              sito implica l'accettazione dei Termini d’uso.
+            </p>
           </div>
-        </div>
-      </div>
-
-      <!-- DISCLAIMER / LEGALE -->
-      <div class="footer__disclaimer">
-        <!-- Navigazione disclaimer -->
-        <div class="disclaimer__nav">
-          <ul type="none">
-            <li>
-              <a
-                href="https://www.lego.com/it-it/legal/notices-and-policies/privacy-policy"
-                >Informativa sulla privacy</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/cookie-policy">Cookie</a>
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/it-it/legal/notices-and-policies/legal-notice"
-                >Informativa legale</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://www.lego.com/it-it/legal/notices-and-policies/terms-and-code-of-conduct"
-                >Termini d'uso</a
-              >
-            </li>
-            <li>
-              <a href="https://www.lego.com/it-it/page/accessibility"
-                >Accessibilità</a
-              >
-            </li>
-            <li><a href="#">Impostazioni dei cookie</a></li>
-          </ul>
-        </div>
-
-        <!-- Testo legale -->
-        <div class="disclaimer__legal">
-          <p>
-            LEGO System A/S, DK-7190 Billund, Denmark. Per effettuare acquisti
-            online è necessario essere maggiorenni. LEGO, il logo LEGO, la
-            Minifigure, DUPLO, il logo FRIENDS, il logo MINIFIGURES, DREAMZzz,
-            NINJAGO, VIDIYO e MINDSTORMS sono marchi registrati di LEGO Group.
-            ©2026 The LEGO Group. Tutti i diritti riservati. L'uso di questo
-            sito implica l'accettazione dei Termini d’uso.
-          </p>
         </div>
       </div>
     </footer>
-    <!-- FINE DEL FOOTER -->
+    <!-- FINE FOOTER -->
   </body>
 </html>
