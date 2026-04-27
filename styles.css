@@ -308,7 +308,7 @@ footer a:hover {
   }
   .video video {
     width: 320px;
-    height: 550px;
+    height: 640px;
 
     border-radius: 50px;
 
@@ -340,7 +340,12 @@ footer a:hover {
     padding-right: 10px;
   }
   .btn-background {
-    display: none;
+    width: 223px;
+    margin: 0px;
+    bottom: 50px;
+    height: 66px;
+    padding-right: 10px;
+    border-radius: 25px;
   }
   footer a {
     display: none;
@@ -356,19 +361,22 @@ footer a:hover {
     display: none;
   }
   .barra-inferiore {
-    margin-top: 320px;
-    justify-content: center;
+    margin-top: 20px;
   }
   .cards {
     display: flex;
     gap: 16px;
+    justify-content: flex-start;
+    margin-top: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 12px;
   }
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
   .btn-background-two {
-    top: 70%;
-    margin-top: 50px;
+    bottom: 35px;
   }
 }
