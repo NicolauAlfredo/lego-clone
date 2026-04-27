@@ -201,9 +201,6 @@ body {
   .lego-insiders__header-w-background-image {
     background-image: url("../../assets/pages/insiders/images/insiders-image-tablet.jpg");
   }
-
-  .lego-insiders__header {
-  }
 }
 
 /* Media query per mobile */
