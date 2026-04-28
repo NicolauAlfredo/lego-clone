@@ -1827,14 +1827,9 @@
   }
 
   .carota {
-    width: 180px;
-    right: -160px;
-  }
-
-  .carota {
     display: block;
     position: absolute;
-    top: 30px;
+    top: 8px;
     right: -160px;
 
     width: 180px;
