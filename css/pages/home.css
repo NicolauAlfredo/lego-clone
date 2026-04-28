@@ -702,6 +702,7 @@
   }
 }
 
+
 /* ================= SECTION 4: DISCOVER BUILDS ================= */
 
 /* Base mobile */
@@ -734,16 +735,40 @@
   color: #333;
 }
 
-/* Grid principale */
+/* Grid mobile/tablet */
 .discover-builds__grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "eevee macchina"
+    "ocarina ocarina"
+    "magnolia winnie";
   gap: 12px;
 }
 
-/* Grid laterale su mobile */
 .discover-builds__side-grid {
   display: contents;
+}
+
+/* Aree mobile/tablet */
+.discover-builds__card--large {
+  grid-area: ocarina;
+}
+
+.discover-builds__side-grid .discover-builds__card:nth-child(1) {
+  grid-area: eevee;
+}
+
+.discover-builds__side-grid .discover-builds__card:nth-child(2) {
+  grid-area: macchina;
+}
+
+.discover-builds__side-grid .discover-builds__card:nth-child(3) {
+  grid-area: magnolia;
+}
+
+.discover-builds__side-grid .discover-builds__card:nth-child(4) {
+  grid-area: winnie;
 }
 
 /* Card base */
@@ -753,9 +778,12 @@
 }
 
 /* Dimensioni mobile */
-.discover-builds__card--large,
+.discover-builds__card--large {
+  min-height: 260px;
+}
+
 .discover-builds__card--small {
-  min-height: 200px;
+  min-height: 180px;
 }
 
 /* Link immagine */
@@ -923,13 +951,6 @@
   }
 
   .discover-builds__grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .discover-builds__side-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
@@ -938,7 +959,7 @@
   }
 
   .discover-builds__card--small {
-    min-height: 200px;
+    min-height: 240px;
   }
 
   .discover-builds__info-card {
@@ -966,7 +987,9 @@
   }
 
   .discover-builds__grid {
+    display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-areas: none;
     gap: 16px;
   }
 
@@ -974,6 +997,14 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
+  }
+
+  .discover-builds__card--large,
+  .discover-builds__side-grid .discover-builds__card:nth-child(1),
+  .discover-builds__side-grid .discover-builds__card:nth-child(2),
+  .discover-builds__side-grid .discover-builds__card:nth-child(3),
+  .discover-builds__side-grid .discover-builds__card:nth-child(4) {
+    grid-area: auto;
   }
 
   .discover-builds__card--large {
