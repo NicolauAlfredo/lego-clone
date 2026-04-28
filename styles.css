@@ -404,54 +404,120 @@ footer a:hover {
   body,
   .btn-wrapper,
   .video {
+    touch-action: none;
     overflow-y: hidden;
     overflow-x: hidden;
   }
-}
-.video {
-  width: 100%;
-}
-.btn-wrapper {
-  width: 100%;
-  height: auto;
-  margin-top: 180px;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.video video {
-  width: 530px;
-  height: 280px;
+  html,
+  body {
+    height: 100vh;
+  }
+  .immagine-laterale {
+    display: none;
+  }
 
-  border-radius: 20px;
+  .video {
+    width: 100%;
+  }
+  .btn-wrapper {
+    width: 100%;
+    height: auto;
+    margin-top: 300px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .video video {
+    width: 770px;
+    height: 420px;
 
-  margin: 0 auto;
-}
-.btn-esplora {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 160px;
-  margin: 0px;
-  bottom: 50px;
-  height: 40px;
-  padding: 0;
-  font-size: 10px;
-}
-.btn-background {
-  width: 160px;
-  margin: 0px;
-  bottom: 50px;
-  height: 45px;
+    border-radius: 35px;
 
-  border-radius: 20px;
-}
-.btn-esplora svg {
-  width: 20px;
-  height: 15px;
-}
-.video-due,
-.video-tre {
-  display: none;
+    margin: 0 auto;
+  }
+  .video-due {
+    left: 69%;
+  }
+  .video-due video {
+    height: 345px;
+  }
+  .video-tre {
+    right: 48%;
+  }
+  .video-tre video {
+    height: 345px;
+  }
+  .btn-esplora {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    margin: 0px;
+    bottom: 60px;
+    height: 55px;
+    padding: 0;
+    font-size: 15px;
+  }
+  .btn-background {
+    width: 220px;
+    margin: 0px;
+    bottom: 60px;
+    height: 62px;
+
+    border-radius: 20px;
+  }
+  .btn-esplora svg {
+    width: 30px;
+    height: 23px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 240px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px;
+    overscroll-behavior-x: contain;
+  }
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+  .second_cards {
+    gap: 40px;
+  }
+  .third_cards {
+    gap: 40px;
+  }
+  .fourth_cards {
+    gap: 40px;
+  }
+
+  .btn-show svg {
+    display: none;
+  }
+  footer a {
+    display: none;
+  }
+  .barra-inferiore {
+    margin-top: 60px;
+  }
+  .btn-background-two {
+    top: 89.4%;
+  }
+  .freccia-dx {
+    right: 60px;
+
+    top: 35%;
+  }
+  .freccia-sx {
+    left: 60px;
+
+    top: 35%;
+  }
 }
