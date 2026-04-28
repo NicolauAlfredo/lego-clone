@@ -136,12 +136,39 @@
 /* ================= SECTION FEATURED ================= */
 
 .section-featured {
+  position: relative;
   width: 100%;
   max-width: 1604px;
-  margin: 0 auto;
-  padding: 12px 12px 10px;
+  margin: 0 auto 72px;
+  padding: 16px 0 0;
+  background: var(--color-dark);
+  overflow: visible;
+}
+
+.section-featured::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0px;
+
+  width: calc(100% + 4px);
+  height: 72px;
+
   background-color: var(--color-dark);
-  overflow-x: hidden;
+
+  -webkit-mask-image: url("../../assets/global/icons/header-decorative-bg.svg");
+  mask-image: url("../../assets/global/icons/header-decorative-bg.svg");
+
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+
+  -webkit-mask-position: top left;
+  mask-position: top left;
+
+  pointer-events: none;
 }
 
 .section-featured__title {
