@@ -1836,3 +1836,115 @@
     transform: translateX(0);
   }
 }
+
+/* ================= SECTION 8: WELCOME HOME ================= */
+
+/* Base mobile */
+.welcome-home__title {
+  display: none;
+}
+
+.welcome-home {
+  width: 100%;
+  max-width: 1604px;
+  margin: 0 auto;
+  padding: 20px 16px;
+
+  background-color: var(--color-gray-light);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* Toggle nascosto */
+.welcome-home__toggle {
+  display: none;
+}
+
+/* Testo */
+.welcome-home__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+/* Link blu */
+.welcome-home__blue-text {
+  color: var(--color-blue-dark);
+  text-decoration: none;
+}
+
+.welcome-home__blue-text:hover {
+  text-decoration: underline;
+}
+
+/* Bottone */
+.welcome-home__btn {
+  display: block;
+  margin-top: 10px;
+
+  color: var(--color-blue-dark);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+
+  cursor: pointer;
+}
+
+.welcome-home__btn::after {
+  content: "Leggi di più";
+}
+
+/* Stato aperto (mobile/tablet) */
+.welcome-home__toggle:checked + .welcome-home__text {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.welcome-home__toggle:checked ~ .welcome-home__btn::after {
+  content: "Mostra meno";
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .welcome-home {
+    padding: 20px 24px;
+  }
+
+  .welcome-home__text {
+    -webkit-line-clamp: 4;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .welcome-home {
+    padding: 20px;
+  }
+
+  /* Desktop: mostra sempre tutto il testo */
+  .welcome-home__text {
+    display: block;
+    overflow: visible;
+    text-align: justify;
+  }
+
+  /* IMPORTANTE: mantém botão visível */
+  .welcome-home__btn {
+    display: inline-block;
+    margin-top: 12px;
+  }
+
+  /* Desktop: toggle NÃO altera layout */
+  .welcome-home__toggle:checked + .welcome-home__text {
+    display: block;
+  }
+}
