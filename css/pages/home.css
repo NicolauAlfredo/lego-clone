@@ -342,3 +342,362 @@
     font-size: 1.2rem;
   }
 }
+
+/* ================= SECTION 3: PERFECT SET ================= */
+
+/* Base mobile */
+.perfect-set {
+  width: 100%;
+  max-width: 1604px;
+  margin: 0 auto;
+  padding: 24px 0 32px;
+}
+
+.title-perfect-set {
+  margin: 0 0 16px;
+  padding: 0 16px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.perfect-set-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.perfect-set-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.perfect-set-nav-link {
+  display: inline-block;
+  padding-bottom: 8px;
+  color: var(--color-text-btn);
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.perfect-set-nav-link:hover,
+.perfect-set-nav-link:focus {
+  border-bottom: 3px solid var(--color-text-btn);
+}
+
+.perfect-set-container-chevron {
+  display: none;
+}
+
+.perfect-set-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 16px 24px;
+}
+
+.perfect-set-scroll::-webkit-scrollbar {
+  height: 5px;
+}
+
+.perfect-set-scroll::-webkit-scrollbar-track {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+.perfect-set-scroll::-webkit-scrollbar-thumb {
+  background-color: #9c9c9c;
+  border-radius: 10px;
+}
+
+.perfect-set-carousel {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+}
+
+.perfect-set-article {
+  flex: 0 0 270px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background-color: var(--color-white);
+}
+
+.perfect-set-badge {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 24px;
+  margin-bottom: 8px;
+}
+
+.perfect-set-badge span {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  background-color: yellow;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.perfect-set-card-image {
+  width: 100%;
+  height: 250px;
+}
+
+.perfect-set-link-product {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.perfect-set-card-image-product {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.perfect-set-attributes {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.perfect-set-attributes span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.perfect-set-attributes-icons {
+  width: 18px;
+  height: 18px;
+}
+
+.perfect-set-attributes-icons img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.perfect-set-product-name {
+  margin: 12px 0 24px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.perfect-set-product-name-text {
+  color: var(--color-black);
+  text-decoration: none;
+}
+
+.perfect-set-product-name-text:hover {
+  text-decoration: underline;
+}
+
+.perfect-set-price {
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.perfect-set-carrello-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.perfect-set-carrello-btn {
+  display: none;
+}
+
+.perfect-set-carrello-btn-responsive,
+.perfect-set-favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.perfect-set-carrello-btn-responsive {
+  background-color: var(--color-orange);
+}
+
+.perfect-set-carrello-btn-responsive:hover {
+  background-color: var(--color-orange-dark);
+}
+
+.perfect-set-favorite-button {
+  background-color: #f5f5f5;
+}
+
+.perfect-set-favorite-button:hover {
+  filter: brightness(90%);
+}
+
+.carrello-bag-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .perfect-set {
+    padding: 32px;
+  }
+
+  .title-perfect-set {
+    font-size: 26px;
+  }
+
+  .perfect-set-header {
+    padding: 0;
+  }
+
+  .perfect-set-scroll {
+    padding: 0 0 24px;
+  }
+
+  .perfect-set-carousel {
+    gap: 20px;
+  }
+
+  .perfect-set-article {
+    flex-basis: 292px;
+  }
+
+  .perfect-set-container-chevron {
+    display: flex;
+    gap: 20px;
+  }
+
+  .perfect-set-chevron {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--color-text-btn);
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .perfect-set-chevron:hover,
+  .perfect-set-chevron:focus {
+    background-color: var(--color-text-btn);
+  }
+
+  .perfect-set-chevron img {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .perfect-set {
+    --perfect-card-width: 292px;
+    --perfect-card-gap: 20px;
+
+    padding: 32px;
+  }
+
+  .title-perfect-set {
+    font-size: 31px;
+  }
+
+  .perfect-set-scroll {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 24px;
+  }
+
+  .perfect-set-carousel {
+    display: flex;
+    gap: var(--perfect-card-gap);
+    width: max-content;
+  }
+
+  .perfect-set-article {
+    flex: 0 0 var(--perfect-card-width);
+    max-width: var(--perfect-card-width);
+  }
+
+  .perfect-set-carrello-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 213px;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 25px;
+    background-color: var(--color-orange);
+  }
+
+  .perfect-set-carrello-btn:hover {
+    background-color: var(--color-orange-dark);
+  }
+
+  .perfect-set-carrello-aggiungi-al-carrello {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .perfect-set-carrello-btn-responsive {
+    display: none;
+  }
+
+  .carrello-bag-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .perfect-set-scroll::-webkit-scrollbar {
+    height: 5px;
+  }
+
+  .perfect-set-scroll {
+    overflow-x: auto;
+    padding: 0 16px 24px;
+    scrollbar-gutter: stable;
+  }
+
+  .perfect-set-scroll::-webkit-scrollbar-track {
+    background-color: #d1d1d1;
+    border-radius: 999px;
+
+    margin-left: calc(
+      var(--perfect-card-width) * 1.1 + var(--perfect-card-gap) * 0.5
+    );
+    margin-right: calc(
+      var(--perfect-card-width) * 1 + var(--perfect-card-gap) * 0
+    );
+  }
+
+  .perfect-set-scroll::-webkit-scrollbar-thumb {
+    background-color: #707070;
+    border-radius: 999px;
+  }
+}
