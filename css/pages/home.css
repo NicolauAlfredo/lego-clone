@@ -702,7 +702,6 @@
   }
 }
 
-
 /* ================= SECTION 4: DISCOVER BUILDS ================= */
 
 /* Base mobile */
@@ -1039,5 +1038,279 @@
 
   .discover-builds__info-price {
     font-size: 1.7rem;
+  }
+}
+/* ================= SECTION 5: WEEKLY FEATURED ================= */
+
+/* Base mobile */
+.weekly-featured {
+  width: 100%;
+  max-width: none;
+  margin: 40px auto 0;
+  padding: 0;
+}
+
+/* Header sezione */
+.weekly-featured__header {
+  text-align: center;
+  margin-bottom: 0;
+  padding: 88px 16px 56px;
+  background-color: #fff;
+}
+
+.weekly-featured__title {
+  margin: 0 0 18px;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111;
+}
+
+.weekly-featured__subtitle {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #111;
+}
+
+/* Banner mobile */
+.weekly-featured__banner {
+  position: relative;
+  width: 100%;
+  min-height: auto;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: #151515;
+  background-image: none;
+}
+
+/* Wrapper immagine mobile */
+.weekly-featured__image-wrapper {
+  width: 100%;
+  padding-top: 72px;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: #151515;
+}
+
+/* Immagine mobile */
+.weekly-featured__image {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
+
+/* Tabs */
+.weekly-featured__tabs {
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 5px;
+  border-radius: 999px;
+  background-color: rgba(238, 242, 248, 0.95);
+  z-index: 2;
+}
+
+.weekly-featured__tab {
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+
+  background: transparent;
+  color: #111;
+
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  white-space: nowrap;
+
+  cursor: pointer;
+}
+
+.weekly-featured__tab--active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Contenuto */
+.weekly-featured__content {
+  max-width: 520px;
+  padding: 20px 16px 70px;
+  color: #fff;
+  z-index: 1;
+}
+
+.weekly-featured__heading {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.weekly-featured__description {
+  margin: 0 0 18px;
+  max-width: 520px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Bottoni */
+.weekly-featured__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.weekly-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 40px;
+  padding: 0 16px;
+
+  border-radius: 999px;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.weekly-featured__cta--primary {
+  background-color: #fff;
+  color: #111;
+}
+
+.weekly-featured__cta--secondary {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+}
+
+.weekly-featured__cta:hover span {
+  text-decoration: underline;
+}
+
+.weekly-featured__cta-icon {
+  width: 14px;
+  height: 14px;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .weekly-featured {
+    padding: 0; 
+  }
+
+  .weekly-featured__header {
+    margin-bottom: 36px;
+    padding: 0;
+  }
+
+  /* Tablet: nasconde immagine mobile */
+  .weekly-featured__image-wrapper {
+    display: none;
+  }
+
+  .weekly-featured__banner {
+    min-height: 520px;
+    padding: 40px 32px;
+
+    justify-content: center;
+
+    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-medium.jpg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--color-white);
+  }
+
+  .weekly-featured__tabs {
+    top: 50px;
+  }
+
+  .weekly-featured__content {
+    max-width: 430px;
+    padding: 0;
+  }
+
+  .weekly-featured__heading {
+    font-size: 2.3rem;
+  }
+
+  .weekly-featured__description {
+    font-size: 0.95rem;
+  }
+
+  .weekly-featured__cta {
+    min-height: 44px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .weekly-featured {
+    max-width: 1604px;
+    margin: 40px auto 0;
+    padding: 0 16px;
+  }
+
+  .weekly-featured__header {
+    margin-bottom: 36px;
+  }
+
+  .weekly-featured__title {
+    font-size: 2rem;
+  }
+
+  .weekly-featured__banner {
+    min-height: 700px;
+    padding: 0 32px;
+
+    justify-content: center;
+
+    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-large.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .weekly-featured__tabs {
+    top: 28px;
+  }
+
+  .weekly-featured__content {
+    max-width: 560px;
+  }
+
+  .weekly-featured__heading {
+    font-size: 3rem;
+  }
+
+  .weekly-featured__description {
+    max-width: 620px;
+    font-size: 1rem;
+  }
+
+  .weekly-featured__cta {
+    min-height: 48px;
+    padding: 0 22px;
+    font-size: 1rem;
   }
 }
