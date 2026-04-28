@@ -1703,7 +1703,10 @@
   }
 
   .join-and-earn__buttons {
-    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* garante lado a lado */
+    gap: 12px;
   }
 
   .btn-primary,
