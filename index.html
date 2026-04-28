@@ -1593,9 +1593,12 @@
       <!-- FINE DELLA SECTION 4 -->
 
       <!-- Sezione 5: In evidenza questa settimana -->
-      <section class="weekly-featured">
+      <section class="weekly-featured" aria-labelledby="weekly-featured-title">
         <div class="weekly-featured__header">
-          <h2 class="weekly-featured__title">In evidenza questa settimana</h2>
+          <h2 id="weekly-featured-title" class="weekly-featured__title">
+            In evidenza questa settimana
+          </h2>
+
           <p class="weekly-featured__subtitle">
             Uno sguardo più da vicino ai momenti LEGO&reg; che vale la pena
             scoprire: dal divertimento stagionale alle occasioni speciali.
@@ -1604,24 +1607,39 @@
 
         <div class="weekly-featured__banner">
           <div class="weekly-featured__overlay">
-            <div class="weekly-featured__tabs">
+            <!-- Tabs contenuto in evidenza -->
+            <div
+              class="weekly-featured__tabs"
+              role="tablist"
+              aria-label="Contenuti in evidenza"
+            >
               <button
                 class="weekly-featured__tab weekly-featured__tab--active"
                 type="button"
+                role="tab"
+                aria-selected="true"
               >
                 Formula 1®
               </button>
-              <button class="weekly-featured__tab" type="button">
+
+              <button
+                class="weekly-featured__tab"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
                 Regali di Pasqua
               </button>
             </div>
 
+            <!-- Testo sovrapposto al banner -->
             <div class="weekly-featured__overlay-text">
               <a
                 href="https://www.lego.com/it-it/categories/f1/f1-sets"
                 class="weekly-featured__badge"
-                >Novità</a
               >
+                Novità
+              </a>
 
               <h3 class="weekly-featured__heading">
                 Inizia la tua collezione in <br />
@@ -1641,8 +1659,7 @@
                 <img
                   class="weekly-featured__cta-icon"
                   src="./assets/global/icons/arrow-right-icon.svg"
-                  alt="Vai a Compra ora"
-                  aria-hidden="true"
+                  alt=""
                 />
               </a>
             </div>
