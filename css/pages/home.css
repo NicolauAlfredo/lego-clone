@@ -1771,6 +1771,31 @@
   .join-and-earn__card--rewards {
     rotate: 3deg;
   }
+
+  .carota {
+    display: block;
+
+    position: absolute;
+    top: 20px; /* ligeiramente mais alto */
+    right: -80px; /* começa fora como no desktop */
+
+    width: 120px; /* menor que desktop */
+    height: auto;
+
+    opacity: 0;
+    transform: translateX(60px);
+
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease,
+      right 0.6s ease;
+  }
+
+  .join-and-earn.is-visible .carota {
+    right: 10px; /* entra um pouco menos que no desktop */
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 /* ================= DESKTOP ================= */
