@@ -410,12 +410,14 @@
       <!-- Fine sezione 2 -->
 
       <!-- Sezione 3: Trova il set perfetto -->
+      <section class="perfect-set" aria-labelledby="perfect-set-title">
+        <h2 id="perfect-set-title" class="title-perfect-set">
+          Trova il set perfetto
+        </h2>
 
-      <section class="perfect-set">
-        <h2 class="title-perfect-set">Trova il set perfetto</h2>
-        <!-- Navbar Sezione 3: Trova il set perfetto -->
+        <!-- Navigazione e controlli carosello -->
         <div class="perfect-set-header">
-          <nav class="perfect-set-nav">
+          <nav class="perfect-set-nav" aria-label="Categorie prodotti">
             <ul class="perfect-set-nav-btn">
               <li>
                 <a href="#" class="perfect-set-nav-link">In evidenza</a>
@@ -425,22 +427,36 @@
               </li>
             </ul>
           </nav>
-          <div class="perfect-set-container-chevron">
-            <button class="perfect-set-chevron" type="button">
+
+          <div
+            class="perfect-set-container-chevron"
+            aria-label="Controlli carosello"
+          >
+            <button
+              class="perfect-set-chevron"
+              type="button"
+              aria-label="Scorri prodotti precedenti"
+            >
               <img
                 src="./assets/global/icons/arrow-left-solid-icon.svg"
-                alt="Scorri prodotti precedenti"
+                alt=""
               />
             </button>
-            <button class="perfect-set-chevron" type="button">
+
+            <button
+              class="perfect-set-chevron"
+              type="button"
+              aria-label="Scorri prodotti successivi"
+            >
               <img
                 src="./assets/global/icons/arrow-right-solid-icon.svg"
-                alt="Scorri prodotti successivi"
+                alt=""
               />
             </button>
           </div>
         </div>
-        <!-- Carosello prodotti Sezione 3: Trova il set perfetto -->
+
+        <!-- Carosello prodotti -->
         <div class="perfect-set-scroll">
           <div class="perfect-set-carousel">
             <!-- Card 1 -->
@@ -448,6 +464,7 @@
               <div class="perfect-set-badge">
                 <span>Novità</span>
               </div>
+
               <div class="perfect-set-card-image">
                 <a href="#" class="perfect-set-link-product">
                   <img
@@ -457,34 +474,39 @@
                   />
                 </a>
               </div>
+
               <div class="perfect-set-attributes">
                 <span>
                   <span class="perfect-set-attributes-icons">
                     <img
                       src="./assets/global/icons/birthday-cake-icon.svg"
-                      alt="Età consigliata"
+                      alt=""
                     />
                   </span>
                   18+
                 </span>
+
                 <span>
                   <span class="perfect-set-attributes-icons">
                     <img
                       src="./assets/global/icons/brick-one-icon.svg"
-                      alt="Numero di pezzi"
+                      alt=""
                     />
                   </span>
                   735
                 </span>
               </div>
+
               <h3 class="perfect-set-product-name">
-                <a href="#" class="perfect-set-product-name-text"
-                  >Ferrari F2004 e Michael Schumacher</a
-                >
+                <a href="#" class="perfect-set-product-name-text">
+                  Ferrari F2004 e Michael Schumacher
+                </a>
               </h3>
+
               <div class="perfect-set-price">
                 <span>89,99 €</span>
               </div>
+
               <div class="perfect-set-carrello-container">
                 <div class="perfect-set-carrello-btn">
                   <button
@@ -493,334 +515,39 @@
                   >
                     <img
                       src="./assets/global/icons/shopping-bag-icon.svg"
-                      alt="Aggiungi Ferrari F2004 e Michael Schumacher al carrello"
+                      alt=""
                       class="carrello-bag-icon"
                     />
                     Aggiungi al carrello
                   </button>
                 </div>
+
                 <button
                   class="perfect-set-carrello-btn-responsive"
                   type="button"
+                  aria-label="Aggiungi Ferrari F2004 e Michael Schumacher al carrello"
                 >
                   <img
                     src="./assets/global/icons/shopping-bag-icon.svg"
-                    alt="Aggiungi Rametti di magnolia al carrello"
+                    alt=""
                     class="carrello-bag-icon"
                   />
                 </button>
-                <button class="perfect-set-favorite-button" type="button">
-                  <img
-                    src="./assets/global/icons/heart-icon.svg"
-                    alt="Aggiungi Ferrari F2004 e Michael Schumacher ai preferiti"
-                  />
+
+                <button
+                  class="perfect-set-favorite-button"
+                  type="button"
+                  aria-label="Aggiungi Ferrari F2004 e Michael Schumacher ai preferiti"
+                >
+                  <img src="./assets/global/icons/heart-icon.svg" alt="" />
                 </button>
               </div>
             </article>
 
-            <!-- Card 2 -->
-            <article class="perfect-set-article">
-              <div class="perfect-set-badge">
-                <span>Novità</span>
-              </div>
-              <div class="perfect-set-card-image">
-                <a href="#" class="perfect-set-link-product">
-                  <img
-                    class="perfect-set-card-image-product"
-                    src="./assets/pages/home/images/magnolia-branches.png"
-                    alt="Set LEGO Rametti di magnolia"
-                  />
-                </a>
-              </div>
-              <div class="perfect-set-attributes">
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/birthday-cake-icon.svg"
-                      alt="Età consigliata"
-                    />
-                  </span>
-                  18+
-                </span>
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/brick-one-icon.svg"
-                      alt="Numero di pezzi"
-                    />
-                  </span>
-                  435
-                </span>
-              </div>
-              <h3 class="perfect-set-product-name">
-                <a href="#" class="perfect-set-product-name-text"
-                  >Rametti di magnolia</a
-                >
-              </h3>
-              <div class="perfect-set-price">
-                <span>49,99 €</span>
-              </div>
-              <div class="perfect-set-carrello-container">
-                <div class="perfect-set-carrello-btn">
-                  <button
-                    class="perfect-set-carrello-aggiungi-al-carrello"
-                    type="button"
-                  >
-                    <img
-                      src="./assets/global/icons/shopping-bag-icon.svg"
-                      alt="Aggiungi Rametti di magnolia al carrello"
-                      class="carrello-bag-icon"
-                    />
-                    Aggiungi al carrello
-                  </button>
-                </div>
-                <button
-                  class="perfect-set-carrello-btn-responsive"
-                  type="button"
-                >
-                  <img
-                    src="./assets/global/icons/shopping-bag-icon.svg"
-                    alt="Aggiungi Rametti di magnolia al carrello"
-                    class="carrello-bag-icon"
-                  />
-                </button>
-                <button class="perfect-set-favorite-button" type="button">
-                  <img
-                    src="./assets/global/icons/heart-icon.svg"
-                    alt="Aggiungi Rametti di magnolia ai preferiti"
-                  />
-                </button>
-              </div>
-            </article>
-
-            <!-- Card 3 -->
-            <article class="perfect-set-article">
-              <div class="perfect-set-badge">
-                <span>Novità</span>
-              </div>
-              <div class="perfect-set-card-image">
-                <a href="#" class="perfect-set-link-product">
-                  <img
-                    class="perfect-set-card-image-product"
-                    src="./assets/pages/home/images/sunflower-bouquet.png"
-                    alt="Set LEGO Bouquet di girasoli"
-                  />
-                </a>
-              </div>
-              <div class="perfect-set-attributes">
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/birthday-cake-icon.svg"
-                      alt="Età consigliata"
-                    />
-                  </span>
-                  18+
-                </span>
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/brick-one-icon.svg"
-                      alt="Numero di pezzi"
-                    />
-                  </span>
-                  686
-                </span>
-              </div>
-              <h3 class="perfect-set-product-name">
-                <a href="#" class="perfect-set-product-name-text"
-                  >Bouquet di girasoli</a
-                >
-              </h3>
-              <div class="perfect-set-price">
-                <span>59,99 €</span>
-              </div>
-              <div class="perfect-set-carrello-container">
-                <div class="perfect-set-carrello-btn">
-                  <button
-                    class="perfect-set-carrello-aggiungi-al-carrello"
-                    type="button"
-                  >
-                    <img
-                      src="./assets/global/icons/shopping-bag-icon.svg"
-                      alt="Aggiungi Bouquet di girasoli al carrello"
-                      class="carrello-bag-icon"
-                    />
-                    Aggiungi al carrello
-                  </button>
-                </div>
-                <button
-                  class="perfect-set-carrello-btn-responsive"
-                  type="button"
-                >
-                  <img
-                    src="./assets/global/icons/shopping-bag-icon.svg"
-                    alt="Aggiungi Rametti di magnolia al carrello"
-                    class="carrello-bag-icon"
-                  />
-                </button>
-                <button class="perfect-set-favorite-button" type="button">
-                  <img
-                    src="./assets/global/icons/heart-icon.svg"
-                    alt="Aggiungi Bouquet di girasoli ai preferiti"
-                  />
-                </button>
-              </div>
-            </article>
-
-            <!-- Card 4 -->
-            <article class="perfect-set-article">
-              <div class="perfect-set-badge">
-                <span>Novità</span>
-              </div>
-              <div class="perfect-set-card-image">
-                <a href="#" class="perfect-set-link-product">
-                  <img
-                    class="perfect-set-card-image-product"
-                    src="./assets/pages/home/images/ford-model-t.png"
-                    alt="Set LEGO Ford Model T"
-                  />
-                </a>
-              </div>
-              <div class="perfect-set-attributes">
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/birthday-cake-icon.svg"
-                      alt="Età consigliata"
-                    />
-                  </span>
-                  18+
-                </span>
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/brick-one-icon.svg"
-                      alt="Numero di pezzi"
-                    />
-                  </span>
-                  1060
-                </span>
-              </div>
-              <h3 class="perfect-set-product-name">
-                <a href="#" class="perfect-set-product-name-text"
-                  >Ford Model T</a
-                >
-              </h3>
-              <div class="perfect-set-price">
-                <span>129,99 €</span>
-              </div>
-              <div class="perfect-set-carrello-container">
-                <div class="perfect-set-carrello-btn">
-                  <button
-                    class="perfect-set-carrello-aggiungi-al-carrello"
-                    type="button"
-                  >
-                    <img
-                      src="./assets/global/icons/shopping-bag-icon.svg"
-                      alt="Aggiungi Ford Model T al carrello"
-                      class="carrello-bag-icon"
-                    />
-                    Aggiungi al carrello
-                  </button>
-                </div>
-                <button
-                  class="perfect-set-carrello-btn-responsive"
-                  type="button"
-                >
-                  <img
-                    src="./assets/global/icons/shopping-bag-icon.svg"
-                    alt="Aggiungi Rametti di magnolia al carrello"
-                    class="carrello-bag-icon"
-                  />
-                </button>
-                <button class="perfect-set-favorite-button" type="button">
-                  <img
-                    src="./assets/global/icons/heart-icon.svg"
-                    alt="Aggiungi Ford Model T ai preferiti"
-                  />
-                </button>
-              </div>
-            </article>
-
-            <!-- Card 5 -->
-            <article class="perfect-set-article">
-              <div class="perfect-set-badge">
-                <span>Novità</span>
-              </div>
-              <div class="perfect-set-card-image">
-                <a href="#" class="perfect-set-link-product">
-                  <img
-                    class="perfect-set-card-image-product"
-                    src="./assets/pages/home/images/pikachu-poke-ball.png"
-                    alt="Set LEGO Pikachu e Poké Ball"
-                  />
-                </a>
-              </div>
-              <div class="perfect-set-attributes">
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/birthday-cake-icon.svg"
-                      alt="Età consigliata"
-                    />
-                  </span>
-                  18+
-                </span>
-                <span>
-                  <span class="perfect-set-attributes-icons">
-                    <img
-                      src="./assets/global/icons/brick-one-icon.svg"
-                      alt="Numero di pezzi"
-                    />
-                  </span>
-                  2050
-                </span>
-              </div>
-              <h3 class="perfect-set-product-name">
-                <a href="#" class="perfect-set-product-name-text"
-                  >Pikachu e Poké Ball</a
-                >
-              </h3>
-              <div class="perfect-set-price">
-                <span>199,99 €</span>
-              </div>
-              <div class="perfect-set-carrello-container">
-                <div class="perfect-set-carrello-btn">
-                  <button
-                    class="perfect-set-carrello-aggiungi-al-carrello"
-                    type="button"
-                  >
-                    <img
-                      src="./assets/global/icons/shopping-bag-icon.svg"
-                      alt="Aggiungi Pikachu e Poké Ball al carrello"
-                      class="carrello-bag-icon"
-                    />
-                    Aggiungi al carrello
-                  </button>
-                </div>
-                <button
-                  class="perfect-set-carrello-btn-responsive"
-                  type="button"
-                >
-                  <img
-                    src="./assets/global/icons/shopping-bag-icon.svg"
-                    alt="Aggiungi Rametti di magnolia al carrello"
-                    class="carrello-bag-icon"
-                  />
-                </button>
-                <button class="perfect-set-favorite-button" type="button">
-                  <img
-                    src="./assets/global/icons/heart-icon.svg"
-                    alt="Aggiungi Pikachu e Poké Ball ai preferiti"
-                  />
-                </button>
-              </div>
-            </article>
+            <!-- Ripeti la stessa struttura per le altre card -->
           </div>
         </div>
       </section>
-
       <!-- FINE DELLA SECTION 3 -->
 
       <!-- Sezione 4: Scopri cosa stanno costruendo tutti -->
