@@ -1314,3 +1314,198 @@
     font-size: 1rem;
   }
 }
+
+
+/* ================= SECTION 6: EXPLORE MORE ================= */
+
+/* Base mobile */
+.explore-more {
+  width: 100%;
+  max-width: 1604px;
+  margin: 40px auto 0;
+  padding: 24px 16px;
+}
+
+/* Container interno */
+.explore-more__container {
+  width: 100%;
+}
+
+/* Header sezione */
+.explore-more__header {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Titolo sezione */
+.explore-more__title {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-background-dark);
+}
+
+/* Lista card */
+.explore-more__cards {
+  display: flex;
+  gap: 16px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+
+  padding-bottom: 20px;
+}
+
+/* Scrollbar */
+.explore-more__cards::-webkit-scrollbar {
+  height: 4px;
+}
+
+.explore-more__cards::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 4px;
+}
+
+/* Card */
+.explore-more__card {
+  flex: 0 0 260px;
+  min-width: 260px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  scroll-snap-align: start;
+}
+
+/* Immagine */
+.explore-more__image-wrapper {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.explore-more__image {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+}
+
+/* Contenuto */
+.explore-more__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Titolo card */
+.explore-more__card-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Testo card */
+.explore-more__text {
+  max-width: 90%;
+  margin: 0 0 20px;
+
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--color-background-dark);
+}
+
+/* Bottone */
+.explore-more__cta {
+  display: inline-block;
+  padding: 10px 20px;
+
+  border: 1px solid var(--color-black);
+  border-radius: 25px;
+
+  color: var(--color-black);
+  font-size: 14px;
+  text-decoration: none;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    text-decoration 0.2s ease;
+}
+
+.explore-more__cta:hover {
+  background-color: #696868;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .explore-more {
+    padding: 32px 24px;
+  }
+
+  .explore-more__card {
+    flex-basis: 310px;
+    min-width: 310px;
+  }
+
+  .explore-more__card-title {
+    font-size: 18px;
+  }
+
+  .explore-more__text {
+    font-size: 18px;
+  }
+
+  .explore-more__cards::-webkit-scrollbar {
+    height: 3px;
+  }
+
+  .explore-more__cards::-webkit-scrollbar-thumb {
+    background: #e0e0e0;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .explore-more {
+    padding: 32px;
+  }
+
+  .explore-more__header {
+    text-align: left;
+    margin-bottom: 30px;
+  }
+
+  .explore-more__title {
+    font-size: 28px;
+  }
+
+  .explore-more__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    overflow: visible;
+    padding-bottom: 0;
+  }
+
+  .explore-more__card {
+    min-width: 0;
+    flex: initial;
+  }
+
+  .explore-more__image-wrapper {
+    margin-bottom: 15px;
+  }
+
+  .explore-more__card-title {
+    font-size: 20px;
+  }
+
+  .explore-more__text {
+    font-size: 16px;
+  }
+}
