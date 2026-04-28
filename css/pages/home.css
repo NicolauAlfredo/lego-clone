@@ -1802,12 +1802,12 @@
 
   .join-and-earn__cards {
     flex-direction: row;
-    gap: 60px;
+    gap: 80px;
   }
 
   .join-and-earn__card {
-    width: 240px;
-    min-height: 360px;
+    width: 250px;
+    min-height: 370px;
   }
 
   .join-and-earn__card-image {
