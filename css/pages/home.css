@@ -214,9 +214,10 @@
 .section-featured__cards {
   display: flex;
   gap: 7px;
-  padding-bottom: 20px;
+  padding: 20px 20px;
   overflow-x: auto;
   overflow-y: hidden;
+  scroll-padding-left: 20px;
 }
 
 .section-featured__cards::-webkit-scrollbar {
@@ -224,12 +225,16 @@
 }
 
 .section-featured__cards::-webkit-scrollbar-track {
-  background-color: gray;
+  background: #e0e0e0;
+  border-radius: 999px;
+
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .section-featured__cards::-webkit-scrollbar-thumb {
-  border-radius: 2px;
-  background-color: var(--color-white);
+  background: #9c9c9c;
+  border-radius: 999px;
 }
 
 .section-featured__card {
