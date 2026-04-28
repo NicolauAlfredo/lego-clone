@@ -1509,3 +1509,333 @@
     font-size: 16px;
   }
 }
+
+/* ================= SECTION 7: JOIN AND EARN ================= */
+
+/* Base mobile */
+.join-and-earn {
+  position: relative;
+  width: 100%;
+  max-width: 1604px;
+  margin: 40px auto 0;
+  padding: 32px 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+
+  background-color: var(--color-gray-alt);
+  overflow: hidden;
+}
+
+/* Contenuto principale */
+.join-and-earn__content {
+  width: 100%;
+}
+
+.join-and-earn__logo {
+  display: block;
+  width: 128px;
+  height: auto;
+  margin-bottom: 16px;
+}
+
+.join-and-earn__title {
+  margin: 0 0 12px;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #141414;
+}
+
+.join-and-earn__description {
+  margin: 0 0 20px;
+  max-width: 520px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  color: #141414;
+}
+
+/* Bottoni */
+.join-and-earn__buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 12px;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 0 18px;
+
+  border-radius: 999px;
+
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  border: 2px solid transparent;
+  background-color: #005bd2d7;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #003f9e;
+}
+
+.btn-secondary {
+  border: 2px solid #005bd2d7;
+  background-color: transparent;
+  color: #005bd2d7;
+}
+
+.btn-secondary:hover {
+  background-color: #003f9e;
+  border-color: #003f9e;
+  color: #fff;
+}
+
+.btn-primary:hover .btn-text,
+.btn-secondary:hover .btn-text {
+  text-decoration: underline;
+}
+
+.btn-arrow {
+  width: 14px;
+  height: 14px;
+}
+
+/* Lista card */
+.join-and-earn__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card base */
+.join-and-earn__card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 150px;
+
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+
+  background-color: #fff;
+}
+
+.join-and-earn__card--loyalty,
+.join-and-earn__card--gifts {
+  rotate: -1deg;
+}
+
+.join-and-earn__card--rewards {
+  rotate: 1deg;
+}
+
+/* Immagine card */
+.join-and-earn__card-image {
+  width: 134px;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Testo card */
+.join-and-earn__card-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 12px;
+  text-align: center;
+}
+
+.join-and-earn__card-content h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #3d3737;
+}
+
+.join-and-earn__card-content p {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.55;
+  color: #888686;
+}
+
+/* Personaggio decorativo */
+.carota {
+  display: none;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  .join-and-earn {
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .join-and-earn__logo {
+    width: 190px;
+  }
+
+  .join-and-earn__title {
+    font-size: 30px;
+  }
+
+  .join-and-earn__description {
+    font-size: 19px;
+  }
+
+  .join-and-earn__buttons {
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    min-height: 46px;
+    padding: 0 22px;
+    font-size: 15px;
+  }
+
+  .join-and-earn__cards {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .join-and-earn__card {
+    flex-direction: column;
+    width: 200px;
+    min-height: 320px;
+  }
+
+  .join-and-earn__card-image {
+    width: 100%;
+    height: 140px;
+  }
+
+  .join-and-earn__card-content {
+    padding: 20px 12px;
+  }
+
+  .join-and-earn__card-content h3 {
+    font-size: 17px;
+  }
+
+  .join-and-earn__card-content p {
+    font-size: 14px;
+  }
+
+  .join-and-earn__card--loyalty,
+  .join-and-earn__card--gifts {
+    rotate: -3deg;
+  }
+
+  .join-and-earn__card--rewards {
+    rotate: 3deg;
+  }
+
+  .carota {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: -20px;
+
+    width: 130px;
+    height: auto;
+
+    opacity: 0;
+    transform: translateX(80px);
+    animation: slide-in 0.6s ease-out forwards;
+    animation-timeline: view();
+    animation-range: entry 80% entry 100%;
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 1025px) {
+  .join-and-earn {
+    padding: 50px 16px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .join-and-earn__content {
+    width: 360px;
+    margin-left: 50px;
+    margin-right: 80px;
+  }
+
+  .join-and-earn__logo {
+    width: 200px;
+  }
+
+  .join-and-earn__title {
+    font-size: 2.4rem;
+  }
+
+  .join-and-earn__description {
+    font-size: 1.3rem;
+  }
+
+  .join-and-earn__cards {
+    flex-direction: row;
+    gap: 60px;
+  }
+
+  .join-and-earn__card {
+    width: 240px;
+    min-height: 360px;
+  }
+
+  .join-and-earn__card-image {
+    height: 180px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    min-height: 48px;
+    padding: 0 30px;
+    font-size: 18px;
+  }
+
+  .btn-arrow {
+    width: 16px;
+    height: 16px;
+  }
+
+  .carota {
+    top: 30px;
+    right: 0;
+    width: 180px;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
