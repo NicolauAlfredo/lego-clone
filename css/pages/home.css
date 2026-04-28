@@ -741,7 +741,7 @@
   gap: 12px;
 }
 
-/* Grid laterale (mobile = comportamento flat) */
+/* Grid laterale su mobile */
 .discover-builds__side-grid {
   display: contents;
 }
@@ -758,7 +758,7 @@
   min-height: 200px;
 }
 
-/* Link full area */
+/* Link immagine */
 .discover-builds__card-link {
   display: block;
   width: 100%;
@@ -780,33 +780,53 @@
   bottom: 10px;
   z-index: 2;
 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   width: 32px;
   height: 32px;
+  padding: 0;
 
   border: 1px solid #111;
   border-radius: 50%;
   background: #fff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   cursor: pointer;
 }
 
 .discover-builds__zoom-button:hover {
   background: #111;
-  color: #fff;
 }
 
-/* Card info (hidden default) */
+/* Icone */
+.discover-builds__zoom-button img {
+  display: block;
+  width: 14px;
+  height: 14px;
+}
+
+.discover-builds__info-close img {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+
+.discover-builds__info-link img {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+/* Card info */
 .discover-builds__info-card {
   position: absolute;
   left: 10px;
   bottom: 10px;
+  z-index: 3;
 
   width: calc(100% - 20px);
-  padding: 14px;
+  min-height: 120px;
+  padding: 42px 14px 14px;
 
   border-radius: 16px;
   background: #fff;
@@ -814,15 +834,19 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 12px;
 
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
 
-  transition: all 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease,
+    transform 0.25s ease;
 }
 
-/* Stato attivo (hover/focus) */
+/* Stato attivo */
 .discover-builds__card:hover .discover-builds__info-card,
 .discover-builds__card:focus-within .discover-builds__info-card,
 .discover-builds__card.is-open .discover-builds__info-card {
@@ -831,7 +855,7 @@
   transform: translateY(0);
 }
 
-/* Nasconde il bottone + quando aperto */
+/* Nasconde il bottone + quando la card info è aperta */
 .discover-builds__card:hover .discover-builds__zoom-button,
 .discover-builds__card:focus-within .discover-builds__zoom-button,
 .discover-builds__card.is-open .discover-builds__zoom-button {
@@ -839,19 +863,26 @@
   pointer-events: none;
 }
 
-/* Close button */
+/* Bottone chiusura */
 .discover-builds__info-close {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 12px;
+  left: 12px;
 
-  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+  padding: 0;
+
   border: none;
-  font-size: 1.5rem;
+  background: transparent;
   cursor: pointer;
 }
 
-/* Contenuto */
+/* Contenuto card info */
 .discover-builds__info-content {
   display: flex;
   flex-direction: column;
@@ -859,20 +890,30 @@
 }
 
 .discover-builds__info-title {
+  margin: 0;
   font-size: 0.95rem;
+  font-weight: 400;
   line-height: 1.4;
+  color: #222;
 }
 
 .discover-builds__info-price {
+  margin: 0;
   font-size: 1.3rem;
   font-weight: 700;
+  line-height: 1;
+  color: #111;
 }
 
 /* Link freccia */
 .discover-builds__info-link {
-  font-size: 1.8rem;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+
   color: #111;
+  text-decoration: none;
 }
 
 /* ================= TABLET ================= */
@@ -899,12 +940,29 @@
   .discover-builds__card--small {
     min-height: 200px;
   }
+
+  .discover-builds__info-card {
+    min-height: 110px;
+    padding: 44px 16px 16px;
+  }
 }
 
 /* ================= DESKTOP ================= */
 @media (min-width: 1025px) {
   .discover-builds {
     padding: 0 16px;
+  }
+
+  .discover-builds__header {
+    margin-bottom: 32px;
+  }
+
+  .discover-builds__title {
+    font-size: 2rem;
+  }
+
+  .discover-builds__subtitle {
+    max-width: 700px;
   }
 
   .discover-builds__grid {
@@ -927,12 +985,28 @@
   }
 
   .discover-builds__zoom-button {
+    left: 16px;
+    bottom: 16px;
     width: 36px;
     height: 36px;
   }
 
   .discover-builds__info-card {
+    left: 12px;
+    bottom: 12px;
+
     width: min(230px, calc(100% - 24px));
-    padding: 16px;
+    min-height: 120px;
+    padding: 46px 16px 16px;
+
+    border-radius: 20px;
+  }
+
+  .discover-builds__info-title {
+    font-size: 1.05rem;
+  }
+
+  .discover-builds__info-price {
+    font-size: 1.7rem;
   }
 }
