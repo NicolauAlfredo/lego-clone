@@ -1874,20 +1874,30 @@
       <!-- Fine sezione 7 -->
 
       <!-- Sezione 8: Benvenuto-->
-      <section class="welcome-home">
-        <!-- Toggle -->
-        <input type="checkbox" id="toggle-text" class="welcome-home__toggle" />
+      <!-- Sezione 8: Benvenuto -->
+      <section class="welcome-home" aria-labelledby="welcome-home-title">
+        <h2 id="welcome-home-title" class="welcome-home__title">
+          Benvenuto nel LEGO® Shop ufficiale
+        </h2>
 
-        <!-- Testo -->
-        <p class="welcome-home__text">
+        <!-- Toggle contenuto -->
+        <input
+          type="checkbox"
+          id="toggle-text"
+          class="welcome-home__toggle"
+          aria-controls="welcome-home-text"
+        />
+
+        <!-- Testo descrittivo -->
+        <p id="welcome-home-text" class="welcome-home__text">
           Ti diamo il benvenuto nel LEGO® Shop ufficiale, dove troverai
           giocattoli da costruzione LEGO,
           <a
             href="https://www.lego.com/it-it/gifts"
             class="welcome-home__blue-text"
-            >regali</a
+          >
+            regali</a
           >, splendidi set da esposizione e molto altro ancora
-
           <span class="welcome-home__extra">
             per
             <a
@@ -1961,9 +1971,16 @@
           </span>
         </p>
 
-        <!-- Bottone -->
-        <label for="toggle-text" class="welcome-home__btn"></label>
+        <!-- Bottone toggle -->
+        <label
+          for="toggle-text"
+          class="welcome-home__btn"
+          role="button"
+          tabindex="0"
+          aria-label="Mostra o nascondi il testo completo"
+        ></label>
       </section>
+      <!-- Fine sezione 8 -->
       <!-- FINE DELLA SECTION 8 -->
     </main>
 
