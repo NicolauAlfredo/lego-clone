@@ -1,0 +1,564 @@
+/* =========================
+   TOP BAR
+   Mobile first
+========================= */
+
+/* Barra superiore */
+.top-bar {
+  background: var(--color-white);
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+}
+
+/* Contenitore principale */
+.top-bar__container {
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nasconde le sezioni laterali su mobile */
+.top-bar__left,
+.top-bar__right {
+  display: none;
+}
+
+/* Area centrale */
+.top-bar__center {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Contenitore del messaggio */
+.top-bar__center-container {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Bottoni della top bar */
+.top-bar__button {
+  border: 0;
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Icone dei bottoni */
+.top-bar__button img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+/* Testo centrale */
+.top-bar__center-text {
+  min-width: 0;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.3;
+  color: var(--color-black);
+}
+
+/* Paragrafo del messaggio */
+.top-bar__center-text p {
+  margin: 0;
+}
+
+/* Link del messaggio */
+.top-bar__center-link {
+  color: var(--color-black);
+  text-decoration: underline;
+}
+
+/* =========================
+   TOP BAR - Tablet
+========================= */
+
+@media (min-width: 768px) {
+  /* Barra superiore tablet */
+  .top-bar {
+    padding: 12px 0;
+  }
+
+  /* Contenitore tablet */
+  .top-bar__container {
+    padding: 0 24px;
+  }
+
+  /* Messaggio tablet */
+  .top-bar__center-container {
+    max-width: 680px;
+  }
+
+  /* Testo tablet */
+  .top-bar__center-text {
+    font-size: 14px;
+  }
+
+  /* Icone tablet */
+  .top-bar__button img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+/* =========================
+   TOP BAR - Desktop
+========================= */
+
+@media (min-width: 1200px) {
+  /* Barra superiore desktop */
+  .top-bar {
+    padding: 15px 0;
+  }
+
+  /* Contenitore desktop */
+  .top-bar__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 40px;
+    justify-content: space-between;
+  }
+
+  /* Pulsante area giochi */
+  .top-bar__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 25px;
+    padding: 0 10px;
+    border-radius: 5px;
+    background-color: rgb(171, 217, 255);
+    box-shadow: rgba(48, 85, 181, 0.44) 0px 1px 4px 0px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 12px;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  /* Hover area giochi */
+  .top-bar__left:hover {
+    background-color: var(--color-white);
+  }
+
+  /* Link area giochi */
+  .top-bar__left-link {
+    text-decoration: none;
+    color: var(--color-black);
+  }
+
+  /* Messaggio centrale desktop */
+  .top-bar__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+  }
+
+  /* Contenitore messaggio desktop */
+  .top-bar__center-container {
+    width: auto;
+    max-width: none;
+    gap: 8px;
+  }
+
+  /* Testo desktop */
+  .top-bar__center-text {
+    font-size: 14px;
+    white-space: nowrap;
+  }
+
+  /* Bottoni desktop */
+  .top-bar__button {
+    padding: 4px;
+  }
+
+  /* Nasconde il bottone chiudi su desktop */
+  .top-bar__button--close {
+    display: none;
+  }
+
+  /* Sezione destra desktop */
+  .top-bar__right {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Bottone account */
+  .top-bar__account-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-black);
+    font-size: 0.75rem;
+    line-height: 1.1875rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  /* Icona account */
+  .top-bar__account-btn img {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+
+  /* Separatore verticale */
+  .top-bar__vertical-line {
+    width: 1px;
+    height: 20px;
+    margin: 0 20px;
+    background: var(--color-background-gray);
+  }
+
+  /* Link LEGO Insiders */
+  .top-bar__insider-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-black);
+    text-decoration: none;
+    font-size: 0.75rem;
+    line-height: 1.1875rem;
+    font-weight: 500;
+  }
+
+  /* Icona LEGO Insiders */
+  .top-bar__insider-link img {
+    width: 22px;
+    height: 22px;
+    display: block;
+  }
+}
+
+/* =========================
+   MOBILE HEADER
+   Mobile first
+========================= */
+
+/* Header mobile visibile di default */
+.mobile-header {
+  display: block;
+  width: 100%;
+  background: var(--color-white);
+}
+
+/* Contenitore principale */
+.mobile-header__container {
+  height: 56px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Bottone menu */
+.mobile-header__menu-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Icona menu */
+.mobile-header__menu-btn img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
+/* Logo */
+.mobile-header__logo {
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  margin-right: auto;
+}
+
+/* Immagine logo */
+.mobile-header__logo img {
+  width: 60px;
+  height: auto;
+  display: block;
+}
+
+/* Azioni (search, account, preferiti, cart) */
+.mobile-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Bottone icona */
+.mobile-header__icon-btn {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Icone */
+.mobile-header__icon-btn img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+/* Contatore carrello */
+.mobile-header__cart-count {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+  font-size: 10px;
+  line-height: 1;
+  color: var(--color-black);
+}
+
+/* =========================
+   MOBILE HEADER - Tablet
+========================= */
+
+@media (min-width: 768px) {
+  /* Contenitore tablet */
+  .mobile-header__container {
+    height: 64px;
+    padding: 0 24px;
+  }
+
+  /* Icona menu tablet */
+  .mobile-header__menu-btn img {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Logo tablet */
+  .mobile-header__logo img {
+    width: 70px;
+  }
+
+  /* Icone tablet */
+  .mobile-header__icon-btn img {
+    width: 24px;
+    height: 24px;
+  }
+
+  /* Spaziatura azioni */
+  .mobile-header__actions {
+    gap: 18px;
+  }
+
+  /* Contatore leggermente più basso */
+  .mobile-header__cart-count {
+    bottom: -12px;
+  }
+}
+
+/* =========================
+   MOBILE HEADER - Desktop
+========================= */
+
+@media (min-width: 1200px) {
+  /* Nasconde mobile header su desktop */
+  .mobile-header {
+    display: none;
+  }
+}
+
+/* =========================
+   HEADER DESKTOP
+   Mobile first
+========================= */
+
+/* Header desktop nascosto di default */
+.header {
+  display: none;
+}
+
+/* =========================
+   HEADER - Desktop
+========================= */
+
+@media (min-width: 1200px) {
+  /* Header principale */
+  .header {
+    display: block;
+    width: 100%;
+    background-color: var(--color-yellow);
+  }
+
+  /* Contenitore */
+  .header__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 30px;
+    height: 4.6875rem;
+
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  /* =========================
+     LEFT: logo + menu
+  ========================= */
+
+  .header__left {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  /* Logo */
+  .header__logo img {
+    width: 55px;
+    height: 55px;
+    margin-right: 40px;
+    display: block;
+  }
+
+  /* Menu */
+  .header__menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Item */
+  .header__menu-item {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Bottoni menu */
+  .header__menu-btn {
+    border: 0;
+    background: transparent;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+
+  .header__menu-btn:hover {
+    border-bottom: 3px solid var(--color-black);
+  }
+
+  /* Link evidenziato */
+  .header__menu-link {
+    text-transform: uppercase;
+    background: var(--color-white);
+    color: var(--color-red);
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .header__menu-link:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+  }
+
+  /* =========================
+     CENTER: search
+  ========================= */
+
+  .header__center {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 200px;
+  }
+
+  .header__search-form {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .header__search-box {
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0 12px;
+    border-radius: 999px;
+    border: 1px solid var(--color-black);
+    background: var(--color-white);
+  }
+
+  .header__search-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .header__search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  /* =========================
+     RIGHT: icons
+  ========================= */
+
+  .header__right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .header__icon-btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .header__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .header__cart-count {
+    font-size: 14px;
+  }
+}
