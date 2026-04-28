@@ -1606,60 +1606,71 @@
         </div>
 
         <div class="weekly-featured__banner">
-          <div class="weekly-featured__overlay">
-            <!-- Tabs contenuto in evidenza -->
-            <div
-              class="weekly-featured__tabs"
-              role="tablist"
-              aria-label="Contenuti in evidenza"
+          <!-- MOBILE IMAGE -->
+          <div class="weekly-featured__image-wrapper">
+            <img
+              src="./assets/pages/home/background/home-ps-hero-tall-small.jpg"
+              alt="Collezione LEGO Formula 1"
+              class="weekly-featured__image"
+            />
+          </div>
+
+          <!-- Tabs contenuto in evidenza -->
+          <div
+            class="weekly-featured__tabs"
+            role="tablist"
+            aria-label="Contenuti in evidenza"
+          >
+            <button
+              class="weekly-featured__tab weekly-featured__tab--active"
+              type="button"
+              role="tab"
+              aria-selected="true"
             >
-              <button
-                class="weekly-featured__tab weekly-featured__tab--active"
-                type="button"
-                role="tab"
-                aria-selected="true"
-              >
-                Formula 1®
-              </button>
+              Formula 1®
+            </button>
 
-              <button
-                class="weekly-featured__tab"
-                type="button"
-                role="tab"
-                aria-selected="false"
-              >
-                Regali di Pasqua
-              </button>
-            </div>
+            <button
+              class="weekly-featured__tab"
+              type="button"
+              role="tab"
+              aria-selected="false"
+            >
+              ONE PIECE
+            </button>
+          </div>
 
-            <!-- Testo sovrapposto al banner -->
-            <div class="weekly-featured__overlay-text">
+          <!-- Testo banner -->
+          <div class="weekly-featured__content">
+            <h3 class="weekly-featured__heading">Vivi l'emozione</h3>
+
+            <p class="weekly-featured__description">
+              Colleziona tutta la griglia di partenza e dai vita al circuito di
+              casa tua con i nuovi set LEGO&reg; Formula 1&reg;.
+            </p>
+
+            <div class="weekly-featured__actions">
               <a
-                href="https://www.lego.com/it-it/categories/f1/f1-sets"
-                class="weekly-featured__badge"
-              >
-                Novità
-              </a>
-
-              <h3 class="weekly-featured__heading">
-                Inizia la tua collezione in <br />
-                pole position
-              </h3>
-
-              <p class="weekly-featured__description">
-                Prenota subito i set Casco di Lewis Hamilton e Casco <br />
-                Charles Leclerc Scuderia Ferrari HP LEGO&reg; Editions.
-              </p>
-
-              <a
-                href="https://www.lego.com/it-it/categories/f1/f1-sets"
-                class="weekly-featured__cta"
+                href="#"
+                class="weekly-featured__cta weekly-featured__cta--primary"
               >
                 <span>Compra ora</span>
                 <img
-                  class="weekly-featured__cta-icon"
-                  src="./assets/global/icons/arrow-right-icon.svg"
+                  src="./assets/global/icons/arrow-right-solid-icon.svg"
                   alt=""
+                  class="weekly-featured__cta-icon"
+                />
+              </a>
+
+              <a
+                href="#"
+                class="weekly-featured__cta weekly-featured__cta--secondary"
+              >
+                <span>Scopri di più</span>
+                <img
+                  src="./assets/global/icons/arrow-right-solid-icon.svg"
+                  alt=""
+                  class="weekly-featured__cta-icon"
                 />
               </a>
             </div>
