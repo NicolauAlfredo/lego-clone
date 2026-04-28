@@ -4,11 +4,7 @@ if (joinAndEarnSection) {
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          joinAndEarnSection.classList.add("is-visible");
-        } else {
-          joinAndEarnSection.classList.remove("is-visible");
-        }
+        joinAndEarnSection.classList.toggle("is-visible", entry.isIntersecting);
       });
     },
     {
