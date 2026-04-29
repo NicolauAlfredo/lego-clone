@@ -67,9 +67,6 @@
   color: var(--color-white);
 }
 
-.hero__btn--primary img {
-}
-
 .hero__btn--secondary {
   border: 2px solid rgba(32, 32, 32, 0.6);
   color: rgb(20, 20, 20);
