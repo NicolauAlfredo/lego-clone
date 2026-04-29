@@ -128,6 +128,8 @@ function renderProducts(category) {
     scrollContainer.scrollLeft = 0;
   }
 
+  document.dispatchEvent(new CustomEvent("perfectSetProductsChanged"));
+
   requestAnimationFrame(() => {
     carousel.classList.remove("is-changing");
   });

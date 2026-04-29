@@ -24,12 +24,12 @@ if (scrollContainer && carousel && prevButton && nextButton) {
   const resetVisualState = () => {
     prevButton.classList.remove(
       "perfect-set-chevron--plain",
-      "perfect-set-chevron--clicked"
+      "perfect-set-chevron--clicked",
     );
 
     nextButton.classList.remove(
       "perfect-set-chevron--plain",
-      "perfect-set-chevron--clicked"
+      "perfect-set-chevron--clicked",
     );
   };
 
@@ -103,6 +103,10 @@ if (scrollContainer && carousel && prevButton && nextButton) {
   document.addEventListener("click", () => {
     resetVisualState();
     updateButtonsState();
+  });
+
+  document.addEventListener("perfectSetProductsChanged", () => {
+    updateChevronState();
   });
 
   updateButtonsState();
