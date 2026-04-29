@@ -459,6 +459,10 @@
   width: max-content;
 }
 
+.perfect-set-carousel.is-changing {
+  opacity: 0.6;
+}
+
 .perfect-set-article {
   flex: 0 0 270px;
   padding: 10px;
