@@ -68,7 +68,6 @@
 }
 
 .hero__btn--primary img {
-  
 }
 
 .hero__btn--secondary {
@@ -248,12 +247,12 @@
 }
 
 .section-featured__cards::-webkit-scrollbar-track {
-  background: #fff;
+  background: #4d4d4d;
   border-radius: 999px;
 }
 
 .section-featured__cards::-webkit-scrollbar-thumb {
-  background: #9c9c9c;
+  background: var(--color-white);
   border-radius: 999px;
 }
 
@@ -352,12 +351,15 @@
     font-size: 14px;
   }
 
-  .section-featured__cards {
-    width: calc(100% - 20px);
-    margin: 0 0 0 10px;
-    padding: 0 0 13px;
-    gap: 10px;
-    overflow-x: auto;
+  @media (min-width: 1025px) {
+    .section-featured__cards {
+      width: calc(100% - 20px);
+      margin: 0 0 0 10px;
+      padding: 0 0 13px;
+      gap: 10px;
+
+      overflow-x: hidden;
+    }
   }
 
   .section-featured__card {
