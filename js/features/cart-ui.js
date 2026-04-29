@@ -2,13 +2,22 @@ import { Cart } from "../models/Cart.js";
 
 const cart = new Cart();
 
-const cartCounter = document.querySelector(".mobile-header__cart-count");
+const cartCounters = document.querySelectorAll(
+  ".mobile-header__cart-count, .header__cart-count",
+);
+
 const carousel = document.querySelector(".perfect-set-carousel");
 
 function updateCartCounter() {
-  if (!cartCounter) return;
+  const totalProducts = cart.countProducts();
 
-  cartCounter.textContent = cart.countProducts();
+  cartCounters.forEach((counter) => {
+    const isDesktopCounter = counter.classList.contains("header__cart-count");
+
+    counter.textContent = isDesktopCounter
+      ? `(${totalProducts})`
+      : totalProducts;
+  });
 }
 
 function handleAddToCart(event) {
@@ -21,8 +30,6 @@ function handleAddToCart(event) {
     name: button.dataset.productName,
     price: Number(button.dataset.productPrice),
   };
-
-  console.log("Prodotto aggiunto:", product);
 
   cart.addProduct(product);
   updateCartCounter();
