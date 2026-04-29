@@ -438,7 +438,7 @@
   .header__logo img {
     width: 55px;
     height: 55px;
-    margin-right: 40px;
+    margin-right: 64px;
     display: block;
   }
 
@@ -464,10 +464,13 @@
     background: transparent;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 16px;
     line-height: 1.2;
     cursor: pointer;
     border-bottom: 3px solid transparent;
+    font-family: "Cera Pro", sans-serif;
+    font-weight: 500;
+    margin-right: 40px;
   }
 
   .header__menu-btn:hover {
@@ -498,13 +501,13 @@
   .header__center {
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
     min-width: 200px;
   }
 
   .header__search-form {
     width: 100%;
-    max-width: 360px;
+    max-width: 300px;
   }
 
   .header__search-box {
@@ -517,13 +520,13 @@
 
     padding: 0 12px;
     border-radius: 999px;
-    border: 1px solid var(--color-black);
+    border: 1px solid var(--color-gray-alt);
     background: var(--color-white);
   }
 
   .header__search-icon {
-    width: 18px;
-    height: 18px;
+    width: 22px;
+    height: 22px;
   }
 
   .header__search-input {
@@ -531,6 +534,7 @@
     border: none;
     outline: none;
     background: transparent;
+    font-size: 16px
   }
 
   /* =========================

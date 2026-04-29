@@ -1,5 +1,9 @@
 /* ================= HERO SECTION ================= */
 
+* {
+  font-family: "Cera Pro", sans-serif;
+}
+
 /* Mobile first */
 .hero {
   width: 100%;
