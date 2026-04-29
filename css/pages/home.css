@@ -665,12 +665,6 @@
     font-size: 31px;
   }
 
-  .perfect-set-scroll {
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 24px;
-  }
-
   .perfect-set-carousel {
     display: flex;
     gap: var(--perfect-card-gap);
@@ -691,6 +685,14 @@
     padding: 0 16px;
     border-radius: 25px;
     background-color: var(--color-orange);
+  }
+
+  .perfect-set-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 0 16px 24px;
+    scrollbar-gutter: stable;
   }
 
   .perfect-set-carrello-btn:hover {
@@ -722,12 +724,6 @@
     height: 5px;
   }
 
-  .perfect-set-scroll {
-    overflow-x: auto;
-    padding: 0 16px 24px;
-    scrollbar-gutter: stable;
-  }
-
   .perfect-set-scroll::-webkit-scrollbar-track {
     background-color: #d1d1d1;
     border-radius: 999px;
@@ -747,10 +743,6 @@
 
   .perfect-set-nav-link {
     font-size: 20px;
-  }
-
-  .perfect-set-scroll {
-    max-width: 100%;
   }
 
   .perfect-set-nav-btn {
