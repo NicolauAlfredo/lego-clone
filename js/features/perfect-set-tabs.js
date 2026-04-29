@@ -78,6 +78,10 @@ function createProductCard(product) {
           <button
             class="perfect-set-carrello-aggiungi-al-carrello"
             type="button"
+            data-add-to-cart
+            data-product-id="${product.id}"
+            data-product-name="${product.name}"
+            data-product-price="${product.price}"
           >
             <img
               src="./assets/global/icons/shopping-bag-icon.svg"
@@ -91,7 +95,11 @@ function createProductCard(product) {
         <button
           class="perfect-set-carrello-btn-responsive"
           type="button"
-          aria-label="Aggiungi ${product.name} al carrello"
+          aria-label="Aggiungi ${product.name} al carrello
+          data-add-to-cart
+          data-product-id="${product.id}"
+          data-product-name="${product.name}"
+          data-product-price="${product.price}"
         >
           <img
             src="./assets/global/icons/shopping-bag-icon.svg"
