@@ -106,7 +106,10 @@ if (scrollContainer && carousel && prevButton && nextButton) {
   });
 
   document.addEventListener("perfectSetProductsChanged", () => {
-    updateChevronState();
+    requestAnimationFrame(() => {
+      resetVisualState();
+      updateButtonsState();
+    });
   });
 
   updateButtonsState();
