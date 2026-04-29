@@ -292,7 +292,7 @@
 .mobile-header__logo {
   display: flex;
   align-items: center;
-  margin-left: 12px;
+  margin-left: 22px;
   margin-right: auto;
 }
 
@@ -300,6 +300,7 @@
 .mobile-header__logo img {
   width: 60px;
   height: auto;
+  max-width: 39px;
   display: block;
 }
 
@@ -307,7 +308,7 @@
 .mobile-header__actions {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 20px;
 }
 
 /* Bottone icona */
@@ -329,12 +330,23 @@
   display: block;
 }
 
+.mobile-header__icon-btn--cart {
+  align-self: flex-start;
+  margin-top: -8px;
+}
+
+.mobile-header__icon-btn--heart img {
+  width: 28px;
+  height: 28px;
+  display: block;
+}
+
 /* Contatore carrello */
 .mobile-header__cart-count {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -10px;
+  bottom: -15px;
   font-size: 10px;
   line-height: 1;
   color: var(--color-black);
@@ -534,7 +546,7 @@
     border: none;
     outline: none;
     background: transparent;
-    font-size: 16px
+    font-size: 16px;
   }
 
   /* =========================
