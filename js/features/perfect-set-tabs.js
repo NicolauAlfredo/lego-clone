@@ -1,4 +1,5 @@
 import { perfectSetProducts } from "../data/perfect-set-products.js";
+import { formatCurrency } from "../utils/currency.js";
 
 const carousel = document.querySelector(".perfect-set-carousel");
 const scrollContainer = document.querySelector(".perfect-set-scroll");
@@ -69,7 +70,7 @@ function createProductCard(product) {
       </h3>
 
       <div class="perfect-set-price">
-        <span>${product.price}</span>
+        <span>${formatCurrency(product.price)}</span>
       </div>
 
       <div class="perfect-set-carrello-container">
