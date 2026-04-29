@@ -65,7 +65,7 @@ export const perfectSetProducts = {
     },
     {
       name: "Ghirlanda primaverile",
-      image: "./assets/pages/home/images/spring-wreath.png",
+      image: "./assets/pages/home/images/ghirlanda-primaverile.png",
       alt: "Set LEGO Ghirlanda primaverile",
       age: "12+",
       pieces: "747",
@@ -75,7 +75,7 @@ export const perfectSetProducts = {
     },
     {
       name: "Cestino delle uova di Pasqua",
-      image: "./assets/pages/home/images/easter-egg-basket.png",
+      image: "./assets/pages/home/images/cestino-uova-pasqua.png",
       alt: "Set LEGO Cestino delle uova di Pasqua",
       age: "7+",
       pieces: "216",
@@ -95,7 +95,7 @@ export const perfectSetProducts = {
     },
     {
       name: "Adorabile Coniglio",
-      image: "./assets/pages/home/images/adorable-bunny.png",
+      image: "./assets/pages/home/images/adorabile-coniglio.png",
       alt: "Set LEGO Adorabile Coniglio",
       age: "8+",
       pieces: "326",

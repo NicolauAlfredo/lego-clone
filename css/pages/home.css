@@ -523,6 +523,12 @@
   height: 18px;
 }
 
+.star-icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-yellow);
+}
+
 .perfect-set-attributes-icons img {
   display: block;
   width: 100%;
