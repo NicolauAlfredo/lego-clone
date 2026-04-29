@@ -628,10 +628,33 @@
     border-radius: 50%;
     background-color: transparent;
     cursor: pointer;
+    transition:
+      opacity 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
 
-  .perfect-set-chevron:hover,
-  .perfect-set-chevron:focus {
+  .perfect-set-chevron img {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Rimuove il cerchio, resta visibile solo la freccia */
+  .perfect-set-chevron--plain {
+    border-color: transparent;
+    background-color: transparent;
+  }
+
+  /* Stato quando il carosello ha raggiunto il limite */
+  .perfect-set-chevron--disabled {
+    opacity: 0.35;
+    border-color: var(--color-text-btn);
+    background-color: transparent;
+    pointer-events: none;
+  }
+
+  /* Colore visibile solo durante il click */
+  .perfect-set-chevron--clicked {
     background-color: var(--color-text-btn);
   }
 
