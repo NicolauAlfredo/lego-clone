@@ -396,12 +396,16 @@
   margin-bottom: 16px;
 }
 
+.perfect-set-nav {
+  width: 100%;
+}
+
 .perfect-set-nav-btn {
   display: flex;
   align-items: center;
   gap: 24px;
   padding: 0;
-  margin: 0;
+  margin-left: 22px;
   list-style: none;
 }
 
@@ -409,14 +413,17 @@
   display: inline-block;
   padding-bottom: 8px;
   color: var(--color-text-btn);
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
   text-decoration: none;
 }
 
-.perfect-set-nav-link:hover,
-.perfect-set-nav-link:focus {
-  border-bottom: 3px solid var(--color-text-btn);
+.perfect-set-nav-link--active {
+  border-bottom: 4px solid #0009;
+}
+
+.perfect-set-nav-link:hover {
+  border-bottom: 4px solid #0009;
 }
 
 .perfect-set-container-chevron {
@@ -426,7 +433,10 @@
 .perfect-set-scroll {
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 0 16px 24px;
+  padding: 0 0px 24px;
+  width: 100%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .perfect-set-scroll::-webkit-scrollbar {
@@ -595,10 +605,6 @@
     padding: 0;
   }
 
-  .perfect-set-scroll {
-    padding: 0 0 24px;
-  }
-
   .perfect-set-carousel {
     gap: 20px;
   }
@@ -632,6 +638,17 @@
   .perfect-set-chevron img {
     width: 16px;
     height: 16px;
+  }
+
+  .perfect-set-scroll {
+    padding: 0 0 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .perfect-set-nav-btn {
+    margin-left: 5px;
   }
 }
 
@@ -726,6 +743,18 @@
   .perfect-set-scroll::-webkit-scrollbar-thumb {
     background-color: #707070;
     border-radius: 999px;
+  }
+
+  .perfect-set-nav-link {
+    font-size: 20px;
+  }
+
+  .perfect-set-scroll {
+    max-width: 100%;
+  }
+
+  .perfect-set-nav-btn {
+    margin-left: 30px;
   }
 }
 
