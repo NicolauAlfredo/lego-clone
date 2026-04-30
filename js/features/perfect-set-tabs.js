@@ -1,10 +1,24 @@
+// Importa i dati dei prodotti della sezione "Perfect Set"
 import { perfectSetProducts } from "../data/perfect-set-products.js";
+
+// Importa la funzione per formattare il prezzo in valuta
 import { formatCurrency } from "../utils/currency.js";
 
+// Seleziona il carosello dove verranno renderizzate le card dei prodotti
 const carousel = document.querySelector(".perfect-set-carousel");
+
+// Seleziona il contenitore scrollabile del carosello
 const scrollContainer = document.querySelector(".perfect-set-scroll");
+
+// Seleziona tutti i link/tabs di navigazione delle categorie
 const navLinks = document.querySelectorAll(".perfect-set-nav-link");
 
+/**
+ * Crea il markup HTML della valutazione del prodotto.
+ *
+ * Se il prodotto non ha una valutazione disponibile,
+ * non viene renderizzato nulla.
+ */
 function createRatingMarkup(rating) {
   if (!rating) {
     return "";
@@ -18,6 +32,11 @@ function createRatingMarkup(rating) {
   `;
 }
 
+/**
+ * Crea il badge "Novità" se il prodotto è nuovo.
+ *
+ * Se isNew è false, il badge non viene renderizzato.
+ */
 function createBadgeMarkup(isNew) {
   if (!isNew) {
     return "";
@@ -30,6 +49,17 @@ function createBadgeMarkup(isNew) {
   `;
 }
 
+/**
+ * Crea il markup HTML completo di una card prodotto.
+ *
+ * Ogni card contiene:
+ * - badge "Novità"
+ * - immagine prodotto
+ * - attributi principali (età, numero pezzi, rating)
+ * - nome prodotto
+ * - prezzo formattato
+ * - pulsanti carrello e preferiti
+ */
 function createProductCard(product) {
   return `
     <article class="perfect-set-article">
@@ -122,6 +152,16 @@ function createProductCard(product) {
   `;
 }
 
+/**
+ * Renderizza i prodotti della categoria selezionata.
+ *
+ * Logica:
+ * - Recupera i prodotti dalla categoria scelta
+ * - Aggiorna il contenuto HTML del carosello
+ * - Riporta lo scroll all'inizio
+ * - Emette un evento custom per notificare altri script
+ *   che i prodotti sono cambiati
+ */
 function renderProducts(category) {
   const products = perfectSetProducts[category];
 
@@ -129,21 +169,32 @@ function renderProducts(category) {
     return;
   }
 
+  // Aggiunge una classe temporanea per gestire l’animazione di cambio categoria
   carousel.classList.add("is-changing");
 
+  // Genera tutte le card prodotto e le inserisce nel carosello
   carousel.innerHTML = products.map(createProductCard).join("");
 
+  // Dopo il cambio categoria, riporta il carosello alla posizione iniziale
   if (scrollContainer) {
     scrollContainer.scrollLeft = 0;
   }
 
+  // Notifica agli altri moduli che il contenuto del carosello è cambiato
   document.dispatchEvent(new CustomEvent("perfectSetProductsChanged"));
 
+  // Rimuove la classe temporanea dopo il re-render del browser
   requestAnimationFrame(() => {
     carousel.classList.remove("is-changing");
   });
 }
 
+/**
+ * Aggiorna visivamente il tab attivo.
+ *
+ * Rimuove la classe active da tutti i link
+ * e la aggiunge solo al link selezionato.
+ */
 function setActiveTab(activeLink) {
   navLinks.forEach((link) => {
     link.classList.remove("perfect-set-nav-link--active");
@@ -152,6 +203,13 @@ function setActiveTab(activeLink) {
   activeLink.classList.add("perfect-set-nav-link--active");
 }
 
+/**
+ * Gestisce il click sui tab delle categorie.
+ *
+ * Evita il comportamento default del link,
+ * legge la categoria dal dataset e aggiorna
+ * sia il tab attivo sia i prodotti mostrati.
+ */
 function handleTabClick(event) {
   event.preventDefault();
 
@@ -162,8 +220,10 @@ function handleTabClick(event) {
   renderProducts(category);
 }
 
+// Associa l’evento click a ogni tab di categoria
 navLinks.forEach((link) => {
   link.addEventListener("click", handleTabClick);
 });
 
+// Render iniziale: mostra i prodotti della categoria "inEvidenza"
 renderProducts("inEvidenza");
