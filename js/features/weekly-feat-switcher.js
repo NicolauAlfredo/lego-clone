@@ -1,6 +1,5 @@
 const track = document.querySelector(".weekly-featured__track");
 const tabs = document.querySelectorAll(".weekly-featured__tab");
-const overlay = document.querySelector(".weekly-featured__overlay");
 
 function setActiveTab(activeTab) {
   tabs.forEach((tab) => {
@@ -18,23 +17,12 @@ function moveToSlide(slideIndex) {
   track.style.transform = `translateX(-${slideIndex * 100}%)`;
 }
 
-function updateOverlay(slideIndex) {
-  if (!overlay) return;
-
-  if (slideIndex === 0) {
-    overlay.classList.remove("weekly-featured__overlay--hidden");
-  } else {
-    overlay.classList.add("weekly-featured__overlay--hidden");
-  }
-}
-
 function handleTabClick(event) {
   const clickedTab = event.currentTarget;
   const slideIndex = Number(clickedTab.dataset.slide);
 
   setActiveTab(clickedTab);
   moveToSlide(slideIndex);
-  updateOverlay(slideIndex);
 }
 
 tabs.forEach((tab) => {
@@ -42,4 +30,3 @@ tabs.forEach((tab) => {
 });
 
 moveToSlide(0);
-updateOverlay(0);
