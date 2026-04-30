@@ -1177,7 +1177,7 @@
   display: flex;
   justify-content: center;
 
-  background-color: #151515;
+  background-color: transparent;
 }
 
 /* Immagine mobile */
@@ -1317,6 +1317,14 @@
   margin: 0 auto;
 }
 
+.weekly-featured__slide--formula1 {
+  background-color: #151515;
+}
+
+.weekly-featured__slide--onepiece {
+  background-color: #ffffff;
+}
+
 .weekly-featured__content--onepiece .weekly-featured__description {
   max-width: 760px;
   margin-left: auto;
@@ -1371,7 +1379,7 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    background-color: #151515;
+    background-color: transparent;
   }
 
   .weekly-featured__slide--formula1 {
