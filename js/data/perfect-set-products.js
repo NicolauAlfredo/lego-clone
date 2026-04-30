@@ -42,7 +42,7 @@ export const perfectSetProducts = {
       alt: "Set LEGO Rametti di magnolia",
       age: "18+",
       pieces: "435",
-      rating: null, // Nessuna valutazione disponibile
+      rating: null,
       price: 49.99,
       isNew: true,
     }),
@@ -85,6 +85,75 @@ export const perfectSetProducts = {
       price: 199.99,
       isNew: true,
     }),
+
+    /**
+     * Nuovi prodotti aggiunti alla sezione "inEvidenza"
+     */
+
+    // Set artistico LEGO Art - Monet (quadro decorativo)
+    new Product({
+      id: "monet-ninfee",
+      name: "Claude Monet – Lo stagno delle ninfee",
+      image: `${BASE_IMAGE_PATH}monet-ninfee.png`,
+      alt: "Set LEGO Claude Monet Lo stagno delle ninfee",
+      age: "18+",
+      pieces: "3179",
+      rating: "5.0",
+      price: 199.99,
+      isNew: true,
+    }),
+
+    // Trofeo ufficiale della Coppa del Mondo FIFA
+    new Product({
+      id: "trofeo-fifa",
+      name: "Trofeo ufficiale Coppa del Mondo FIFA",
+      image: `${BASE_IMAGE_PATH}fifa-world-cup-trophy.png`,
+      alt: "Set LEGO Trofeo Coppa del Mondo FIFA",
+      age: "12+",
+      pieces: "2842",
+      rating: "5.0",
+      price: 179.99,
+      isNew: true,
+    }),
+
+    // Set personaggi Pixar (Monsters & Co.)
+    new Product({
+      id: "sulley-mike-boo",
+      name: "Personaggi di Sulley, Mike e Boo",
+      image: `${BASE_IMAGE_PATH}sulley-mike-boo.png`,
+      alt: "Set LEGO Personaggi di Sulley, Mike e Boo",
+      age: "10+",
+      pieces: "303",
+      rating: null, // Nessuna valutazione disponibile
+      price: 24.99,
+      isNew: true,
+    }),
+
+    // Auto Formula 1 McLaren
+    new Product({
+      id: "mclaren-mcl39",
+      name: "Auto McLaren MCL39 F1®",
+      image: `${BASE_IMAGE_PATH}mclaren-mcl39-f1.png`,
+      alt: "Set LEGO Auto McLaren MCL39 F1",
+      age: "18+",
+      pieces: "1675",
+      rating: null,
+      price: 229.99,
+      isNew: true,
+    }),
+
+    // Logo iconico di Batman
+    new Product({
+      id: "batman-logo",
+      name: "Logo di Batman™",
+      image: `${BASE_IMAGE_PATH}batman-logo.png`,
+      alt: "Set LEGO Logo di Batman",
+      age: "12+",
+      pieces: "678",
+      rating: "4.8",
+      price: 79.99,
+      isNew: true,
+    }),
   ],
 
   /**
@@ -112,7 +181,7 @@ export const perfectSetProducts = {
       alt: "Set LEGO Ghirlanda primaverile",
       age: "12+",
       pieces: "747",
-      rating: null, // Nessuna recensione disponibile
+      rating: null,
       price: 49.99,
       isNew: true,
     }),
