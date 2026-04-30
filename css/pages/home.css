@@ -1327,17 +1327,47 @@
     display: none;
   }
 
-  .weekly-featured__banner {
+  .weekly-featured__image-wrapper {
+    display: none;
+  }
+
+  .weekly-featured__slide {
     min-height: 520px;
     padding: 40px 32px;
 
-    justify-content: center;
+    display: flex;
+    align-items: center;
 
-    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-medium.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: var(--color-white);
+  }
+
+  .weekly-featured__banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #151515;
+  }
+
+  .weekly-featured__slide--formula1 {
+    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-medium.jpg");
+  }
+
+  .weekly-featured__slide--onepiece {
+    background-image: url("../../assets/pages/home/background/home-one-peace-medium.jpg");
+  }
+
+  .weekly-featured__track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .weekly-featured__slide {
+    flex: 0 0 100%;
+    width: 100%;
   }
 
   .weekly-featured__tabs {
@@ -1380,15 +1410,38 @@
   }
 
   .weekly-featured__banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #151515;
+  }
+
+  .weekly-featured__slide {
     min-height: 700px;
     padding: 0 32px;
 
-    justify-content: center;
-
-    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-large.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+  }
+
+  .weekly-featured__slide--formula1 {
+    background-image: url("../../assets/pages/home/background/home-ps-hero-tall-large.jpg");
+  }
+
+  .weekly-featured__slide--onepiece {
+    background-image: url("../../assets/pages/home/background/home-one-peace-large.jpg");
+  }
+
+  .weekly-featured__track {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+
+  .weekly-featured__slide {
+    flex: 0 0 100%;
+    width: 100%;
   }
 
   .weekly-featured__tabs {
