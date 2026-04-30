@@ -1,12 +1,26 @@
-export function cardProduct(id, linkImage, age, blocks, price, rating, favorite){
-    this.id = id;
-    this.linkImage= linkImage
-    this.age = age;
-    this.blocks = blocks;
-    this.price = price;
-    this.rating = rating;
-    this.favorite = favorite;
-};
-// ESEMPIO
-//perfectSet = new cardProduct ("f2004", "../../../assets/pages/home/images/ferrari-f2004-schumacher.png", 18, 735, 89.99, 5, false)
-// console.log(typeof(perfectSet), perfectSet) 
+// Modello prodotto
+// Responsabilità: rappresentare un prodotto in modo consistente
+
+export function Product({
+  id,
+  name,
+  image,
+  alt,
+  age,
+  pieces,
+  rating = null,
+  price,
+  isNew = false,
+  isFavorite = false,
+}) {
+  this.id = id;
+  this.name = name;
+  this.image = image;
+  this.alt = alt;
+  this.age = age;
+  this.pieces = pieces;
+  this.rating = rating;
+  this.price = price;
+  this.isNew = isNew;
+  this.isFavorite = isFavorite;
+}

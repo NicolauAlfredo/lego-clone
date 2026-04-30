@@ -1,6 +1,8 @@
+import { Product } from "../models/Product.js";
+
 export const perfectSetProducts = {
   inEvidenza: [
-    {
+    new Product({
       id: "ferrari-f2004-schumacher",
       name: "Ferrari F2004 e Michael Schumacher",
       image: "./assets/pages/home/images/ferrari-f2004-schumacher.png",
@@ -10,8 +12,9 @@ export const perfectSetProducts = {
       rating: "4.9",
       price: 89.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "rametti-magnolia",
       name: "Rametti di magnolia",
       image: "./assets/pages/home/images/magnolia-branches.png",
@@ -21,8 +24,9 @@ export const perfectSetProducts = {
       rating: null,
       price: 49.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "bouquet-girasoli",
       name: "Bouquet di girasoli",
       image: "./assets/pages/home/images/sunflower-bouquet.png",
@@ -32,8 +36,9 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 59.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "ford-model-t",
       name: "Ford Model T",
       image: "./assets/pages/home/images/ford-model-t.png",
@@ -43,8 +48,9 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 129.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "pikachu-ball",
       name: "Pikachu e Poké Ball",
       image: "./assets/pages/home/images/pikachu-poke-ball.png",
@@ -54,11 +60,11 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 199.99,
       isNew: true,
-    },
+    }),
   ],
 
   pasqua: [
-    {
+    new Product({
       id: "bugs-bunny",
       name: "Bugs Bunny",
       image: "./assets/pages/home/images/bugs-bunny.png",
@@ -68,8 +74,9 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 29.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "ghirlanda-primaverile",
       name: "Ghirlanda primaverile",
       image: "./assets/pages/home/images/ghirlanda-primaverile.png",
@@ -79,8 +86,9 @@ export const perfectSetProducts = {
       rating: null,
       price: 49.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "cestino-pasqua",
       name: "Cestino delle uova di Pasqua",
       image: "./assets/pages/home/images/cestino-uova-pasqua.png",
@@ -90,8 +98,9 @@ export const perfectSetProducts = {
       rating: null,
       price: 14.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "bouquet-girasoli",
       name: "Bouquet di girasoli",
       image: "./assets/pages/home/images/sunflower-bouquet.png",
@@ -101,8 +110,9 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 59.99,
       isNew: true,
-    },
-    {
+    }),
+
+    new Product({
       id: "adorabile-coniglio",
       name: "Adorabile Coniglio",
       image: "./assets/pages/home/images/adorabile-coniglio.png",
@@ -112,6 +122,6 @@ export const perfectSetProducts = {
       rating: "5.0",
       price: 19.99,
       isNew: true,
-    },
+    }),
   ],
 };
