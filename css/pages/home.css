@@ -1890,10 +1890,10 @@
     display: block;
 
     position: absolute;
-    top: 20px; /* ligeiramente mais alto */
-    right: -80px; /* começa fora como no desktop */
+    top: 20px;  
+    right: -80px;  
 
-    width: 120px; /* menor que desktop */
+    width: 120px; 
     height: auto;
 
     opacity: 0;
@@ -1906,7 +1906,7 @@
   }
 
   .join-and-earn.is-visible .carota {
-    right: 10px; /* entra um pouco menos que no desktop */
+    right: 10px; 
     opacity: 1;
     transform: translateX(0);
   }
@@ -2082,21 +2082,18 @@
   .welcome-home {
     padding: 20px;
   }
-
-  /* Desktop: mostra sempre tutto il testo */
+ 
   .welcome-home__text {
     display: block;
     overflow: visible;
     text-align: justify;
   }
-
-  /* IMPORTANTE: mantém botão visível */
+ 
   .welcome-home__btn {
     display: inline-block;
     margin-top: 12px;
   }
-
-  /* Desktop: toggle NÃO altera layout */
+ 
   .welcome-home__toggle:checked + .welcome-home__text {
     display: block;
   }
