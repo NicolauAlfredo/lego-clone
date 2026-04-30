@@ -1292,6 +1292,25 @@
   height: 14px;
 }
 
+/* Viewport */
+.weekly-featured__viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.weekly-featured__track {
+  display: flex;
+  width: 200%; /* 2 slides */
+  transition: transform 0.5s ease;
+}
+
+.weekly-featured__slide {
+  width: 100%;
+  flex: 0 0 100%;
+  position: relative;
+}
+
 /* ================= TABLET ================= */
 @media (min-width: 768px) {
   .weekly-featured {
