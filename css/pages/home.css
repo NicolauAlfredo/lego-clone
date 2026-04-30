@@ -1124,7 +1124,6 @@
 
 /* ================= SECTION 5: WEEKLY FEATURED ================= */
 
-/* Base mobile */
 .weekly-featured {
   width: 100%;
   max-width: none;
@@ -1155,7 +1154,6 @@
   color: #111;
 }
 
-/* Banner */
 .weekly-featured__banner {
   position: relative;
   width: 100%;
@@ -1167,7 +1165,6 @@
   width: 100%;
   overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
 .weekly-featured__track {
@@ -1181,36 +1178,40 @@
   flex: 0 0 100%;
   width: 100%;
   position: relative;
-  background-color: transparent;
+  overflow: hidden;
 }
 
-/* Mobile image */
+.weekly-featured__slide--formula1 {
+  background-color: #151515;
+}
+
+.weekly-featured__slide--onepiece {
+  background-color: #fff;
+}
+
+/* MOBILE IMAGE */
 .weekly-featured__image-wrapper {
   width: 100%;
   padding-top: 72px;
   display: flex;
   justify-content: center;
-  background-color: transparent;
 }
 
 .weekly-featured__image {
   display: block;
   width: 100%;
-  max-width: none;
   height: auto;
 }
 
-/* Tabs */
+/* TABS */
 .weekly-featured__tabs {
   position: absolute;
   top: 14px;
   left: 50%;
   transform: translateX(-50%);
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 5px;
   border-radius: 999px;
   background-color: rgba(238, 242, 248, 0.95);
@@ -1235,13 +1236,13 @@
   color: #fff;
 }
 
-/* Content */
+/* CONTENT */
 .weekly-featured__content {
   position: relative;
+  z-index: 1;
   max-width: 520px;
   padding: 20px 16px 70px;
   color: #fff;
-  z-index: 4;
 }
 
 .weekly-featured__content--onepiece {
@@ -1272,7 +1273,7 @@
   font-weight: 500;
 }
 
-/* Buttons */
+/* BUTTONS */
 .weekly-featured__actions {
   display: flex;
   flex-wrap: wrap;
@@ -1289,11 +1290,9 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-
   min-height: 40px;
   padding: 0 16px;
   border-radius: 999px;
-
   font-size: 0.85rem;
   font-weight: 700;
   text-decoration: none;
@@ -1329,62 +1328,22 @@
   height: 14px;
 }
 
-.weekly-featured__slide {
-  flex: 0 0 100%;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  background-color: #fff;
-}
-
-.weekly-featured__image-wrapper,
-.weekly-featured__content {
-  position: relative;
-  z-index: 1;
-}
-
-.weekly-featured__viewport {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  z-index: 2;
-}
-
-.weekly-featured__slide--formula1 {
-  background-color: #151515;
-}
-
-.weekly-featured__slide--onepiece {
-  background-color: #fff;
-}
-
 /* ================= TABLET ================= */
-
 @media (min-width: 768px) {
-  .weekly-featured {
-    padding: 0;
-  }
-
   .weekly-featured__header {
     margin-bottom: 36px;
     padding: 0;
   }
 
   .weekly-featured__image-wrapper {
-    width: 100%;
-    padding-top: 72px;
-    display: flex;
-    justify-content: center;
-    background-color: transparent;
+    display: none;
   }
 
   .weekly-featured__slide {
     min-height: 520px;
     padding: 40px 32px;
-
     display: flex;
     align-items: center;
-
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -1410,7 +1369,7 @@
   .weekly-featured__content--onepiece {
     max-width: 760px;
     margin: 0 auto;
-    align-self: center;
+    text-align: center;
   }
 
   .weekly-featured__heading {
@@ -1446,7 +1405,6 @@
   .weekly-featured__slide {
     min-height: 700px;
     padding: 0 32px;
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1457,7 +1415,7 @@
   }
 
   .weekly-featured__slide--onepiece {
-    background-image: url("../../assets/pages/home/background/home-one-piece-large.jpg");
+    background-image: url("../../assets/pages/home/background/home-one-peace-large.jpg");
   }
 
   .weekly-featured__tabs {
@@ -1471,7 +1429,7 @@
   .weekly-featured__content--onepiece {
     max-width: 760px;
     margin: 0 auto;
-    align-self: center;
+    text-align: center;
   }
 
   .weekly-featured__heading {
