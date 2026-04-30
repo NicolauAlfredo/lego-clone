@@ -224,5 +224,70 @@ export const perfectSetProducts = {
       price: 19.99,
       isNew: true,
     }),
+
+    // Pokémon Eevee (set decorativo/collezionabile)
+    new Product({
+      id: "eevee",
+      name: "Eevee",
+      image: `${BASE_IMAGE_PATH}eevee-set.png`,
+      alt: "Set LEGO Eevee",
+      age: "18+",
+      pieces: "587",
+      rating: "5.0",
+      price: 59.99,
+      isNew: true,
+    }),
+
+    // Mech di Lloyd (Ninjago - anniversario)
+    new Product({
+      id: "mech-lloyd-15-anniversario",
+      name: "Mech Titano di Lloyd – 15° anniversario",
+      image: `${BASE_IMAGE_PATH}mech-lloyd.png`,
+      alt: "Set LEGO Mech Titano di Lloyd 15 anniversario",
+      age: "14+",
+      pieces: "1293",
+      rating: null,
+      price: 129.99,
+      isNew: true,
+    }),
+
+    // Pallone da calcio decorativo
+    new Product({
+      id: "pallone-calcio",
+      name: "Pallone da calcio",
+      image: `${BASE_IMAGE_PATH}soccer-ball.png`,
+      alt: "Set LEGO Pallone da calcio",
+      age: "10+",
+      pieces: "1498",
+      rating: "5.0",
+      price: 119.99,
+      isNew: true,
+    }),
+
+    // Fiori di ciliegio (set decorativo primaverile)
+    new Product({
+      id: "fiori-ciliegio",
+      name: "Fiori di ciliegio",
+      image: `${BASE_IMAGE_PATH}cherry-blossom.png`,
+      alt: "Set LEGO Fiori di ciliegio",
+      age: "8+",
+      pieces: "430",
+      rating: "5.0",
+      price: 14.99,
+      isNew: true,
+    }),
+
+    // Personaggi Pixar (già presenti in evidenza, riutilizzati)
+    new Product({
+      id: "sulley-mike-boo-pasqua",
+      name: "Personaggi di Sulley, Mike e Boo",
+      image: `${BASE_IMAGE_PATH}sulley-mike-boo.png`,
+      alt: "Set LEGO Personaggi di Sulley, Mike e Boo",
+      age: "10+",
+      pieces: "303",
+      rating: null,
+      price: 24.99,
+      isNew: true,
+    }),
   ],
 };
