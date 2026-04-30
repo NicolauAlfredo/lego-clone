@@ -1160,13 +1160,14 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: transparent;
+  background-color: #fff;
 }
 
 .weekly-featured__viewport {
   width: 100%;
   overflow: hidden;
   position: relative;
+  z-index: 2;
 }
 
 .weekly-featured__track {
@@ -1180,14 +1181,7 @@
   flex: 0 0 100%;
   width: 100%;
   position: relative;
-}
-
-.weekly-featured__slide--formula1 {
-  background-color: #151515;
-}
-
-.weekly-featured__slide--onepiece {
-  background-color: #fff;
+  background-color: transparent;
 }
 
 /* Mobile image */
@@ -1243,10 +1237,11 @@
 
 /* Content */
 .weekly-featured__content {
+  position: relative;
   max-width: 520px;
   padding: 20px 16px 70px;
   color: #fff;
-  z-index: 1;
+  z-index: 4;
 }
 
 .weekly-featured__content--onepiece {
@@ -1332,6 +1327,26 @@
 .weekly-featured__cta-icon {
   width: 14px;
   height: 14px;
+}
+
+.weekly-featured__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  height: 45%;
+
+  background-color: #151515;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+
+  z-index: 3;
+  pointer-events: none;
+}
+
+.weekly-featured__overlay--hidden {
+  opacity: 0;
 }
 
 /* ================= TABLET ================= */
