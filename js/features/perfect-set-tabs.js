@@ -82,6 +82,7 @@ function createProductCard(product) {
             data-product-id="${product.id}"
             data-product-name="${product.name}"
             data-product-price="${product.price}"
+            data-product-image="${product.image}"
           >
             <img
               src="./assets/global/icons/shopping-bag-icon.svg"
@@ -96,10 +97,11 @@ function createProductCard(product) {
           class="perfect-set-carrello-btn-responsive"
           type="button"
           aria-label="Aggiungi ${product.name} al carrello"
-          data-add-to-cart
-          data-product-id="${product.id}"
-          data-product-name="${product.name}"
-          data-product-price="${product.price}"
+            data-add-to-cart
+            data-product-id="${product.id}"
+            data-product-name="${product.name}"
+            data-product-price="${product.price}"
+            data-product-image="${product.image}"
         >
           <img
             src="./assets/global/icons/shopping-bag-icon.svg"
