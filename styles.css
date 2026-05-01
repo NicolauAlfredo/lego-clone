@@ -413,7 +413,7 @@ footer a:hover {
     height: 100vh;
   }
   .immagine-laterale {
-    display: none;
+    right: -15%;
   }
 
   .video {
@@ -437,7 +437,7 @@ footer a:hover {
     margin: 0 auto;
   }
   .video-due {
-    left: 69%;
+    left: 73%;
   }
   .video-due video {
     height: 345px;
@@ -502,13 +502,12 @@ footer a:hover {
     display: none;
   }
   footer a {
-    display: none;
   }
   .barra-inferiore {
-    margin-top: 60px;
+    margin-top: 125px;
   }
   .btn-background-two {
-    top: 89.4%;
+    top: 94%;
   }
   .freccia-dx {
     right: 60px;
