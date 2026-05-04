@@ -13,7 +13,7 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
   width: 1100px;
-  height: 680px;
+  height: 750px;
 
   background-color: white;
   border-radius: 12px;
@@ -28,4 +28,175 @@
   box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.1),
     0 1px 6px rgba(0, 0, 0, 0.03);
+}
+.cart-container h2 {
+  color: #007133;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px;
+  margin-top: 5px;
+
+  width: 95%;
+}
+.cart_immagine-scarpa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cart_immagine-scarpa > a img {
+  width: 150px;
+  height: auto;
+  margin-left: 15px;
+}
+.cart_immagine-scarpa a {
+  text-decoration: none;
+  color: inherit;
+}
+.cart_scarpa-info h3 {
+  font-family: "nunito", sans-serif;
+  color: rgb(44, 44, 44);
+  font-size: 17px;
+  font-weight: 550;
+}
+.cart_scarpa-info a:hover {
+  text-decoration: underline;
+}
+.cart_scarpa-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  width: 100%;
+  align-items: stretch;
+}
+.cart_scarpa-info p {
+  padding-top: 30px;
+  flex-direction: column;
+  font-family: "nunito", sans-serif;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 19px;
+}
+.cart_bottoni {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.qty-btn {
+  background: #333;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+.btn-minus {
+  -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-minus.svg")
+    no-repeat center;
+  mask: url("https://assets.lego.com/icons/v7.11.1/control-minus.svg") no-repeat
+    center;
+  -webkit-mask-size: 26px;
+  mask-size: 26px;
+}
+
+.btn-plus {
+  -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg")
+    no-repeat center;
+  mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg") no-repeat
+    center;
+  -webkit-mask-size: 26px;
+  mask-size: 26px;
+}
+
+.qty-num {
+  padding: 0 18px;
+  border-left: 1.5px solid #ccc;
+  border-right: 1.5px solid #ccc;
+  font-size: 20px;
+  color: black;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+.cart_bottoni-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  margin-top: 28px;
+}
+.cart-heart-icon {
+  max-width: 24px;
+  max-height: 24px;
+}
+.cart-trash-icon {
+  max-width: 24px;
+  max-height: 24px;
+
+  margin-left: auto;
+  margin-right: 30px;
+}
+.hr-due {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px;
+  margin-top: 25px;
+
+  width: 95%;
+}
+.cart_immagine-trofeo > a img {
+  width: 170px;
+
+  height: auto;
+}
+.cart_immagine-trofeo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 15px;
+}
+.cart_immagine-trofeo a {
+  text-decoration: none;
+  color: inherit;
+}
+.cart_trofeo-info a:hover {
+  text-decoration: underline;
+}
+.cart_trofeo-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  gap: 112px;
+  width: 100%;
+  align-items: stretch;
+}
+.cart_trofeo-info h3 {
+  font-family: "nunito", sans-serif;
+  color: rgb(44, 44, 44);
+  font-size: 17px;
+  font-weight: 550;
+}
+.cart_trofeo-info p {
+  padding-top: 30px;
+  flex-direction: column;
+  font-family: "nunito", sans-serif;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 19px;
+}
+.cart-trash-icon-due {
+  max-width: 24px;
+  max-height: 24px;
+
+  margin-left: auto;
+  margin-right: 45px;
 }
