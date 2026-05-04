@@ -163,6 +163,13 @@ hr {
   width: 100%;
   margin-top: 28px;
 }
+.cart_bottoni-wrapper-due {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  margin-top: -70px;
+}
 .cart-heart-icon {
   max-width: 24px;
   max-height: 24px;
@@ -259,7 +266,7 @@ hr {
   }
   .cart-container {
     width: 400px;
-    height: 500px;
+    height: 480px;
     border-radius: 9px;
   }
   .cart-container h2 {
@@ -325,20 +332,33 @@ hr {
     margin-left: -8px;
     margin-top: -8px;
   }
- 
+  .cart-trofeo-info {
+    width: auto;
+  }
   .cart_trofeo-info h3 {
     font-size: 13px;
     margin-left: 0px;
     margin-top: -10px;
-    
-    
-    
-   
+    padding-top: 15px;
+    white-space: nowrap;
   }
-  .cart_immagine-trofeo{
+  .cart_trofeo-info p {
+    font-size: 15px;
+    margin-left: 0px;
+    margin-top: -70px;
+  }
+  .cart_immagine-trofeo {
     margin-left: -10px;
-   width: 85%;
+    width: 98%;
     flex-shrink: 0;
+    align-items: flex-start;
   }
-
+  .cart_bottoni-wrapper-due {
+    margin-top: -30px;
+  }
+  .cart-trash-icon-due {
+    margin-right: -25px;
+    max-width: 20px;
+    max-height: 20px;
+  }
 }
