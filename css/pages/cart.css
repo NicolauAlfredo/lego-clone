@@ -85,7 +85,7 @@ hr {
 .cart_bottoni {
   display: flex;
   align-items: center;
-  border: 1.5px solid #ccc;
+
   border-radius: 6px;
   width: fit-content;
 }
@@ -97,6 +97,7 @@ hr {
   width: 45px;
   height: 45px;
   flex-shrink: 0;
+  border: 1.5px solid #ccc;
 }
 
 .btn-minus {
@@ -119,14 +120,42 @@ hr {
 
 .qty-num {
   padding: 0 18px;
-  border-left: 1.5px solid #ccc;
-  border-right: 1.5px solid #ccc;
+
   font-size: 20px;
   color: black;
-  height: 40px;
+  height: 45px;
   display: flex;
   align-items: center;
+  border: 1.5px solid #ccc;
 }
+.qty-num:hover {
+  outline: 2px solid blue;
+}
+
+.qty-btn-minus {
+  border: 1.5px solid #ccc;
+  height: 45px;
+  width: 45px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-minus {
+  cursor: not-allowed;
+}
+
+.qty-btn-plus {
+  border: 1.5px solid #ccc;
+  height: 45px;
+  width: 45px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  cursor: pointer;
+}
+.qty-btn-minus:hover,
+.qty-btn-plus:hover {
+  outline: 2px solid blue;
+}
+
 .cart_bottoni-wrapper {
   display: flex;
   align-items: center;
@@ -137,6 +166,12 @@ hr {
 .cart-heart-icon {
   max-width: 24px;
   max-height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.cart-heart-icon:hover {
+  box-shadow: 0 0 0 12px #e8e8e8;
+  background-color: #e8e8e8;
 }
 .cart-trash-icon {
   max-width: 24px;
@@ -144,6 +179,12 @@ hr {
 
   margin-left: auto;
   margin-right: 30px;
+}
+.cart-trash-icon:hover {
+  cursor: pointer;
+}
+.cart-trash-icon-due:hover {
+  cursor: pointer;
 }
 .hr-due {
   border: none;
