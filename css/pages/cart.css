@@ -1,3 +1,6 @@
+main {
+  display: flex;
+}
 .cart_title {
   padding: 10px;
   margin-top: 25px;
@@ -12,7 +15,7 @@
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
-  width: 1100px;
+  width: 58rem;
   height: 750px;
 
   background-color: white;
@@ -22,7 +25,7 @@
   background-color: #e8e8e8;
   padding: 2px;
   border-radius: 16px;
-  margin-left: 90px;
+  margin-left: 2rem;
   margin-top: 10px;
   display: inline-block;
   box-shadow:
@@ -250,6 +253,10 @@ hr {
 }
 
 @media (max-width: 1366px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
   .cart {
     margin-left: -60px;
   }
@@ -258,6 +265,10 @@ hr {
   }
 }
 @media (max-width: 932px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
   .cart_title {
     font-size: 23px;
   }
@@ -364,13 +375,21 @@ hr {
 }
 
 /* CSS PER SEZIONE RIEPILOGO ORDINE */
+.order-summary__container-background {
+  padding: 2px;
+  border-radius: 16px;
+  margin: 2rem;
+  display: inline-block;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 1px 6px rgba(0, 0, 0, 0.03);
+}
 
 .order-summary__container {
   margin: 1.875rem;
-  background: white;
-  padding: 1.25rem;
+  padding: 0.125rem;
   border-radius: 0.75rem;
-  background-color: #fff;
+  background-color: white;
 }
 
 .order-summary__header {
