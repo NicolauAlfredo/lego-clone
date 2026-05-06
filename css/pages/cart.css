@@ -362,3 +362,78 @@ hr {
     max-height: 20px;
   }
 }
+
+/* CSS PER SEZIONE RIEPILOGO ORDINE */
+
+.order-summary__container {
+  margin: 1.875rem;
+  background: white;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  background-color: #fff;
+}
+
+.order-summary__header {
+  margin-bottom: 1.25rem;
+}
+
+.order-summary__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.62rem 0;
+}
+
+.order-summary__promo {
+  color: #555;
+  cursor: pointer;
+}
+
+.order-summary__success {
+  color: green;
+  font-weight: bold;
+}
+
+.order-summary__total {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.order-summary__iva {
+  color: gray;
+  font-size: 0.875rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.938rem;
+  border-radius: 1.563rem;
+  border: none;
+  margin-top: 0.938rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.order-summary__primary {
+  background: orange;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.order-summary__paypal {
+  background: #0070ba;
+  color: white;
+}
+
+.order-summary__paypal.order-summary__outline {
+  background: #005ea6;
+}
+
+.order-summary__payment {
+  margin-top: 1rem;
+}
+.order-summary__small {
+  font-size: 0.813rem;
+  color: #666;
+  margin: 1rem 0;
+}
