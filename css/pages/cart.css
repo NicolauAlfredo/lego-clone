@@ -75,7 +75,7 @@ hr {
   flex-direction: column;
   margin-left: 50px;
   width: 100%;
-  align-items: stretch;
+  align-items: left;
 }
 .cart_scarpa-info p {
   padding-top: 30px;
@@ -110,15 +110,18 @@ hr {
     center;
   -webkit-mask-size: 26px;
   mask-size: 26px;
+  margin: auto;
 }
 
 .btn-plus {
+
   -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg")
     no-repeat center;
   mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg") no-repeat
     center;
   -webkit-mask-size: 26px;
   mask-size: 26px;
+  margin: auto;
 }
 
 .qty-num {
@@ -164,7 +167,9 @@ hr {
   align-items: center;
   gap: 28px;
   width: 100%;
-  margin-top: 28px;
+ margin-top: 28px;
+   justify-content: center; 
+    
 }
 .cart_bottoni-wrapper-due {
   display: flex;
@@ -262,7 +267,16 @@ hr {
   }
   .cart-container {
     width: 950px;
+    
+    
   }
+  .cart_background {
+   
+    margin-top: 10px;
+   margin-left: 80px;
+    
+    
+}
 }
 @media (max-width: 932px) {
   main {
@@ -279,6 +293,18 @@ hr {
     width: 400px;
     height: 480px;
     border-radius: 9px;
+    margin-top: -2px;
+    
+    
+    
+  }
+  .cart_background {
+    z-index: -1;
+    margin-top: 10px;
+    margin-left: 95px;
+    height: 480px;
+
+   
   }
   .cart-container h2 {
     font-size: 16px;
