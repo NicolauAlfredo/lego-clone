@@ -1,7 +1,9 @@
 import { Cart } from "../models/Cart.js";
+import { perfectSetProducts } from "../data/perfect-set-products.js";
 import { Product } from "../models/Product.js";
+import { formatCurrency } from "../utils/currency.js";
 
-const carrello = new Cart();
+ const carrello = new Cart();
 
 const contatoreCarrello = document.querySelectorAll(
   ".mobile-header__cart-count, .header__cart-count",
@@ -9,7 +11,7 @@ const contatoreCarrello = document.querySelectorAll(
 
 const carosello = document.querySelector(".perfect-set-carousel");
 
-function updateCartCounter() {
+export function updateCartCounter() {
   const contatoreAggiornato = carrello.countProducts();
 
   contatoreCarrello.forEach((counter) => {
@@ -35,7 +37,7 @@ function aggiungiAlCarrello(event) {
   });
 
   carrello.addProduct(prodotto);
-
+  console.log(carrello.products)
   updateCartCounter();
 }
 
@@ -44,3 +46,4 @@ if (carosello) {
 }
 
 updateCartCounter();
+export {carrello}

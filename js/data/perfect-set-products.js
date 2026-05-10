@@ -2,7 +2,7 @@
 import { Product } from "../models/Product.js";
 
 // Percorso base delle immagini dei prodotti della homepage
-const BASE_IMAGE_PATH = "./assets/pages/home/images/";
+export const BASE_IMAGE_PATH = "./assets/pages/home/images/";
 
 /**
  * Collezione di prodotti utilizzata nella sezione "Perfect Set"
