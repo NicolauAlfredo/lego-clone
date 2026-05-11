@@ -6,28 +6,43 @@ export function Cart() {
   this.products = [];
 
   // Aggiunge un prodotto al carrello
-  // @param {Object} product - Oggetto prodotto da inserire
   this.addProduct = function (product) {
-    // Validazione minima: il prodotto deve esistere e avere un prezzo numerico
     if (!product || typeof product.price !== "number") {
       console.warn("Prodotto non valido:", product);
       return;
     }
 
-    this.products.push(product);
+    const existingProduct = this.products.find(
+      (i) => i.id === product.id,
+    );
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+      return;
+    }
+
+    this.products.push({
+      ...product,
+      quantity: 1,
+    });
   };
 
+  // Restituisce il numero totale di prodotti unici
+    this.countProductsUnique = function () {
+      return this.products.length
+    }
+
   // Restituisce il numero totale di prodotti nel carrello
-  // @returns {number}
   this.countProducts = function () {
-    return this.products.length;
+    return this.products.reduce((total, product) => {
+      return total + product.quantity;
+    }, 0);
   };
 
   // Calcola il totale del carrello
-  // @returns {number}
   this.calculateTotal = function () {
     return this.products.reduce((total, product) => {
-      return total + product.price;
+      return total + product.price * product.quantity;
     }, 0);
   };
 

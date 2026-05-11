@@ -1,49 +1,67 @@
 import { Cart } from "../models/Cart.js";
-import { perfectSetProducts } from "../data/perfect-set-products.js";
-import { Product } from "../models/Product.js";
-import { formatCurrency } from "../utils/currency.js";
 
- const carrello = new Cart();
+const carousel = document.querySelector(".perfect-set-carousel");
 
-const contatoreCarrello = document.querySelectorAll(
+const cartCounters = document.querySelectorAll(
   ".mobile-header__cart-count, .header__cart-count",
 );
 
-const carosello = document.querySelector(".perfect-set-carousel");
+const cart = new Cart();
 
-export function updateCartCounter() {
-  const contatoreAggiornato = carrello.countProducts();
+function saveCart() {
+  localStorage.setItem("cart", JSON.stringify(cart.products));
+}
 
-  contatoreCarrello.forEach((counter) => {
-    const isDesktopCounter = counter.classList.contains("header__cart-count");
+function loadCart() {
+  const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.products = savedCart;
+}
 
-    counter.textContent = isDesktopCounter
-      ? `(${contatoreAggiornato})`
-      : contatoreAggiornato;
+function updateCartCounters() {
+  const totalItems = cart.countProducts();
+
+  cartCounters.forEach((counter) => {
+    if (counter.classList.contains("header__cart-count")) {
+      counter.textContent = `(${totalItems})`;
+    } else {
+      counter.textContent = totalItems;
+    }
   });
 }
 
-function aggiungiAlCarrello(event) {
-    console.log("Sono entrato nel aggiungi al carrelo")
-  const button = event.target.closest("[data-add-to-cart]");
-
-  if (!button) return;
-
-  const prodotto = new Product({
+function getProductFromButton(button) {
+  return {
     id: button.dataset.productId,
     name: button.dataset.productName,
     price: Number(button.dataset.productPrice),
     image: button.dataset.productImage,
-  });
-
-  carrello.addProduct(prodotto);
-  console.log(carrello.products)
-  updateCartCounter();
+  };
 }
 
-if (carosello) {
-  carosello.addEventListener("click", aggiungiAlCarrello);
+function handleAddToCartClick(event) {
+  const addToCartButton = event.target.closest("[data-add-to-cart]");
+
+  if (!addToCartButton) {
+    return;
+  }
+
+  event.preventDefault();
+
+  const product = getProductFromButton(addToCartButton);
+
+  cart.addProduct(product);
+  saveCart();
+  updateCartCounters();
+
+  console.log("Carrello aggiornato:", cart.products);
+  console.table(cart.products);
 }
 
-updateCartCounter();
-export {carrello}
+loadCart();
+updateCartCounters();
+
+if (carousel) {
+  carousel.addEventListener("click", handleAddToCartClick);
+}
+
+updateCartCounters();

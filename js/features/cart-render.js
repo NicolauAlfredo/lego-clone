@@ -1,37 +1,75 @@
+import { formatCurrency } from "../utils/currency.js"
 import { Cart } from "../models/Cart.js";
-import { perfectSetProducts, BASE_IMAGE_PATH } from "../data/perfect-set-products.js";
-import { Product } from "../models/Product.js";
-import { formatCurrency } from "../utils/currency.js";
-import { carrello, updateCartCounter } from "./cart-ui.js";
 
 
-const cartProducts = document.getElementsByClassName(".cart-container");
+const cartCounters = document.querySelector(".cart-totale")
 
-let test = {
-    id: "ferrari-f2004-schumacher",
-    name: "Ferrari F2004 e Michael Schumacher",
-    image: "/assets/pages/home/images/ferrari-f2004-schumacher.png",
-    price: 89.99,
-};
+const cartContainer = document.querySelector(".cart-products")
+
+const products = getCartProducts()
 
 
-// cartProducts.innerHTML = `
-//             <div class= "cart-product-card-container">
-//               <img class= "cart-product-img" src="${test.image}" alt="${test.id}">
-//               <p class= "cart-product-name">${test.name}</p>
-//               <p class= "cart-product-price">${test.price} €</p>
-//             </div>
-//             `;
+// Recupera i prodotti salvati ne Local Storage
+function getCartProducts (){
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
 
-
-carrello.products.forEach(e => {
-    cartProducts.innerHTML += 
-    `
-        <div class= "cart-product-card-container">
-              <img class= "cart-product-img" src="${carrello.e.image}" alt="${e.id}">
-              <p class= "cart-product-name">${carrello.e.name}</p>
-              <p class= "cart-product-price">${carrello.e.price} €</p>
+// Funzione di render della card prodotto nel carrello (da sistemare non appena la pagina Cart.html sarà pronta)
+function CartCardProduct(product){
+    return `
+        <article class="card-product">
+        <div class="card-product__img">
+          <img src="${product.image
+          }" alt="${product.name}">
+        </div>
+        <div class="card-product__info">
+          <a class="card-product__name">${product.name}</a>
+          <p class="card-product__price">${formatCurrency(product.price)}</p>
+          <div class="card-product__quantity">
+            <button class="card-product__quantity-btn" type="button"><img src="../assets/global/icons/minus-icon.svg" alt="minus"></button>
+            <input type="number" name="product-quantity" id="product-quantity" value="${product.quantity}">
+            <button class="card-product__quantity-btn" type="button"><img src="../assets/global/icons/plus-icon.svg" alt="plus"></button>
+          </div>
+            <div class="card-product__favorite">
+              <button type="button" class="card-product__favorite-btn"><img src="/assets/global/icons/heart-icon.svg" alt="Favorite"></button>
             </div>
-    `
-});
+          </div>
+        <button><img src="../assets/global/icons/trash-icon.svg" alt="Trash"></button>
+        <div>
 
+        </div>
+      </article>
+    `
+}
+
+// Calcola il prezzo totale del prodotto
+function calcolateCartTotal(products){
+    return products.reduce((total, product) => {
+        return total + product.price * product.quantity
+    })
+}
+
+// Calcola il numero dei prodotti
+function calculateTotalProducts(products) {
+        return products.reduce((total, product) => {
+        return total + product.quantity
+    }, 0);
+}
+
+function renderCartProducts(){
+    const product = getCartProducts();
+    const totalProdcuts = calculateTotalProducts(products);
+    if (!cartContainer){
+        return
+    } 
+    if(totalProdcuts.length != 0){
+        cartCounters.textContent =  `Il mio carrello (${totalProdcuts})`
+    }
+}
+
+cartContainer.innerHTML = products.map(CartCardProduct).join("")
+
+console.log("Prodotti renderizzati nel carrello", products)
+console.table(products)
+
+renderCartProducts()
