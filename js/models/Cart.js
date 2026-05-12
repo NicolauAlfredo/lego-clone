@@ -35,4 +35,11 @@ export function Cart() {
   this.clear = function () {
     this.products = [];
   };
+  // Rimuove un prodotto specifico dal carrello
+  this.removeProduct = function (productId) {
+    this.products = this.products.filter((product) => {
+      return product.id !== productId;
+    });
+
+  }
 }

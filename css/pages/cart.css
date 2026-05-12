@@ -114,7 +114,6 @@ hr {
 }
 
 .btn-plus {
-
   -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg")
     no-repeat center;
   mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg") no-repeat
@@ -167,9 +166,8 @@ hr {
   align-items: center;
   gap: 28px;
   width: 100%;
- margin-top: 28px;
-   justify-content: center; 
-    
+  margin-top: 28px;
+  justify-content: center;
 }
 .cart_bottoni-wrapper-due {
   display: flex;
@@ -267,16 +265,11 @@ hr {
   }
   .cart-container {
     width: 950px;
-    
-    
   }
   .cart_background {
-   
     margin-top: 10px;
-   margin-left: 80px;
-    
-    
-}
+    margin-left: 80px;
+  }
 }
 @media (max-width: 932px) {
   main {
@@ -294,17 +287,12 @@ hr {
     height: 480px;
     border-radius: 9px;
     margin-top: -2px;
-    
-    
-    
   }
   .cart_background {
     z-index: -1;
     margin-top: 10px;
     margin-left: 95px;
     height: 480px;
-
-   
   }
   .cart-container h2 {
     font-size: 16px;
