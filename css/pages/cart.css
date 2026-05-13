@@ -144,7 +144,9 @@ hr {
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
-.btn-minus {
+
+.qty-btn:disabled {
+  opacity: 0.5;
   cursor: not-allowed;
 }
 
