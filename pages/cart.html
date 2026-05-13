@@ -243,66 +243,16 @@
   <main class="cart-section">
   <!-- CART -->
   <section class="cart">
-    <h1 class="cart_title">Il mio carrello</h1>
+
+    <h1 class="cart_title" data-cart-title>Il mio carrello</h1>
 
     <div class="cart_background">
       <div class="cart-container">
-        <h2>Disponibile ora</h2>
+      <h2>Disponibile ora</h2>
+      <hr />
 
-        <hr />
-
-        <!-- PRODOTTO 1 -->
-        <div class="cart_immagine-scarpa">
-          <a
-            href="https://www.lego.com/it-it/product/nike-air-max-95-x-lego-set-43025"
-          >
-            <img
-              src="../assets/pages/cart/scarpa.jfif"
-              alt="Immagine di una scarpa lego"
-            />
-          </a>
-
-          <div class="cart_scarpa-info">
-            <a
-              href="https://www.lego.com/it-it/product/nike-air-max-95-x-lego-set-43025"
-            >
-              <h3>Nike Air Max 95 x LEGO® Set</h3>
-            </a>
-
-            <p>99,99€</p>
-
-            <div class="cart_bottoni-wrapper">
-              <div class="cart_bottoni">
-                <div class="qty-btn-minus">
-                  <button class="qty-btn btn-minus"></button>
-                </div>
-
-                <span class="qty-num">1</span>
-
-                <div class="qty-btn-plus">
-                  <button class="qty-btn btn-plus"></button>
-                </div>
-              </div>
-
-              <img
-                class="cart-heart-icon"
-                src="https://assets.lego.com/icons/v7.11.1/heart.svg"
-                alt="Preferiti"
-              />
-
-              <img
-                class="cart-trash-icon"
-                src="https://assets.lego.com/icons/v7.11.1/trash.svg"
-                alt="Rimuovi dal carrello"
-              />
-            </div>
-          </div>
-        </div>
-
-        <hr class="hr-due" />
-
-        <!-- PRODOTTO 2 -->
-        <div class="cart_immagine-trofeo">
+       <!-- PRODOTTI -->
+        <div class="cart-products" data-cart-products>
           <a href="https://www.lego.com/it-it/product/lego-trophy-43026">
             <img
               src="../assets/pages/cart/trofeo.jfif"
@@ -361,8 +311,8 @@
       <hr/>
 
       <div class="order-summary__row">
-        <span>Valore ordine (2) articoli</span>
-        <strong>279,98 €</strong>
+        <span data-order-items>Valore ordine (0) articoli</span>
+        <strong data-order-subtotal>0</strong>
       </div>
 
       <p class="order-summary__success">
@@ -371,10 +321,10 @@
 
       <div class="order-summary__row order-summary__total">
         <span>Totale dell'Ordine</span>
-        <strong>279,98 €</strong>
+        <strong data-order-total>0</strong>
       </div>
 
-      <p class="order-summary__iva">Include IVA 50,49 €</p>
+      <p class="order-summary__iva" data-order-iva>Include IVA 0</p>
 
       <button class="order-summary__primary summary-btn">
         Pagamento sicuro
@@ -729,7 +679,8 @@
     </footer>
     <!-- FINE FOOTER -->
 
-    <script type="module" src="../js/features/cart-render.js"></script>
-    <script src="../js/features/footer-accordion.js" defer></script>
+    <script type="module" src="../js/features/cart-render.js" defer></script>
+    <script type="module" src="../js/features/cart-ui.js" defer></script>
+    <script type="module" src="../js/features/footer-accordion.js" defer></script>
   </body>
 </html>

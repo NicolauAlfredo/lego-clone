@@ -2,9 +2,15 @@ import { formatCurrency } from "../utils/currency.js"
 import { Cart } from "../models/Cart.js";
 
 
-const cartCounters = document.querySelector(".cart-totale")
+const cartTitle = document.querySelector("[data-cart-title]");
 
-const cartContainer = document.querySelector(".cart-products")
+const cartContainer = document.querySelector("[data-cart-products]")
+
+
+const cartIva = document.querySelector("[data-order-iva]")
+const cartOrderItems = document.querySelector("[data-order-items]")
+const cartOrderSubtotal = document.querySelector("[data-order-subtotal]")
+const cartOrderTotal = document.querySelector("[data-order-total]")
 
 const products = getCartProducts()
 
@@ -14,62 +20,152 @@ function getCartProducts (){
     return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
+// Save cart
+function saveCart(products) {
+  localStorage.setItem("cart", JSON.stringify(products));
+}
+
 // Funzione di render della card prodotto nel carrello (da sistemare non appena la pagina Cart.html sarà pronta111)
 function CartCardProduct(product){
     return `
-        <article class="card-product">
-        <div class="card-product__img">
-          <img src="${product.image
-          }" alt="${product.name}">
-        </div>
-        <div class="card-product__info">
-          <a class="card-product__name">${product.name}</a>
-          <p class="card-product__price">${formatCurrency(product.price)}</p>
-          <div class="card-product__quantity">
-            <button class="card-product__quantity-btn" type="button"><img src="../assets/global/icons/minus-icon.svg" alt="minus"></button>
-            <input type="number" name="product-quantity" id="product-quantity" value="${product.quantity}">
-            <button class="card-product__quantity-btn" type="button"><img src="../assets/global/icons/plus-icon.svg" alt="plus"></button>
-          </div>
-            <div class="card-product__favorite">
-              <button type="button" class="card-product__favorite-btn"><img src="/assets/global/icons/heart-icon.svg" alt="Favorite"></button>
+        <div class="cart_immagine-scarpa">
+          <a
+            href="#"
+          >
+            <img
+              src="${product.image}"
+              alt="${product.name}"
+            />
+          </a>
+
+          <div class="cart_scarpa-info">
+            <a
+              href="#"
+            >
+              <h3>${product.name}</h3>
+            </a>
+
+            <p>${formatCurrency(product.price)}</p>
+
+            <div class="cart_bottoni-wrapper">
+              <div class="cart_bottoni">
+                <div class="qty-btn-minus">
+                  <button class="qty-btn btn-minus" data-btn-minus></button>
+                </div>
+
+                <span class="qty-num">${product.quantity}</span>
+
+                <div class="qty-btn-plus">
+                  <button class="qty-btn btn-plus" data-btn-plus></button>
+                </div>
+              </div>
+
+              <img
+                class="cart-heart-icon"
+                src="https://assets.lego.com/icons/v7.11.1/heart.svg"
+                alt="Preferiti"
+              />
+
+              <img
+                class="cart-trash-icon"
+                src="https://assets.lego.com/icons/v7.11.1/trash.svg"
+                alt="Rimuovi dal carrello"
+              />
             </div>
           </div>
-        <button><img src="../assets/global/icons/trash-icon.svg" alt="Trash"></button>
-        <div>
-
         </div>
-      </article>
+
+        <hr class="hr-due"/>
     `
 }
 
 // Calcola il prezzo totale del prodotto
-function calcolateCartTotal(products){
-    return products.reduce((total, product) => {
+const totalPrice = products.reduce((total, product) => {
         return total + product.price * product.quantity
-    })
-}
+    }, 0)
 
 // Calcola il numero dei prodotti
 function calculateTotalProducts(products) {
         return products.reduce((total, product) => {
-        return total + product.quantity
+          return total + product.quantity
     }, 0);
 }
 
+//Add to card e remove to card
+function increaseProductQuantiy(productId){
+  const updateProducts = products.map((product) => {
+    if (product.id === productId){
+      return {
+        ...product,
+        quantity: product.quantity + 1,
+      }
+    }
+    return product
+  })
+  saveCart(updateProducts)
+  renderCartProducts()
+}
+
+function decreaseProductQuantiy(productId){
+  const updateProducts = products.map((product) => {
+    if (product.id === productId){
+      return {
+        ...product,
+        quantity: product.quantity - 1,
+      }
+    }
+    return product
+  }).filter((product)=> {
+    product.quantity > 0
+  })
+  saveCart(updateProducts)
+  renderCartProducts()
+}
+
+
+// Funzione di rendering
 function renderCartProducts(){
+
     const product = getCartProducts();
     const totalProdcuts = calculateTotalProducts(products);
+    const iva = totalPrice * 0.22;
+
     if (!cartContainer){
         return
     } 
-    if(totalProdcuts.length != 0){
-        cartCounters.textContent =  `Il mio carrello (${totalProdcuts})`
+    if(totalProdcuts.length === 0){
+        cartTitle.textContent =  `Il mio carrello è vuoto`
+        cartContainer.innerHTML = ""
+        cartOrderItems.textContent =  `Valore ordine (0) articoli `
+        cartOrderSubtotal.textContent = formatCurrency(0)
+        cartOrderTotal.textContent = formatCurrency(0)
     }
-}
 
-cartContainer.innerHTML = products.map(CartCardProduct).join("")
+    cartTitle.textContent = `Il mio carrello (${totalProdcuts})`
+    cartOrderItems.textContent = `Valore ordine (${totalProdcuts}) articoli`
+    cartOrderSubtotal.textContent = formatCurrency(totalPrice);
+    cartOrderTotal.textContent = formatCurrency(totalPrice);
+    cartIva.textContent =  `Include IVA ${formatCurrency(iva)} `
+    cartContainer.innerHTML = products.map(CartCardProduct).join("")
+  }
 
-console.log("Prodotti renderizzati nel carrello", products)
+
+  cartContainer.addEventListener("click", (event) => {
+    const increaseProdcut = document.querySelector("[data-btn-plus]")
+    const decreaseProduct = document.querySelector("[data-btn-minus]")
+
+    if (increaseProdcut) {
+      const productId = increaseProdcut.dataset.id
+      increaseProductQuantiy(productId)
+    }
+    if (decreaseProduct) {
+      const productId = decreaseProduct.dataset.id
+      decreaseProductQuantiy(productId)
+    }
+
+
+  })
+
 console.table(products)
 
 renderCartProducts()

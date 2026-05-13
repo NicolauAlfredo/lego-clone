@@ -33,7 +33,7 @@ function getProductFromButton(button) {
   return {
     id: button.dataset.productId,
     name: button.dataset.productName,
-    price: Number(button.dataset.productPrice),
+    price: Number(button.dataset.productPrice.replace(",", ".")),
     image: button.dataset.productImage,
   };
 }
