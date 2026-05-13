@@ -20,7 +20,7 @@ export function Product({
   this.age = age;
   this.pieces = pieces;
   this.rating = rating;
-  this.price = price;
+  this.price = Number(price);
   this.isNew = isNew;
   this.isFavorite = isFavorite;
 }
