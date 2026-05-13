@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/pages/cart.css" />
     <link rel="stylesheet" href="../css/layout/header.css" />
     <link rel="stylesheet" href="../css/layout/footer.css" />
+
     <link
       rel="icon"
       type="image/png"
@@ -241,7 +242,143 @@
     </header>
     <!-- FINE DEL HEADER -->
 
-    <main></main>
+    <main>
+      <section class="cart">
+        <h1 class="cart_title">Il mio carrello  </h1>
+        <div class="cart_background">
+          <div class="cart-container">
+            <h2>Disponibile ora</h2>
+            <hr>
+            <div class="cart_immagine-scarpa">
+              <a
+                href="https://www.lego.com/it-it/product/nike-air-max-95-x-lego-set-43025"
+              >
+                <img
+                  src="../assets/pages/cart/scarpa.jfif"
+                  alt="Immagine di una scarpa lego"
+                />
+              </a>
+              <div class="cart_scarpa-info">
+                <a
+                  href="https://www.lego.com/it-it/product/nike-air-max-95-x-lego-set-43025"
+                >
+                  <h3>Nike Air Max 95 x LEGO® Set</h3></a
+                >
+                <p>99,99€</p>
+                <div class="cart_bottoni-wrapper">
+                <div class="cart_bottoni">
+                  <div class="qty-btn-minus">
+                  <button class="qty-btn btn-minus" ></button>
+                  </div>
+                  <span class="qty-num">1</span>
+<div class="qty-btn-plus">
+                  <button class="qty-btn btn-plus"></button>
+                  </div>
+                
+                </div>
+                 <img class="cart-heart-icon" src="https://assets.lego.com/icons/v7.11.1/heart.svg" alt="Preferiti" >
+                 <img class="cart-trash-icon" src="https://assets.lego.com/icons/v7.11.1/trash.svg" alt="Rimuovi dal carrello">
+                   
+
+                </div>
+                 
+                
+
+              </div>
+              
+            </div>
+             <hr class="hr-due">
+             <div class="cart_immagine-trofeo"> 
+              <a
+                href="https://www.lego.com/it-it/product/lego-trophy-43026"
+              >
+                <img
+                  src="../assets/pages/cart/trofeo.jfif"
+                  alt="Immagine di un trofeo lego"
+                />
+              </a>
+              <div class="cart_trofeo-info">
+                <a
+                  href="https://www.lego.com/it-it/product/lego-trophy-43026"
+                >
+                  <h3>Trofeo ufficiale Coppa del Mondo FIFA</h3></a
+                >
+                <p>179,99€</p>
+                <div class="cart_bottoni-wrapper-due">
+                <div class="cart_bottoni">
+                  <div class="qty-btn-minus">
+                  <button class="qty-btn btn-minus"></button>
+                  </div>
+                  <span class="qty-num">1</span>
+<div class="qty-btn-plus">
+                  <button class="qty-btn btn-plus"></button>
+</div>
+                
+                </div>
+                 <img class="cart-heart-icon" src="https://assets.lego.com/icons/v7.11.1/heart.svg" alt="Preferiti" >
+                 <img class="cart-trash-icon-due" src="https://assets.lego.com/icons/v7.11.1/trash.svg" alt="Rimuovi dal carrello">
+                   
+
+                </div>
+                 
+                
+
+              </div>
+              
+            </div>
+            
+      
+      </section>
+
+      <!-- SEZIONE REPILOGO ORDINE -->
+      
+    <div class="order-summary__container-background">
+      <div class="order-summary__container">
+        <h2 class="order-summary__header">Riepilogo dell'ordine</h2>
+
+        <div class="order-summary__row order-summary__promo">
+          <span> Aggiungere un codice promozionale</span>
+          <span>⌄</span>
+        </div>
+
+        <hr />
+
+        <div class="order-summary__row">
+          <span>Valore ordine (2) articoli</span>
+          <strong>279,98 €</strong>
+        </div>
+
+        <p class="order-summary__success">Congratulazioni: consegna GRATUITA</p>
+
+        <div class="order-summary__row order-summary__total">
+          <span>Totale dell'Ordine</span>
+          <strong>279,98 €</strong>
+        </div>
+
+        <p class="order-summary__iva">Include IVA 50,49 €</p>
+
+        <button class="order-summary__primary">Pagamento sicuro</button>
+
+        <hr />
+
+        <h3 class="order-summary__payment">Pagamento veloce</h3>
+        <p class="order-summary__small">
+          Tutti i dettagli dell'ordine saranno acquisiti direttamente dal
+          provider di servizi di pagamento. Assicurarsi di selezionare gli
+          indirizzi corretti prima di inviare l'ordine. Dalla pagina del
+          provider di servizi di pagamento, si verrà reindirizzati alla pagina
+          di conferma dell'ordine. Se si dispone di un codice sconto, scegliere
+          'Pagamento sicuro
+        </p>
+
+        <button class="order-summary__paypal">Paga con PayPal</button>
+        <button class="order-summary__paypal order-summary__outline">
+          Paga a rate
+        </button>
+      </div>
+    </div>
+
+    </main>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -569,5 +706,6 @@
     <!-- FINE FOOTER -->
 
     <script src="../js/features/footer-accordion.js" defer></script>
+    <script type="module" src="../js/models/cart-page.js"></script>
   </body>
 </html>
