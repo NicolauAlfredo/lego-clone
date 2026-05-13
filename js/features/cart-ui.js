@@ -40,8 +40,12 @@ function getProductFromButton(button) {
 
 function handleAddToCartClick(event) {
   const addToCartButton = event.target.closest("[data-add-to-cart]");
-
-  if (!addToCartButton) {
+ 
+  // Entra nel carrello ma non prende alcun dato se non si clicka nel bottone 
+  // console.log("Sono entrato nel carrello")
+  
+  
+   if (!addToCartButton) {
     return;
   }
 

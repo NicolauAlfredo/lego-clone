@@ -14,7 +14,7 @@ function getCartProducts (){
     return JSON.parse(localStorage.getItem("cart")) || [];
 }
 
-// Funzione di render della card prodotto nel carrello (da sistemare non appena la pagina Cart.html sarà pronta)
+// Funzione di render della card prodotto nel carrello (da sistemare non appena la pagina Cart.html sarà pronta111)
 function CartCardProduct(product){
     return `
         <article class="card-product">
