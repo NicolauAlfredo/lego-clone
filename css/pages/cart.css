@@ -1,4 +1,4 @@
-main {
+.cart-section {
   display: flex;
 }
 .cart_title {
@@ -256,7 +256,7 @@ hr {
 }
 
 @media (max-width: 1366px) {
-  main {
+  .cart-section {
     display: flex;
     flex-direction: column;
   }
@@ -272,7 +272,7 @@ hr {
   }
 }
 @media (max-width: 932px) {
-  main {
+  .cart-section {
     display: flex;
     flex-direction: column;
   }
@@ -436,7 +436,7 @@ hr {
   font-size: 0.875rem;
 }
 
-button {
+.summary-btn {
   width: 100%;
   padding: 0.938rem;
   border-radius: 1.563rem;
