@@ -1,0 +1,472 @@
+main {
+  display: flex;
+}
+.cart_title {
+  padding: 10px;
+  margin-top: 25px;
+  margin-left: 82px;
+  color: rgb(44, 44, 44);
+}
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+  width: 58rem;
+  height: 750px;
+
+  background-color: white;
+  border-radius: 12px;
+}
+.cart_background {
+  background-color: #e8e8e8;
+  padding: 2px;
+  border-radius: 16px;
+  margin-left: 2rem;
+  margin-top: 10px;
+  display: inline-block;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 1px 6px rgba(0, 0, 0, 0.03);
+}
+.cart-container h2 {
+  color: #007133;
+  font-size: 18px;
+  padding-left: 15px;
+  padding-top: 8px;
+}
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px;
+  margin-top: 5px;
+
+  width: 95%;
+}
+.cart_immagine-scarpa {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.cart_immagine-scarpa > a img {
+  width: 150px;
+  height: auto;
+  margin-left: 15px;
+}
+.cart_immagine-scarpa a {
+  text-decoration: none;
+  color: inherit;
+}
+.cart_scarpa-info h3 {
+  font-family: "nunito", sans-serif;
+  color: rgb(44, 44, 44);
+  font-size: 17px;
+  font-weight: 550;
+}
+.cart_scarpa-info a:hover {
+  text-decoration: underline;
+}
+.cart_scarpa-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  width: 100%;
+  align-items: left;
+}
+.cart_scarpa-info p {
+  padding-top: 30px;
+  flex-direction: column;
+  font-family: "nunito", sans-serif;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 19px;
+}
+.cart_bottoni {
+  display: flex;
+  align-items: center;
+
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.qty-btn {
+  background: #333;
+  border: none;
+  cursor: pointer;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  border: 1.5px solid #ccc;
+}
+
+.btn-minus {
+  -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-minus.svg")
+    no-repeat center;
+  mask: url("https://assets.lego.com/icons/v7.11.1/control-minus.svg") no-repeat
+    center;
+  -webkit-mask-size: 26px;
+  mask-size: 26px;
+  margin: auto;
+}
+
+.btn-plus {
+  -webkit-mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg")
+    no-repeat center;
+  mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg") no-repeat
+    center;
+  -webkit-mask-size: 26px;
+  mask-size: 26px;
+  margin: auto;
+}
+
+.qty-num {
+  padding: 0 18px;
+
+  font-size: 20px;
+  color: black;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #ccc;
+}
+.qty-num:hover {
+  outline: 2px solid blue;
+}
+
+.qty-btn-minus {
+  border: 1.5px solid #ccc;
+  height: 45px;
+  width: 45px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.btn-minus {
+  cursor: not-allowed;
+}
+
+.qty-btn-plus {
+  border: 1.5px solid #ccc;
+  height: 45px;
+  width: 45px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  cursor: pointer;
+}
+.qty-btn-minus:hover,
+.qty-btn-plus:hover {
+  outline: 2px solid blue;
+}
+
+.cart_bottoni-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  margin-top: 28px;
+  justify-content: center;
+}
+.cart_bottoni-wrapper-due {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  margin-top: -70px;
+}
+.cart-heart-icon {
+  max-width: 24px;
+  max-height: 24px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.cart-heart-icon:hover {
+  box-shadow: 0 0 0 12px #e8e8e8;
+  background-color: #e8e8e8;
+}
+.cart-trash-icon {
+  max-width: 24px;
+  max-height: 24px;
+
+  margin-left: auto;
+  margin-right: 30px;
+}
+.cart-trash-icon:hover {
+  cursor: pointer;
+}
+.cart-trash-icon-due:hover {
+  cursor: pointer;
+}
+.hr-due {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 15px;
+  margin-top: 25px;
+
+  width: 95%;
+}
+.cart_immagine-trofeo > a img {
+  width: 170px;
+
+  height: auto;
+}
+.cart_immagine-trofeo {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-left: 15px;
+}
+.cart_immagine-trofeo a {
+  text-decoration: none;
+  color: inherit;
+}
+.cart_trofeo-info a:hover {
+  text-decoration: underline;
+}
+.cart_trofeo-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  gap: 112px;
+  width: 100%;
+  align-items: stretch;
+}
+.cart_trofeo-info h3 {
+  font-family: "nunito", sans-serif;
+  color: rgb(44, 44, 44);
+  font-size: 17px;
+  font-weight: 550;
+}
+.cart_trofeo-info p {
+  padding-top: 30px;
+  flex-direction: column;
+  font-family: "nunito", sans-serif;
+  color: #2c2c2c;
+  font-weight: 700;
+  font-size: 19px;
+}
+.cart-trash-icon-due {
+  max-width: 24px;
+  max-height: 24px;
+
+  margin-left: auto;
+  margin-right: 45px;
+}
+
+@media (max-width: 1366px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart {
+    margin-left: -60px;
+  }
+  .cart-container {
+    width: 950px;
+  }
+  .cart_background {
+    margin-top: 10px;
+    margin-left: 80px;
+  }
+}
+@media (max-width: 932px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .cart_title {
+    font-size: 23px;
+  }
+  .cart {
+    margin-left: -80px;
+  }
+  .cart-container {
+    width: 400px;
+    height: 480px;
+    border-radius: 9px;
+    margin-top: -2px;
+  }
+  .cart_background {
+    z-index: -1;
+    margin-top: 10px;
+    margin-left: 95px;
+    height: 480px;
+  }
+  .cart-container h2 {
+    font-size: 16px;
+    margin-left: -20px;
+    margin-top: -10px;
+  }
+  .cart-container hr {
+    width: 104%;
+    margin-left: -5px;
+    margin-top: -5px;
+  }
+  .cart-container h3 {
+    font-size: 13px;
+    margin-left: -25px;
+    margin-top: -10px;
+  }
+  .cart-container p {
+    font-size: 15px;
+    margin-left: -25px;
+    margin-top: -10px;
+  }
+  .cart_immagine-scarpa > a img {
+    margin-left: -10px;
+    width: 130px;
+    margin-top: -10px;
+  }
+  .cart_bottoni-wrapper {
+    margin-left: -25px;
+  }
+  .cart-heart-icon {
+    max-width: 20px;
+    max-height: 20px;
+    margin-left: 30px;
+  }
+  .cart-trash-icon {
+    max-width: 20px;
+    max-height: 20px;
+    margin-right: -30px;
+  }
+  .qty-btn-plus {
+    width: 30px;
+    height: 30px;
+  }
+  .qty-btn-minus {
+    width: 30px;
+    height: 30px;
+  }
+  .qty-num {
+    padding: 0 10px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .btn-minus {
+    -webkit-mask-size: 15px;
+    mask-size: 15px;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+  .btn-plus {
+    -webkit-mask-size: 15px;
+    mask-size: 15px;
+    margin-left: -8px;
+    margin-top: -8px;
+  }
+  .cart-trofeo-info {
+    width: auto;
+  }
+  .cart_trofeo-info h3 {
+    font-size: 13px;
+    margin-left: 0px;
+    margin-top: -10px;
+    padding-top: 15px;
+    white-space: nowrap;
+  }
+  .cart_trofeo-info p {
+    font-size: 15px;
+    margin-left: 0px;
+    margin-top: -70px;
+  }
+  .cart_immagine-trofeo {
+    margin-left: -10px;
+    width: 98%;
+    flex-shrink: 0;
+    align-items: flex-start;
+  }
+  .cart_bottoni-wrapper-due {
+    margin-top: -30px;
+  }
+  .cart-trash-icon-due {
+    margin-right: -25px;
+    max-width: 20px;
+    max-height: 20px;
+  }
+}
+
+/* CSS PER SEZIONE RIEPILOGO ORDINE */
+.order-summary__container-background {
+  padding: 2px;
+  border-radius: 16px;
+  margin: 2rem;
+  display: inline-block;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.1),
+    0 1px 6px rgba(0, 0, 0, 0.03);
+}
+
+.order-summary__container {
+  margin: 1.875rem;
+  padding: 0.125rem;
+  border-radius: 0.75rem;
+  background-color: white;
+}
+
+.order-summary__header {
+  margin-bottom: 1.25rem;
+}
+
+.order-summary__row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.62rem 0;
+}
+
+.order-summary__promo {
+  color: #555;
+  cursor: pointer;
+}
+
+.order-summary__success {
+  color: green;
+  font-weight: bold;
+}
+
+.order-summary__total {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+.order-summary__iva {
+  color: gray;
+  font-size: 0.875rem;
+}
+
+button {
+  width: 100%;
+  padding: 0.938rem;
+  border-radius: 1.563rem;
+  border: none;
+  margin-top: 0.938rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.order-summary__primary {
+  background: orange;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.order-summary__paypal {
+  background: #0070ba;
+  color: white;
+}
+
+.order-summary__paypal.order-summary__outline {
+  background: #005ea6;
+}
+
+.order-summary__payment {
+  margin-top: 1rem;
+}
+.order-summary__small {
+  font-size: 0.813rem;
+  color: #666;
+  margin: 1rem 0;
+}

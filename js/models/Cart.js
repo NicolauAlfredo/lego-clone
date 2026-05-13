@@ -50,4 +50,4 @@ export function Cart() {
   this.clear = function () {
     this.products = [];
   };
-}
+};
