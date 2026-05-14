@@ -16,7 +16,10 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
   width: 58rem;
-  height: 750px;
+  min-height: 46.875rem;
+  max-height: 80vh;
+  height: auto;
+  overflow-y: auto;
 
   background-color: white;
   border-radius: 12px;
