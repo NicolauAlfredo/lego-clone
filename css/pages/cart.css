@@ -16,7 +16,6 @@
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
   width: 58rem;
-  min-height: 46.875rem;
   height: auto;
   overflow-y: auto;
 
@@ -340,6 +339,10 @@ hr {
   margin: 1rem 0;
 }
 
+.nascondere-desktop {
+  display: none;
+}
+
 @media (max-width: 1366px) {
   .cart-section {
     display: flex;
@@ -348,6 +351,10 @@ hr {
 
   .cart-container {
     width: 59.375rem;
+  }
+
+  .nascondere-desktop {
+    display: inline-block;
   }
 }
 @media (max-width: 932px) {
@@ -476,5 +483,25 @@ hr {
     margin-right: -25px;
     max-width: 20px;
     max-height: 20px;
+  }
+
+  .order-summary__small {
+    display: none;
+  }
+
+  .nascondere-mobile {
+    display: none;
+  }
+
+  .nascondere-desktop {
+    display: inline-block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    z-index: 1000;
+    background-color: white;
+    padding: 1rem;
   }
 }
