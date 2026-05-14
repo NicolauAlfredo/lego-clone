@@ -10,8 +10,8 @@
 .cart-container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  padding: 20px;
+  gap: 1.25rem;
+  padding: 1.25rem;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 
@@ -28,8 +28,9 @@
   background-color: #e8e8e8;
   padding: 2px;
   border-radius: 16px;
-  margin-left: 2rem;
-  margin-top: 10px;
+  /* margin-left: 2rem;
+  margin-top: 0.625rem; */
+  margin: 2rem;
   display: inline-block;
   box-shadow:
     0 4px 20px rgba(0, 0, 0, 0.1),
@@ -100,8 +101,8 @@ hr {
   background: #333;
   border: none;
   cursor: pointer;
-  width: 45px;
-  height: 45px;
+  width: 2.813rem;
+  height: 2.813rem;
   flex-shrink: 0;
   border: 1.5px solid #ccc;
 }
@@ -111,8 +112,8 @@ hr {
     no-repeat center;
   mask: url("https://assets.lego.com/icons/v7.11.1/control-minus.svg") no-repeat
     center;
-  -webkit-mask-size: 26px;
-  mask-size: 26px;
+  -webkit-mask-size: 1.625rem;
+  mask-size: 1.625rem;
   margin: auto;
 }
 
@@ -121,17 +122,17 @@ hr {
     no-repeat center;
   mask: url("https://assets.lego.com/icons/v7.11.1/control-plus.svg") no-repeat
     center;
-  -webkit-mask-size: 26px;
-  mask-size: 26px;
+  -webkit-mask-size: 1.625rem;
+  mask-size: 1.625rem;
   margin: auto;
 }
 
 .qty-num {
-  padding: 0 18px;
+  padding: 0 1.125rem;
 
   font-size: 20px;
   color: black;
-  height: 45px;
+  height: 2.813rem;
   display: flex;
   align-items: center;
   border: 1.5px solid #ccc;
@@ -142,8 +143,8 @@ hr {
 
 .qty-btn-minus {
   border: 1.5px solid #ccc;
-  height: 45px;
-  width: 45px;
+  height: 2.813rem;
+  width: 2.813rem;
   border-top-left-radius: 6px;
   border-bottom-left-radius: 6px;
 }
@@ -155,8 +156,8 @@ hr {
 
 .qty-btn-plus {
   border: 1.5px solid #ccc;
-  height: 45px;
-  width: 45px;
+  height: 2.813rem;
+  width: 2.813rem;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   cursor: pointer;
@@ -266,14 +267,15 @@ hr {
     flex-direction: column;
   }
   .cart {
-    margin-left: -60px;
+    /* margin-left: -60px; */
+    /* margin: 2rem; */
   }
   .cart-container {
-    width: 950px;
+    width: 59.375rem;
   }
   .cart_background {
-    margin-top: 10px;
-    margin-left: 80px;
+    /* margin-top: 10px;
+    margin-left: 80px; */
   }
 }
 @media (max-width: 932px) {
@@ -285,7 +287,7 @@ hr {
     font-size: 23px;
   }
   .cart {
-    margin-left: -80px;
+    /* margin-left: -80px; */
   }
   .cart-container {
     /* width: 400px;
@@ -295,8 +297,8 @@ hr {
   }
   .cart_background {
     z-index: -1;
-    margin-top: 10px;
-    margin-left: 95px;
+    /* margin-top: 10px;
+    margin-left: 95px; */
     /* height: 480px; */
   }
   .cart-container h2 {
