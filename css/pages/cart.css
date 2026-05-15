@@ -343,7 +343,7 @@ hr {
   display: none;
 }
 
-@media (max-width: 1366px) {
+@media (min-width: 768px) and (max-width: 1366px) {
   .cart-section {
     display: flex;
     flex-direction: column;
@@ -353,11 +353,11 @@ hr {
     width: 59.375rem;
   }
 
-  .nascondere-desktop {
+  .nascondere-mobile {
     display: inline-block;
   }
 }
-@media (max-width: 932px) {
+@media (max-width: 767px) {
   .cart-section {
     display: flex;
     flex-direction: column;
