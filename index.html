@@ -334,17 +334,17 @@
           class="section-featured__navigation"
           aria-label="Categorie dei set"
         >
-          <a
+          <button
+            type="button"
             href="#novita"
-            class="section-featured__nav-link section-featured__nav-link--active"
-            >Novità</a
-          >
-          <a href="#regali" class="section-featured__nav-link">Regali</a>
-          <a href="#temi" class="section-featured__nav-link">Temi</a>
+            class="section-featured__nav-link section-featured__nav-link--active section-featured__nav-link--default"
+            >Novità</button>
+          <button type="button" href="#regali" class="section-featured__nav-link">Regali</button>
+          <button type="button" href="#temi" class="section-featured__nav-link">Temi</button>
         </nav>
 
         <!-- Lista delle card novità -->
-        <div id="novita" class="section-featured__cards">
+        <div id="novita" class="section-featured__cards section-featured__cards--active">
           <a
             href="https://www.lego.com/it-it/categories/new-sets-and-products"
             class="section-featured__card"
@@ -437,7 +437,9 @@
             />
           </a>
         </div>
+        
       </section>
+</section>
       <!-- FINE DELLA SECTION 2 -->
 
       <!-- Sezione 3: Trova il set perfetto -->
@@ -1595,5 +1597,6 @@
       src="./js/features/weekly-feat-switcher.js"
       defer
     ></script>
+    <script type="module" src="./js/features/promo-tabs.js" defer></script>
   </body>
 </html>

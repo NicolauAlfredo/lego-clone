@@ -202,6 +202,8 @@
   font-weight: 800;
   color: var(--color-white);
   text-decoration: none;
+  background-color: transparent;
+  border: none;
 }
 
 .section-featured__nav-link--active {
@@ -213,6 +215,9 @@
 }
 
 /* Carosello mobile */
+.section-featured__cards--active{
+  display: unset;
+}
 .section-featured__cards {
   --featured-space-x: 20px;
 
@@ -337,6 +342,8 @@
 
 /* Desktop */
 @media (min-width: 1025px) {
+ 
+
   .section-featured {
     padding: 20px;
   }
