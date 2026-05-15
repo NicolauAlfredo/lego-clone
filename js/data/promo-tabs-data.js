@@ -1,4 +1,4 @@
-import { BASE_IMAGE_PATH } from "./perfect-set-products";
+import { BASE_IMAGE_PATH } from "./perfect-set-products.js";
 
 
 function createTabs({
@@ -37,7 +37,7 @@ export const tabsCategories = {
                 new createTabs({
                     id : "Pokemon",
                     name : "Pokemon",
-                    image : `${BASE_IMAGE_PATH}pokemon.jpg`,
+                    image : `${BASE_IMAGE_PATH}pokemon.png`,
         }),
         // Lego editions category
                 new createTabs({
@@ -95,7 +95,7 @@ export const tabsCategories = {
                 new createTabs({
                     id : "Set di piccole dimensioni",
                     name : "Set di piccole dimensioni",
-                    image : `${BASE_IMAGE_PATH}SmallSets.jpeg`,
+                    image : `${BASE_IMAGE_PATH}SmallSets.jpg`,
         }),
         // Merchandising category
                 new createTabs({
@@ -107,7 +107,7 @@ export const tabsCategories = {
                 new createTabs({
                     id : "Acquista per eta",
                     name : "Acquista per età",
-                    image : `${BASE_IMAGE_PATH}buyForAge.png`,
+                    image : `${BASE_IMAGE_PATH}buyForAge.jpg`,
         }),
         // Ottieni premi category
                 new createTabs({
