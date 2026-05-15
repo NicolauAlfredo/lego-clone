@@ -339,7 +339,7 @@ hr {
   margin: 1rem 0;
 }
 
-.nascondere-desktop {
+.order-summary__btn-mobile {
   display: none;
 }
 
@@ -353,7 +353,7 @@ hr {
     width: 59.375rem;
   }
 
-  .nascondere-mobile {
+  .order-summary__btn-desktop {
     display: inline-block;
   }
 }
@@ -489,11 +489,11 @@ hr {
     display: none;
   }
 
-  .nascondere-mobile {
+  .order-summary__btn-desktop {
     display: none;
   }
 
-  .nascondere-desktop {
+  .order-summary__btn-mobile {
     display: inline-block;
     position: fixed;
     left: 0;
