@@ -172,7 +172,9 @@ function renderCartProducts() {
 function handleCartClick(event) {
   const increaseProduct = event.target.closest("[data-btn-plus]");
   const decreaseProduct = event.target.closest("[data-btn-minus]");
-  const removeProduct = event.target.closest("[data-btn-remove]");
+  // TODO:
+  // Gestire la rimozione di un prodotto dal carrello
+  // tramite il pulsante con attributo data-btn-remove
 
   cart.load();
 
@@ -184,9 +186,9 @@ function handleCartClick(event) {
     cart.decreaseProductQuantity(decreaseProduct.dataset.id);
   }
 
-  if (removeProduct) {
-    cart.removeProduct(removeProduct.dataset.id);
-  }
+  // TODO:
+  // Implementare la logica di rimozione prodotto
+  // dal carrello
 
   cart.save();
   renderCartProducts();
