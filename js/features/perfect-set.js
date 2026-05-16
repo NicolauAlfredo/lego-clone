@@ -303,7 +303,6 @@ function renderProducts(category) {
 
   // Genera tutte le card prodotto e le inserisce nel carosello
   carousel.innerHTML = products.map(createProductCard).join("");
-  document.dispatchEvent(new CustomEvent("wishlist:products-rendered"));
 
   // Dopo il cambio categoria, riporta il carosello alla posizione iniziale
   if (scrollContainer) {
@@ -313,6 +312,8 @@ function renderProducts(category) {
   // Rimuove la classe temporanea dopo il re-render del browser
   requestAnimationFrame(() => {
     carousel.classList.remove("is-changing");
+
+    document.dispatchEvent(new CustomEvent("wishlist:products-rendered"));
 
     // Dopo il render dei prodotti, aggiorna lo stato delle frecce
     if (scrollContainer && prevButton && nextButton) {

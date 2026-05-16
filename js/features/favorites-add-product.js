@@ -1,5 +1,6 @@
 import { Wishlist } from "../models/Wishlist.js";
 import { formatCurrency } from "../utils/currency.js";
+console.log("favorites-add-product.js caricato");
 
 const wishlist = new Wishlist();
 
@@ -67,7 +68,9 @@ function openCreateWishlistModal() {
   createWishlistModal.classList.add("is-open");
 
   requestAnimationFrame(() => {
-    wishlistNameInput.focus();
+    if (wishlistNameInput) {
+      wishlistNameInput.focus();
+    }
   });
 }
 
@@ -81,7 +84,9 @@ function closeCreateWishlistModal() {
 
   createWishlistModal.classList.remove("is-open");
 
-  createWishlistForm.reset();
+  if (createWishlistForm) {
+    createWishlistForm.reset();
+  }
 }
 
 /**
@@ -90,8 +95,11 @@ function closeCreateWishlistModal() {
 function handleCreateWishlistSubmit(event) {
   event.preventDefault();
 
-  const formData = new FormData(createWishlistForm);
+  if (!createWishlistForm) {
+    return;
+  }
 
+  const formData = new FormData(createWishlistForm);
   const listName = formData.get("wishlistName")?.trim();
 
   if (!listName) {
@@ -101,6 +109,7 @@ function handleCreateWishlistSubmit(event) {
   wishlist.createList(listName);
 
   renderWishlistLists();
+  updateFavoriteButtonsState();
 
   closeCreateWishlistModal();
 }
@@ -170,6 +179,10 @@ function openWishlistModal(product) {
 
   const lists = wishlist.getLists();
 
+  console.log("liste trovate:", lists);
+  console.log("modal:", wishlistModal);
+  console.log("modal lists:", wishlistModalLists);
+
   if (!wishlistModal || !wishlistModalLists) {
     return;
   }
@@ -216,7 +229,12 @@ function closeWishlistModal() {
  * perché usa event delegation sul document.
  */
 function handleFavoriteClick(event) {
+  console.log("click globale rilevato");
+  console.log("target cliccato:", event.target);
+
   const favoriteButton = event.target.closest("[data-add-to-wishlist]");
+
+  console.log("bottone preferiti trovato:", favoriteButton);
 
   if (!favoriteButton) {
     return;
