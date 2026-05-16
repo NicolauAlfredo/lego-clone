@@ -16,6 +16,30 @@ const wishlistModalClose = document.querySelector(
   "[data-wishlist-modal-close]",
 );
 
+const HEART_OUTLINE_ICON = `
+<svg
+  class="perfect-set-heart-icon"
+  viewBox="0 0 40 40"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path d="m18.063 34.117-.125-.188L7 23.804a9.458 9.458 0 0 1-3-6.938v-.187c0-4.375 3.125-8.188 7.438-9 2.437-.5 4.937.062 7 1.5.562.375 1.062.875 1.562 1.375.25-.25.5-.563.813-.813l.75-.562c2-1.438 4.5-2 6.937-1.5a9.167 9.167 0 0 1 7.5 9v.188c0 2.624-1.125 5.124-3.063 6.937L22 33.929l-.125.188c-.5.437-1.188.75-1.875.75-.75 0-1.375-.313-1.938-.75Zm.875-20.25c-.063 0-.063 0-.063-.063l-1.125-1.25c-1.438-1.625-3.625-2.313-5.75-1.938a6.158 6.158 0 0 0-5 6.063v.188c0 1.812.688 3.5 2 4.687l11 10.188 10.938-10.188A6.289 6.289 0 0 0 33 16.866v-.187c0-2.937-2.125-5.5-5.063-6.062-2.125-.376-4.312.312-5.75 1.937l-1.125 1.25c0 .063 0 .063-.062.125-.25.25-.625.438-1 .438-.438 0-.813-.188-1.063-.438v-.063Z"/>
+</svg>
+`;
+
+const HEART_FILLED_ICON = `
+<svg
+  class="perfect-set-heart-icon"
+  viewBox="0 0 40 40"
+  fill="currentColor"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+>
+  <path d="M6.938 23.633C5.063 21.883 4 19.383 4 16.758v-.313c0-4.375 3.125-8.125 7.438-8.813 2.874-.5 5.75.438 7.812 2.438l.75.75.75-.75c2-2 4.938-2.938 7.75-2.438 4.313.688 7.5 4.438 7.5 8.813v.313a9.455 9.455 0 0 1-3 6.875L21.687 34.194c-.437.438-1.062.625-1.687.625-.688 0-1.313-.188-1.75-.625L6.937 23.632Z"/>
+</svg>
+`;
+
 let selectedProduct = null;
 
 /**
@@ -262,9 +286,18 @@ function updateFavoriteButtonsState() {
 
   favoriteButtons.forEach((button) => {
     const productId = button.dataset.productId;
+
     const isFavorite = wishlist.hasProduct(productId);
 
     button.classList.toggle("is-favorite", isFavorite);
+
+    const iconClass = button.classList.contains("perfect-set-favorite-button")
+      ? "perfect-set-heart-icon"
+      : "wishlist-product__heart-icon";
+
+    button.innerHTML = isFavorite
+      ? HEART_FILLED_ICON.replace("perfect-set-heart-icon", iconClass)
+      : HEART_OUTLINE_ICON.replace("perfect-set-heart-icon", iconClass);
   });
 }
 

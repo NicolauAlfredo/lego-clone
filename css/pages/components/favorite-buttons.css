@@ -1,0 +1,44 @@
+/* ================= FAVORITE BUTTON ================= */
+
+.perfect-set-favorite-button,
+.wishlist-product__favorite-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border: none;
+  border-radius: 50%;
+
+  background-color: #f5f5f5;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.perfect-set-favorite-button:hover,
+.wishlist-product__favorite-button:hover {
+  background-color: #ebebeb;
+}
+
+/* SVG */
+.perfect-set-heart-icon,
+.wishlist-product__heart-icon {
+  width: 22px;
+  height: 22px;
+
+  color: #111;
+
+  pointer-events: none;
+}
+
+/* Stato attivo */
+.perfect-set-favorite-button.is-favorite .perfect-set-heart-icon,
+.wishlist-product__favorite-button.is-favorite .wishlist-product__heart-icon {
+  color: #d72054;
+}
