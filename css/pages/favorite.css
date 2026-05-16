@@ -633,6 +633,22 @@ button {
   background-color: #0047a8;
 }
 
+.wishlist-product__favorite-button,
+.perfect-set-favorite-button {
+  color: #111;
+}
+
+.wishlist-product__favorite-button.is-favorite,
+.perfect-set-favorite-button.is-favorite {
+  color: #d72054;
+}
+
+.wishlist-product__heart-icon,
+.perfect-set-heart-icon {
+  width: 18px;
+  height: 18px;
+}
+
 @media (max-width: 1024px) {
   .account-page {
     grid-template-columns: 1fr;

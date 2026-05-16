@@ -232,6 +232,28 @@ function handleFavoriteClick(event) {
 /**
  * Gestisce la selezione della lista dentro il modal.
  */
+
+/**
+ * Aggiorna il colore dei cuori dei prodotti già presenti
+ * in almeno una lista dei desideri.
+ */
+function updateFavoriteButtonsState() {
+  wishlist.load();
+
+  const favoriteButtons = document.querySelectorAll("[data-add-to-wishlist]");
+
+  favoriteButtons.forEach((button) => {
+    const productId = button.dataset.productId;
+    const isFavorite = wishlist.hasProduct(productId);
+
+    button.classList.toggle("is-favorite", isFavorite);
+  });
+}
+
+/**
+ * Gestisce la selezione della lista dentro il modal.
+ */
+
 function handleModalListClick(event) {
   const listButton = event.target.closest("[data-select-wishlist-list]");
 
@@ -244,6 +266,7 @@ function handleModalListClick(event) {
   wishlist.addProductToList(listId, selectedProduct);
 
   renderWishlistLists();
+  updateFavoriteButtonsState();
   closeWishlistModal();
 }
 
@@ -254,6 +277,7 @@ function initWishlistUI() {
   wishlist.load();
 
   renderWishlistLists();
+  updateFavoriteButtonsState();
 
   if (createListButton) {
     createListButton.addEventListener("click", openCreateWishlistModal);
@@ -279,6 +303,13 @@ function initWishlistUI() {
   if (wishlistModalClose) {
     wishlistModalClose.addEventListener("click", closeWishlistModal);
   }
+
+  // Aggiorna automaticamente i cuori
+  // quando i prodotti vengono renderizzati dinamicamente
+  document.addEventListener(
+    "wishlist:products-rendered",
+    updateFavoriteButtonsState,
+  );
 }
 
 initWishlistUI();

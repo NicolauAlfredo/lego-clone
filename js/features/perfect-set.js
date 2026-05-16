@@ -158,7 +158,14 @@ function createProductCard(product) {
           data-product-image="${product.image}"
           >
           
-          <img src="./assets/global/icons/heart-icon.svg" alt="" />
+        <svg
+        class="perfect-set-heart-icon"
+        viewBox="0 0 40 40"
+        fill="currentColor"
+        aria-hidden="true"
+        >
+        <path d="M20 35.5 17.7 33.4C9.4 25.9 4 21 4 14.9 4 9.9 7.9 6 12.9 6c2.8 0 5.5 1.3 7.1 3.4C21.6 7.3 24.3 6 27.1 6 32.1 6 36 9.9 36 14.9c0 6.1-5.4 11-13.7 18.6L20 35.5Z" />
+        </svg>
         </button>
       </div>
     </article>
@@ -296,6 +303,7 @@ function renderProducts(category) {
 
   // Genera tutte le card prodotto e le inserisce nel carosello
   carousel.innerHTML = products.map(createProductCard).join("");
+  document.dispatchEvent(new CustomEvent("wishlist:products-rendered"));
 
   // Dopo il cambio categoria, riporta il carosello alla posizione iniziale
   if (scrollContainer) {

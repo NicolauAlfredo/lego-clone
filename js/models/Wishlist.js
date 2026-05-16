@@ -89,6 +89,17 @@ export function Wishlist(storageKey = "wishlists") {
   };
 
   /**
+   * Verifica se un prodotto è presente in almeno una lista.
+   */
+  this.hasProduct = function (productId) {
+    return this.lists.some((list) => {
+      return list.products.some((product) => {
+        return product.id === productId;
+      });
+    });
+  };
+
+  /**
    * Aggiunge un prodotto a una lista specifica.
    *
    * Se il prodotto è già presente nella lista,
