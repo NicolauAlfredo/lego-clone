@@ -28,7 +28,7 @@
         <!-- SEZIONE SINISTRA: AREA GIOCHI -->
         <div class="top-bar__left">
           <!-- Link area giochi -->
-          <a href="./kids.html" class="top-bar__left-link">AREA GIOCHI</a>
+          <a href="./pages/kids.html" class="top-bar__left-link">AREA GIOCHI</a>
         </div>
 
         <!-- SEZIONE CENTRALE: MESSAGGIO E BOTTONI  -->
@@ -112,7 +112,7 @@
         </button>
 
         <!-- Logo -->
-        <a href="../index.html" class="mobile-header__logo">
+        <a href="../" class="mobile-header__logo">
           <img src="../assets/global/logo/logo-header.svg" alt="LEGO" />
         </a>
 
@@ -126,17 +126,25 @@
             <img src="../assets/global/icons/account-icon.svg" alt="Account" />
           </button>
 
-          <button class="mobile-header__icon-btn" aria-label="Preferiti">
+          <button
+            class="mobile-header__icon-btn mobile-header__icon-btn--heart"
+            aria-label="Preferiti"
+          >
             <img src="../assets/global/icons/heart-icon.svg" alt="Preferiti" />
           </button>
 
-          <button class="mobile-header__icon-btn" aria-label="Carrello">
+          <a
+            href="../pages/cart.html"
+            class="mobile-header__icon-btn mobile-header__icon-btn--cart"
+            aria-label="Carrello"
+          >
             <img
               src="../assets/global/icons/shopping-bag-icon.svg"
               alt="Carrello"
             />
+
             <span class="mobile-header__cart-count">0</span>
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -149,7 +157,7 @@
         <!-- SEZIONE SINISTRA: LOGO + NAV -->
         <div class="header__left">
           <!-- Logo -->
-          <a href="../index.html" class="header__logo">
+          <a href="../" class="header__logo">
             <img src="../assets/global/logo/logo-header.svg" alt="LEGO" />
           </a>
           <!-- Navigazione principale -->
@@ -224,16 +232,19 @@
           </button>
 
           <!-- Bottone carrello -->
-          <button type="button" class="header__icon-btn">
+          <a
+            href="../pages/cart.html"
+            class="header__icon-btn"
+            aria-label="Carrello"
+          >
             <img
               src="../assets/global/icons/shopping-bag-icon.svg"
               alt="Carrello"
               class="header__icon"
             />
 
-            <!-- Contatore prodotti -->
             <span class="header__cart-count">(0)</span>
-          </button>
+          </a>
         </div>
       </div>
     </header>
@@ -967,5 +978,11 @@
     <!-- FINE FOOTER -->
 
     <script src="../js/features/footer-accordion.js" defer></script>
+
+    <script
+      type="module"
+      src="../js/features/cart-add-product.js"
+      defer
+    ></script>
   </body>
 </html>

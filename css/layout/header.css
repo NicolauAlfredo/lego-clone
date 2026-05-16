@@ -324,6 +324,13 @@
 }
 
 /* Icone */
+.mobile-header__icon-btn,
+.header__icon-btn {
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .mobile-header__icon-btn img {
   width: 22px;
   height: 22px;
