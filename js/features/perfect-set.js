@@ -151,7 +151,13 @@ function createProductCard(product) {
           class="perfect-set-favorite-button"
           type="button"
           aria-label="Aggiungi ${product.name} ai preferiti"
-        >
+          data-add-to-wishlist
+          data-product-id="${product.id}"
+          data-product-name="${product.name}"
+          data-product-price="${product.price}"
+          data-product-image="${product.image}"
+          >
+          
           <img src="./assets/global/icons/heart-icon.svg" alt="" />
         </button>
       </div>
