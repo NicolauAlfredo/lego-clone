@@ -11,15 +11,15 @@
       rel="icon"
       type="image/png"
       sizes="16x16"
-      href="./favicon-16x16.png"
+      href="../favicon-16x16.png"
     />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./favicon-32x32.png"
+      href="../favicon-32x32.png"
     />
-    <link rel="apple-touch-icon" href="./favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="../favicon-512x512.png" />
   </head>
   <body>
     <!-- TOP BAR - Barra Superiore Bloco principale: top-bar -->
@@ -136,7 +136,12 @@
               src="../assets/global/icons/shopping-bag-icon.svg"
               alt="Carrello"
             />
-            <span class="mobile-header__cart-count">0</span>
+            <a
+              href="../pages/cart.html"
+              class="mobile-header__cart-count"
+              style="text-decoration: none"
+              >0</a
+            >
           </button>
         </div>
       </div>
@@ -233,145 +238,221 @@
             />
 
             <!-- Contatore prodotti -->
-            <span class="header__cart-count">(0)</span>
+            <a
+              href="../pages/cart.html"
+              class="header__cart-count"
+              style="text-decoration: none"
+              >(0)</a
+            >
           </button>
         </div>
       </div>
     </header>
     <!-- FINE DEL HEADER -->
 
-    <main class="cart-section">
-      <!-- CART -->
-      <section class="cart">
-        <h1 class="cart_title" data-cart-title>Il mio carrello</h1>
+    <main class="cart-page">
+      <div class="cart-page__container">
+        <div class="cart-page__layout">
+          <div class="cart-main">
+            <h1 class="cart-page__title" data-cart-title>
+              Il mio carrello (1)
+            </h1>
 
-        <div class="cart_background">
-          <div class="cart-container">
-            <h2>Disponibile ora</h2>
-            <hr />
+            <section class="cart-card" aria-labelledby="cart-products-title">
+              <h2 id="cart-products-title" class="cart-card__status">
+                Disponibile ora
+              </h2>
 
-            <!-- PRODOTTI -->
-            <div class="cart-products" data-cart-products>
-              <a href="https://www.lego.com/it-it/product/lego-trophy-43026">
-                <img
-                  src="../assets/pages/cart/trofeo.jfif"
-                  alt="Immagine di un trofeo lego"
-                />
-              </a>
+              <div class="cart-card__divider"></div>
 
-              <div class="cart_trofeo-info">
-                <a href="https://www.lego.com/it-it/product/lego-trophy-43026">
-                  <h3>Trofeo ufficiale Coppa del Mondo FIFA</h3>
-                </a>
+              <div class="cart-products" data-cart-products></div>
+            </section>
+          </div>
 
-                <p>179,99€</p>
+          <aside class="cart-sidebar" aria-label="Riepilogo ordine">
+            <section class="order-summary">
+              <h2 class="order-summary__title">Riepilogo dell'ordine</h2>
 
-                <div class="cart_bottoni-wrapper-due">
-                  <div class="cart_bottoni">
-                    <div class="qty-btn-minus">
-                      <button class="qty-btn btn-minus"></button>
-                    </div>
+              <div class="order-summary__divider"></div>
 
-                    <span class="qty-num">1</span>
+              <div class="order-summary__accordion" data-promo-accordion>
+                <button
+                  class="order-summary__promo"
+                  type="button"
+                  aria-expanded="true"
+                  aria-controls="promo-coupon-content"
+                  data-promo-toggle
+                >
+                  <img src="../assets/pages/cart/icons/tag-icon.svg" alt="" />
 
-                    <div class="qty-btn-plus">
-                      <button class="qty-btn btn-plus"></button>
-                    </div>
+                  <span>
+                    Aggiungere un codice promozionale o codice sconto LEGO®
+                    Insiders
+                  </span>
+
+                  <img
+                    class="order-summary__promo-arrow"
+                    src="../assets/pages/cart/icons/chevron-up-solid.svg"
+                    alt=""
+                  />
+                </button>
+
+                <label
+                  class="order-summary__coupon"
+                  id="promo-coupon-content"
+                  data-promo-content
+                >
+                  <span>Inserire il codice</span>
+
+                  <div class="order-summary__coupon-box">
+                    <input type="text" aria-label="Inserire il codice" />
+                    <button type="button">Applica</button>
                   </div>
-
-                  <img
-                    class="cart-heart-icon"
-                    src="https://assets.lego.com/icons/v7.11.1/heart.svg"
-                    alt="Preferiti"
-                  />
-
-                  <img
-                    class="cart-trash-icon-due"
-                    src="https://assets.lego.com/icons/v7.11.1/trash.svg"
-                    alt="Rimuovi dal carrello"
-                  />
-                </div>
+                </label>
               </div>
-            </div>
-          </div>
+
+              <div class="order-summary__divider"></div>
+
+              <div class="order-summary__row">
+                <span data-order-items>Valore ordine (0) articoli</span>
+                <strong data-order-subtotal>0 €</strong>
+              </div>
+
+              <div class="order-summary__free-shipping">
+                <span
+                  >Congratulazioni: si ha diritto alla consegna GRATUITA</span
+                >
+                <span>✓</span>
+              </div>
+
+              <div class="order-summary__total">
+                <span>Totale dell'Ordine</span>
+                <strong data-order-total>0 €</strong>
+              </div>
+
+              <p class="order-summary__iva" data-order-iva>Include IVA 0 €</p>
+
+              <button class="order-summary__secure-button" type="button">
+                <img src="../assets/pages/cart/icons/shield-icon.svg" alt="" />
+                <span>Pagamento sicuro</span>
+              </button>
+
+              <div class="order-summary__divider"></div>
+
+              <div class="quick-payment">
+                <h3>Pagamento veloce</h3>
+
+                <p>
+                  Tutti i dettagli dell'ordine saranno acquisiti direttamente
+                  dal provider di servizi di pagamento. Assicurarsi di
+                  selezionare gli indirizzi corretti prima di inviare l'ordine.
+                  Dalla pagina del provider di servizi di pagamento, si verrà
+                  reindirizzati alla pagina di conferma dell'ordine. Se si
+                  dispone di un codice sconto, scegliere “Pagamento sicuro”.
+                </p>
+
+                <button class="quick-payment__button" type="button">
+                  Paga con <strong>PayPal</strong>
+                </button>
+
+                <button class="quick-payment__button" type="button">
+                  <img
+                    src="../assets/pages/cart/icons/paypal-icon.svg"
+                    alt=""
+                  />
+                  Paga a rate
+                </button>
+
+                <small>
+                  <span>
+                    <img
+                      src="../assets/pages/cart/icons/paypal-solid-icon.svg"
+                      alt=""
+                    />
+                  </span>
+
+                  <span>
+                    <img src="../assets/pages/cart/images/paypal.svg" alt="" />
+                  </span>
+
+                  Paga in 3 rate da 20,00€ senza interessi. TAEG 0%.
+                  <a href="#">Scopri di più</a>
+                </small>
+              </div>
+            </section>
+
+            <section class="order-info">
+              <h2>Informazioni sull'ordine:</h2>
+
+              <div class="order-info__links">
+                <a href="#">Modalità di spedizione</a>
+                <a href="#">Resi</a>
+              </div>
+
+              <h3>Modalità di pagamento</h3>
+
+              <div class="order-info__payments">
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-paypal-card.svg"
+                    alt=""
+                  />
+                </span>
+
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-visa-card.svg"
+                    alt=""
+                  />
+                </span>
+
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-mastercard-card.svg"
+                    alt=""
+                  />
+                </span>
+
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-american-express-card.svg"
+                    alt=""
+                  />
+                </span>
+
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-klarna.svg"
+                    alt=""
+                  />
+                </span>
+
+                <span>
+                  <img
+                    src="../assets/pages/cart/images/payments-lego-gift-card-card.svg"
+                    alt=""
+                  />
+                </span>
+              </div>
+            </section>
+          </aside>
         </div>
-      </section>
+      </div>
 
-      <!-- ORDER SUMMARY -->
-      <div class="order-summary__container-background">
-        <div class="order-summary__container">
-          <h2 class="order-summary__header">Riepilogo dell'ordine</h2>
-
-          <div class="order-summary__row order-summary__promo">
-            <span>Aggiungere un codice promozionale</span>
-            <span>⌄</span>
-          </div>
-
-          <hr />
-
-          <div class="order-summary__row">
-            <span data-order-items>Valore ordine (0) articoli</span>
-            <strong data-order-subtotal>0</strong>
-          </div>
-
-          <p class="order-summary__success">
-            Congratulazioni: consegna GRATUITA
-          </p>
-
-          <div class="order-summary__row order-summary__total">
-            <span>Totale dell'Ordine</span>
-            <strong data-order-total>0</strong>
-          </div>
-
-          <p class="order-summary__iva" data-order-iva>Include IVA 0</p>
-
-          <div class="order-summary__btn-desktop">
-            <button class="order-summary__primary summary-btn">
-              Pagamento sicuro
-            </button>
-
-            <hr />
-
-            <h3 class="order-summary__payment">Pagamento veloce</h3>
-
-            <p class="order-summary__small">
-              Tutti i dettagli dell'ordine saranno acquisiti direttamente dal
-              provider di servizi di pagamento. Assicurarsi di selezionare gli
-              indirizzi corretti prima di inviare l'ordine. Dalla pagina del
-              provider di servizi di pagamento, si verrà reindirizzati alla
-              pagina di conferma dell'ordine. Se si dispone di un codice sconto,
-              scegliere "Pagamento sicuro".
-            </p>
-
-            <button class="order-summary__paypal summary-btn">
-              Paga con PayPal
-            </button>
-
-            <button
-              class="order-summary__paypal order-summary__outline summary-btn"
-            >
-              Paga a rate
-            </button>
-          </div>
-
-          <div class="order-summary__btn-mobile">
-            <div class="order-summary__row order-summary__total">
-              <span>Totale dell'Ordine</span>
-              <strong data-order-total>0</strong>
-            </div>
-
-            <p class="order-summary__iva" data-order-iva>Include IVA 0</p>
-            <button
-              class="order-summary__paypal order-summary__outline summary-btn"
-            >
-              Pagamento veloce
-            </button>
-
-            <button class="order-summary__primary summary-btn">
-              Pagamento sicuro
-            </button>
-          </div>
+      <div class="cart-mobile-checkout">
+        <div class="cart-mobile-checkout__total">
+          <span>Totale dell'Ordine</span>
+          <small data-order-iva>Include IVA 0 €</small>
+          <strong data-order-total>0 €</strong>
         </div>
+
+        <button class="cart-mobile-checkout__paypal" type="button">
+          Pagamento veloce
+        </button>
+
+        <button class="cart-mobile-checkout__secure" type="button">
+          Pagamento sicuro
+        </button>
       </div>
     </main>
 
@@ -705,10 +786,17 @@
       src="../js/features/cart-add-product.js"
       defer
     ></script>
+
     <script type="module" src="../js/features/cart-page.js" defer></script>
     <script
       type="module"
       src="../js/features/footer-accordion.js"
+      defer
+    ></script>
+
+    <script
+      type="module"
+      src="../js/features/cart-promo-accordion.js"
       defer
     ></script>
   </body>
