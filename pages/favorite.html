@@ -347,47 +347,17 @@
               dei desideri separate per occasioni o eventi diversi.
             </p>
 
-            <button class="button button--outline" type="button">
+            <button
+              class="button button--outline"
+              type="button"
+              data-create-wishlist-list
+            >
               + Crea una nuova lista
             </button>
           </div>
         </section>
 
-        <section class="wishlist-summary">
-          <div class="wishlist-summary__info">
-            <a href="#" class="wishlist-summary__name">Teste (5)</a>
-            <p>Ultimo aggiornamento: 15/05/2026</p>
-            <strong>Costo totale: 773,95 €</strong>
-          </div>
-
-          <div class="wishlist-summary__products">
-            <img
-              src="../assets/pages/favorites/images/10365_Prod_en-gb.jpg"
-              alt="Serie 29 LEGO"
-            />
-            <img
-              src="../assets/pages/favorites/images/21368_Prod.jpg"
-              alt="Bici da corsa LEGO"
-            />
-            <img
-              src="../assets/pages/favorites/images/bltb0549d82daa2d4ff-71052_Prod_en-gb.jpg"
-              alt="Nave pirata LEGO"
-            />
-            <img
-              src="../assets/pages/favorites/images/blte9afc6fc58e0fa7b-11380_Prod_en-gb.jpg"
-              alt="Peanuts LEGO"
-            />
-            <img
-              src="../assets/pages/favorites/images/10365_Prod_en-gb.jpg"
-              alt="Aereo LEGO"
-            />
-          </div>
-
-          <button class="button button--primary" type="button">
-            <img src="../assets/global/icons/shopping-bag-icon.svg" alt="" />
-            Aggiungi al carrello
-          </button>
-        </section>
+        <div data-wishlist-lists></div>
 
         <!-- Recomendations -->
         <section
@@ -819,11 +789,36 @@
     </footer>
     <!-- FINE FOOTER -->
 
+    <!-- Modal -->
+    <div class="wishlist-modal" data-wishlist-modal>
+      <div class="wishlist-modal__content">
+        <button
+          class="wishlist-modal__close"
+          type="button"
+          aria-label="Chiudi modal"
+          data-wishlist-modal-close
+        >
+          ×
+        </button>
+
+        <h2>Scegli una lista</h2>
+
+        <div class="wishlist-modal__lists" data-wishlist-modal-lists></div>
+      </div>
+    </div>
+    <!-- FINE DEL MODAL -->
+
     <script type="module" src="../js/features/favorites-page.js" defer></script>
 
     <script
       type="module"
       src="../js/features/footer-accordion.js"
+      defer
+    ></script>
+
+    <script
+      type="module"
+      src="../js/features/favorites-add-product.js"
       defer
     ></script>
   </body>

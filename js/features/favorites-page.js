@@ -11,8 +11,12 @@ const carousel = document.querySelector(".wishlist-recommended__carousel");
 const scrollContainer = document.querySelector(".wishlist-recommended__scroll");
 
 // Pulsanti di navigazione del carosello
-const prevButton = document.querySelector(".wishlist-recommended__chevron--prev");
-const nextButton = document.querySelector(".wishlist-recommended__chevron--next");
+const prevButton = document.querySelector(
+  ".wishlist-recommended__chevron--prev",
+);
+const nextButton = document.querySelector(
+  ".wishlist-recommended__chevron--next",
+);
 
 // Numero massimo di prodotti consigliati da mostrare nella pagina
 const PRODUCTS_TO_RENDER = 8;
@@ -163,7 +167,7 @@ function createProductCard(product) {
         ${formatCurrency(product.price)}
       </strong>
 
-      <div class="wishlist-product__actions">
+     <div class="wishlist-product__actions">
         <button
           class="wishlist-product__cart-button"
           type="button"
@@ -173,19 +177,24 @@ function createProductCard(product) {
           data-product-price="${product.price}"
           data-product-image="${product.image}"
         >
-          <img src="../assets/global/icons/shopping-bag-icon.svg" alt="" />
-          Aggiungi al carrello
-        </button>
+        <img src="../assets/global/icons/shopping-bag-icon.svg" alt="" />
+        Aggiungi al carrello
+      </button>
 
-        <button
-          class="wishlist-product__favorite-button"
-          type="button"
-          aria-label="Aggiungi ${product.name} ai preferiti"
-        >
-          <img src="../assets/global/icons/heart-icon.svg" alt="" />
-        </button>
-      </div>
-    </article>
+      <button
+        class="wishlist-product__favorite-button"
+        type="button"
+        aria-label="Aggiungi ${product.name} ai preferiti"
+        data-add-to-wishlist
+        data-product-id="${product.id}"
+        data-product-name="${product.name}"
+        data-product-price="${product.price}"
+        data-product-image="${product.image}"
+      >
+      <img src="../assets/global/icons/heart-icon.svg" alt="" />
+      </button>
+    </div>
+  </article>
   `;
 }
 
