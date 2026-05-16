@@ -789,7 +789,44 @@
     </footer>
     <!-- FINE FOOTER -->
 
-    <!-- Modal -->
+    <!-- Modal create a new list -->
+    <div class="wishlist-create-modal" data-create-wishlist-modal>
+      <div class="wishlist-create-modal__overlay"></div>
+
+      <div class="wishlist-create-modal__content">
+        <button
+          class="wishlist-create-modal__close"
+          type="button"
+          aria-label="Chiudi modal"
+          data-close-create-wishlist-modal
+        >
+          ×
+        </button>
+
+        <h2>Crea una nuova lista</h2>
+
+        <form class="wishlist-create-modal__form" data-create-wishlist-form>
+          <label for="wishlist-name"> Nome della lista * </label>
+
+          <div class="wishlist-create-modal__actions">
+            <input
+              id="wishlist-name"
+              type="text"
+              name="wishlistName"
+              maxlength="40"
+              required
+            />
+
+            <button class="wishlist-create-modal__submit" type="submit">
+              Invia
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- FINE DEL MODAL -->
+
+    <!-- Modal Add to a list -->
     <div class="wishlist-modal" data-wishlist-modal>
       <div class="wishlist-modal__content">
         <button

@@ -4,10 +4,16 @@ import { formatCurrency } from "../utils/currency.js";
 const wishlist = new Wishlist();
 
 const createListButton = document.querySelector("[data-create-wishlist-list]");
-const wishlistSummaryContainer = document.querySelector("[data-wishlist-lists]");
+const wishlistSummaryContainer = document.querySelector(
+  "[data-wishlist-lists]",
+);
 const wishlistModal = document.querySelector("[data-wishlist-modal]");
-const wishlistModalLists = document.querySelector("[data-wishlist-modal-lists]");
-const wishlistModalClose = document.querySelector("[data-wishlist-modal-close]");
+const wishlistModalLists = document.querySelector(
+  "[data-wishlist-modal-lists]",
+);
+const wishlistModalClose = document.querySelector(
+  "[data-wishlist-modal-close]",
+);
 
 let selectedProduct = null;
 
@@ -36,15 +42,67 @@ function getProductFromButton(button) {
  * Per ora usiamo prompt per semplificare.
  * Depois você pode substituir por um modal mais bonito.
  */
-function handleCreateWishlistList() {
-  const listName = prompt("Nome della nuova lista:");
+const createWishlistModal = document.querySelector(
+  "[data-create-wishlist-modal]",
+);
 
-  if (!listName || !listName.trim()) {
+const createWishlistForm = document.querySelector(
+  "[data-create-wishlist-form]",
+);
+
+const closeCreateWishlistModalButton = document.querySelector(
+  "[data-close-create-wishlist-modal]",
+);
+
+const wishlistNameInput = document.querySelector("#wishlist-name");
+
+/**
+ * Apre il modal di creazione lista.
+ */
+function openCreateWishlistModal() {
+  if (!createWishlistModal) {
+    return;
+  }
+
+  createWishlistModal.classList.add("is-open");
+
+  requestAnimationFrame(() => {
+    wishlistNameInput.focus();
+  });
+}
+
+/**
+ * Chiude il modal di creazione lista.
+ */
+function closeCreateWishlistModal() {
+  if (!createWishlistModal) {
+    return;
+  }
+
+  createWishlistModal.classList.remove("is-open");
+
+  createWishlistForm.reset();
+}
+
+/**
+ * Gestisce il submit del form.
+ */
+function handleCreateWishlistSubmit(event) {
+  event.preventDefault();
+
+  const formData = new FormData(createWishlistForm);
+
+  const listName = formData.get("wishlistName")?.trim();
+
+  if (!listName) {
     return;
   }
 
   wishlist.createList(listName);
+
   renderWishlistLists();
+
+  closeCreateWishlistModal();
 }
 
 /**
@@ -198,7 +256,18 @@ function initWishlistUI() {
   renderWishlistLists();
 
   if (createListButton) {
-    createListButton.addEventListener("click", handleCreateWishlistList);
+    createListButton.addEventListener("click", openCreateWishlistModal);
+  }
+
+  if (closeCreateWishlistModalButton) {
+    closeCreateWishlistModalButton.addEventListener(
+      "click",
+      closeCreateWishlistModal,
+    );
+  }
+
+  if (createWishlistForm) {
+    createWishlistForm.addEventListener("submit", handleCreateWishlistSubmit);
   }
 
   document.addEventListener("click", handleFavoriteClick);
