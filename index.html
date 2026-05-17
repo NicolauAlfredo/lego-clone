@@ -339,109 +339,31 @@
           class="section-featured__navigation"
           aria-label="Categorie dei set"
         >
-          <a
-            href="#novita"
+          <button
+            type="button"
             class="section-featured__nav-link section-featured__nav-link--active"
-            >Novità</a
+            data-tab="Novita"
           >
-          <a href="#regali" class="section-featured__nav-link">Regali</a>
-          <a href="#temi" class="section-featured__nav-link">Temi</a>
+            Novità
+          </button>
+          <button
+            type="button"
+            class="section-featured__nav-link"
+            data-tab="Regali"
+          >
+            Regali
+          </button>
+          <button
+            type="button"
+            class="section-featured__nav-link"
+            data-tab="Temi"
+          >
+            Temi
+          </button>
         </nav>
 
         <!-- Lista delle card novità -->
-        <div id="novita" class="section-featured__cards">
-          <a
-            href="https://www.lego.com/it-it/categories/new-sets-and-products"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">
-              Tutti i nuovi <br />set
-            </h3>
-            <img
-              src="./assets/pages/home/images/all-new-sets.jpg"
-              alt="Tutti i nuovi set LEGO"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/categories/exclusives"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">Set esclusivi</h3>
-            <img
-              src="./assets/pages/home/images/exclusive-sets.jpg"
-              alt="Set esclusivi LEGO"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/page/lego-offers-promotions"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">Offerte</h3>
-            <img
-              src="./assets/pages/home/images/offers.jpg"
-              alt="Offerte LEGO"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/themes/pokemon"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">Pokémon</h3>
-            <img
-              src="./assets/pages/home/images/pokemon.png"
-              alt="Set LEGO Pokémon"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/themes/editions"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">LEGO® Editions</h3>
-            <img
-              src="./assets/pages/home/images/star-wars.jpeg"
-              alt="Set LEGO Star Wars"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/fathers-day/gift-ideas"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">Festa del papà</h3>
-            <img
-              src="./assets/pages/home/images/fathers-day.jpg"
-              alt="Idee regalo LEGO per la Festa del papà"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/page/lego-offers-promotions/2x-points"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">
-              Il doppio dei punti fedeltà
-            </h3>
-            <img
-              src="./assets/pages/home/images/double-points.png"
-              alt="Promozione doppio dei punti fedeltà LEGO Insiders"
-            />
-          </a>
-
-          <a
-            href="https://www.lego.com/it-it/page/lego-offers-promotions/2x-points"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">LEGO® ONE PIECE</h3>
-            <img
-              src="./assets/pages/home/images/one-piece.jpg"
-              alt="LEGO ONE PIECE"
-            />
-          </a>
-        </div>
+        <div id="novita" class="section-featured__cards"></div>
       </section>
       <!-- FINE DELLA SECTION 2 -->
 
@@ -1597,5 +1519,7 @@
       src="./js/features/weekly-featured-tabs.js"
       defer
     ></script>
+
+    <script type="module" src="./js/features/promo-tabs.js" defer></script>
   </body>
 </html>
