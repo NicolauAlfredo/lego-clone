@@ -1,16 +1,15 @@
-// Importa i dati delle categorie 
+// Importa i dati delle categorie
 import { tabsCategories } from "../data/promo-tabs-data.js";
 
 // Container dove verranno reindirizzate le card delle categorie
-const carouselCategory = document.querySelector(".section-featured__cards")
+const carouselCategory = document.querySelector(".section-featured__cards");
 
-// Seleziona i links
-const navLink = document.querySelectorAll(".section-featured__nav-link")
-
+// Seleziona i bottoni delle tab
+const navLinks = document.querySelectorAll(".section-featured__nav-link");
 
 // crea il Markup della card di una categoria
-function createCategoryCard(category) {
-    return `
+function renderCategoryCards(category) {
+  return `
         <a
             href="#"
             class="section-featured__card"
@@ -23,34 +22,33 @@ function createCategoryCard(category) {
               alt="${category.name}"
             />
           </a>
-    `
+    `;
 }
 
 //Rendering delle categorie
 
-function renderCategory (category){
-    const categoria = tabsCategories[category]
+function renderCategory(category) {
+  const categoryCards = tabsCategories[category];
 
-    if (!categoria || !carouselCategory){
-        return;
-    }
+  if (!categoryCards || !carouselCategory) {
+    return;
+  }
 
-
-// Aggiunge una classe temporanea per gestire cambio categoria
+  // Aggiunge una classe temporanea per gestire cambio categoria
   carouselCategory.classList.add("is-changing");
 
   // Genera tutte le card e le inserisce nel carosello
-  carouselCategory.innerHTML = categoria.map(createCategoryCard).join("");
+  carouselCategory.innerHTML = categoryCards.map(renderCategoryCards).join("");
 
-// Rimuove la classe temporanea dopo il re-render del browser
+  // Rimuove la classe temporanea dopo il re-render del browser
   requestAnimationFrame(() => {
     carouselCategory.classList.remove("is-changing");
   });
 }
 
-  //Aggiorna i link rimuovendo il tag active a tutti e aggiunge soltato alla tab attiva
-  function setActiveTab(activeLink) {
-  navLink.forEach((link) => {
+//Aggiorna i link rimuovendo il tag active a tutti e aggiunge soltato alla tab attiva
+function setActiveTab(activeLink) {
+  navLinks.forEach((link) => {
     link.classList.remove("section-featured__nav-link--active");
   });
 
@@ -70,10 +68,13 @@ function handleTabClick(event) {
 
 // Inizializzazione del rendering delle categorie
 function initCategoryCarousel() {
-    navLink.forEach((link) => {
+  navLinks.forEach((link) => {
     link.addEventListener("click", handleTabClick);
   });
-    renderCategory("Novita")
+
+  renderCategory("Novita");
 }
 
-initCategoryCarousel()
+if (carouselCategory && navLinks.length > 0) {
+  initCategoryCarousel();
+}
