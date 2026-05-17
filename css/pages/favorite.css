@@ -72,6 +72,10 @@ button {
   color: #fff;
 }
 
+.sidebar__link--active img {
+  filter: brightness(0) invert(1);
+}
+
 .wishlist {
   min-width: 0;
 }
@@ -207,7 +211,7 @@ button {
 }
 
 .wishlist-recommended {
-  margin-bottom: 36px;
+  margin-bottom: 50px;
 }
 
 .wishlist-recommended__header {
@@ -261,7 +265,7 @@ button {
 }
 
 .wishlist-recommended__scroll::-webkit-scrollbar {
-  height: 8px;
+  height: 4px;
 }
 
 .wishlist-recommended__scroll::-webkit-scrollbar-track {
@@ -636,6 +640,10 @@ button {
   .bottom-cards {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+
+  .support-card {
+    margin-top: 40px;
   }
 }
 
