@@ -7,6 +7,7 @@ const promoToggle = document.querySelector("[data-promo-toggle]");
 // Seleziona l'icona della freccia dell'accordion
 const promoArrow = document.querySelector(".order-summary__promo-arrow");
 
+//Listener per il toggle della label del codice promozionale
 promoToggle.addEventListener("click", () => {
   const willBeClosed = !promoAccordion.classList.contains("is-closed");
   promoAccordion.classList.toggle("is-closed");
