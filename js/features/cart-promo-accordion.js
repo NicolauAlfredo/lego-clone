@@ -7,18 +7,11 @@ const promoToggle = document.querySelector("[data-promo-toggle]");
 // Seleziona l'icona della freccia dell'accordion
 const promoArrow = document.querySelector(".order-summary__promo-arrow");
 
-/**
- * TODO:
- * Implementare la logica di apertura e chiusura
- * dell'accordion del codice promozionale.
- *
- * Requisiti:
- * - aprire e chiudere il contenuto
- * - aggiornare aria-expanded
- * - cambiare dinamicamente l'icona della freccia
- * - gestire la classe is-closed
- */
-
-// TODO:
-// Aggiungere il listener del click
-// per aprire e chiudere l'accordion
+promoToggle.addEventListener("click", () => {
+  const willBeClosed = !promoAccordion.classList.contains("is-closed");
+  promoAccordion.classList.toggle("is-closed");
+  promoToggle.setAttribute("aria-expanded", !willBeClosed);
+  promoArrow.src = willBeClosed
+    ? "../assets/pages/cart/icons/chevron-down-solid-icon.svg"
+    : "../assets/pages/cart/icons/chevron-up-solid-icon.svg";
+});
