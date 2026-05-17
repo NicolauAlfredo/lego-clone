@@ -8,27 +8,28 @@ const carouselCategory = document.querySelector(".section-featured__cards");
 const navLinks = document.querySelectorAll(".section-featured__nav-link");
 
 // crea il Markup della card di una categoria
-function renderCategoryCards(category) {
+function createCategoryCard(category) {
   return `
-        <a
-            href="#"
-            class="section-featured__card"
-          >
-            <h3 class="section-featured__card-title">
-              ${category.name}
-            </h3>
-            <img
-              src="${category.image}"
-              alt="${category.name}"
-            />
-          </a>
-    `;
+    <a
+      href="#"
+      class="section-featured__card"
+    >
+      <h3 class="section-featured__card-title">
+        ${category.name}
+      </h3>
+
+      <img
+        src="${category.image}"
+        alt="${category.name}"
+      />
+    </a>
+  `;
 }
 
 //Rendering delle categorie
 
-function renderCategory(category) {
-  const categoryCards = tabsCategories[category];
+function renderCategory(categoryName) {
+  const categoryCards = tabsCategories[categoryName];
 
   if (!categoryCards || !carouselCategory) {
     return;
@@ -38,7 +39,7 @@ function renderCategory(category) {
   carouselCategory.classList.add("is-changing");
 
   // Genera tutte le card e le inserisce nel carosello
-  carouselCategory.innerHTML = categoryCards.map(renderCategoryCards).join("");
+  carouselCategory.innerHTML = categoryCards.map(createCategoryCard).join("");
 
   // Rimuove la classe temporanea dopo il re-render del browser
   requestAnimationFrame(() => {
@@ -57,8 +58,6 @@ function setActiveTab(activeLink) {
 
 // Funzione che gestisce il click sui nomi dei link
 function handleTabClick(event) {
-  event.preventDefault();
-
   const clickedLink = event.currentTarget;
   const category = clickedLink.dataset.tab;
 
