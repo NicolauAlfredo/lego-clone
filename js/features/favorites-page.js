@@ -284,7 +284,7 @@ function renderRecommendedProducts() {
     updateButtonsState();
   });
 
-  document.dispatchEvent(new CustomEvent("wishlist:products-rendered"));
+  document.dispatchEvent(new CustomEvent("favorites:products-rendered"));
 }
 
 /**

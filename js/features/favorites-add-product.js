@@ -1,15 +1,15 @@
-import { Wishlist } from "../models/Wishlist.js";
+import { Favorite } from "../models/Favorite.js";
 import { formatCurrency } from "../utils/currency.js";
 
 /**
- * Selettore globale del modello Wishlist.
+ * Istanza globale del modello Favorite.
  *
  * Gestisce:
  * - creazione delle liste
  * - aggiunta dei prodotti alle liste
  * - lettura/scrittura nel localStorage
  */
-const wishlist = new Wishlist();
+const favorite = new Favorite();
 
 /**
  * Prodotto attualmente selezionato tramite click sul cuore.
@@ -151,8 +151,8 @@ function handleCreateWishlistSubmit(event) {
     return;
   }
 
-  wishlist.createList(listName);
-  wishlist.load();
+  favorite.createList(listName);
+  favorite.load();
 
   renderWishlistLists();
   updateFavoriteButtonsState();
@@ -169,9 +169,9 @@ function handleCreateWishlistSubmit(event) {
  * Renderizza le liste nella pagina Lista dei desideri.
  */
 function renderWishlistLists() {
-  wishlist.load();
+  favorite.load();
 
-  const lists = wishlist.getLists();
+  const lists = favorite.getLists();
 
   if (!wishlistSummaryContainer) {
     return;
@@ -179,7 +179,7 @@ function renderWishlistLists() {
 
   wishlistSummaryContainer.innerHTML = lists
     .map((list) => {
-      const total = wishlist.calculateListTotal(list.id);
+      const total = favorite.calculateListTotal(list.id);
 
       return `
         <section class="wishlist-summary">
@@ -228,7 +228,7 @@ function openWishlistModal(product, anchorButton) {
     return;
   }
 
-  wishlist.load();
+  favorite.load();
 
   selectedProduct = product;
   activeFavoriteButton = anchorButton;
@@ -251,7 +251,7 @@ function openWishlistModal(product, anchorButton) {
  * Alla fine aggiunge il bottone per creare una nuova lista.
  */
 function renderWishlistPopoverLists(product) {
-  const lists = wishlist.getLists();
+  const lists = favorite.getLists();
 
   if (!wishlistModalLists) {
     return;
@@ -260,7 +260,7 @@ function renderWishlistPopoverLists(product) {
   wishlistModalLists.innerHTML = `
     ${lists
       .map((list) => {
-        const isChecked = wishlist.hasProductInList(list.id, product.id);
+        const isChecked = favorite.hasProductInList(list.id, product.id);
 
         return `
           <button
@@ -364,14 +364,14 @@ function handleFavoriteClick(event) {
  * in almeno una lista dei desideri.
  */
 function updateFavoriteButtonsState() {
-  wishlist.load();
+  favorite.load();
 
   const favoriteButtons = document.querySelectorAll("[data-add-to-wishlist]");
 
   favoriteButtons.forEach((button) => {
     const productId = button.dataset.productId;
 
-    const isFavorite = wishlist.hasProduct(productId);
+    const isFavorite = favorite.hasProduct(productId);
 
     button.classList.toggle("is-favorite", isFavorite);
 
@@ -405,7 +405,7 @@ function handleModalListClick(event) {
 
   const listId = listButton.dataset.listId;
 
-  wishlist.addProductToList(listId, selectedProduct);
+  favorite.addProductToList(listId, selectedProduct);
 
   renderWishlistLists();
   updateFavoriteButtonsState();
@@ -416,7 +416,7 @@ function handleModalListClick(event) {
  * Inizializza tutta la logica delle liste dei desideri.
  */
 function initWishlistUI() {
-  wishlist.load();
+  favorite.load();
 
   renderWishlistLists();
   updateFavoriteButtonsState();
@@ -474,7 +474,7 @@ function initWishlistUI() {
   }
 
   document.addEventListener(
-    "wishlist:products-rendered",
+    "favorites:products-rendered",
     updateFavoriteButtonsState,
   );
 }
