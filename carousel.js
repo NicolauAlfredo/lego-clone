@@ -30,3 +30,34 @@ document.querySelector(".freccia-sx").addEventListener("click", () => {
 });
 
 updateCarousel();
+
+// Swipe solo su mobile
+if (window.innerWidth <= 480) {
+  let startX = 0;
+  let startY = 0;
+
+  document.querySelector(".btn-wrapper").addEventListener(
+    "touchstart",
+    (e) => {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    },
+    { passive: true },
+  );
+
+  document.querySelector(".btn-wrapper").addEventListener(
+    "touchend",
+    (e) => {
+      const dx = startX - e.changedTouches[0].clientX;
+      const dy = startY - e.changedTouches[0].clientY;
+      if (Math.abs(dx) < 40 || Math.abs(dy) > Math.abs(dx)) return;
+      if (dx > 0) {
+        current = (current + 1) % videos.length;
+      } else {
+        current = (current - 1 + videos.length) % videos.length;
+      }
+      updateCarousel();
+    },
+    { passive: true },
+  );
+}
