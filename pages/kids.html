@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/pages/kids.css" />
+
+    <!-- TODO:
+  Verificare se questi file esistono realmente nella cartella public/assets.
+  Attualmente favicon, icona PWA e apple-touch-icon sono referenziati,
+  ma se i file non esistono verranno generati errori 404 nel browser.
+-->
+    <link rel="icon" href="../assets/pages/kids/icons/favicon.ico" />
+
+    <link
+      rel="icon"
+      href="../assets/pages/kids/icons/favicon512x512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+
+    <link
+      rel="apple-touch-icon"
+      href="../assets/pages/kids/icons/apple-icon.png"
+      sizes="180x180"
+      type="image/png"
+    />
+    <title>Kids lego area giochi</title>
+  </head>
+  <body>
+    <div class="video">
+      <div class="btn-wrapper">
+        <!-- TODO:
+          Questo <a> contiene un <button>, quindi ci sono elementi interattivi annidati.
+          Non è una struttura HTML semanticamente corretta e può creare problemi di accessibilità.
+          Se serve navigare verso un'altra pagina, usare solo <a> stilizzato come bottone.
+          Se invece serve gestire un'azione JavaScript, usare solo <button>.
+        -->
+        <a href="https://kids.lego.com/it-it/boop">
+          <img src="../assets/pages/kids/images/boop.png" alt="immagine boop" />
+          <video
+            src="../assets/pages/kids/videos/video-lego.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+          <div class="btn-background"></div>
+          <button class="btn-esplora">
+            VAI A ESPLORARE
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+        </a>
+        <div class="video-due">
+          <video
+            src="../assets/pages/kids/videos/video-lego3.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+        <div class="video-tre">
+          <video
+            src="../assets/pages/kids/videos/video-lego2.mp4"
+            autoplay
+            muted
+            loop
+          ></video>
+        </div>
+      </div>
+
+      <!-- TODO:
+        Anche qui c'è un <button> dentro un <a>, struttura non valida semanticamente.
+        Per le frecce del carousel sarebbe meglio usare solo <button>,
+        perché sembrano controlli di interfaccia e non veri link di navigazione.
+      -->
+      <a href="#">
+        <button class="freccia-dx">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M9 18l6-6-6-6" />
+          </svg>
+        </button>
+      </a>
+
+      <!-- TODO:
+        Anche qui evitare elementi interattivi annidati.
+        Se la freccia viene usata dal JavaScript per cambiare slide,
+        lasciare solo il <button> e rimuovere il wrapper <a>.
+      -->
+      <a href="#">
+        <button class="freccia-sx">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
+      </a>
+    </div>
+
+    <!-- TODO:
+      Codice commentato e non usato.
+      Se non serve più, meglio rimuoverlo per mantenere il file pulito.
+      Se invece serve come riferimento temporaneo, aggiungere una spiegazione chiara.
+    -->
+    <!--   <a href="#">
+        <button class="freccia-dx-due"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M9 18l6-6-6-6"/>
+  </svg></button>
+  </a>
+<a href="#">
+  <button class="freccia-sx-due"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 18l-6-6 6-6"/>
+  </svg></button>
+  </a>-->
+
+    <section class="cards">
+      <div class="first_card">
+        <a href="https://kids.lego.com/it-it/boop">
+          <img
+            src="../assets/pages/kids/images/prima-immagine.jpg"
+            alt="immagine lego boop"
+          />
+        </a>
+      </div>
+
+      <div class="second_cards">
+        <a href="https://kids.lego.com/it-it/legoland">
+          <img
+            src="../assets/pages/kids/images/legoland.jpg"
+            alt="immagine legoland"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/vehicles">
+          <img
+            src="../assets/pages/kids/images/vehicles.jfif"
+            alt="immagine veicoli"
+          />
+        </a>
+      </div>
+      <div class="third_cards">
+        <a href="https://kids.lego.com/it-it/friends">
+          <img
+            src="../assets/pages/kids/images/friends.jpg"
+            alt="immagine amici"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/ninjago">
+          <img
+            src="../assets/pages/kids/images/ninjago.png"
+            alt="immagine ninjago"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/city">
+          <img src="../assets/pages/kids/images/city.png" alt="immagine city" />
+        </a>
+        <a href="https://kids.lego.com/it-it/technic">
+          <img
+            src="../assets/pages/kids/images/technic.png"
+            alt="immagine technic"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/star-wars">
+          <img
+            src="../assets/pages/kids/images/starwars.png"
+            alt="immagine starwars"
+          />
+        </a>
+      </div>
+      <div class="fourth_cards">
+        <a href="https://kids.lego.com/it-it/she-built-that">
+          <img
+            src="../assets/pages/kids/images/shebuiltthat.png"
+            alt="immagine she built that"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/f1">
+          <img
+            src="../assets/pages/kids/images/formula.png"
+            alt="immagine she built that"
+          />
+        </a>
+      </div>
+      <button class="btn-show">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="60"
+          height="60"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#8A3400"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="22" y2="22" />
+        </svg>
+        VISUALIZZA TUTTO
+      </button>
+    </section>
+
+    <!-- TODO:
+      Questa sezione funziona come navigazione inferiore, quindi semanticamente sarebbe meglio usare <nav>.
+      Inoltre il nome classe "footer" può creare confusione perché esiste già un vero <footer> più sotto.
+    -->
+    <section class="footer">
+      <div class="btn-background-two"></div>
+
+      <!-- TODO:
+        Questo <button> contiene più link <a>, quindi ci sono elementi interattivi annidati.
+        È HTML non valido e può creare problemi con tastiera, screen reader e comportamento del click.
+        Soluzione consigliata: sostituire questo <button> con un <nav> o un <div>.
+      -->
+      <button class="barra-inferiore">
+        <!-- TODO:
+          Gli <img> usati come icone dentro link non hanno alt.
+          Se l'icona è decorativa, usare alt="" e aggiungere aria-label sul link.
+          Esempio: <a href="..." aria-label="Arcade"><img src="..." alt="" /></a>
+        -->
+        <a href="https://kids.lego.com/it-it/arcade">
+          <img
+            src="../assets/pages/kids/icons/gamepad-modern-solid.svg"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/videos">
+          <img
+            src="../assets/pages/kids/icons/play-solid.svg"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="https://kids.lego.com/it-it/sets">
+          <img
+            src="../assets/pages/kids/icons/brick-two-by-two-side-solid.svg"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="../assets/pages/kids/icons/magnifying-glass-solid.svg"
+            width="30"
+            height="30"
+          />
+        </a>
+        <a href="#">
+          <img
+            src="../assets/pages/kids/icons/minifigure-faceless-1-solid.svg"
+            width="30"
+            height="30"
+          />
+        </a>
+      </button>
+    </section>
+
+    <!-- TODO:
+      Valutare se questa è davvero una <section>.
+      Se è solo un elemento visuale/decorativo, potrebbe essere più corretto usare un <div>.
+    -->
+    <section class="immagine-laterale">
+      <img
+        src="../assets/pages/kids/animations/boop-animation.gif"
+        alt="animazione boop"
+      />
+    </section>
+
+    <div class="immagine-laterale-intera-wrapper">
+      <button class="chiudi-btn">
+        <img
+          src="https://assets.lego.com/icons/v8.1.0/control-close-solid.svg"
+          alt="chiudi"
+        />
+      </button>
+      <img
+        class="immagine-laterale-intera"
+        src="../assets/pages/kids/animations/boop-animation.gif"
+        alt="animazione boop"
+      />
+    </div>
+
+    <footer>
+      <a href="https://kids.lego.com/it-it/legal-stuff">Legal stuff</a>
+    </footer>
+
+    <script type="module" src="../js/features/kids-carousel.js" defer></script>
+    <script
+      type="module"
+      src="../js/features/kids-sidebar-preview.js.js"
+      defer
+    ></script>
+  </body>
+</html>
