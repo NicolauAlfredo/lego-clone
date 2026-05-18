@@ -1,8 +1,18 @@
 // Import del modello Product, che rappresenta un singolo set LEGO
 import { Product } from "../models/Product.js";
 
-// Percorso base delle immagini dei prodotti della homepage
-export const BASE_IMAGE_PATH = "./assets/pages/home/images/";
+/**
+ * Restituisce l'URL assoluto di un'immagine prodotto.
+ *
+ * Usiamo import.meta.url perché il percorso viene risolto
+ * rispetto a questo file JavaScript, non rispetto alla pagina HTML.
+ *
+ * Questo evita problemi su GitHub Pages, dove i percorsi relativi
+ * come "./assets/..." possono rompersi quando il modulo viene usato
+ * da pagine diverse.
+ */
+export const getProductImageUrl = (fileName) =>
+  new URL("../../assets/pages/home/images/" + fileName, import.meta.url).href;
 
 /**
  * Collezione di prodotti utilizzata nella sezione "Perfect Set"
@@ -15,6 +25,8 @@ export const BASE_IMAGE_PATH = "./assets/pages/home/images/";
  * - Ogni prodotto è creato tramite il costruttore Product
  * - I dati sono statici (mock), ma progettati per essere facilmente
  *   sostituibili con dati provenienti da API in futuro
+ * - Le immagini vengono risolte tramite getProductImageUrl()
+ *   per funzionare correttamente anche su GitHub Pages
  */
 export const perfectSetProducts = {
   /**
@@ -25,7 +37,7 @@ export const perfectSetProducts = {
     new Product({
       id: "ferrari-f2004-schumacher",
       name: "Ferrari F2004 e Michael Schumacher",
-      image: `${BASE_IMAGE_PATH}ferrari-f2004-schumacher.png`,
+      image: getProductImageUrl("ferrari-f2004-schumacher.png"),
       alt: "Set LEGO Ferrari F2004 e Michael Schumacher",
       age: "18+",
       pieces: "735",
@@ -38,7 +50,7 @@ export const perfectSetProducts = {
     new Product({
       id: "rametti-magnolia",
       name: "Rametti di magnolia",
-      image: `${BASE_IMAGE_PATH}magnolia-branches.png`,
+      image: getProductImageUrl("magnolia-branches.png"),
       alt: "Set LEGO Rametti di magnolia",
       age: "18+",
       pieces: "435",
@@ -51,7 +63,7 @@ export const perfectSetProducts = {
     new Product({
       id: "bouquet-girasoli-evidenza",
       name: "Bouquet di girasoli",
-      image: `${BASE_IMAGE_PATH}sunflower-bouquet.png`,
+      image: getProductImageUrl("sunflower-bouquet.png"),
       alt: "Set LEGO Bouquet di girasoli",
       age: "18+",
       pieces: "686",
@@ -64,7 +76,7 @@ export const perfectSetProducts = {
     new Product({
       id: "ford-model-t",
       name: "Ford Model T",
-      image: `${BASE_IMAGE_PATH}ford-model-t.png`,
+      image: getProductImageUrl("ford-model-t.png"),
       alt: "Set LEGO Ford Model T",
       age: "18+",
       pieces: "1060",
@@ -77,7 +89,7 @@ export const perfectSetProducts = {
     new Product({
       id: "pikachu-ball",
       name: "Pikachu e Poké Ball",
-      image: `${BASE_IMAGE_PATH}pikachu-poke-ball.png`,
+      image: getProductImageUrl("pikachu-poke-ball.png"),
       alt: "Set LEGO Pikachu e Poké Ball",
       age: "18+",
       pieces: "2050",
@@ -86,15 +98,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    /**
-     * Nuovi prodotti aggiunti alla sezione "inEvidenza"
-     */
-
-    // Set artistico LEGO Art - Monet (quadro decorativo)
+    // Set artistico LEGO Art - Monet
     new Product({
       id: "monet-ninfee",
       name: "Claude Monet – Lo stagno delle ninfee",
-      image: `${BASE_IMAGE_PATH}monet-ninfee.png`,
+      image: getProductImageUrl("monet-ninfee.png"),
       alt: "Set LEGO Claude Monet Lo stagno delle ninfee",
       age: "18+",
       pieces: "3179",
@@ -107,7 +115,7 @@ export const perfectSetProducts = {
     new Product({
       id: "trofeo-fifa",
       name: "Trofeo ufficiale Coppa del Mondo FIFA",
-      image: `${BASE_IMAGE_PATH}fifa-world-cup-trophy.png`,
+      image: getProductImageUrl("fifa-world-cup-trophy.png"),
       alt: "Set LEGO Trofeo Coppa del Mondo FIFA",
       age: "12+",
       pieces: "2842",
@@ -116,15 +124,15 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Set personaggi Pixar (Monsters & Co.)
+    // Set personaggi Pixar
     new Product({
       id: "sulley-mike-boo",
       name: "Personaggi di Sulley, Mike e Boo",
-      image: `${BASE_IMAGE_PATH}sulley-mike-boo.png`,
+      image: getProductImageUrl("sulley-mike-boo.png"),
       alt: "Set LEGO Personaggi di Sulley, Mike e Boo",
       age: "10+",
       pieces: "303",
-      rating: null, // Nessuna valutazione disponibile
+      rating: null,
       price: 24.99,
       isNew: true,
     }),
@@ -133,7 +141,7 @@ export const perfectSetProducts = {
     new Product({
       id: "mclaren-mcl39",
       name: "Auto McLaren MCL39 F1®",
-      image: `${BASE_IMAGE_PATH}mclaren-mcl39-f1.png`,
+      image: getProductImageUrl("mclaren-mcl39-f1.png"),
       alt: "Set LEGO Auto McLaren MCL39 F1",
       age: "18+",
       pieces: "1675",
@@ -146,7 +154,7 @@ export const perfectSetProducts = {
     new Product({
       id: "batman-logo",
       name: "Logo di Batman™",
-      image: `${BASE_IMAGE_PATH}batman-logo.png`,
+      image: getProductImageUrl("batman-logo.png"),
       alt: "Set LEGO Logo di Batman",
       age: "12+",
       pieces: "678",
@@ -164,7 +172,7 @@ export const perfectSetProducts = {
     new Product({
       id: "bugs-bunny",
       name: "Bugs Bunny",
-      image: `${BASE_IMAGE_PATH}bugs-bunny.png`,
+      image: getProductImageUrl("bugs-bunny.png"),
       alt: "Set LEGO Bugs Bunny",
       age: "14+",
       pieces: "605",
@@ -173,11 +181,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Decorazione primaverile (ghirlanda)
+    // Decorazione primaverile
     new Product({
       id: "ghirlanda-primaverile",
       name: "Ghirlanda primaverile",
-      image: `${BASE_IMAGE_PATH}ghirlanda-primaverile.png`,
+      image: getProductImageUrl("ghirlanda-primaverile.png"),
       alt: "Set LEGO Ghirlanda primaverile",
       age: "12+",
       pieces: "747",
@@ -186,11 +194,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Piccolo set a tema Pasqua (cestino uova)
+    // Piccolo set a tema Pasqua
     new Product({
       id: "cestino-pasqua",
       name: "Cestino delle uova di Pasqua",
-      image: `${BASE_IMAGE_PATH}cestino-uova-pasqua.png`,
+      image: getProductImageUrl("cestino-uova-pasqua.png"),
       alt: "Set LEGO Cestino delle uova di Pasqua",
       age: "7+",
       pieces: "216",
@@ -203,7 +211,7 @@ export const perfectSetProducts = {
     new Product({
       id: "bouquet-girasoli-pasqua",
       name: "Bouquet di girasoli",
-      image: `${BASE_IMAGE_PATH}sunflower-bouquet.png`,
+      image: getProductImageUrl("sunflower-bouquet.png"),
       alt: "Set LEGO Bouquet di girasoli",
       age: "18+",
       pieces: "686",
@@ -216,7 +224,7 @@ export const perfectSetProducts = {
     new Product({
       id: "adorabile-coniglio",
       name: "Adorabile Coniglio",
-      image: `${BASE_IMAGE_PATH}adorabile-coniglio.png`,
+      image: getProductImageUrl("adorabile-coniglio.png"),
       alt: "Set LEGO Adorabile Coniglio",
       age: "8+",
       pieces: "326",
@@ -225,11 +233,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Pokémon Eevee (set decorativo/collezionabile)
+    // Pokémon Eevee
     new Product({
       id: "eevee",
       name: "Eevee",
-      image: `${BASE_IMAGE_PATH}eevee-set.png`,
+      image: getProductImageUrl("eevee-set.png"),
       alt: "Set LEGO Eevee",
       age: "18+",
       pieces: "587",
@@ -238,11 +246,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Mech di Lloyd (Ninjago - anniversario)
+    // Mech di Lloyd
     new Product({
       id: "mech-lloyd-15-anniversario",
       name: "Mech Titano di Lloyd – 15° anniversario",
-      image: `${BASE_IMAGE_PATH}mech-lloyd.png`,
+      image: getProductImageUrl("mech-lloyd.png"),
       alt: "Set LEGO Mech Titano di Lloyd 15 anniversario",
       age: "14+",
       pieces: "1293",
@@ -255,7 +263,7 @@ export const perfectSetProducts = {
     new Product({
       id: "pallone-calcio",
       name: "Pallone da calcio",
-      image: `${BASE_IMAGE_PATH}soccer-ball.png`,
+      image: getProductImageUrl("soccer-ball.png"),
       alt: "Set LEGO Pallone da calcio",
       age: "10+",
       pieces: "1498",
@@ -264,11 +272,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Fiori di ciliegio (set decorativo primaverile)
+    // Fiori di ciliegio
     new Product({
       id: "fiori-ciliegio",
       name: "Fiori di ciliegio",
-      image: `${BASE_IMAGE_PATH}cherry-blossom.png`,
+      image: getProductImageUrl("cherry-blossom.png"),
       alt: "Set LEGO Fiori di ciliegio",
       age: "8+",
       pieces: "430",
@@ -277,11 +285,11 @@ export const perfectSetProducts = {
       isNew: true,
     }),
 
-    // Personaggi Pixar (già presenti in evidenza, riutilizzati)
+    // Personaggi Pixar già presenti in evidenza
     new Product({
       id: "sulley-mike-boo-pasqua",
       name: "Personaggi di Sulley, Mike e Boo",
-      image: `${BASE_IMAGE_PATH}sulley-mike-boo.png`,
+      image: getProductImageUrl("sulley-mike-boo.png"),
       alt: "Set LEGO Personaggi di Sulley, Mike e Boo",
       age: "10+",
       pieces: "303",
