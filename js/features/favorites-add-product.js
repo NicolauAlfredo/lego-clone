@@ -282,8 +282,6 @@ function renderWishlistLists() {
 function openWishlistModal(product, anchorButton) {
   const wrapper = anchorButton.closest(".favorite-popover-wrapper");
 
-  console.log("wrapper:", wrapper);
-
   if (!wrapper) {
     return;
   }
@@ -292,9 +290,6 @@ function openWishlistModal(product, anchorButton) {
   const inlineModalLists = wrapper.querySelector(
     "[data-inline-wishlist-modal-lists]",
   );
-
-  console.log("inlineModal:", inlineModal);
-  console.log("inlineModalLists:", inlineModalLists);
 
   if (!inlineModal || !inlineModalLists) {
     return;
