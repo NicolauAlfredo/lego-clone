@@ -1894,10 +1894,10 @@
     display: block;
 
     position: absolute;
-    top: 20px;  
-    right: -80px;  
+    top: 20px;
+    right: -80px;
 
-    width: 120px; 
+    width: 120px;
     height: auto;
 
     opacity: 0;
@@ -1910,7 +1910,7 @@
   }
 
   .join-and-earn.is-visible .carota {
-    right: 10px; 
+    right: 10px;
     opacity: 1;
     transform: translateX(0);
   }
@@ -2086,18 +2086,18 @@
   .welcome-home {
     padding: 20px;
   }
- 
+
   .welcome-home__text {
     display: block;
     overflow: visible;
     text-align: justify;
   }
- 
+
   .welcome-home__btn {
     display: inline-block;
     margin-top: 12px;
   }
- 
+
   .welcome-home__toggle:checked + .welcome-home__text {
     display: block;
   }

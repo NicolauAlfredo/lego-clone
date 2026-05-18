@@ -1,13 +1,5 @@
 import { Cart } from "../models/Cart.js";
 
-// Seleziona il carosello della sezione "Perfect Set"
-const carousel = document.querySelector(".perfect-set-carousel");
-
-// Seleziona tutti i contatori del carrello presenti nell'header desktop e mobile
-const cartCounters = document.querySelectorAll(
-  ".mobile-header__cart-count, .header__cart-count",
-);
-
 // Crea una nuova istanza del carrello
 const cart = new Cart();
 
@@ -15,7 +7,13 @@ const cart = new Cart();
  * Aggiorna dinamicamente il contatore del carrello
  * nell'header desktop e mobile.
  */
-function updateCartCounters() {
+export function updateCartCounters() {
+  cart.load();
+
+  const cartCounters = document.querySelectorAll(
+    ".mobile-header__cart-count, .header__cart-count",
+  );
+
   const totalItems = cart.countProducts();
 
   cartCounters.forEach((counter) => {
@@ -65,7 +63,5 @@ cart.load();
 // Aggiorna il contatore iniziale del carrello
 updateCartCounters();
 
-// Aggiunge il listener solo se il carosello esiste nel DOM
-if (carousel) {
-  carousel.addEventListener("click", handleAddToCartClick);
-}
+// Aggiunge il listener globale per tutti i pulsanti "Aggiungi al carrello"
+document.addEventListener("click", handleAddToCartClick);

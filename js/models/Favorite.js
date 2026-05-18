@@ -1,124 +1,188 @@
-// Modello dei preferiti
+// Modello Wishlist
 // Responsabilità:
-// - gestire lo stato dei prodotti preferiti
+// - gestire più liste dei desideri
+// - salvare nome, data di aggiornamento e prodotti di ogni lista
 // - gestire la persistenza nel localStorage
 // - NON manipolare il DOM
 
 export function Favorite(storageKey = "favorites") {
-  // Chiave utilizzata per salvare i preferiti nel localStorage
+  // Chiave utilizzata per salvare tutte le liste nel localStorage
   this.storageKey = storageKey;
 
-  // Array che contiene tutti i prodotti aggiunti ai preferiti
-  this.products = [];
+  // Array che contiene tutte le liste dei desideri
+  this.lists = [];
 
   /**
-   * Carica i prodotti preferiti dal localStorage.
+   * Carica le liste dei desideri dal localStorage.
    *
-   * Se non esistono prodotti salvati,
-   * inizializza la lista con un array vuoto.
+   * Se non esiste ancora nessuna lista salvata,
+   * inizializza this.lists con un array vuoto.
    */
   this.load = function () {
-    this.products = JSON.parse(localStorage.getItem(this.storageKey)) || [];
+    this.lists = JSON.parse(localStorage.getItem(this.storageKey)) || [];
   };
 
   /**
-   * Salva lo stato corrente dei preferiti nel localStorage.
+   * Salva lo stato corrente delle liste nel localStorage.
    */
   this.save = function () {
-    localStorage.setItem(this.storageKey, JSON.stringify(this.products));
+    localStorage.setItem(this.storageKey, JSON.stringify(this.lists));
   };
 
   /**
-   * Verifica se un prodotto è già presente nei preferiti.
+   * Crea una nuova lista dei desideri.
    *
-   * @param {string} productId - ID del prodotto da verificare.
-   * @returns {boolean}
+   * Ogni lista contiene:
+   * - id univoco
+   * - nome
+   * - data ultimo aggiornamento
+   * - array di prodotti
    */
-  this.hasProduct = function (productId) {
-    return this.products.some((product) => {
+  this.createList = function (name) {
+    if (!name || !name.trim()) {
+      console.warn("Nome lista non valido:", name);
+      return null;
+    }
+
+    const newList = {
+      id: crypto.randomUUID(),
+      name: name.trim(),
+      updatedAt: new Date().toISOString(),
+      products: [],
+    };
+
+    this.lists.push(newList);
+    this.save();
+
+    return newList;
+  };
+
+  /**
+   * Restituisce tutte le liste dei desideri.
+   */
+  this.getLists = function () {
+    return this.lists;
+  };
+
+  /**
+   * Cerca una lista tramite il suo id.
+   */
+  this.getListById = function (listId) {
+    return this.lists.find((list) => {
+      return list.id === listId;
+    });
+  };
+
+  /**
+   * Verifica se un prodotto è già presente in una lista specifica.
+   */
+  this.hasProductInList = function (listId, productId) {
+    const list = this.getListById(listId);
+
+    if (!list) {
+      return false;
+    }
+
+    return list.products.some((product) => {
       return product.id === productId;
     });
   };
 
   /**
-   * Aggiunge un prodotto ai preferiti.
-   *
-   * Se il prodotto esiste già,
-   * non viene aggiunto una seconda volta.
-   *
-   * @param {Object} product - Prodotto da aggiungere.
+   * Verifica se un prodotto è presente in almeno una lista.
    */
-  this.addProduct = function (product) {
-    if (!product || !product.id) {
-      console.warn("Prodotto non valido:", product);
-      return;
-    }
-
-    if (this.hasProduct(product.id)) {
-      return;
-    }
-
-    this.products.push(product);
-  };
-
-  /**
-   * Rimuove un prodotto dai preferiti.
-   *
-   * @param {string} productId - ID del prodotto da rimuovere.
-   */
-  this.removeProduct = function (productId) {
-    this.products = this.products.filter((product) => {
-      return product.id !== productId;
+  this.hasProduct = function (productId) {
+    return this.lists.some((list) => {
+      return list.products.some((product) => {
+        return product.id === productId;
+      });
     });
   };
 
   /**
-   * Aggiunge o rimuove un prodotto dai preferiti.
+   * Aggiunge un prodotto a una lista specifica.
    *
-   * Se il prodotto è già presente,
-   * viene rimosso.
-   *
-   * Se non è presente,
-   * viene aggiunto.
-   *
-   * @param {Object} product - Prodotto da aggiungere/rimuovere.
+   * Se il prodotto è già presente nella lista,
+   * non viene aggiunto una seconda volta.
    */
-  this.toggleProduct = function (product) {
+  this.addProductToList = function (listId, product) {
+    const list = this.getListById(listId);
+
+    if (!list) {
+      console.warn("Lista non trovata:", listId);
+      return;
+    }
+
     if (!product || !product.id) {
       console.warn("Prodotto non valido:", product);
       return;
     }
 
-    if (this.hasProduct(product.id)) {
-      this.removeProduct(product.id);
+    if (this.hasProductInList(listId, product.id)) {
       return;
     }
 
-    this.addProduct(product);
+    list.products.push(product);
+    list.updatedAt = new Date().toISOString();
+
+    this.save();
   };
 
   /**
-   * Restituisce il numero totale di prodotti preferiti.
-   *
-   * @returns {number}
+   * Rimuove un prodotto da una lista specifica.
    */
-  this.countProducts = function () {
-    return this.products.length;
+  this.removeProductFromList = function (listId, productId) {
+    const list = this.getListById(listId);
+
+    if (!list) {
+      return;
+    }
+
+    list.products = list.products.filter((product) => {
+      return product.id !== productId;
+    });
+
+    list.updatedAt = new Date().toISOString();
+
+    this.save();
   };
 
   /**
-   * Restituisce tutti i prodotti preferiti.
-   *
-   * @returns {Array}
+   * Calcola il totale economico di una lista.
    */
-  this.getProducts = function () {
-    return this.products;
+  this.calculateListTotal = function (listId) {
+    const list = this.getListById(listId);
+
+    if (!list) {
+      return 0;
+    }
+
+    return list.products.reduce((total, product) => {
+      return total + Number(product.price);
+    }, 0);
   };
 
   /**
-   * Svuota completamente la lista dei preferiti.
+   * Conta quanti prodotti ci sono in una lista.
    */
-  this.clear = function () {
-    this.products = [];
+  this.countProductsInList = function (listId) {
+    const list = this.getListById(listId);
+
+    if (!list) {
+      return 0;
+    }
+
+    return list.products.length;
+  };
+
+  /**
+   * Rimuove completamente una lista dei desideri.
+   */
+  this.deleteList = function (listId) {
+    this.lists = this.lists.filter((list) => {
+      return list.id !== listId;
+    });
+
+    this.save();
   };
 }

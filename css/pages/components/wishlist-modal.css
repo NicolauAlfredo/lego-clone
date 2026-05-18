@@ -1,0 +1,130 @@
+/* POPOVER LISTA DESIDERI */
+
+/* Contenitore principale del popover */
+.wishlist-modal {
+  position: absolute;
+  display: none;
+  z-index: 9999;
+}
+
+/* Stato aperto del popover */
+.wishlist-modal.is-open {
+  display: block;
+}
+
+/* Box interno del popover */
+.wishlist-modal__content {
+  width: 220px;
+  padding: 8px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.16),
+    0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+/* Contenitore delle liste */
+.wishlist-modal__lists {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Pulsante singola lista */
+.wishlist-modal__list-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 26px;
+  padding: 2px 4px;
+
+  border: none;
+  background-color: transparent;
+
+  font-size: 14px;
+  color: #111111;
+  text-align: left;
+
+  cursor: pointer;
+}
+
+/* Hover del pulsante lista */
+.wishlist-modal__list-button:hover {
+  background-color: #f4f4f4;
+}
+
+/* Checkbox personalizzata */
+.wishlist-modal__checkbox {
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #999999;
+  background-color: #ffffff;
+}
+
+/* Stato selezionato della checkbox */
+.wishlist-modal__checkbox.is-checked {
+  position: relative;
+
+  background-color: #005ad2;
+  border-color: #005ad2;
+}
+
+/* Check interna della checkbox */
+.wishlist-modal__checkbox.is-checked::after {
+  content: "";
+
+  position: absolute;
+  left: 4px;
+  top: 1px;
+
+  width: 4px;
+  height: 8px;
+
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+/* Pulsante creazione nuova lista */
+.wishlist-modal__create-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 36px;
+
+  margin-top: 8px;
+  padding: 0 12px;
+
+  border: 1.5px solid #005ad2;
+  border-radius: 999px;
+
+  background-color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+
+  cursor: pointer;
+}
+
+/* Hover pulsante creazione lista */
+.wishlist-modal__create-button:hover {
+  background-color: #eef6ff;
+}
+
+/* Icona del pulsante */
+.wishlist-modal__create-button img {
+  width: 14px;
+  height: 14px;
+}
