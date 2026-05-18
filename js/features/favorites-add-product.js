@@ -1,10 +1,28 @@
 import { Wishlist } from "../models/Wishlist.js";
 import { formatCurrency } from "../utils/currency.js";
-console.log("favorites-add-product.js caricato");
 
+/**
+ * Selettore globale del modello Wishlist.
+ *
+ * Gestisce:
+ * - creazione delle liste
+ * - aggiunta dei prodotti alle liste
+ * - lettura/scrittura nel localStorage
+ */
 const wishlist = new Wishlist();
 
-const createListButton = document.querySelector("[data-create-wishlist-list]");
+/**
+ * Prodotto attualmente selezionato tramite click sul cuore.
+ * Serve quando l'utente sceglie una lista nel popover.
+ */
+let selectedProduct = null;
+
+/**
+ * Bottone cuore che ha aperto il popover.
+ * Serve per riposizionare il popover dopo la creazione di una nuova lista.
+ */
+let activeFavoriteButton = null;
+
 const wishlistSummaryContainer = document.querySelector(
   "[data-wishlist-lists]",
 );
@@ -40,8 +58,6 @@ const HEART_FILLED_ICON = `
 </svg>
 `;
 
-let selectedProduct = null;
-
 /**
  * Formatta una data ISO nel formato italiano.
  */
@@ -62,10 +78,8 @@ function getProductFromButton(button) {
 }
 
 /**
- * Crea una nuova lista dei desideri.
- *
- * Per ora usiamo prompt per semplificare.
- * Depois você pode substituir por um modal mais bonito.
+ * Elementi del modal dedicato alla creazione
+ * di una nuova lista dei desideri.
  */
 const createWishlistModal = document.querySelector(
   "[data-create-wishlist-modal]",
@@ -114,7 +128,14 @@ function closeCreateWishlistModal() {
 }
 
 /**
- * Gestisce il submit del form.
+ * Gestisce l'invio del form di creazione lista.
+ *
+ * Dopo aver creato la lista:
+ * - salva i dati nel localStorage
+ * - aggiorna il riepilogo nella pagina wishlist
+ * - aggiorna lo stato dei cuori
+ * - chiude il modal di creazione
+ * - riapre/aggiorna il popover se un prodotto era selezionato
  */
 function handleCreateWishlistSubmit(event) {
   event.preventDefault();
@@ -131,11 +152,17 @@ function handleCreateWishlistSubmit(event) {
   }
 
   wishlist.createList(listName);
+  wishlist.load();
 
   renderWishlistLists();
   updateFavoriteButtonsState();
-
   closeCreateWishlistModal();
+
+  if (selectedProduct && activeFavoriteButton) {
+    renderWishlistPopoverLists(selectedProduct);
+    wishlistModal.classList.add("is-open");
+    positionWishlistPopover(activeFavoriteButton);
+  }
 }
 
 /**
@@ -197,39 +224,76 @@ function renderWishlistLists() {
  * Abre il modal per scegliere in quale lista aggiungere il prodotto.
  */
 function openWishlistModal(product, anchorButton) {
-  wishlist.load();
-
-  selectedProduct = product;
-
-  const lists = wishlist.getLists();
-
   if (!wishlistModal || !wishlistModalLists) {
     return;
   }
 
-  wishlistModalLists.innerHTML = lists
-    .map((list) => {
-      const isChecked = wishlist.hasProductInList(list.id, product.id);
+  wishlist.load();
 
-      return `
-        <button
-          class="wishlist-modal__list-button"
-          type="button"
-          data-select-wishlist-list
-          data-list-id="${list.id}"
-        >
-          <span class="wishlist-modal__checkbox ${isChecked ? "is-checked" : ""}"></span>
-          <span>${list.name} (${list.products.length})</span>
-        </button>
-      `;
-    })
-    .join("");
+  selectedProduct = product;
+  activeFavoriteButton = anchorButton;
+
+  renderWishlistPopoverLists(product);
 
   wishlistModal.classList.add("is-open");
 
   positionWishlistPopover(anchorButton);
 }
 
+/**
+ * Renderizza dentro il popover tutte le liste disponibili.
+ *
+ * Per ogni lista mostra:
+ * - checkbox visiva
+ * - nome della lista
+ * - numero di prodotti presenti
+ *
+ * Alla fine aggiunge il bottone per creare una nuova lista.
+ */
+function renderWishlistPopoverLists(product) {
+  const lists = wishlist.getLists();
+
+  if (!wishlistModalLists) {
+    return;
+  }
+
+  wishlistModalLists.innerHTML = `
+    ${lists
+      .map((list) => {
+        const isChecked = wishlist.hasProductInList(list.id, product.id);
+
+        return `
+          <button
+            class="wishlist-modal__list-button"
+            type="button"
+            data-select-wishlist-list
+            data-list-id="${list.id}"
+          >
+            <span class="wishlist-modal__checkbox ${isChecked ? "is-checked" : ""}"></span>
+            <span>${list.name} (${list.products.length})</span>
+          </button>
+        `;
+      })
+      .join("")}
+
+    <button
+      class="wishlist-modal__create-button"
+      type="button"
+      data-create-wishlist-list
+    >
+      <img src="../assets/pages/favorites/icons/control-plus-solid-icon.svg" alt="">
+      Crea una nuova lista
+    </button>
+  `;
+}
+
+/**
+ * Posiziona il popover vicino al bottone cuore cliccato.
+ *
+ * Di default prova ad aprirlo sopra il bottone.
+ * Se non c'è spazio sufficiente, lo apre sotto.
+ * Inoltre impedisce al popover di uscire lateralmente dallo schermo.
+ */
 function positionWishlistPopover(anchorButton) {
   const buttonRect = anchorButton.getBoundingClientRect();
   const modalRect = wishlistModal.getBoundingClientRect();
@@ -281,12 +345,7 @@ function closeWishlistModal() {
  * perché usa event delegation sul document.
  */
 function handleFavoriteClick(event) {
-  console.log("click globale rilevato");
-  console.log("target cliccato:", event.target);
-
   const favoriteButton = event.target.closest("[data-add-to-wishlist]");
-
-  console.log("bottone preferiti trovato:", favoriteButton);
 
   if (!favoriteButton) {
     return;
@@ -299,10 +358,6 @@ function handleFavoriteClick(event) {
 
   openWishlistModal(product, favoriteButton);
 }
-
-/**
- * Gestisce la selezione della lista dentro il modal.
- */
 
 /**
  * Aggiorna il colore dei cuori dei prodotti già presenti
@@ -331,7 +386,14 @@ function updateFavoriteButtonsState() {
 }
 
 /**
- * Gestisce la selezione della lista dentro il modal.
+ * Gestisce la scelta di una lista nel popover.
+ *
+ * Quando l'utente clicca su una lista:
+ * - aggiunge il prodotto selezionato a quella lista
+ * - aggiorna il localStorage
+ * - aggiorna il riepilogo delle liste
+ * - aggiorna il cuore del prodotto
+ * - chiude il popover
  */
 
 function handleModalListClick(event) {
@@ -359,9 +421,38 @@ function initWishlistUI() {
   renderWishlistLists();
   updateFavoriteButtonsState();
 
-  if (createListButton) {
-    createListButton.addEventListener("click", openCreateWishlistModal);
-  }
+  document.addEventListener("click", handleFavoriteClick);
+
+  document.addEventListener("click", (event) => {
+    const createButton = event.target.closest("[data-create-wishlist-list]");
+
+    if (!createButton) {
+      return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+
+    openCreateWishlistModal();
+  });
+
+  document.addEventListener("click", (event) => {
+    const clickedInsidePopover = event.target.closest("[data-wishlist-modal]");
+    const clickedFavoriteButton = event.target.closest(
+      "[data-add-to-wishlist]",
+    );
+    const clickedInsideCreateModal = event.target.closest(
+      "[data-create-wishlist-modal]",
+    );
+
+    if (
+      !clickedInsidePopover &&
+      !clickedFavoriteButton &&
+      !clickedInsideCreateModal
+    ) {
+      closeWishlistModal();
+    }
+  });
 
   if (closeCreateWishlistModalButton) {
     closeCreateWishlistModalButton.addEventListener(
@@ -373,19 +464,6 @@ function initWishlistUI() {
   if (createWishlistForm) {
     createWishlistForm.addEventListener("submit", handleCreateWishlistSubmit);
   }
-
-  document.addEventListener("click", handleFavoriteClick);
-
-  document.addEventListener("click", (event) => {
-    const clickedInsidePopover = event.target.closest("[data-wishlist-modal]");
-    const clickedFavoriteButton = event.target.closest(
-      "[data-add-to-wishlist]",
-    );
-
-    if (!clickedInsidePopover && !clickedFavoriteButton) {
-      closeWishlistModal();
-    }
-  });
 
   if (wishlistModalLists) {
     wishlistModalLists.addEventListener("click", handleModalListClick);

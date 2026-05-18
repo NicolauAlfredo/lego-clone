@@ -109,7 +109,7 @@
   background-color: #eef6ff;
 }
 
-.wishlist-modal__create-button span {
-  font-size: 20px;
-  line-height: 1;
+.wishlist-modal__create-button img {
+  width: 14px;
+  height: 14px;
 }

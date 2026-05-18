@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="./css/pages/components/favorite-buttons.css" />
     <link rel="stylesheet" href="./css/pages/components/wishlist-modal.css" />
     <link
+      rel="stylesheet"
+      href="./css/pages/components/create-wishlist-modal.css"
+    />
+    <link
       rel="icon"
       type="image/png"
       sizes="16x16"
@@ -1576,19 +1580,50 @@
     </footer>
     <!-- FINE FOOTER -->
 
+    <!-- Modal create a new list -->
+    <div class="wishlist-create-modal" data-create-wishlist-modal>
+      <div class="wishlist-create-modal__overlay"></div>
+
+      <div class="wishlist-create-modal__content">
+        <button
+          class="wishlist-create-modal__close"
+          type="button"
+          aria-label="Chiudi modal"
+          data-close-create-wishlist-modal
+        >
+          <img
+            src="../assets/pages/favorites/icons/control-close-icon.svg"
+            alt=""
+          />
+        </button>
+
+        <h2>Crea una nuova lista</h2>
+
+        <form class="wishlist-create-modal__form" data-create-wishlist-form>
+          <label for="wishlist-name"> Nome della lista * </label>
+
+          <div class="wishlist-create-modal__actions">
+            <input
+              id="wishlist-name"
+              type="text"
+              name="wishlistName"
+              maxlength="40"
+              required
+            />
+
+            <button class="wishlist-create-modal__submit" type="submit">
+              Invia
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- FINE DEL MODAL -->
+
     <!-- Modal Add to a list -->
     <div class="wishlist-modal" data-wishlist-modal>
       <div class="wishlist-modal__content">
         <div class="wishlist-modal__lists" data-wishlist-modal-lists></div>
-
-        <button
-          class="wishlist-modal__create-button"
-          type="button"
-          data-create-wishlist-list
-        >
-          <span>+</span>
-          Crea una nuova lista
-        </button>
       </div>
     </div>
     <!-- FINE DEL MODAL -->
