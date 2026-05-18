@@ -15,7 +15,13 @@ const cart = new Cart();
  * Aggiorna dinamicamente il contatore del carrello
  * nell'header desktop e mobile.
  */
-function updateCartCounters() {
+export function updateCartCounters() {
+  cart.load();
+
+  const cartCounters = document.querySelectorAll(
+    ".mobile-header__cart-count, .header__cart-count",
+  );
+
   const totalItems = cart.countProducts();
 
   cartCounters.forEach((counter) => {

@@ -1,8 +1,10 @@
 import { Favorite } from "../models/Favorite.js";
+import { Cart } from "../models/Cart.js";
 import { formatCurrency } from "../utils/currency.js";
+import { updateCartCounters } from "./cart-add-product.js";
 
 /**
- * Istanza globale del modello Favorite.
+ * Istanza globale del modello Favorite e Cart.
  *
  * Gestisce:
  * - creazione delle liste
@@ -10,6 +12,7 @@ import { formatCurrency } from "../utils/currency.js";
  * - lettura/scrittura nel localStorage
  */
 const favorite = new Favorite();
+const cart = new Cart();
 
 /**
  * Prodotto attualmente selezionato tramite click sul cuore.
@@ -166,6 +169,46 @@ function handleCreateWishlistSubmit(event) {
 }
 
 /**
+ * Aggiunge al carrello tutti i prodotti presenti
+ * in una lista dei desideri.
+ *
+ * Se un prodotto esiste già nel carrello,
+ * il modello Cart aggiorna automaticamente la quantità.
+ */
+function handleAddFavoriteListToCart(event) {
+  const addListButton = event.target.closest("[data-add-list-to-cart]");
+
+  if (!addListButton) {
+    return;
+  }
+
+  event.preventDefault();
+
+  const listId = addListButton.dataset.listId;
+
+  favorite.load();
+  cart.load();
+
+  const list = favorite.getListById(listId);
+
+  if (!list || list.products.length === 0) {
+    return;
+  }
+
+  list.products.forEach((product) => {
+    cart.addProduct({
+      id: product.id,
+      name: product.name,
+      price: Number(product.price),
+      image: product.image,
+    });
+  });
+
+  cart.save();
+  updateCartCounters();
+}
+
+/**
  * Renderizza le liste nella pagina Lista dei desideri.
  */
 function renderWishlistLists() {
@@ -223,7 +266,7 @@ function renderWishlistLists() {
             }
           </div>
 
-          <button class="button button--primary" type="button">
+          <button class="button button--primary" type="button" data-add-list-to-cart data-list-id="${list.id}">
             <img src="../assets/global/icons/shopping-bag-icon.svg" alt="" />
             Aggiungi al carrello
           </button>
@@ -525,6 +568,11 @@ function initWishlistUI() {
   );
 
   document.addEventListener("click", handleDeleteFavoriteList);
+
+  document.addEventListener("click", handleAddFavoriteListToCart);
+
+  cart.load();
+  updateCartCounters();
 }
 
 initWishlistUI();
