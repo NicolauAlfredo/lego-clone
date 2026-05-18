@@ -10,11 +10,6 @@
 
     <link rel="stylesheet" href="../css/pages/kids.css" />
 
-    <!-- TODO:
-  Verificare se questi file esistono realmente nella cartella public/assets.
-  Attualmente favicon, icona PWA e apple-touch-icon sono referenziati,
-  ma se i file non esistono verranno generati errori 404 nel browser.
--->
     <link rel="icon" href="../assets/pages/kids/icons/favicon.ico" />
 
     <link
@@ -43,12 +38,7 @@
         -->
         <a href="https://kids.lego.com/it-it/boop">
           <img src="../assets/pages/kids/images/boop.png" alt="immagine boop" />
-          <video
-            src="../assets/pages/kids/videos/video-lego.mp4"
-            autoplay
-            muted
-            loop
-          ></video>
+          <video src="video-lego.mp4" autoplay muted loop></video>
           <div class="btn-background"></div>
           <button class="btn-esplora">
             VAI A ESPLORARE
@@ -65,20 +55,10 @@
           </button>
         </a>
         <div class="video-due">
-          <video
-            src="../assets/pages/kids/videos/video-lego3.mp4"
-            autoplay
-            muted
-            loop
-          ></video>
+          <video src="video-lego3.mp4" autoplay muted loop></video>
         </div>
         <div class="video-tre">
-          <video
-            src="../assets/pages/kids/videos/video-lego2.mp4"
-            autoplay
-            muted
-            loop
-          ></video>
+          <video src="video-lego2.mp4" autoplay muted loop></video>
         </div>
       </div>
 
@@ -128,22 +108,6 @@
         </button>
       </a>
     </div>
-
-    <!-- TODO:
-      Codice commentato e non usato.
-      Se non serve più, meglio rimuoverlo per mantenere il file pulito.
-      Se invece serve come riferimento temporaneo, aggiungere una spiegazione chiara.
-    -->
-    <!--   <a href="#">
-        <button class="freccia-dx-due"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M9 18l6-6-6-6"/>
-  </svg></button>
-  </a>
-<a href="#">
-  <button class="freccia-sx-due"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M15 18l-6-6 6-6"/>
-  </svg></button>
-  </a>-->
 
     <section class="cards">
       <div class="first_card">
@@ -230,7 +194,6 @@
         VISUALIZZA TUTTO
       </button>
     </section>
-
     <!-- TODO:
       Questa sezione funziona come navigazione inferiore, quindi semanticamente sarebbe meglio usare <nav>.
       Inoltre il nome classe "footer" può creare confusione perché esiste già un vero <footer> più sotto.
@@ -286,7 +249,6 @@
         </a>
       </button>
     </section>
-
     <!-- TODO:
       Valutare se questa è davvero una <section>.
       Se è solo un elemento visuale/decorativo, potrebbe essere più corretto usare un <div>.
@@ -297,7 +259,6 @@
         alt="animazione boop"
       />
     </section>
-
     <div class="immagine-laterale-intera-wrapper">
       <button class="chiudi-btn">
         <img
@@ -310,8 +271,22 @@
         src="../assets/pages/kids/animations/boop-animation.gif"
         alt="animazione boop"
       />
-    </div>
+      <button class="btn-guarda-subito">
+        GUARDA SUBITO
 
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          style="flex-shrink: 0"
+        >
+          <path d="M5 12h14M12 5l7 7-7 7" />
+        </svg>
+      </button>
+    </div>
     <footer>
       <a href="https://kids.lego.com/it-it/legal-stuff">Legal stuff</a>
     </footer>
