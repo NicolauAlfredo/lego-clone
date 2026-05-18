@@ -191,6 +191,19 @@ function renderWishlistLists() {
             <p>Ultimo aggiornamento: ${formatDate(list.updatedAt)}</p>
 
             <strong>Costo totale: ${formatCurrency(total)}</strong>
+
+            <button
+              class="button button_trash"
+              type="button"
+              aria-label="Elimina lista ${list.name}"
+              data-delete-favorite-list
+              data-list-id="${list.id}"
+            >
+              <img
+                src="../assets/pages/favorites/icons/trash-icon.svg"
+                alt=""
+              />
+            </button>
           </div>
 
           <div class="wishlist-summary__products">
@@ -238,6 +251,26 @@ function openWishlistModal(product, anchorButton) {
   wishlistModal.classList.add("is-open");
 
   positionWishlistPopover(anchorButton);
+}
+
+/**
+ * Gestisce l'eliminazione completa di una lista dei desideri.
+ */
+function handleDeleteFavoriteList(event) {
+  const deleteButton = event.target.closest("[data-delete-favorite-list]");
+
+  if (!deleteButton) {
+    return;
+  }
+
+  event.preventDefault();
+
+  const listId = deleteButton.dataset.listId;
+
+  favorite.deleteList(listId);
+
+  renderWishlistLists();
+  updateFavoriteButtonsState();
 }
 
 /**
@@ -477,6 +510,8 @@ function initWishlistUI() {
     "favorites:products-rendered",
     updateFavoriteButtonsState,
   );
+
+  document.addEventListener("click", handleDeleteFavoriteList);
 }
 
 initWishlistUI();

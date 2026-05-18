@@ -174,4 +174,15 @@ export function Favorite(storageKey = "favorites") {
 
     return list.products.length;
   };
+
+  /**
+   * Rimuove completamente una lista dei desideri.
+   */
+  this.deleteList = function (listId) {
+    this.lists = this.lists.filter((list) => {
+      return list.id !== listId;
+    });
+
+    this.save();
+  };
 }
