@@ -1,15 +1,18 @@
-/* WISHLIST POPOVER */
+/* POPOVER LISTA DESIDERI */
 
+/* Contenitore principale del popover */
 .wishlist-modal {
   position: absolute;
   display: none;
   z-index: 9999;
 }
 
+/* Stato aperto del popover */
 .wishlist-modal.is-open {
   display: block;
 }
 
+/* Box interno del popover */
 .wishlist-modal__content {
   width: 220px;
   padding: 8px;
@@ -24,12 +27,14 @@
     0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
+/* Contenitore delle liste */
 .wishlist-modal__lists {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 
+/* Pulsante singola lista */
 .wishlist-modal__list-button {
   display: flex;
   align-items: center;
@@ -49,10 +54,12 @@
   cursor: pointer;
 }
 
+/* Hover del pulsante lista */
 .wishlist-modal__list-button:hover {
   background-color: #f4f4f4;
 }
 
+/* Checkbox personalizzata */
 .wishlist-modal__checkbox {
   width: 15px;
   height: 15px;
@@ -61,14 +68,18 @@
   background-color: #ffffff;
 }
 
+/* Stato selezionato della checkbox */
 .wishlist-modal__checkbox.is-checked {
+  position: relative;
+
   background-color: #005ad2;
   border-color: #005ad2;
-  position: relative;
 }
 
+/* Check interna della checkbox */
 .wishlist-modal__checkbox.is-checked::after {
   content: "";
+
   position: absolute;
   left: 4px;
   top: 1px;
@@ -82,6 +93,7 @@
   transform: rotate(45deg);
 }
 
+/* Pulsante creazione nuova lista */
 .wishlist-modal__create-button {
   display: flex;
   align-items: center;
@@ -90,6 +102,7 @@
 
   width: 100%;
   min-height: 36px;
+
   margin-top: 8px;
   padding: 0 12px;
 
@@ -105,10 +118,12 @@
   cursor: pointer;
 }
 
+/* Hover pulsante creazione lista */
 .wishlist-modal__create-button:hover {
   background-color: #eef6ff;
 }
 
+/* Icona del pulsante */
 .wishlist-modal__create-button img {
   width: 14px;
   height: 14px;
