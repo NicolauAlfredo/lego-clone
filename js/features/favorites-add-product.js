@@ -196,28 +196,21 @@ function renderWishlistLists() {
 /**
  * Abre il modal per scegliere in quale lista aggiungere il prodotto.
  */
-function openWishlistModal(product) {
+function openWishlistModal(product, anchorButton) {
   wishlist.load();
 
   selectedProduct = product;
 
   const lists = wishlist.getLists();
 
-  console.log("liste trovate:", lists);
-  console.log("modal:", wishlistModal);
-  console.log("modal lists:", wishlistModalLists);
-
   if (!wishlistModal || !wishlistModalLists) {
-    return;
-  }
-
-  if (lists.length === 0) {
-    alert("Prima crea una lista dei desideri.");
     return;
   }
 
   wishlistModalLists.innerHTML = lists
     .map((list) => {
+      const isChecked = wishlist.hasProductInList(list.id, product.id);
+
       return `
         <button
           class="wishlist-modal__list-button"
@@ -225,13 +218,48 @@ function openWishlistModal(product) {
           data-select-wishlist-list
           data-list-id="${list.id}"
         >
-          ${list.name} (${list.products.length})
+          <span class="wishlist-modal__checkbox ${isChecked ? "is-checked" : ""}"></span>
+          <span>${list.name} (${list.products.length})</span>
         </button>
       `;
     })
     .join("");
 
   wishlistModal.classList.add("is-open");
+
+  positionWishlistPopover(anchorButton);
+}
+
+function positionWishlistPopover(anchorButton) {
+  const buttonRect = anchorButton.getBoundingClientRect();
+  const modalRect = wishlistModal.getBoundingClientRect();
+
+  const spacing = 8;
+
+  let top = window.scrollY + buttonRect.top - modalRect.height - spacing;
+  let left =
+    window.scrollX +
+    buttonRect.left +
+    buttonRect.width / 2 -
+    modalRect.width / 2;
+
+  const minLeft = 8;
+  const maxLeft = window.scrollX + window.innerWidth - modalRect.width - 8;
+
+  if (left < minLeft) {
+    left = minLeft;
+  }
+
+  if (left > maxLeft) {
+    left = maxLeft;
+  }
+
+  if (top < window.scrollY + 8) {
+    top = window.scrollY + buttonRect.bottom + spacing;
+  }
+
+  wishlistModal.style.top = `${top}px`;
+  wishlistModal.style.left = `${left}px`;
 }
 
 /**
@@ -265,10 +293,11 @@ function handleFavoriteClick(event) {
   }
 
   event.preventDefault();
+  event.stopPropagation();
 
   const product = getProductFromButton(favoriteButton);
 
-  openWishlistModal(product);
+  openWishlistModal(product, favoriteButton);
 }
 
 /**
@@ -347,6 +376,17 @@ function initWishlistUI() {
 
   document.addEventListener("click", handleFavoriteClick);
 
+  document.addEventListener("click", (event) => {
+    const clickedInsidePopover = event.target.closest("[data-wishlist-modal]");
+    const clickedFavoriteButton = event.target.closest(
+      "[data-add-to-wishlist]",
+    );
+
+    if (!clickedInsidePopover && !clickedFavoriteButton) {
+      closeWishlistModal();
+    }
+  });
+
   if (wishlistModalLists) {
     wishlistModalLists.addEventListener("click", handleModalListClick);
   }
@@ -355,8 +395,6 @@ function initWishlistUI() {
     wishlistModalClose.addEventListener("click", closeWishlistModal);
   }
 
-  // Aggiorna automaticamente i cuori
-  // quando i prodotti vengono renderizzati dinamicamente
   document.addEventListener(
     "wishlist:products-rendered",
     updateFavoriteButtonsState,

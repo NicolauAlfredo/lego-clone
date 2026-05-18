@@ -1,52 +1,115 @@
+/* WISHLIST POPOVER */
+
 .wishlist-modal {
-  position: fixed;
-  inset: 0;
+  position: absolute;
   display: none;
-  place-items: center;
-  padding: 24px;
-  background-color: rgba(0, 0, 0, 0.45);
-  z-index: 1000;
+  z-index: 9999;
 }
 
 .wishlist-modal.is-open {
-  display: grid;
+  display: block;
 }
 
 .wishlist-modal__content {
-  position: relative;
-  width: min(100%, 360px);
-  padding: 24px;
-  background-color: #fff;
+  width: 220px;
+  padding: 8px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #d8d8d8;
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
 
-.wishlist-modal__close {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  font-size: 24px;
-}
-
-.wishlist-modal__content h2 {
-  margin-bottom: 18px;
-  font-size: 20px;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.16),
+    0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .wishlist-modal__lists {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 4px;
 }
 
 .wishlist-modal__list-button {
-  padding: 12px;
-  border: 1px solid #d8d8d8;
-  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 26px;
+  padding: 2px 4px;
+
+  border: none;
+  background-color: transparent;
+
+  font-size: 14px;
+  color: #111111;
   text-align: left;
-  background-color: #fff;
+
+  cursor: pointer;
 }
 
 .wishlist-modal__list-button:hover {
   background-color: #f4f4f4;
+}
+
+.wishlist-modal__checkbox {
+  width: 15px;
+  height: 15px;
+
+  border: 1px solid #999999;
+  background-color: #ffffff;
+}
+
+.wishlist-modal__checkbox.is-checked {
+  background-color: #005ad2;
+  border-color: #005ad2;
+  position: relative;
+}
+
+.wishlist-modal__checkbox.is-checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+
+  width: 4px;
+  height: 8px;
+
+  border: solid #ffffff;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
+}
+
+.wishlist-modal__create-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  width: 100%;
+  min-height: 36px;
+  margin-top: 8px;
+  padding: 0 12px;
+
+  border: 1.5px solid #005ad2;
+  border-radius: 999px;
+
+  background-color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 500;
+  color: #111111;
+
+  cursor: pointer;
+}
+
+.wishlist-modal__create-button:hover {
+  background-color: #eef6ff;
+}
+
+.wishlist-modal__create-button span {
+  font-size: 20px;
+  line-height: 1;
 }
