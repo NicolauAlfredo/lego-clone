@@ -29,13 +29,6 @@ let activeFavoriteButton = null;
 const wishlistSummaryContainer = document.querySelector(
   "[data-wishlist-lists]",
 );
-const wishlistModal = document.querySelector("[data-wishlist-modal]");
-const wishlistModalLists = document.querySelector(
-  "[data-wishlist-modal-lists]",
-);
-const wishlistModalClose = document.querySelector(
-  "[data-wishlist-modal-close]",
-);
 
 const HEART_OUTLINE_ICON = `
 <svg
@@ -162,9 +155,16 @@ function handleCreateWishlistSubmit(event) {
   closeCreateWishlistModal();
 
   if (selectedProduct && activeFavoriteButton) {
-    renderWishlistPopoverLists(selectedProduct);
-    wishlistModal.classList.add("is-open");
-    positionWishlistPopover(activeFavoriteButton);
+    const wrapper = activeFavoriteButton.closest(".favorite-popover-wrapper");
+    const inlineModal = wrapper?.querySelector("[data-inline-wishlist-modal]");
+    const inlineModalLists = wrapper?.querySelector(
+      "[data-inline-wishlist-modal-lists]",
+    );
+
+    if (inlineModal && inlineModalLists) {
+      renderWishlistPopoverLists(selectedProduct, inlineModalLists);
+      inlineModal.classList.add("is-open");
+    }
   }
 }
 
@@ -280,7 +280,23 @@ function renderWishlistLists() {
  * Abre il modal per scegliere in quale lista aggiungere il prodotto.
  */
 function openWishlistModal(product, anchorButton) {
-  if (!wishlistModal || !wishlistModalLists) {
+  const wrapper = anchorButton.closest(".favorite-popover-wrapper");
+
+  console.log("wrapper:", wrapper);
+
+  if (!wrapper) {
+    return;
+  }
+
+  const inlineModal = wrapper.querySelector("[data-inline-wishlist-modal]");
+  const inlineModalLists = wrapper.querySelector(
+    "[data-inline-wishlist-modal-lists]",
+  );
+
+  console.log("inlineModal:", inlineModal);
+  console.log("inlineModalLists:", inlineModalLists);
+
+  if (!inlineModal || !inlineModalLists) {
     return;
   }
 
@@ -289,11 +305,11 @@ function openWishlistModal(product, anchorButton) {
   selectedProduct = product;
   activeFavoriteButton = anchorButton;
 
-  renderWishlistPopoverLists(product);
+  closeAllWishlistPopovers();
 
-  wishlistModal.classList.add("is-open");
+  renderWishlistPopoverLists(product, inlineModalLists);
 
-  positionWishlistPopover(anchorButton);
+  inlineModal.classList.add("is-open");
 }
 
 /**
@@ -316,6 +332,16 @@ function handleDeleteFavoriteList(event) {
   updateFavoriteButtonsState();
 }
 
+function closeAllWishlistPopovers() {
+  const openedPopovers = document.querySelectorAll(
+    "[data-inline-wishlist-modal].is-open",
+  );
+
+  openedPopovers.forEach((popover) => {
+    popover.classList.remove("is-open");
+  });
+}
+
 /**
  * Renderizza dentro il popover tutte le liste disponibili.
  *
@@ -326,14 +352,14 @@ function handleDeleteFavoriteList(event) {
  *
  * Alla fine aggiunge il bottone per creare una nuova lista.
  */
-function renderWishlistPopoverLists(product) {
+function renderWishlistPopoverLists(product, targetContainer = null) {
   const lists = favorite.getLists();
 
-  if (!wishlistModalLists) {
+  if (!targetContainer) {
     return;
   }
 
-  wishlistModalLists.innerHTML = `
+  targetContainer.innerHTML = `
     ${lists
       .map((list) => {
         const isChecked = favorite.hasProductInList(list.id, product.id);
@@ -364,54 +390,12 @@ function renderWishlistPopoverLists(product) {
 }
 
 /**
- * Posiziona il popover vicino al bottone cuore cliccato.
- *
- * Di default prova ad aprirlo sopra il bottone.
- * Se non c'è spazio sufficiente, lo apre sotto.
- * Inoltre impedisce al popover di uscire lateralmente dallo schermo.
- */
-function positionWishlistPopover(anchorButton) {
-  const buttonRect = anchorButton.getBoundingClientRect();
-  const modalRect = wishlistModal.getBoundingClientRect();
-
-  const spacing = 8;
-
-  let top = window.scrollY + buttonRect.top - modalRect.height - spacing;
-  let left =
-    window.scrollX +
-    buttonRect.left +
-    buttonRect.width / 2 -
-    modalRect.width / 2;
-
-  const minLeft = 8;
-  const maxLeft = window.scrollX + window.innerWidth - modalRect.width - 8;
-
-  if (left < minLeft) {
-    left = minLeft;
-  }
-
-  if (left > maxLeft) {
-    left = maxLeft;
-  }
-
-  if (top < window.scrollY + 8) {
-    top = window.scrollY + buttonRect.bottom + spacing;
-  }
-
-  wishlistModal.style.top = `${top}px`;
-  wishlistModal.style.left = `${left}px`;
-}
-
-/**
  * Chiude il modal delle liste.
  */
 function closeWishlistModal() {
-  if (!wishlistModal) {
-    return;
-  }
-
-  wishlistModal.classList.remove("is-open");
+  closeAllWishlistPopovers();
   selectedProduct = null;
+  activeFavoriteButton = null;
 }
 
 /**
@@ -453,11 +437,17 @@ function updateFavoriteButtonsState() {
 
     const iconClass = button.classList.contains("perfect-set-favorite-button")
       ? "perfect-set-heart-icon"
-      : "wishlist-product__heart-icon";
+      : button.classList.contains("cart-product__favorite")
+        ? "cart-product__heart-icon"
+        : "wishlist-product__heart-icon";
 
-    button.innerHTML = isFavorite
-      ? HEART_FILLED_ICON.replace("perfect-set-heart-icon", iconClass)
-      : HEART_OUTLINE_ICON.replace("perfect-set-heart-icon", iconClass);
+    const currentIcon = button.querySelector("svg");
+
+    if (currentIcon) {
+      currentIcon.outerHTML = isFavorite
+        ? HEART_FILLED_ICON.replace("perfect-set-heart-icon", iconClass)
+        : HEART_OUTLINE_ICON.replace("perfect-set-heart-icon", iconClass);
+    }
   });
 }
 
@@ -478,6 +468,7 @@ function handleModalListClick(event) {
   }
 
   event.preventDefault();
+  event.stopPropagation();
 
   const listId = listButton.dataset.listId;
   const productId = selectedProduct.id;
@@ -492,13 +483,13 @@ function handleModalListClick(event) {
 
   favorite.load();
 
-  renderWishlistLists();
-  renderWishlistPopoverLists(selectedProduct);
-  updateFavoriteButtonsState();
+  const currentListsContainer = listButton.closest(
+    "[data-inline-wishlist-modal-lists]",
+  );
 
-  if (activeFavoriteButton) {
-    positionWishlistPopover(activeFavoriteButton);
-  }
+  renderWishlistLists();
+  renderWishlistPopoverLists(selectedProduct, currentListsContainer);
+  updateFavoriteButtonsState();
 }
 
 /**
@@ -526,7 +517,9 @@ function initWishlistUI() {
   });
 
   document.addEventListener("click", (event) => {
-    const clickedInsidePopover = event.target.closest("[data-wishlist-modal]");
+    const clickedInsidePopover = event.target.closest(
+      "[data-inline-wishlist-modal]",
+    );
     const clickedFavoriteButton = event.target.closest(
       "[data-add-to-wishlist]",
     );
@@ -554,14 +547,6 @@ function initWishlistUI() {
     createWishlistForm.addEventListener("submit", handleCreateWishlistSubmit);
   }
 
-  if (wishlistModalLists) {
-    wishlistModalLists.addEventListener("click", handleModalListClick);
-  }
-
-  if (wishlistModalClose) {
-    wishlistModalClose.addEventListener("click", closeWishlistModal);
-  }
-
   document.addEventListener(
     "favorites:products-rendered",
     updateFavoriteButtonsState,
@@ -570,6 +555,8 @@ function initWishlistUI() {
   document.addEventListener("click", handleDeleteFavoriteList);
 
   document.addEventListener("click", handleAddFavoriteListToCart);
+
+  document.addEventListener("click", handleModalListClick);
 
   cart.load();
   updateCartCounters();

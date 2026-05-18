@@ -669,3 +669,23 @@
     color: #111;
   }
 }
+
+/* Modal */
+.cart-card,
+.cart-products,
+.cart-product,
+.cart-product__info,
+.cart-product__bottom,
+.cart-product__actions,
+.favorite-popover-wrapper {
+  overflow: visible;
+}
+
+.cart-product {
+  position: relative;
+  z-index: 1;
+}
+
+.cart-product:has(.wishlist-modal.is-open) {
+  z-index: 20;
+}

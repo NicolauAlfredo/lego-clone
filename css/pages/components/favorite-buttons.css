@@ -42,3 +42,29 @@
 .wishlist-product__favorite-button.is-favorite .wishlist-product__heart-icon {
   color: #d72054;
 }
+
+.cart-product__favorite {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  background-color: transparent;
+
+  color: #111111;
+  cursor: pointer;
+}
+
+.cart-product__favorite.is-favorite {
+  color: #d72054;
+}
+
+.cart-product__heart-icon {
+  width: 22px;
+  height: 22px;
+
+  pointer-events: none;
+}

@@ -6,7 +6,15 @@
     <title>Carrello della spesa | LEGO Shop</title>
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/pages/cart.css" />
-
+    <link
+      rel="stylesheet"
+      href="../css/pages/components/create-wishlist-modal.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/pages/components/favorite-buttons.css"
+    />
+    <link rel="stylesheet" href="../css/pages/components/wishlist-modal.css" />
     <link
       rel="icon"
       type="image/png"
@@ -789,11 +797,45 @@
     </footer>
     <!-- FINE FOOTER -->
 
-    <script
-      type="module"
-      src="../js/features/cart-add-product.js"
-      defer
-    ></script>
+    <!-- Modal create a new list -->
+    <div class="wishlist-create-modal" data-create-wishlist-modal>
+      <div class="wishlist-create-modal__overlay"></div>
+
+      <div class="wishlist-create-modal__content">
+        <button
+          class="wishlist-create-modal__close"
+          type="button"
+          aria-label="Chiudi modal"
+          data-close-create-wishlist-modal
+        >
+          <img
+            src="../assets/pages/favorites/icons/control-close-icon.svg"
+            alt=""
+          />
+        </button>
+
+        <h2>Crea una nuova lista</h2>
+
+        <form class="wishlist-create-modal__form" data-create-wishlist-form>
+          <label for="wishlist-name"> Nome della lista * </label>
+
+          <div class="wishlist-create-modal__actions">
+            <input
+              id="wishlist-name"
+              type="text"
+              name="wishlistName"
+              maxlength="40"
+              required
+            />
+
+            <button class="wishlist-create-modal__submit" type="submit">
+              Invia
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- FINE DEL MODAL -->
 
     <script type="module" src="../js/features/cart-page.js" defer></script>
     <script
@@ -809,5 +851,11 @@
     ></script>
 
     <script type="module" src="../js/features/cart-promo-accordion.js"></script>
+
+    <script
+      type="module"
+      src="../js/features/favorites-add-product.js"
+      defer
+    ></script>
   </body>
 </html>

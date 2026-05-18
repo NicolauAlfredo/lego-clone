@@ -2,7 +2,6 @@
 
 /* Contenitore principale del popover */
 .wishlist-modal {
-  position: absolute;
   display: none;
   z-index: 9999;
 }
@@ -127,4 +126,68 @@
 .wishlist-modal__create-button img {
   width: 14px;
   height: 14px;
+}
+
+.favorite-popover-wrapper {
+  position: relative;
+  display: inline-flex;
+  overflow: visible;
+}
+
+.favorite-popover-wrapper .wishlist-modal {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  left: auto;
+
+  display: none;
+  width: max-content;
+  min-width: 220px;
+
+  transform: none;
+
+  z-index: 99999;
+}
+
+.favorite-popover-wrapper .wishlist-modal.is-open {
+  display: block;
+}
+
+.favorite-popover-wrapper .wishlist-modal__content {
+  position: relative;
+  z-index: 99999;
+}
+
+.cart-product .favorite-popover-wrapper .wishlist-modal {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  bottom: auto;
+  left: auto;
+
+  display: none;
+  width: max-content;
+  min-width: 220px;
+
+  transform: none;
+  z-index: 999999;
+}
+
+.cart-product .favorite-popover-wrapper .wishlist-modal.is-open {
+  display: block;
+}
+
+.cart-card,
+.cart-products,
+.cart-product,
+.cart-product__info,
+.cart-product__bottom,
+.cart-product__actions,
+.favorite-popover-wrapper {
+  overflow: visible;
+}
+
+.cart-product:has(.wishlist-modal.is-open) {
+  position: relative;
+  z-index: 9999;
 }
