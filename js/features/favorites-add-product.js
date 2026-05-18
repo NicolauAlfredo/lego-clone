@@ -421,14 +421,12 @@ function updateFavoriteButtonsState() {
 /**
  * Gestisce la scelta di una lista nel popover.
  *
- * Quando l'utente clicca su una lista:
- * - aggiunge il prodotto selezionato a quella lista
- * - aggiorna il localStorage
- * - aggiorna il riepilogo delle liste
- * - aggiorna il cuore del prodotto
- * - chiude il popover
+ * Se il prodotto è già presente nella lista selezionata,
+ * viene rimosso da quella lista.
+ *
+ * Se il prodotto non è presente,
+ * viene aggiunto alla lista.
  */
-
 function handleModalListClick(event) {
   const listButton = event.target.closest("[data-select-wishlist-list]");
 
@@ -436,13 +434,28 @@ function handleModalListClick(event) {
     return;
   }
 
-  const listId = listButton.dataset.listId;
+  event.preventDefault();
 
-  favorite.addProductToList(listId, selectedProduct);
+  const listId = listButton.dataset.listId;
+  const productId = selectedProduct.id;
+
+  const productAlreadyInList = favorite.hasProductInList(listId, productId);
+
+  if (productAlreadyInList) {
+    favorite.removeProductFromList(listId, productId);
+  } else {
+    favorite.addProductToList(listId, selectedProduct);
+  }
+
+  favorite.load();
 
   renderWishlistLists();
+  renderWishlistPopoverLists(selectedProduct);
   updateFavoriteButtonsState();
-  closeWishlistModal();
+
+  if (activeFavoriteButton) {
+    positionWishlistPopover(activeFavoriteButton);
+  }
 }
 
 /**
